@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bcaf3ee4739dc4ea0bd1a48a320381, type: 3}
+  m_Name: Angel Eyes
+  m_EditorClassIdentifier: 
+  nodeId: 2
+  skill: {fileID: 11400000, guid: b3d2e223e809fae4cb5cbd11af2e1fcf, type: 2}
+  prerequisites:
+  - {fileID: 11400000, guid: 6ad85ca2803e310429e52f48c83ca8e2, type: 2}
+  - {fileID: 11400000, guid: 5425cc5d07a38de44aec9ee2a52acf69, type: 2}
+  cost: 1

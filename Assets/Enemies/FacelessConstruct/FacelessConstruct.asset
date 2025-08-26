@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
+  m_Name: FacelessConstruct
+  m_EditorClassIdentifier: 
+  characterName: FacelessConstruct
+  level: 1
+  experience: 0
+  maxHP: 20
+  maxMP: 7
+  strength: 5
+  perception: 3
+  evasiveness: 3
+  spirit: 3
+  speed: 10
+  EquippedWeapon: {fileID: 11400000, guid: 82c5bfb29e4f2554eb3c8dc503099cea, type: 2}
+  dodgeSound: {fileID: 8300000, guid: 2be7548daec14a946a71694dab891fd8, type: 3}
+  equipableWeaponTypes: 
+  Skills: []
+  Images:
+  - {fileID: -1088191747161653187, guid: cffeead4bed892c488aa06678ac446db, type: 3}
+  - {fileID: -6598660518414516605, guid: b204519bf18fd36499ae954359ce92be, type: 3}
+  - {fileID: 5214518682848346691, guid: 7e8a90e6bec53c841a1a2011d62bf545, type: 3}
+  droppableWeapons: []
+  skillTree: {fileID: 0}
+  unlockedNodeIds: []
+  equippedSkills: []
+  skillPoints: 0

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
+  m_Name: Almos
+  m_EditorClassIdentifier: 
+  characterName: Almos
+  level: 1
+  experience: 0
+  maxHP: 50
+  maxMP: 7
+  strength: 12
+  perception: 25
+  evasiveness: 25
+  spirit: 25
+  speed: 22
+  EquippedWeapon: {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
+  dodgeSound: {fileID: 8300000, guid: ae19c1f928962ba488cc06aa18003218, type: 3}
+  equipableWeaponTypes: 01000000
+  Skills:
+  - {fileID: 11400000, guid: ca5517b66add167439e54ffbaccf148e, type: 2}
+  Images: []
+  droppableWeapons: []
+  skillTree: {fileID: 11400000, guid: 8c3973b1cbe095a42acefcd107f9872c, type: 2}
+  unlockedNodeIds: []
+  equippedSkills: []
+  skillPoints: 3

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
+  m_Name: BalloonAnimal
+  m_EditorClassIdentifier: 
+  characterName: Balloon Animal
+  level: 1
+  experience: 0
+  maxHP: 12
+  maxMP: 3
+  strength: 5
+  perception: 3
+  evasiveness: 3
+  spirit: 3
+  speed: 3
+  EquippedWeapon: {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
+  dodgeSound: {fileID: 8300000, guid: 15879ca370931d64fa600dcba60ea3b9, type: 3}
+  equipableWeaponTypes: 
+  Skills: []
+  Images:
+  - {fileID: 8909163506513615303, guid: 94b388409ed0e5d438b518c684c6f1c7, type: 3}
+  - {fileID: 3225533269174286501, guid: 51eedde3f5eac9e418ccd35aadf897a0, type: 3}
+  - {fileID: 1927747291459362490, guid: 9b0c3d00e9b63a740bfd666d703ef925, type: 3}
+  droppableWeapons:
+  - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
+  skillTree: {fileID: 0}
+  unlockedNodeIds: []
+  equippedSkills: []
+  skillPoints: 0

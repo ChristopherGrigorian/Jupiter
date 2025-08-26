@@ -1,0 +1,53 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class PedestalController : MonoBehaviour
+{
+    [SerializeField] private Slider hp;
+    [SerializeField] private TextMeshProUGUI nameLabel;
+    [SerializeField] private CanvasGroup highlight;
+
+    private Combatant bound;   // from your game
+    public Combatant Bound => bound;
+
+    public void Bind(Combatant c)
+    {
+        bound = c;
+        if (nameLabel) nameLabel.text = c.Name;
+        if (hp)
+        {
+            hp.maxValue = c.data.maxHP;
+            hp.value = Mathf.Clamp(c.currentHP, 0, c.data.maxHP);
+            print(hp.value);
+        }
+        SetHover(false);
+    }
+
+    public void Refresh()
+    {
+        print(bound.currentHP);
+        if (bound is null || !hp) return;
+        hp.maxValue = bound.data.maxHP;
+        hp.value = Mathf.Clamp(bound.currentHP, 0, bound.data.maxHP);
+        gameObject.SetActive(bound.IsAlive);
+    }
+
+    // Optional: billboard the bar to the camera
+    void LateUpdate()
+    {
+        if (Camera.main) nameLabel.transform.forward = Camera.main.transform.forward;
+    }
+
+    public void SetHover(bool on)
+    {
+        if (highlight)
+        {
+            highlight.alpha = on ? 1f : 0f;
+        }
+        if (nameLabel)
+        {
+            nameLabel.color = on ? new Color(1f, 1f, 0.6f) : Color.white;
+        }
+    }
+}
