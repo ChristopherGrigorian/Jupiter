@@ -2,6 +2,12 @@ INCLUDE Globals.ink
 INCLUDE ProxyWorld.ink
 INCLUDE Garden.ink
 INCLUDE Government.ink
+INCLUDE WholeNewWorld.ink
+INCLUDE Galaga.ink
+INCLUDE Simulation.ink
+
+
+
 
 
 The balcony surveys well above the street. The street is empty and quiet. Almos is quiet. He sits across from you now. He usually isn’t quiet on Saturdays. Perhaps you’ve gotten it all wrong. It may be Sunday now that you think about it. The days don’t seem to matter anymore, at least to you, anyway. The radio was playing gurbled nonsense so you just shut it off. The damn thing must have been broken. 

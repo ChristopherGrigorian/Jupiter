@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
+  m_Name: Obsolete Android
+  m_EditorClassIdentifier: 
+  characterName: Obsolete Android
+  level: 1
+  experience: 0
+  maxHP: 65
+  maxMP: 5
+  strength: 5
+  perception: 5
+  evasiveness: 5
+  spirit: 5
+  speed: 12
+  EquippedWeapon: {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
+  dodgeSound: {fileID: 8300000, guid: 2be7548daec14a946a71694dab891fd8, type: 3}
+  equipableWeaponTypes: 0000000001000000
+  Skills: []
+  Images: []
+  droppableWeapons: []
+  skillTree: {fileID: 0}
+  unlockedNodeIds: []
+  equippedSkills: []
+  skillPoints: 0

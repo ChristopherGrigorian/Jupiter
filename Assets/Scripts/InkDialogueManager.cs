@@ -67,6 +67,7 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("AddWeapon", (string weapon) => InventoryManager.Instance.addWeapon(weapon));
         story.BindExternalFunction("FadeOutSeq", (string pipeSeparated, string continueKnot) => FadeOutSeq(pipeSeparated, continueKnot));
         story.BindExternalFunction("AddCharacter", (string character) => GameController.Instance.AddCharacter(character));
+        story.BindExternalFunction("RemoveCharacter", (string character) => GameController.Instance.RemoveCharacter(character));
         story.BindExternalFunction("PlaySong", (string song) =>  SongPlayer.Instance.PlaySong(song));
         story.BindExternalFunction("StopSong", () => SongPlayer.Instance.StopSong());
         ContinueStory();
@@ -363,5 +364,11 @@ public class InkDialogueManager : MonoBehaviour
     void OnDisable()
     {
         StopTypingSfx(); // safety in case the object is hidden mid-typing
+    }
+
+    public void locationChange(string location)
+    {
+        story.ChoosePathString(location);
+        ContinueStory();
     }
 }

@@ -9,5 +9,6 @@ VAR MuffinShared = false
 EXTERNAL StartCombat(string, string)
 EXTERNAL FadeOutSeq(string, string)
 EXTERNAL AddCharacter(string)
+EXTERNAL RemoveCharacter(string)
 EXTERNAL PlaySong(string)
 EXTERNAL StopSong()

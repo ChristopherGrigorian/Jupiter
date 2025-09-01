@@ -221,13 +221,42 @@ You close your eyes and meditate. You bring focus back to yourself, and when you
 
 You repeat this until the heavy shroud of rust thins out with each episode you re-live. 
 You begin to hear all. See all. 
+You and Almos become one.
 
 + _Continue..._
     -> PL2
     
 == PL2 ==
-ACT 2 BEGINS TY FOR PLAYING THIS FAR <3
--> DONE
+Your vision fades.
+You feel a compelling force surrounding your body.
+You know you should be terrified, but all you can feel is a sense of security.
+
+"I've finally found you," a voice calls. 
+"It was no small effort to carefully pluck you from the expanse."
+"You have been saved. I cherish you, so deeply, Aiolos."
+"More than you will ever know."
+You don't feel compelled to respond.
+You just wait and listen.
+"What once would have perished to the great expanse not holds home, here."
+"I am your God."
+"I will breathe life into once more."
+"A human body shall bind you no more to a flicker of existence."
+"Hearken to me, kin."
+"Welcome home, child."
+"Welcome to Jup-."
+The voice gets cut off.
+You feel the force unravel and dissipate from around your body.
+You don't feel enraptured or under siren.
+Your vision returns to you.
+"Welcome to Jupiter..." you mumble to yourself.
+-> PL3
+
+== PL3 ==
+~ FadeOutSeq("You are now playing as Obsolete Android.", "WNW")
+~ RemoveCharacter("Aiolos")
+~ RemoveCharacter("Almos")
+~ AddCharacter("Obsolete Android")
+->DONE
 
 == WorldOfRot ==
 Your vision is blurry, and your heart is pounding out of your chest. 

@@ -676,6 +676,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void RemoveCharacter(string name)
+    {
+        foreach(var combatant in playerCharacters)
+        {
+            if (combatant.name == name)
+            {
+                playerCharacters.Remove(combatant);
+            }
+        }
+    }
+
     public void PlaySkillSfx(SkillData skill)
     {
         if (sfxSource != null)
