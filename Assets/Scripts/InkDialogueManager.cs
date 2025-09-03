@@ -60,6 +60,18 @@ public class InkDialogueManager : MonoBehaviour
 
     private string heldStory = "";
 
+
+    public static InkDialogueManager Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         story = new Story(inkJSON.text);

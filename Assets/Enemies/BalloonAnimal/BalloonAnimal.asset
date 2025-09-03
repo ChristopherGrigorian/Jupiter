@@ -27,9 +27,10 @@ MonoBehaviour:
   equipableWeaponTypes: 
   Skills: []
   Images:
-  - {fileID: 8909163506513615303, guid: 94b388409ed0e5d438b518c684c6f1c7, type: 3}
-  - {fileID: 3225533269174286501, guid: 51eedde3f5eac9e418ccd35aadf897a0, type: 3}
-  - {fileID: 1927747291459362490, guid: 9b0c3d00e9b63a740bfd666d703ef925, type: 3}
+  - {fileID: -1028400955298141174, guid: 1dea56f4ab9314340b34335169035af5, type: 3}
+  - {fileID: 199250485055909500, guid: 4314d015c2905e34693bae6e81970bfa, type: 3}
+  - {fileID: -3816224476075818137, guid: 4116ed5820dc27e48a7db3e82c3e11c6, type: 3}
+  battleImage: {fileID: -1485153685, guid: 63819a769b6119f41b22d1288202608f, type: 3}
   droppableWeapons:
   - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
   skillTree: {fileID: 0}

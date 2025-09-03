@@ -7,6 +7,7 @@ public class PedestalController : MonoBehaviour
     [SerializeField] private Slider hp;
     [SerializeField] private TextMeshProUGUI nameLabel;
     [SerializeField] private CanvasGroup highlight;
+    [SerializeField] private Image characterImage;
 
     private Combatant bound;   // from your game
     public Combatant Bound => bound;
@@ -19,6 +20,10 @@ public class PedestalController : MonoBehaviour
         {
             hp.maxValue = c.data.maxHP;
             hp.value = Mathf.Clamp(c.currentHP, 0, c.data.maxHP);
+            if (c.data.battleImage != null)
+            {
+                characterImage.sprite = c.data.battleImage;
+            }
             print(hp.value);
         }
         SetHover(false);
@@ -36,7 +41,14 @@ public class PedestalController : MonoBehaviour
     // Optional: billboard the bar to the camera
     void LateUpdate()
     {
-        if (Camera.main) nameLabel.transform.forward = Camera.main.transform.forward;
+        if (Camera.main)
+        {
+            nameLabel.transform.forward = Camera.main.transform.forward;
+            hp.transform.forward = Camera.main.transform.forward;
+
+            Vector3 hpEulerAngles = hp.transform.eulerAngles;
+            characterImage.transform.rotation = Quaternion.Euler(0, hpEulerAngles.y, 0);
+        }
     }
 
     public void SetHover(bool on)

@@ -31,6 +31,8 @@ public class InventoryManager : MonoBehaviour
 
     private string previousType = "";
 
+
+    [SerializeField] private GameObject featuresHUD;
     public static InventoryManager Instance;
 
     private CharacterData currentSelectedCharacter;
@@ -187,6 +189,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (previousType == "") 
         {
+            featuresHUD.SetActive(false);
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
         } 
         else

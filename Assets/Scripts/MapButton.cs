@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class ButtonHoverImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("The Image component to show/hide")]
-    [SerializeField] private Image targetImage;
+    public Image targetImage;
 
     [Header("The Sprite to show on hover")]
-    [SerializeField] private Sprite hoverSprite;
+    public Sprite hoverSprite;
 
     private Sprite originalSprite;
 

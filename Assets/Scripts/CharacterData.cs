@@ -20,6 +20,7 @@ public class CharacterData : ScriptableObject
     public List<WeaponType> equipableWeaponTypes;
     public List<SkillData> Skills;
     public List<Sprite> Images;
+    public Sprite battleImage;
     public List<WeaponData> droppableWeapons;
 
     public SkillTreeData skillTree;
