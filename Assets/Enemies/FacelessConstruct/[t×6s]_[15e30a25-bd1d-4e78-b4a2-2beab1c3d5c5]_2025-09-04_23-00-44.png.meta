@@ -103,13 +103,13 @@ TextureImporter:
       name: "[t\xD76s]_[15e30a25-bd1d-4e78-b4a2-2beab1c3d5c5]_2025-09-04_23-00-44_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 600
-        height: 950
+        x: 120
+        y: 220
+        width: 305
+        height: 370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 130, y: 225, z: 170, w: 355}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50d22c0a02cc15a43b54eb6c42796cca
+    spriteID: 37794f450240e9445a34829a78f4c1aa
     internalID: 0
     vertices: []
     indices: 
