@@ -27,5 +27,39 @@ You close your eyes, and swallow hard. You're going to break through the glass.
     -> GlassBreak
     
 ==  GlassBreak ==
-This is pause.
+You ball your fist, each finger curls without effort into place.
+Your fist bursts through the glass. The whole front of the capsule collapses.
+A wave of vertigo washes over you. A siren blares. You know not who it alerts, only that you're in deep trouble.
+
++ _Examine the technology within the room._
+    -> ExamineTech
++ _Try the door and escape the cell._
+    -> BreakOut
+    
+== ExamineTech ==
+The wires and monitors within the room are completely foreign to you. You know not of their purpose, only that they were most likely either watching or ensaring you. On closer examination, each device is engraved with "Property of LOTUS."
+
+The siren continues to blaze on. You waste no time in challenging the cell door.
+
++ _Try the door and escape the cell._
+    -> BreakOut
+
+== BreakOut ==
+The door jams and refuses to open. 
+You see no purpose in restraining yourself any further. You hold out your palm and a revolver materializes in your hand as it once had in the proxy world.
+You shoot the lock and break the door down with a strong kick.
+
+You exit the room and are immediately met with a diverging path. Cells just likes your line both walls to point of the space looking liminal. You can hear a faint shuffling and buzzing noise echoing from the hall on your right.
+
++ _Head left_
+    -> LeftHall
++ _Head right_
+    -> RightHall
+
+== LeftHall ==
+->DONE
+
+== RightHall ==
+->DONE
+
 ->DONE
