@@ -20,7 +20,7 @@ They’re crouched on the floor before you. They sport a suit and are humanoid i
     -> RabbitBrain1
     
 == RabbitBrain1 ==
-“Oh. I’m Aiolos.” You’re not sure whether to feel scared or not. 
+“Rabbit, huh. I’m Aiolos,” you announce. You’re not sure whether to feel scared or not. 
 "Can you do this?" Rabbit asks. He holds out his palm, and within it, you see a revolver begin to materialize. It's radiating a brilliant light blue color. 
 "Um.. No," you respond. 
 "Soul weapon," Rabbit says. "Think, and behold."
@@ -52,7 +52,7 @@ You approach Rabbit, but as soon as  you start following, they turn around and s
 -> RotAway
 
 == FollowRabbit ==
-You cautiously follow Rabbit. Their footsteps sugar through the blue and indigo mist surrounding you. His silhouette promenades at the edge of your vision. 
+You cautiously follow Rabbit. Their footsteps sugar through the blue and indigo mist surrounding you. Their silhouette promenades at the edge of your vision. 
 
 You follow them for a while. Their footsteps ramp, faster and faster. To keep them in vision, you’re brought to a jog, and then burst into full-on sprinting.
 
@@ -92,7 +92,7 @@ You follow them for a while. Their footsteps ramp, faster and faster. To keep th
 You're not sure what's become of you or how you've just performed such feats. It felt as though something within you has awakened. You dread no longer on the topic, and continue your search to find Rabbit, and the source of the beeping noise.
 
 You continue to follow the noise until its blaringly close by. 
-You're seemingly endless wander is interupted once more by another silloutte. When you approach, you realize it's Rabbit again. The figure stands next to a cubicle, and beeping, object sprouting from the floor. On further inspection, you realize it's a phone box. 
+You're seemingly endless wander is interupted once more by another silhouette. When you approach, you realize it's Rabbit again. The figure stands next to a cubicle, and beeping, object sprouting from the floor. On further inspection, you realize it's a phone box. 
 
 "Call," beckons Rabbit. You only know your own number.
 
@@ -118,7 +118,7 @@ You call your own number, and the phone rings.
     
     I think we're one and the same," you reply. "Are you on the balcony right now?"
     
-    A weary "Yes...?" crinkles across the line. You look to Rabbit for even the slightest bit of clarification. They continue to be mute. Their eyes pierce through yours. You feel as though it is artificially stringing fish hooks through your eyes and poking and pulling at your throat. You feel compelled to say just one thing.
+    A weary "Yes...?" crinkles across the line. You look to Rabbit for even the slightest bit of clarification. They continue to be mute. Their eyes pierce through yours. You feel as though they are artificially stringing fish hooks through your eyes and poking and pulling at your throat. You feel compelled to say just one thing.
     
     "Kill Almos."
     
@@ -126,14 +126,15 @@ You call your own number, and the phone rings.
         ~ KillCommandAlmos = true
         ->BornBefore
     - else:
-    Rabbit begins ringing. There's a glowing square in its pocket. Rabbit picks up your call. Its eyes pierce through yours. You feel as though it is artificially stringing  fish hooks through your eyes and poking and pulling at your throat. You feel compelled to say just one thing.
+    Rabbit begins ringing. There's a glowing square in their pocket. Rabbit picks up your call. Their eyes pierce through yours. You feel as though they are artificially stringing fish hooks through your eyes and poking and pulling at your throat. You feel compelled to say just one thing.
     
     "Kill Aiolos."
     
     Rabbit approaches you, and in your panic, you collapse  to the floor and blackout. Rabbit kills you, and you unravel into nothing at all.
     
     + _Continue..._
-        ->BornOnceAgain
+        ~ FadeOutSeq(" ", "BornOnceAgain")
+        ->DONE
 }
 
 == BornBefore ==

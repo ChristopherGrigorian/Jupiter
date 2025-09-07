@@ -1672,9 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9441414e39dd9da4ebd01f4de2a380db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
-  - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
+  weapons: []
   acquireableWeapons:
   - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
   - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}

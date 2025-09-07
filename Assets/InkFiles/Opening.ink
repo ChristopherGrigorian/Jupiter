@@ -40,7 +40,7 @@ You ignore the thought for now in defeat.
 The balcony is small. You and Almos are sitting upon an aluminum patio set. Just two chairs and a small circular table between you. 
 Three months ago, you both barely sat here. It has become something of a ritual for you both to sit here and watch the sunset.
 
-The aluminum of the table seems to be falling. You don’t blame the furniture for rusting. Neither you nor Almos took any particular measures to care for it. It was a cheap set, anyway.
+The aluminum of the table seems to be falling apart. You don’t blame the furniture, really, for not holding up. Neither you nor Almos took any particular measures to care for it. It was a cheap set, anyway.
 
 + _Kick the table leg in frustration._
     ~ UncannyPeculiarity += 1
@@ -55,6 +55,9 @@ The aluminum of the table seems to be falling. You don’t blame the furniture f
     Almos jumps a little, and says nothing while giving you a sharp but brief stare.
     
     You’re becoming angry, but you find it challenging to continue to be upset at metal. Perhaps your outburst has little to do with the table itself, and more to do with frustration of feeling ignored by Almos.
+    - else:
+    You look closer at the table to see brownish specles forming near the legs. It's not really immediately noticeable, but the table itself feels like it's about to collapse at any second. 
+    Only three legs of the four are ever touching the ground at once. You do wonder though if those brown spots you're seeing are actually rust.
 }
 {JMP1()}
 
@@ -129,7 +132,7 @@ You direct your attention back to Almos.
 Almos remains silent.
 You're about to blow a fuse.
 He relinquishes his cigarette in the ashtray between you two. He once more stares back at the empty street down below.
-Why were you so easily provoked at nothing? You hope you didn't make Almos feel sad. You feel th eneed to say something, but you're a little choked up at the moment.
+Why were you so easily provoked at nothing? You hope you didn't make Almos feel sad. You feel the need to say something, but you're a little choked up at the moment.
 You try grabbing his hand to comfort him, but he quickly retracted it to his lap. You give out a heavy sigh in response.
 
 + _Look out into the street with Almos_

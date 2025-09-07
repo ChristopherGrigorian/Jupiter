@@ -57,7 +57,7 @@ public class InventoryManager : MonoBehaviour
         skillTreeButton.onClick.AddListener(() => ShowTab("CharacterSelectorSkillTree"));
     }
 
-    public void addWeapon(string name) 
+    public void AddWeapon(string name) 
     {
         foreach (var weapon in acquireableWeapons) 
         {
@@ -170,7 +170,7 @@ public class InventoryManager : MonoBehaviour
 
     private void SelectButton(Button btn)
     {
-        // Reset the previous button’s color
+        // Reset the previous buttonï¿½s color
         if (currentlySelectedBtn != null)
             currentlySelectedBtn.GetComponent<Image>().color = defaultColor;
 

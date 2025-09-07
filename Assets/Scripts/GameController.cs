@@ -416,7 +416,7 @@ public class GameController : MonoBehaviour
             {
                 foreach (var weapon in enemy.data.droppableWeapons)
                 {
-                    InventoryManager.Instance.addWeapon(weapon.name);
+                    InventoryManager.Instance.AddWeapon(weapon.name);
                     yield return StartCoroutine(ShowCombatLog($"You obtain {weapon.name}."));
                 }
             }
