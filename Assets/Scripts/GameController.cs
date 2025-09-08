@@ -162,8 +162,6 @@ public class GameController : MonoBehaviour
                     : StartCoroutine(EnemyTurn(current));
             }
 
-            yield return StartCoroutine(ResolveEndOfTurnStatuses(current));
-
             currentTurnIndex = (currentTurnIndex + 1) % turnOrder.Count;
 
             if (CheckVictoryCondition())
@@ -190,6 +188,8 @@ public class GameController : MonoBehaviour
         while (true)
         {
             combatHudManager.SetAllActionButtonsInteractable(true);
+            weaponBacking.SetActive(true);
+            actionContainer.SetActive(true);
             Debug.Log($"Player {player.Name}'s turn. Choose a skill.");
 
             SkillData chosenSkill = null;
@@ -223,8 +223,9 @@ public class GameController : MonoBehaviour
 
             SpendMP(player, chosenSkill);
             yield return StartCoroutine(PlayerAction(player, chosenSkill));
-
             player.currentMP += 1;
+
+            yield return StartCoroutine(ResolveEndOfTurnStatuses(player));
             yield break;
         }
     }
@@ -398,9 +399,7 @@ public class GameController : MonoBehaviour
 
         var ai = new EnemyAI(enemy, turnOrder);
         yield return StartCoroutine(ai.Run());
-
-        weaponBacking.SetActive(true);
-        actionContainer.SetActive(true);
+        yield return StartCoroutine(ResolveEndOfTurnStatuses(enemy));
         yield return null;
     }
 
@@ -458,7 +457,7 @@ public class GameController : MonoBehaviour
                 totalCoinEarned += awardedCoin;
             }
         }
-        yield return StartCoroutine(ShowCombatLog($"You looted {totalCoinEarned} from this fight."));
+        yield return StartCoroutine(ShowCombatLog($"You looted {totalCoinEarned} coins from this fight."));
     }
 
     private IEnumerator TargetSelection(Combatant player, SkillData skill)
