@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: Perpetuation
   m_EditorClassIdentifier: 
   skillName: Perpetuation
+  skillDescription: Raises the target's attack stat for one turn.
   type: 3
   power: 0
-  potency: 0
+  potency: 10
   MPCost: 1
   targetsEnemies: 0
+  statusesToApply:
+  - status: {fileID: 11400000, guid: 7f8673c196d5dd8429dbab1fd30af6b6, type: 2}
+    chance: 1
+    durationOverride: 2
+    stacks: 1
+  castSFX: {fileID: 0}
+  sfxVolume: 1

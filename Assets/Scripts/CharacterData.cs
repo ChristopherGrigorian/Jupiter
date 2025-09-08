@@ -22,6 +22,7 @@ public class CharacterData : ScriptableObject
     public List<Sprite> Images;
     public Sprite battleImage;
     public List<WeaponData> droppableWeapons;
+    public int heldCoin = 0;
 
     public SkillTreeData skillTree;
 

@@ -106,9 +106,10 @@ public class EnemyAI
                 if (GameController.Instance.RollToHit(self.EffectivePerception, chosenTarget.EffectiveEvasiveness))
                 {
                     GameController.Instance.PlaySkillSfx(chosenSkill);
-                    chosenTarget.currentHP -= chosenSkill.power;
+                    int totalDamage = chosenSkill.power + (self.EffectiveStrength / 2);
+                    chosenTarget.currentHP -= totalDamage;
                     GameController.Instance.RefreshUIFor(chosenTarget);
-                    message = $"{chosenTarget.Name} takes {chosenSkill.power} damage.";
+                    message = $"{chosenTarget.Name} takes {totalDamage} damage.";
                 } else
                 {
                     GameController.Instance.sfxSource.PlayOneShot(chosenTarget.data.dodgeSound);

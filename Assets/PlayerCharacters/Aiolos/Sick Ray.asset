@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Sick Ray
   m_EditorClassIdentifier: 
   skillName: Sick Ray
+  skillDescription: 
   type: 0
-  power: 10
+  power: 3
   potency: 0
   MPCost: 1
   targetsEnemies: 1
@@ -23,3 +24,5 @@ MonoBehaviour:
     chance: 1
     durationOverride: 0
     stacks: 1
+  castSFX: {fileID: 0}
+  sfxVolume: 1

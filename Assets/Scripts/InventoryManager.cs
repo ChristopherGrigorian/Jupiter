@@ -9,6 +9,8 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private List<WeaponData> acquireableWeapons;
 
+    public int totalCoin = 0;
+
     [SerializeField] private Color defaultColor = Color.white;
     [SerializeField] private Color selectedColor = Color.red;
 
@@ -69,6 +71,11 @@ public class InventoryManager : MonoBehaviour
         }
 
         Debug.Log("Weapon doesn't exist.");
+    }
+
+    public void AddCoin(int number)
+    {
+        totalCoin += number;
     }
 
     private void ShowTab(string type)

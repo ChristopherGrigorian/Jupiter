@@ -32,6 +32,7 @@ MonoBehaviour:
   - {fileID: 7397119240160527060, guid: 56e0a2db1cfab4a43bce704b5fa821eb, type: 3}
   battleImage: {fileID: -2116218223262556996, guid: cfe61c5b8d3a58f4895cbd291a805d6b, type: 3}
   droppableWeapons: []
+  heldCoin: 10
   skillTree: {fileID: 0}
   unlockedNodeIds: []
   equippedSkills: []

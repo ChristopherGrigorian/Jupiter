@@ -169,6 +169,7 @@ public class GameController : MonoBehaviour
             if (CheckVictoryCondition())
             {
                 yield return StartCoroutine(AwardWeapons(defeatedEnemiesInCurrentEncounter));
+                yield return StartCoroutine(AwardCoin(defeatedEnemiesInCurrentEncounter));
                 if (cameraPan != null && dialogueCamAnchor != null)
                     cameraPan.PanTo(dialogueCamAnchor);
                 combatHUD.SetActive(false);
@@ -221,47 +222,69 @@ public class GameController : MonoBehaviour
             }
 
             SpendMP(player, chosenSkill);
-           
-
-            switch (chosenSkill.type)
-            {
-                case SkillType.Attack:
-                    int damage = chosenSkill.power;
-                    if (RollToHit(player.EffectivePerception, target.EffectiveEvasiveness))
-                    {
-                        PlaySkillSfx(chosenSkill);
-                        if (RollToCrit(player.data.spirit))
-                        {
-                            damage *= 2;
-                        }
-                        target.currentHP = Mathf.Max(0, target.currentHP - damage);
-                        RefreshUIFor(target);
-                        yield return StartCoroutine(ShowCombatLog($"{target.Name} takes {damage} damage!"));
-                    }
-                    else
-                    {
-                        sfxSource.PlayOneShot(target.data.dodgeSound);
-                        yield return StartCoroutine(ShowCombatLog($"{target.Name} dodges the attack!"));
-                    }
-                    break;
-                case SkillType.Heal:
-                    PlaySkillSfx(chosenSkill);
-                    int heal = chosenSkill.potency;
-                    target.currentHP += heal;
-                    RefreshUIFor(target);
-                    yield return StartCoroutine(ShowCombatLog($"{player.Name} healed for {heal}."));
-                    break;
-                default:
-                    Debug.Log("That wasn't an attack ability.");
-                    break;
-            }
-            yield return StartCoroutine(TryApplyStatuses(player, target, chosenSkill));
-            
+            yield return StartCoroutine(PlayerAction(player, chosenSkill));
 
             player.currentMP += 1;
             yield break;
         }
     }
+
+    private IEnumerator PlayerAction(Combatant player, SkillData chosenSkill)
+    {
+        switch (chosenSkill.type)
+        {
+            case SkillType.Attack:
+                int damage = chosenSkill.power;
+                if (RollToHit(player.EffectivePerception, target.EffectiveEvasiveness))
+                {
+                    PlaySkillSfx(chosenSkill);
+                    if (RollToCrit(player.EffectiveSpirit))
+                    {
+                        StartCoroutine(ShowCombatLog($"{player}'s attack was a critical hit!"));
+                        damage *= 2;
+                    }
+                    int totalDamage = damage + (player.EffectiveStrength / 2);
+                    target.currentHP = Mathf.Max(0, target.currentHP - totalDamage);
+                    RefreshUIFor(target);
+                    yield return StartCoroutine(ShowCombatLog($"{target.Name} takes {totalDamage} damage!"));
+                }
+                else
+                {
+                    sfxSource.PlayOneShot(target.data.dodgeSound);
+                    yield return StartCoroutine(ShowCombatLog($"{target.Name} dodges the attack!"));
+                }
+                break;
+            case SkillType.Heal:
+                PlaySkillSfx(chosenSkill);
+                int heal = chosenSkill.potency;
+                target.currentHP += heal;
+                RefreshUIFor(target);
+                yield return StartCoroutine(ShowCombatLog($"{player.Name} healed for {heal}."));
+                break;
+            case SkillType.Buff:
+                PlaySkillSfx(chosenSkill);
+                List<StatusToApply> statusEffect = chosenSkill.statusesToApply;
+                foreach (var s in statusEffect)
+                {
+                    for (int i = 0; i < s.status.statModifiers.Length; i++)
+                    {
+                        var mod = s.status.statModifiers[i];
+                        int spiritBonus = player.EffectiveSpirit / 2;
+                        mod.flatDelta = chosenSkill.potency;
+                        mod.effectiveFlatDelta = mod.flatDelta + spiritBonus;
+                        s.status.statModifiers[i] = mod;
+                    }
+                }
+                RefreshUIFor(target);
+                yield return StartCoroutine(ShowCombatLog($"{player.Name} utilized {chosenSkill.name}"));
+                break;
+            default:
+                Debug.Log("That wasn't an attack ability.");
+                break;
+        }
+        yield return StartCoroutine(TryApplyStatuses(player, target, chosenSkill));
+    }
+
     public IEnumerator TryApplyStatuses(Combatant source, Combatant target, SkillData skill)
     {
         if (skill.statusesToApply == null) yield break;
@@ -421,6 +444,21 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator AwardCoin(List<Combatant> defeatedEnemies)
+    {
+        int totalCoinEarned = 0;
+        foreach(var enemy in defeatedEnemies)
+        {
+            int awardedCoin = enemy.data.heldCoin;
+            if (enemy.data.heldCoin > 0)
+            {
+                InventoryManager.Instance.totalCoin += awardedCoin;
+                totalCoinEarned += awardedCoin;
+            }
+        }
+        yield return StartCoroutine(ShowCombatLog($"You looted {totalCoinEarned} from this fight."));
     }
 
     private IEnumerator TargetSelection(Combatant player, SkillData skill)

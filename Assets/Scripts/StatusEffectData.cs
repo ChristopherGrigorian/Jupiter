@@ -5,6 +5,7 @@ public struct StatModifier
 {
     public StatType stat;
     public int flatDelta; // e.g., -2 Perception
+    public int effectiveFlatDelta;
 }
 
 [CreateAssetMenu(menuName = "Combat/Status Effect")]

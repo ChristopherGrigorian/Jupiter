@@ -95,7 +95,7 @@ public class Combatant
             if (s.remainingTurns <= 0) continue;
             foreach (var mod in s.data.statModifiers)
             {
-                if (mod.stat == type) delta += mod.flatDelta * Mathf.Max(1, s.stacks);
+                if (mod.stat == type) delta += mod.effectiveFlatDelta * Mathf.Max(1, s.stacks);
             }
         }
         return Mathf.Max(0, baseValue + delta);
