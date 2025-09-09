@@ -113,11 +113,9 @@ public class CharacterData : ScriptableObject
         return Mathf.FloorToInt(100 * Mathf.Pow(targetLevel, 1.5f)); 
     }
 
-    public float GetXPProgress()
+    public int XPNeededToNextLevel()
     {
-        int currentLevelXP = GetRequiredXPForLevel(level);
-        int nextLevelXP = GetRequiredXPForLevel(level + 1);
-        return (float)(experience - currentLevelXP) / (nextLevelXP - currentLevelXP);
+        int nextLevelCost = GetRequiredXPForLevel(level + 1);
+        return Mathf.Max(0, nextLevelCost - experience);
     }
-
 }

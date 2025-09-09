@@ -59,6 +59,9 @@ public class GameController : MonoBehaviour
 
     private readonly Dictionary<Combatant, PedestalController> pedestalMap = new();
 
+    [Header("LevelUpItems")]
+    [SerializeField] private LevelUpPanelController levelUpPanel;
+    private List<LevelUpSummary> _lastVictorySummaries; // built inside CheckVictoryCondition
 
     [Header("Audio")]
     [SerializeField] public AudioSource sfxSource;
@@ -168,10 +171,17 @@ public class GameController : MonoBehaviour
             {
                 yield return StartCoroutine(AwardWeapons(defeatedEnemiesInCurrentEncounter));
                 yield return StartCoroutine(AwardCoin(defeatedEnemiesInCurrentEncounter));
+
+                if (levelUpPanel != null && _lastVictorySummaries != null && _lastVictorySummaries.Count > 0)
+                    Debug.Log("I saw this");
+                    yield return StartCoroutine(levelUpPanel.ShowSequence(_lastVictorySummaries));
+
                 if (cameraPan != null && dialogueCamAnchor != null)
                     cameraPan.PanTo(dialogueCamAnchor);
+
                 combatHUD.SetActive(false);
                 dialogueHUD.SetActive(true);
+
                 defeatedEnemiesInCurrentEncounter.Clear();
                 ClearAllPedestals();
                 break;
@@ -415,11 +425,18 @@ public class GameController : MonoBehaviour
             if (playersAlive)
             {
                 List<Combatant> defeatedEnemies = turnOrder.Where(e => !e.IsAlive && !e.isPlayerControlled).ToList();
-                List<Combatant> survingPlayers = turnOrder.Where(p => p.IsAlive && p.isPlayerControlled).ToList();
-
-                XPUtility.AwardXPToParty(defeatedEnemies, survingPlayers);
+                List<Combatant> survivingPlayers = turnOrder.Where(p => p.IsAlive && p.isPlayerControlled).ToList();
 
                 defeatedEnemiesInCurrentEncounter = defeatedEnemies;
+
+                var beforeMap = new Dictionary<CharacterData, CharacterStatsSnapshot>();
+                foreach (var s in survivingPlayers)
+                    beforeMap[s.data] = CharacterStatsSnapshot.Capture(s.data);
+
+                int xpPerMember = XPUtility.AwardXPToParty(defeatedEnemies, survivingPlayers);
+
+                _lastVictorySummaries = BuildLevelUpSummaries(survivingPlayers, beforeMap, xpPerMember);
+                
             }
 
 
@@ -731,4 +748,27 @@ public class GameController : MonoBehaviour
             sfxSource.PlayOneShot(skill.castSFX, skill.sfxVolume);
         } 
     }
+
+    private List<LevelUpSummary> BuildLevelUpSummaries(List<Combatant> survivors,
+                                                   Dictionary<CharacterData, CharacterStatsSnapshot> beforeMap,
+                                                   int xpPerMember)
+    {
+        var list = new List<LevelUpSummary>();
+        foreach (var c in survivors)
+        {
+            var before = beforeMap[c.data];
+            var after = CharacterStatsSnapshot.Capture(c.data);
+            list.Add(new LevelUpSummary
+            {
+                character = c.data,
+                xpGained = xpPerMember,
+                before = before,
+                after = after,
+                xpNeededToNext = c.data.XPNeededToNextLevel()
+            });
+        }
+        // Only show those who actually changed XP (everyone) — you can also filter to LevelsGained > 0 if you prefer
+        return list;
+    }
+
 }

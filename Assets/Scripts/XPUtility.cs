@@ -12,7 +12,7 @@ public static class XPUtility
         return Mathf.RoundToInt(baseXP + (enemy.level * scalingFactor) + statSum * 0.1f);
     }
 
-    public static void AwardXPToParty(List<Combatant> defeatedEnemies, List<Combatant> party)
+    public static int ComputeTotalXP(List<Combatant> defeatedEnemies)
     {
         int totalXP = 0;
         foreach (Combatant enemy in defeatedEnemies)
@@ -21,13 +21,20 @@ public static class XPUtility
             totalXP += xp;
             Debug.Log($"Enemy {enemy.data.characterName} dropped {xp} XP");
         }
+        return totalXP;
+    }
 
-        int xpPerMember = totalXP / party.Count;
+    public static int AwardXPToParty(List<Combatant> defeatedEnemies, List<Combatant> party)
+    {
+        int totalXP = ComputeTotalXP(defeatedEnemies);
+        int xpPerMember = (party.Count > 0) ? totalXP / party.Count : 0;
+
         foreach (Combatant member in party)
         {
             member.data.GainExperience(xpPerMember);
             Debug.Log($"{member.data.characterName} gains {xpPerMember} XP!");
         }
-    }
 
+        return xpPerMember;
+    }
 }
