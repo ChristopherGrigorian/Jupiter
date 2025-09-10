@@ -77,6 +77,7 @@ public class InkDialogueManager : MonoBehaviour
         story = new Story(inkJSON.text);
         story.BindExternalFunction("StartCombat", (string enemy, string continueKnot) => StartCombat(enemy, continueKnot));
         story.BindExternalFunction("AddWeapon", (string weapon) => InventoryManager.Instance.AddWeapon(weapon));
+        story.BindExternalFunction("AddItem", (string item) => InventoryManager.Instance.AddItem(item));
         story.BindExternalFunction("FadeOutSeq", (string pipeSeparated, string continueKnot) => FadeOutSeq(pipeSeparated, continueKnot));
         story.BindExternalFunction("AddCharacter", (string character) => GameController.Instance.AddCharacter(character));
         story.BindExternalFunction("RemoveCharacter", (string character) => GameController.Instance.RemoveCharacter(character));

@@ -12,12 +12,14 @@ public class ActiveStatus
     public StatusEffectData data;
     public int remainingTurns;
     public int stacks;
+    public bool skipFirstTick;
 
     public ActiveStatus(StatusEffectData d, int duration, int stacks = 1)
     {
         data = d;
         remainingTurns = duration;
         this.stacks = stacks;
+        skipFirstTick = false;
     }
 }
 

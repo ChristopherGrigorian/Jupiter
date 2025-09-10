@@ -9,6 +9,9 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private List<WeaponData> acquireableWeapons;
 
+    [SerializeField] public List<ItemData> items;
+    [SerializeField] private List<ItemData> acquireableItems;
+
     public int totalCoin = 0;
 
     [SerializeField] private Color defaultColor = Color.white;
@@ -72,6 +75,26 @@ public class InventoryManager : MonoBehaviour
 
         Debug.Log("Weapon doesn't exist.");
     }
+
+    public void AddItem(string name)
+    {
+        foreach (var item in acquireableItems)
+        {
+            if (item.name == name)
+            {
+                items.Add(item);
+                return;
+            }
+        }
+    }
+
+    public void RemoveItem(ItemData item)
+    {
+        if (items.Contains(item))
+        {
+            items.Remove(item);
+        }
+    } 
 
     public void AddCoin(int number)
     {

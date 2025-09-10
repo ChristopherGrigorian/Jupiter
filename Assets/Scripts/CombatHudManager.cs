@@ -82,8 +82,22 @@ public class CombatHudManager : MonoBehaviour
             }
         }
 
+        if (type == "Item")
+        {
+            foreach (var item in InventoryManager.Instance.items)
+            {
+                var btn = Instantiate(itemButtonPrefab, itemContainer);
+                btn.GetComponentInChildren<TextMeshProUGUI>().text = item.itemName;
+                var trigger = btn.AddComponent<SkillTooltipTrigger>();
+                trigger.Init(item.skillAttached);
 
-        // Optional: item support
+                btn.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    cachedSkillCallback?.Invoke(item.skillAttached);
+                    item.DestorySelf();
+                });
+            }
+        }
     }
 
     private void ClearAll()

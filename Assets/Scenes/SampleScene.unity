@@ -1815,6 +1815,12 @@ MonoBehaviour:
   acquireableWeapons:
   - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
   - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
+  items:
+  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
+  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
+  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
+  acquireableItems:
+  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   totalCoin: 0
   defaultColor: {r: 0.42745098, g: 0.42745098, b: 0.42745098, a: 0.3019608}
   selectedColor: {r: 1, g: 0, b: 0, a: 1}

@@ -49,7 +49,7 @@ The door jams and refuses to open.
 You see no purpose in restraining yourself any further. You hold out your palm and a revolver materializes in your hand as it once had in the proxy world.
 You shoot the lock and break the door down with a strong kick.
 
-You exit the room and are immediately met with a diverging path. Cells just likes your line both walls to point of the space looking liminal. You can hear a faint shuffling and buzzing noise echoing from the hall on your right.
+You exit the room and are immediately met with a diverging path. Jail cells just likes your line both walls to point of the space looking liminal. You can hear a faint shuffling and buzzing noise echoing from the hall on your right.
 
 + _Head left_
     -> LeftHall
@@ -57,9 +57,72 @@ You exit the room and are immediately met with a diverging path. Cells just like
     -> RightHall
 
 == LeftHall ==
-->DONE
+You walk cautiously down to the left. Perhaps it's too late to exercise caution considering the alarm you set off, but you hope to mask your exact location as much as possible. 
+Just as you're about to take a turn you see figure approaching you at the intersection.
+You approach without hesitation, manifesting your weapon once more.
+"Woah, woah, woah!" says the figure. "Hellooo there!"
+
++ "Boris?"
+    ->LeftHallContinued
 
 == RightHall ==
+You bolt to the right. Whatever may test you, you're willing to face the threat head on.
+You rush to the noise. A robot with two little wheels for movement turns a corner and comes swirling down the corridor towards you.
+You feel Almos' combat prowess besides your own, making you proficient with both swords and guns. Click on the 'Inventory' button, and decide which weapon you will focus on manifesting for this battle.
+You manifest your weapon. Prepare for combat.
+
+~ StartCombat("RightHall", "RightHallFightFinish")
 ->DONE
+
+== RightHallFightFinish ==
+// Give item here
+The robot crumbles to your strength. You wander the halls where the robot came from only to be met with dead ends.
+You trace your steps back to your original cell, only to see another figure approaching you.
+You approach without hesitation, manifesting your weapon once more.
+"Woah, woah, woah!" says the figure. "Hellooo there!"
+
++ "Boris?"
+    ->LeftHallContinued
+    
+== LeftHallContinued ==
+"Whaddya think." he responds.
+"How are you here?" you ask.
+Boris lowers his voice a little, "There's a couple of robots back there, and I got scared."
+"No, not like... whatever," you concede. "Do you know the way out of here?"
+"Yeah," he responds. Boris doesn't continue speaking.
+"...so..." you say after an uncomfortable amount of time.
+"What?" says Boris.
+
++ "Have you no urgency?"
+    - "Why are you in a hurry?" he says. 
+    "You must be joking, just get us out of here." you say.
+    "Alrighty! Like I said though, we have to probably kill this robots in the way first."
+    ->LHC2
+
++ "GET US OUT THEN."
+    - "Damn. Alright." he mutters. 
+    {MuffinShared == false: 
+    "First you don't share the muffin, and now you're just shouting at me. You really are just a bitch, huh."
+    Your mouth drops, you've nothing left to say. "Close your damn mouth, let's go," Boris says.
+    You follow without a word.
+    }
+    ->LHC2
+    
+== LHC2 ==
+You both wind through endless halls until finally arriving before the robots Boris was talking about.
+"Will you be joining me for this fight?" you ask.
+{MuffinShared == false:
+"I don't know, man. When I needed help, you didn't provide."
+"You wanted a fucking muffin dude," get over it.
+"Alright my bad...fatass," he mutters under his breath.
+- else:
+"Of course! My bloods boiling!" he says.
+"Well... it would if I had any," he mutters. "Let's get em!"
+}
+
+~ AddCharacter("Boris")
+Boris has now joined your party.
+Prepare for combat.
+~ StartCombat("LeftHall", "JailFinish")
 
 ->DONE

@@ -268,7 +268,14 @@ public class GameController : MonoBehaviour
             case SkillType.Heal:
                 PlaySkillSfx(chosenSkill);
                 int heal = chosenSkill.potency;
-                target.currentHP += heal;
+                if (heal > target.EffectiveMaxHP - target.currentHP)
+                {
+                    target.currentHP = target.EffectiveMaxHP;
+                }
+                else
+                {
+                    target.currentHP += heal;
+                }
                 RefreshUIFor(target);
                 yield return StartCoroutine(ShowCombatLog($"{player.Name} healed for {heal}."));
                 break;
@@ -306,6 +313,12 @@ public class GameController : MonoBehaviour
             if (UnityEngine.Random.value <= s.chance)
             {
                 target.ApplyStatus(s.status, s.durationOverride, Mathf.Max(1, s.stacks));
+
+                var inst = target.statuses.LastOrDefault(st => st.data == s.status);
+                if (inst != null)
+                {
+                    inst.skipFirstTick = ReferenceEquals(source, target);
+                }
                 yield return StartCoroutine(ShowCombatLog($"{target.Name} is afflicted with {s.status.displayName}!"));
             }
         }
@@ -329,7 +342,15 @@ public class GameController : MonoBehaviour
                 RefreshUIFor(acting);
             }
 
-            s.remainingTurns--;
+            if (s.skipFirstTick)
+            {
+                s.skipFirstTick = false;
+            }
+            else
+            {
+                s.remainingTurns--;
+            }
+            
             if (s.remainingTurns <= 0)
                 logs.Add($"{acting.Name} is no longer {s.data.displayName}.");
         }
@@ -767,7 +788,7 @@ public class GameController : MonoBehaviour
                 xpNeededToNext = c.data.XPNeededToNextLevel()
             });
         }
-        // Only show those who actually changed XP (everyone) — you can also filter to LevelsGained > 0 if you prefer
+        // Only show those who actually changed XP (everyone) ï¿½ you can also filter to LevelsGained > 0 if you prefer
         return list;
     }
 
