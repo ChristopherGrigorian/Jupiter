@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
   m_Name: HealthGainSkill
   m_EditorClassIdentifier: 
-  skillName: HealthGainSkill
+  skillName: Health Potion
   skillDescription: Heal 20 health points to chosen allied target.
   type: 1
   power: 0
