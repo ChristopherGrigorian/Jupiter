@@ -8,6 +8,7 @@ public class TooltipManager : MonoBehaviour
     [SerializeField] private GameObject tooltipPanel;
     [SerializeField] private TextMeshProUGUI tooltipText;
     [SerializeField] private TextMeshProUGUI skillTreeTooltipText;
+    [SerializeField] private TextMeshProUGUI shopTooltipText;
 
     private void Awake()
     {
@@ -21,11 +22,13 @@ public class TooltipManager : MonoBehaviour
     {
         tooltipText.text = content;
         skillTreeTooltipText.text = content;
+        shopTooltipText.text = content;
     }
 
     public void HideTooltip()
     {
         tooltipText.text = "";
         skillTreeTooltipText.text = "";
+        shopTooltipText.text = "";
     }
 }

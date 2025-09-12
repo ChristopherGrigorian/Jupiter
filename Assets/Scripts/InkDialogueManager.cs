@@ -83,10 +83,12 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("RemoveCharacter", (string character) => GameController.Instance.RemoveCharacter(character));
         story.BindExternalFunction("PlaySong", (string song) =>  SongPlayer.Instance.PlaySong(song));
         story.BindExternalFunction("StopSong", () => SongPlayer.Instance.StopSong());
+
+        story.BindExternalFunction("OpenShop", (string shopName, string continueKnot) => ShopManager.Instance.OpenShop(shopName, continueKnot));
         ContinueStory();
     }
 
-    void Update()
+    void Update() 
     {
 
         if (Input.GetMouseButtonDown(0))

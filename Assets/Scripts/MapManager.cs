@@ -101,6 +101,8 @@ public class MapManager : MonoBehaviour
                     btn.GetComponent<Button>().onClick.AddListener(() =>
                     {
                         InkDialogueManager.Instance.locationChange(sublocation.subLocationName);
+                        mapHUD.SetActive(false);
+                        GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
                     });
                 }
             }
@@ -125,7 +127,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    public void unlockLocation(string location)
+    public void UnlockLocation(string location)
     {
         foreach(var locations in unlockableLocations)
         {
@@ -136,7 +138,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    public void unlockSubLocation(string sublocation)
+    public void UnlockSubLocation(string sublocation)
     {
         foreach(var sublocations in unlockableSubLocations)
         {
@@ -147,7 +149,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    public bool isLocationUnlocked(string location)
+    public bool IsLocationUnlocked(string location)
     {
         foreach (var locations in unlockableLocations)
         {
@@ -159,7 +161,7 @@ public class MapManager : MonoBehaviour
         return false;
     }
 
-    public bool isSubLocationUnlocked(string sublocation)
+    public bool IsSubLocationUnlocked(string sublocation)
     {
         foreach (var sublocations in unlockableSubLocations)
         {

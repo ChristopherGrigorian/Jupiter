@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Confetti
   m_EditorClassIdentifier: 
   weaponName: Confetti
+  weaponDescription: Sparkle, sparkle!
+  weaponType: 0
   weaponSkills:
   - {fileID: 11400000, guid: bfbe2ffa7de7b0c4fa32e3c154e92c70, type: 2}

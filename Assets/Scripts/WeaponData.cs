@@ -8,6 +8,10 @@ public enum WeaponType { Gun, Sword }
 public class WeaponData : ScriptableObject
 {
     public string weaponName;
+
+    [TextArea(3, 10)]
+    public string weaponDescription;
+
     public WeaponType weaponType;
     public List<SkillData> weaponSkills;
 }

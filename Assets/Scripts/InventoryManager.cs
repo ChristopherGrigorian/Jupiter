@@ -80,12 +80,13 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (var item in acquireableItems)
         {
-            if (item.name == name)
+            if (item.itemName == name)
             {
                 items.Add(item);
                 return;
             }
         }
+        Debug.Log("Item doesn't exist.");
     }
 
     public void RemoveItem(ItemData item)

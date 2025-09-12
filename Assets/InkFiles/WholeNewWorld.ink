@@ -95,8 +95,8 @@ Boris lowers his voice a little, "There's a couple of robots back there, and I g
 
 + "Have you no urgency?"
     - "Why are you in a hurry?" he says. 
-    "You must be joking, just get us out of here." you say.
-    "Alrighty! Like I said though, we have to probably kill this robots in the way first."
+    "You must be joking, just get us out of here," you say.
+    "Alrighty! Like I said though, we have to probably kill some robots in the way first."
     ->LHC2
 
 + "GET US OUT THEN."

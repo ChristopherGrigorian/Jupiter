@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Mallet
   m_EditorClassIdentifier: 
   weaponName: Mallet
+  weaponDescription: Crush your foes. Although it has a limited moveset, this weapon
+    hits hard.
+  weaponType: 1
   weaponSkills:
   - {fileID: 11400000, guid: c0d21964e2153a048891c370fee1d9f2, type: 2}
