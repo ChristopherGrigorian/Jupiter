@@ -124,5 +124,37 @@ You both wind through endless halls until finally arriving before the robots Bor
 Boris has now joined your party.
 Prepare for combat.
 ~ StartCombat("LeftHall", "JailFinish")
+->DONE
+
+== JailFinish ==
+
+"Phew!" exhales Boris. "Hopefully no more of those freaks are around."
+You look at yourself once more, raising your hands in disbelief.
+"I'm a robot too," you say.
+"Yes, you're a freak too," says Boris.
+"How are you still... human?" you ask.
+"It's cause I'm not real!" Boris says.
+"Really?" you respond.
+"No, haha!" Boris smiles. "I went shopping for a face. You've just been stripped of everything that makes you... well... you."
+"So, I don't have a face right now?" you ask.
+"Yep! Well, not in the traditional sense" says Boris. "It's smooth and metallic, though. You of course have access to all the senses, hence you being able to see MY... GORGEOUS... MUG..."
+Boris strikes a pose and flexes.
+You roll your eyes, "Vanity will be your end, you know?"
+"I think you speak a little too close to home," Boris says. "I'm but a product, nothing of this vessel is my own creation."
+"You're very cryptic, honestly," you say.
+Boris stares at you intently, "Honestly, I'm suprised you don't remember anything, they really did wipe everything from you."
+"See, there you go again!" you exclaim.
+"No matter," Boris says. "Let's get out of here."
+Boris leads you through the facility. You eventually break out to the outside world. You feel a harsh wind. The ground you walk upon feels flimsy. A desolate vision, if anything.
+You look to Boris, "Not many guards around here for a facility like this," you say.
+"You were never supposed to escape," he responds. "Anyway, now that we're out of the building our signal can be received." 
+"Have you ever teleported before?" he says. "Actually, don't answer, you probably haven't, just grab my hand, I know a safer spot."
+You grab Boris' hand. 
+"Concentrate with me, I'm going to transfer you some location data," he says.
+You close your eyes and your mind is overwhelmed by a beautiful, small town. You see condo like, colorful homes seemingly on the outskirts of a grand chateau.
+"Okay, you may open your eyes now," says Boris. You open your eyes. 
+"You should have the proper data to teleport now. Open up your map, and select Galagos in the Galaga region. You'll no longer have to focus on a region to warp there. The system will help facilitate the experience and transport you."
+"Alright, head over there now," Boris says.
+
 
 ->DONE
