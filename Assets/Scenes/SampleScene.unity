@@ -2227,26 +2227,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockableLocations:
   - LocationName: Galaga
-    isUnlocked: 1
+    isUnlocked: 0
   - LocationName: Experiment
-    isUnlocked: 1
+    isUnlocked: 0
   unlockableSubLocations:
   - subLocationName: Experiment1
-    isUnlocked: 1
+    isUnlocked: 0
     mainLocation: Experiment
     sprite: {fileID: -6359615994749993738, guid: b310940abe30b2a4ebab9608afe420f6, type: 3}
   - subLocationName: Experiment2
-    isUnlocked: 1
+    isUnlocked: 0
     mainLocation: Experiment
     sprite: {fileID: -8535634423857798504, guid: 2e4c254c25340d943a5ae9838811c23e, type: 3}
   - subLocationName: Galagos
-    isUnlocked: 1
-    mainLocation: Galaga
-    sprite: {fileID: 5757813779995298773, guid: fe4a3bc7c4b264a4591018dc43024020, type: 3}
-  - subLocationName: HiddenGala
     isUnlocked: 0
     mainLocation: Galaga
-    sprite: {fileID: -7680934077310333772, guid: 7de5029daced54c4ea4a4bf7a84d8c4b, type: 3}
+    sprite: {fileID: 5757813779995298773, guid: fe4a3bc7c4b264a4591018dc43024020, type: 3}
   locationContainer: {fileID: 1204518016}
   sublocationConainter: {fileID: 769045490}
   mapButton: {fileID: 1939167301}
@@ -10986,6 +10982,10 @@ PrefabInstance:
     - target: {fileID: 4385995494897474369, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_Name
       value: MapButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385995494897474369, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8281236087316122574, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

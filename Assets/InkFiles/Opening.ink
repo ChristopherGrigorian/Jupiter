@@ -117,9 +117,9 @@ Images of you poking holes through all his cigarettes resurface within your mind
 You can't quite pin your emotions, but you feel yourself becoming a very potent mixture of anger and sadness. You feel like purple. You feel like if lavender didn’t have a smell.
 You direct your attention back to Almos.
 
-+ "Almos, how are we smoking? I feel like I remember telling you to stop like a million times."
++ "Almos, how are we smoking?"
     -> TB5
-+ "How do you even afford new cigarettes? I thought we blew through our allowance already?"
++ "How do you even afford new cigarettes?"
     -> TB5
     
 == TB5 ==
@@ -142,11 +142,11 @@ You try grabbing his hand to comfort him, but he quickly retracted it to his lap
     
 == TB7 ==
 Can't beat 'em join 'em, you suppose. You join Almos in looking out in the empty street.
-As the sun began to set Almos resigned from looking out. You feel him staring at you now, but you don't meet his gaze. You stare on as he just once was, not out of choice, but a feeling of necessity. 
+As the sun begins to set Almos resigns from looking out. You feel him staring at you now, but you don't meet his gaze. You stare on as he once was, not out of choice, but a feeling of necessity. 
 Something beyond starts to demand your attention. You find siren in the moon's image. 
 Were these the same forces acting upon Almos? He seemed so different today. Inexplicablly compelled to the horizon.
 
-The moon shimmeres more dramtically than before, as if were purposely dazzling you. 
+The moon shimmeres more dramtically than before, as if it were purposely dazzling you. 
 Light waves waft through the skies. They call to you. 
 An irresistible sensation akin to a rush of adrenaline overwhelms you. You feel compelled to melt away with the sky.  
 

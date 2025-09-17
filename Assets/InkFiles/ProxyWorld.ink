@@ -206,7 +206,7 @@ You interject, "Didn't you just insult me earlier for jumping off the balcony? W
 
 "Perhaps he thinks you're predicatable, or just straight pathetic. Who knows, I'm no prophet! Haha! I'm just following the script. Anyway, I'm glad you're here now. Almos wants you to enter some building over here." 
 
-<i>Boris promenades before you leading the path. Before long, you stumble upon what looks like government facility. You feel compelled to voice this to Boris.<i>
+<i>Boris promenades before you leading the path. Before long, you stumble upon what looks like a government facility. You feel compelled to voice this to Boris.<i>
 
 "Hey, isn't this a government building?" you question.
 
@@ -232,7 +232,7 @@ A blue and indigo mist continues to swirl around your legs as you walk though ea
  - "Ah, yes, of course," he says while pacing about. He circles and examines you now like a shark teasing its prey. He's dressed in gray cloths as if someone wrapped a feathery tapestry around him. The clothes carry the occasionally smear of green hues. 
  
  He halts in front of you once more, "That would be Jupiter that was calling to you."
- "Jupiter? I was looking out at the moon," you say."
+ "Jupiter? I was looking out at the moon," you say.
  "It was lovely, wasn't it?" the man says. It seems like the man just ignored what you said. 
  "It takes many shapes and forms," he continues. "Jupiter is multitude, NO, an AMALGAMATION of inexplicable feeling. 'THE PINACLE OF EXISTENCE' some might be bold enough to say." He pauses briefly to clear his throat, "It's also a very real place."
  

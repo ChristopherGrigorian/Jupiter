@@ -41,7 +41,7 @@ You huddle into the corner with a butter knife from the table.
 == G3 ==
 The door breaks open and you nearly faint. Your stomach can’t digest your beating heart and you fall to the floor in terror. Your vision becomes blurry. You can't move your legs. 
 
-You claw your way back to the table to prop yourself on a chair. You get yourself upright and notice the door is in fact open. You don't think anyone enetered the room. The room is dead.
+You claw your way back to the table to prop yourself on a chair. You get yourself upright and notice the door is in fact open. You don't think anyone entered the room. The room is dead.
 
 + "Hello?"
     -> G4

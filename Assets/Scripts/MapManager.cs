@@ -70,7 +70,7 @@ public class MapManager : MonoBehaviour
         if (type == "Locations")
         {
             previousType = "";
-            foreach(var location in unlockableLocations)
+            foreach (var location in unlockableLocations)
             {
                 if (location.isUnlocked)
                 {
@@ -85,10 +85,10 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        if (type ==  "SubLocations")
+        if (type == "SubLocations")
         {
             previousType = "Locations";
-            foreach(var sublocation in unlockableSubLocations)
+            foreach (var sublocation in unlockableSubLocations)
             {
                 if (sublocation.isUnlocked && sublocation.mainLocation == chosenLocation)
                 {
@@ -117,11 +117,12 @@ public class MapManager : MonoBehaviour
 
     public void previousMenu()
     {
-        if (previousType == "") 
+        if (previousType == "")
         {
             mapHUD.SetActive(false);
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
-        } else
+        }
+        else
         {
             ShowTab(previousType);
         }
@@ -129,7 +130,7 @@ public class MapManager : MonoBehaviour
 
     public void UnlockLocation(string location)
     {
-        foreach(var locations in unlockableLocations)
+        foreach (var locations in unlockableLocations)
         {
             if (locations.LocationName == location)
             {
@@ -140,7 +141,7 @@ public class MapManager : MonoBehaviour
 
     public void UnlockSubLocation(string sublocation)
     {
-        foreach(var sublocations in unlockableSubLocations)
+        foreach (var sublocations in unlockableSubLocations)
         {
             if (sublocations.subLocationName == sublocation)
             {
@@ -173,5 +174,12 @@ public class MapManager : MonoBehaviour
         return false;
     }
 
-    
+    public void RevealMapButton()
+    {
+        if (mapButton != null)
+        {
+            mapButton.gameObject.SetActive(true);
+        }
+    }
+
 }

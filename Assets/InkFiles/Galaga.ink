@@ -1,3 +1,4 @@
+
 == Galagos ==
 This is Galaga.
 You see a wandering merchant here. Would you like to visit their shop?

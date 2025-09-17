@@ -1,5 +1,5 @@
 == TheGarden ==
-<i>You were offered work finally and haven’t had the heart to tell Aiolos yet. You accepted the offer without him knowing. You thought he would be hurt by that. But, at the same time, you had no desire to unpack all that was to come if you had told Aiolos. 
+You were offered work finally and haven’t had the heart to tell Aiolos yet. You accepted the offer without him knowing. You thought he would be hurt by that. But, at the same time, you had no desire to unpack all that was to come if you had told Aiolos. 
 
 To spare yourself from him, you kept quiet, but that doesn’t mean you’ve spared yourself from the guilt. Aiolos can be very dramatic at times, and you’ve never lied to Aiolos before. But, being afforded a night shift at this new job–after some slight negotiation with the recruiters–has made the lying a little easier. 
 Is it really lying if you haven’t said anything? 
@@ -14,12 +14,12 @@ To manage population distributions, citizens were assigned keycards, and all exi
 
 Citizens are required to complete a second scan when they return to their residence. Failure to do so prior to the curfew could result in serious consequences–so you were informed that is. Neither Aiolos nor you had any intention of finding out.
 
-Additionally, you could only scan your keycard to leave your home during permitted time slots on par with your citizen rank. At all other points in time, exits were permanently locked. Even windows, despite being open, were fitted with detection systems to alert law enforcement to suspicious activity.<i>
+Additionally, you could only scan your keycard to leave your home during permitted time slots on par with your citizen rank. At all other points in time, exits were permanently locked. Even windows, despite being open, were fitted with detection systems to alert law enforcement to suspicious activity.
 
 -> TheGardenP2
 
 == TheGardenP2 ==
-<i>You are both brought food and toiletries at the start of each week. It usually comfortably lasts us until the next drop-off. Essentials are always provided, but since neither Aiolos nor you were employed until recently, you both would just passively gain a newly established currency as an allowance. Varying items outside of the essentials could be ordered with the new coin. 
+You are both brought food and toiletries at the start of each week. It usually comfortably lasts us until the next drop-off. Essentials are always provided, but since neither Aiolos nor you were employed until recently, you both would just passively gain a newly established currency as an allowance. Varying items outside of the essentials could be ordered with the new coin. 
 
 The selection isn’t all too exciting unfortunately. There’s some stuff like board games, playing cards, and video games for entertainment purposes, but Aiolos loved to rave of how appreciative he was of the provided selection of different bouquets of flowers. 
 
@@ -103,7 +103,7 @@ His eyes follow yours to the flower field. “It feels like we’re trapped, hon
 - “You don’t have to say anything at all. I just want to share this moment with you. We won’t have this forever, you know.”
 
 * "Do you want to head to the field of flowers?"
-- “Sure thing.” Aiolos rises from his seat gracefully and extends his hand out to you. You grab hold of his hand, and he leads you to the middle of the flower field. It feels as though the flower field gets further and furrther the more you pursue it. 
+- “Sure thing.” Aiolos rises from his seat gracefully and extends his hand out to you. You grab hold of his hand, and he leads you to the middle of the flower field. It feels as though the flower field gets further and further the more you pursue it. 
 
 "Do you hear that?" Aiolos says to you. He extends his arm out to you and blocks you from walking any further. 
 He begins shaking.
@@ -211,7 +211,7 @@ A man is speaking to you. He’s made of machine. His voice holds heart.
 You know not how to answer. The world around you is a swirling wash of green and brown echoes. 
 
 Without any effort of your own, you begin to speak.
-"It looks like I'm not fucking yearning and plagued by such intense emotions all the time. It's that I don't feel sad all the time. Why can't you understand that?"
+"It means nothingness. To be returned to nothingness, as all things should. None of this is right, I'll be a slave no longer to eternity. Why can't you understand that?"
 
 The voice that permeates from where you stand now sounds like he's crying. You look down to examine yourself. Your whole body appears to be made of metal. Your arms, your torso, your legs; you are a walking aluminum skeleton.
 
@@ -237,9 +237,9 @@ You know you should be terrified, but all you can feel is a sense of security.
 "More than you will ever know."
 You don't feel compelled to respond.
 You just wait and listen.
-"What once would have perished to the great expanse not holds home, here."
+"What once would have perished to the great expanse now holds home, here."
 "I am your God."
-"I will breathe life into once more."
+"I will breathe life into you once more."
 "A human body shall bind you no more to a flicker of existence."
 "Hearken to me, kin."
 "Welcome home, child."
@@ -265,7 +265,7 @@ Almos is bloodied and resting on the bed. He is calm; his body doesn't rise or f
 You walk to the bathroom to clean your face.
 You turn on the sink, and gather water in your cupped hands. 
 You bring the water to your face, over and over again. 
-You're more so tossing the water upon yourself and hoping it cleans you.
+You're more so tossing the water upon yourself and hoping it cleanses you.
 You're shirt becomes increasingly drenched in water.
 You look up to the mirror to see your reflection, only to be met with Almos' gaze meeting yours. His movements are identical, he blinks and raises his hand when you do. 
 You begin to cry, but Almos just stands there looking at you across the glass.
@@ -277,7 +277,7 @@ You reach out to the glass and begin caressing Almos' cheek.
 "I'm so sorry... I'm so sorry," you bellow.
 You feel a wash of vertigo come about you.
 You stumble to the balcony for some fresh air. 
-You feel sick. Your love is dead. 
+You feel sick.
 You maneuvered yourself over the banister. 
 The sun shines upon you, its glow warm and inviting. You feel Almos calling to you. 
 Your eyes glisten in the sun’s image, filling your body with strength and devotion. 
