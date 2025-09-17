@@ -270,9 +270,9 @@ You're shirt becomes increasingly drenched in water.
 You look up to the mirror to see your reflection, only to be met with Almos' gaze meeting yours. His movements are identical, he blinks and raises his hand when you do. 
 You begin to cry, but Almos just stands there looking at you across the glass.
 He just stands there and stares.
-You reach out to the glass and begin caressing Almos' cheek.
+You reach out to the glass, and your hand melts right through. The glass stretches inward and melds to your fingers. You begin caressing Almos' cheek.
 
-* "You're so beautiful."
+* "I'm so sorry."
 - You whisper sweet nothings to your reflection.
 "I'm so sorry... I'm so sorry," you bellow.
 You feel a wash of vertigo come about you.

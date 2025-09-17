@@ -138,7 +138,7 @@ You look at yourself once more, raising your hands in disbelief.
 "Really?" you respond.
 "No, haha!" Boris smiles. "I went shopping for a face. You've just been stripped of everything that makes you... well... you."
 "So, I don't have a face right now?" you ask.
-"Yep! Well, not in the traditional sense" says Boris. "It's smooth and metallic, though. You of course have access to all the senses, hence you being able to see MY... GORGEOUS... MUG..."
+"Yep! Well, not in the traditional sense" says Boris. "It's smooth and metallic, though. You of course have access to all the senses, hence you being able to see...," he pauses, "MY... GORGEOUS... MUG..."
 Boris strikes a pose and flexes.
 You roll your eyes, "Vanity will be your end, you know?"
 "I think you speak a little too close to home," Boris says. "I'm but a product, nothing of this vessel is my own creation."
