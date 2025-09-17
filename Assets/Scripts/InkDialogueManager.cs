@@ -85,9 +85,9 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("StopSong", () => SongPlayer.Instance.StopSong());
 
         story.BindExternalFunction("OpenShop", (string shopName, string continueKnot) => ShopManager.Instance.OpenShop(shopName, continueKnot));
-        story.BindExternalFunction("UnlockLocation", (string location) => MapManager.Instnace.UnlockLocation(location));
-        story.BindExternalFunction("UnlockSubLocation", (string sublocation) => MapManager.Instnace.UnlockSubLocation(sublocation));
-        story.BindExternalFunction("RevealMapButton", () => MapManager.Instnace.RevealMapButton());
+        story.BindExternalFunction("UnlockLocation", (string location) => MapManager.Instance.UnlockLocation(location));
+        story.BindExternalFunction("UnlockSubLocation", (string sublocation) => MapManager.Instance.UnlockSubLocation(sublocation));
+        story.BindExternalFunction("RevealMapButton", () => MapManager.Instance.RevealMapButton());
         ContinueStory();
     }
 
@@ -140,7 +140,7 @@ public class InkDialogueManager : MonoBehaviour
 
             heldStory = story.Continue();
 
-            typingCoroutine = StartCoroutine(DisplayLine(heldStory));
+            typingCoroutine = StartCoroutine(DisplayLine(heldStory, dialogueText));
             
         } 
         else
@@ -171,10 +171,10 @@ public class InkDialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator DisplayLine(string line)
+    IEnumerator DisplayLine(string line, TextMeshProUGUI textBox) 
     {
         isTyping = true;
-        dialogueText.text = "";
+        textBox.text = "";
 
         bool insideTag = false;
         bool audioSuppressedThisLine = false;
@@ -259,7 +259,7 @@ public class InkDialogueManager : MonoBehaviour
             if (c == '>') insideTag = false;
 
             // Append the visible chunk (handles ellipsis as one step)
-            dialogueText.text += toAppend;
+            textBox.text += toAppend;
 
             // If user skipped mid-typing, stop immediately
             if (!isTyping) break;
@@ -305,13 +305,16 @@ public class InkDialogueManager : MonoBehaviour
         }
     }
 
-    public void FadeOutSeq(string pipeSeperated,  string continueKnot)
+    public void FadeOutSeq(string pipeSeperated, string continueKnot)
     {
         StartCoroutine(FadeOutSeqCo(pipeSeperated, continueKnot));
     }
 
     private IEnumerator FadeOutSeqCo(string pipeSeperated, string continueKnot)
     {
+
+        float heldTypingSpeed = typingSpeed;
+        typingSpeed = 0.10f;
 
         yield return StartCoroutine(FadeImageAlpha(fadeImage, 0, 1));
         fadeText.gameObject.SetActive(true);
@@ -321,7 +324,7 @@ public class InkDialogueManager : MonoBehaviour
         {
             var line = (raw ?? "").Trim();
             if (string.IsNullOrEmpty(line)) continue;
-            fadeText.text = line;
+            yield return StartCoroutine(DisplayLine(line, fadeText));
 
             yield return new WaitForSeconds(3.0f);
         }
@@ -329,6 +332,8 @@ public class InkDialogueManager : MonoBehaviour
         story.ChoosePathString(continueKnot);
         ContinueStory();
         fadeText.gameObject.SetActive(false);
+
+        typingSpeed = heldTypingSpeed;
         yield return StartCoroutine(FadeImageAlpha(fadeImage, 1, 0));
     }
 
