@@ -123,11 +123,12 @@ You both wind through endless halls until finally arriving before the robots Bor
 ~ AddCharacter("Boris")
 Boris has now joined your party.
 Prepare for combat.
+~ PlaySong("Bees")
 ~ StartCombat("LeftHall", "JailFinish")
 ->DONE
 
 == JailFinish ==
-
+~ StopSong()
 "Phew!" exhales Boris. "Hopefully no more of those freaks are around."
 You look at yourself once more, raising your hands in disbelief.
 "I'm a robot too," you say.
@@ -155,6 +156,8 @@ You close your eyes and your mind is overwhelmed by a beautiful, small town. You
 "Okay, you may open your eyes now," says Boris. You open your eyes. 
 "You should have the proper data to teleport now. Open up your map, and select Galagos in the Galaga region. You'll no longer have to focus on a region to warp there. The system will help facilitate the experience and transport you."
 "Alright, head over there now," Boris says.
-
+~RevealMapButton()
+~UnlockLocation("Galaga")
+~UnlockSubLocation("Galagos")
 
 ->DONE

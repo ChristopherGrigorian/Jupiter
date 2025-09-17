@@ -20,12 +20,6 @@ You have a cigarette in hand. Smoke leaves your lips. Almos' face is briefly obs
     -> TB1
  + "..."
     ->TB1
- + "Follow Rabbit"
-    ->FollowRabbit
-+ T1
-    ->T1
-+ LH
-    ->LeftHallContinued
     
 
 == TB1 ==

@@ -2091,6 +2091,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47a1af29a76a42a4e8d2d9cbe5d4e550, type: 2}
   - {fileID: 11400000, guid: f02c21f0bfeff9a44a74c61f258ac060, type: 2}
   - {fileID: 11400000, guid: 51fc46daad58b894f8374b36d0b62a81, type: 2}
+  - {fileID: 11400000, guid: 97e4d1c294b34448488574ea184ec95a, type: 2}
   playerCharacters:
   - {fileID: 11400000, guid: 47a1af29a76a42a4e8d2d9cbe5d4e550, type: 2}
   enemyCharacters: []
@@ -2099,6 +2100,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5fd8b4393187c9b44a52a55ca0af4e36, type: 2}
   - {fileID: 11400000, guid: 6f9f250c61b14aa4795f19124fbb16ce, type: 2}
   - {fileID: 11400000, guid: 79a6588d99758104db8e2b2dcce7676c, type: 2}
+  - {fileID: 11400000, guid: 5540b1e9ad1354f669c40ffc24cf563a, type: 2}
+  - {fileID: 11400000, guid: 546b5cb91ba8b461e80d3990ade8ac12, type: 2}
   combatHudManager: {fileID: 433535024}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}

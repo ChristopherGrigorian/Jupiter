@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
-  m_Name: Divination
+  m_Name: Tetra Burst
   m_EditorClassIdentifier: 
-  skillName: Divination
-  skillDescription: Heal a target ally for 10 health points.
-  type: 1
-  power: 0
-  potency: 10
-  MPCost: 2
-  targetsEnemies: 0
+  skillName: Tetra Burst
+  skillDescription: Fire a wild bolt encapsulating a burst of color.
+  type: 0
+  power: 15
+  potency: 0
+  MPCost: 0
+  targetsEnemies: 1
   statusesToApply: []
   castSFX: {fileID: 0}
   sfxVolume: 1

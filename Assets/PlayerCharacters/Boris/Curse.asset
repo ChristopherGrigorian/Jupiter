@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
-  m_Name: Divination
+  m_Name: Curse
   m_EditorClassIdentifier: 
-  skillName: Divination
-  skillDescription: Heal a target ally for 10 health points.
-  type: 1
+  skillName: Curse
+  skillDescription: Hex the enemy, leaving a potent DoT on the enemy for 3 turns,
+    non-stacking.
+  type: 0
   power: 0
-  potency: 10
-  MPCost: 2
+  potency: 0
+  MPCost: 0
   targetsEnemies: 0
-  statusesToApply: []
+  statusesToApply:
+  - status: {fileID: 11400000, guid: 4319f68e736db4dafa563210c7269029, type: 2}
+    chance: 1
+    durationOverride: 0
+    stacks: 1
   castSFX: {fileID: 0}
   sfxVolume: 1

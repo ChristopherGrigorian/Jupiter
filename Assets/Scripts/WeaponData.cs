@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public enum WeaponType { Gun, Sword }
+public enum WeaponType { Gun, Sword, Tome}
 
 [CreateAssetMenu(menuName = "Combat/Weapon")]
 
