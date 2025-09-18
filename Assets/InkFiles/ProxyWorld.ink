@@ -66,7 +66,7 @@ You follow them for a while. Their footsteps ramp, faster and faster. To keep th
     You feel the figure approach you with malicious content. You feel the need to protect yourself. You once more materialize a revolver in your hand.
     
     The figure clanks towards you. Prepare for combat.
-    ~ AddWeapon("Revolver")
+    ~ RevealInventoryButton()
     ~ PlaySong("FacelessConstruct")
     ~ StartCombat("FacelessConstruct", "FollowRabbit1")
 

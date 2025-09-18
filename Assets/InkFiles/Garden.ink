@@ -200,7 +200,7 @@ You have no time to react before the trigger goes off.
 
 
 == ParadiseLost ==
-~ FadeOutSeq("Jupiter is an amzing place, you know! / You'll feel nothing at all! / You'll be everything and nothing at once! / Oh, how freeing Jupiter will be! / A whole new world! / A whole new frontier! / You are now playing as Aiolos.", "PL")  
+~ FadeOutSeq("Jupiter is an amazing place, you know! / You'll feel nothing at all! / You'll be everything and nothing at once! / Oh, how freeing Jupiter will be! / A whole new world! / A whole new frontier! / You are now playing as Aiolos.", "PL")  
 ->DONE
 
 == PL ==

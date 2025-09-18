@@ -224,7 +224,7 @@ public class GameController : MonoBehaviour
             yield return StartCoroutine(TargetSelection(player, chosenSkill));
             //combatHUD.SetActive(true);
 
-            if (selectionCanceled || target == null)
+            if (selectionCanceled || (!chosenSkill.isAOE && target == null))
             {
                 combatHudManager.SetAllActionButtonsInteractable(true);
                 chosenSkill = null;
@@ -242,65 +242,82 @@ public class GameController : MonoBehaviour
 
     private IEnumerator PlayerAction(Combatant player, SkillData chosenSkill)
     {
+        List<Combatant> targets;
+        if (chosenSkill.isAOE)
+            targets = EnumerateValidTargets(chosenSkill.targetsEnemies).ToList();
+        else
+            targets = target != null ? new List<Combatant> { target } : new List<Combatant>();
+
         switch (chosenSkill.type)
         {
             case SkillType.Attack:
-                int damage = chosenSkill.power;
-                if (RollToHit(player.EffectivePerception, target.EffectiveEvasiveness))
+                PlaySkillSfx(chosenSkill);
+
+                foreach (var t in targets)
                 {
-                    PlaySkillSfx(chosenSkill);
-                    if (RollToCrit(player.EffectiveSpirit))
+                    if (!t.IsAlive) continue;
+                    int damage = chosenSkill.power;
+                    string critMessage = "";
+                    if (RollToHit(player.EffectivePerception, t.EffectiveEvasiveness))
                     {
-                        StartCoroutine(ShowCombatLog($"{player}'s attack was a critical hit!"));
-                        damage *= 2;
+                        PlaySkillSfx(chosenSkill);
+                        if (RollToCrit(player.EffectiveSpirit))
+                        {
+                            critMessage = $"{player.data.characterName}'s attack was a critical hit! ";
+                            damage *= 2;
+                        }
+                        int totalDamage = damage + (player.EffectiveStrength / 2) + player.equippedWeapon.GrabWeaponPower();
+                        t.currentHP = Mathf.Max(0, t.currentHP - totalDamage);
+                        RefreshUIFor(t);
+                        yield return StartCoroutine(ShowCombatLog(critMessage + $"{t.Name} takes {totalDamage} damage!"));
                     }
-                    int totalDamage = damage + (player.EffectiveStrength / 2);
-                    target.currentHP = Mathf.Max(0, target.currentHP - totalDamage);
-                    RefreshUIFor(target);
-                    yield return StartCoroutine(ShowCombatLog($"{target.Name} takes {totalDamage} damage!"));
-                }
-                else
-                {
-                    sfxSource.PlayOneShot(target.data.dodgeSound);
-                    yield return StartCoroutine(ShowCombatLog($"{target.Name} dodges the attack!"));
+                    else
+                    {
+                        sfxSource.PlayOneShot(t.data.dodgeSound);
+                        yield return StartCoroutine(ShowCombatLog($"{t.Name} dodges the attack!"));
+                    }
+
+                    yield return StartCoroutine(TryApplyStatuses(player, t, chosenSkill));
                 }
                 break;
             case SkillType.Heal:
                 PlaySkillSfx(chosenSkill);
-                int heal = chosenSkill.potency;
-                if (heal > target.EffectiveMaxHP - target.currentHP)
+                foreach (var t in targets)
                 {
-                    target.currentHP = target.EffectiveMaxHP;
+                    if (!t.IsAlive) continue;
+                    int heal = chosenSkill.potency;
+                    t.currentHP = Mathf.Min(t.EffectiveMaxHP, t.currentHP + heal);
+                    RefreshUIFor(t);
+                    yield return StartCoroutine(ShowCombatLog($"{player.Name} healed {t.Name} for {heal}."));
+                    yield return StartCoroutine(TryApplyStatuses(player, t, chosenSkill));
                 }
-                else
-                {
-                    target.currentHP += heal;
-                }
-                RefreshUIFor(target);
-                yield return StartCoroutine(ShowCombatLog($"{player.Name} healed for {heal}."));
                 break;
             case SkillType.Buff:
                 PlaySkillSfx(chosenSkill);
-                List<StatusToApply> statusEffect = chosenSkill.statusesToApply;
-                foreach (var s in statusEffect)
+                foreach (var t in targets)
                 {
-                    for (int i = 0; i < s.status.statModifiers.Length; i++)
+                    if (!t.IsAlive) continue;
+                    List<StatusToApply> statusEffect = chosenSkill.statusesToApply;
+                    foreach (var s in statusEffect)
                     {
-                        var mod = s.status.statModifiers[i];
-                        int spiritBonus = player.EffectiveSpirit / 2;
-                        mod.flatDelta = chosenSkill.potency;
-                        mod.effectiveFlatDelta = mod.flatDelta + spiritBonus;
-                        s.status.statModifiers[i] = mod;
+                        for (int i = 0; i < s.status.statModifiers.Length; i++)
+                        {
+                            var mod = s.status.statModifiers[i];
+                            int spiritBonus = player.EffectiveSpirit / 2;
+                            mod.flatDelta = chosenSkill.potency;
+                            mod.effectiveFlatDelta = mod.flatDelta + spiritBonus;
+                            s.status.statModifiers[i] = mod;
+                        }
                     }
+                    RefreshUIFor(t);
+                    yield return StartCoroutine(ShowCombatLog($"{player.Name} utilized {chosenSkill.name}"));
+                    yield return StartCoroutine(TryApplyStatuses(player, t, chosenSkill));
                 }
-                RefreshUIFor(target);
-                yield return StartCoroutine(ShowCombatLog($"{player.Name} utilized {chosenSkill.name}"));
                 break;
             default:
                 Debug.Log("That wasn't an attack ability.");
                 break;
         }
-        yield return StartCoroutine(TryApplyStatuses(player, target, chosenSkill));
     }
 
     public IEnumerator TryApplyStatuses(Combatant source, Combatant target, SkillData skill)
@@ -420,6 +437,11 @@ public class GameController : MonoBehaviour
         combatant.currentMP -= chosenSkill.MPCost;
     }
 
+    private IEnumerable<Combatant> EnumerateValidTargets(bool targetsEnemies)
+    {
+        return turnOrder.Where(t => t.IsAlive && (targetsEnemies ? !t.isPlayerControlled : t.isPlayerControlled));
+    }
+
     private IEnumerator EnemyTurn(Combatant enemy)
     {
 
@@ -512,6 +534,32 @@ public class GameController : MonoBehaviour
 
         PedestalController lastHover = null;
 
+        if (skill.isAOE)
+        {
+            HighlightGroup(skill.targetsEnemies, true);
+
+            // confirm with LMB, cancel with RMB/Esc
+            while (true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    selectionCanceled = false;
+                    break;
+                }
+                if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+                {
+                    selectionCanceled = true;
+                    break;
+                }
+                yield return null;
+            }
+
+            // cleanup
+            HighlightGroup(skill.targetsEnemies, false);
+            cameraPan.PanTo(combatCamAnchor);
+            yield break; // target remains null on purpose for AOE
+        }
+
         while (target == null)
         {
             // (Optional) ignore when mouse over UI
@@ -584,45 +632,18 @@ public class GameController : MonoBehaviour
         if (ped) ped.SetHover(on);
     }
 
-
-    private void AllySelect()
+    private void HighlightGroup(bool targetsEnemies, bool on)
     {
-        foreach (var combatant in turnOrder)
+        foreach (var kv in pedestalMap)
         {
-            if (combatant.isPlayerControlled && combatant.IsAlive) 
-            {
-                var btn = Instantiate(combatantButtonPrefab, targetContainer);
-                btn.GetComponentInChildren<TextMeshProUGUI>().text = combatant.data.characterName;
-                btn.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    target = combatant;      
-                });
-            }
+            var c = kv.Key;
+            var ped = kv.Value;
+            if (!c.IsAlive) continue;
+
+            bool isValid = targetsEnemies ? !c.isPlayerControlled : c.isPlayerControlled;
+            if (isValid) ped.SetHover(on);
         }
     }
-
-    private void EnemySelect()
-    {
-        foreach (var combatant in turnOrder)
-        {
-            if (!combatant.isPlayerControlled && combatant.IsAlive)
-            {
-                var btn = Instantiate(combatantButtonPrefab, targetContainer);
-                btn.GetComponentInChildren<TextMeshProUGUI>().text = combatant.data.characterName;
-                btn.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    target = combatant;
-                });
-            }
-        }
-    }
-
-
-    private void ClearTargetSelection()
-    {
-        foreach (Transform child in targetContainer) Destroy(child.gameObject);
-    }
-
 
     private Coroutine flipbookCoroutine;
 

@@ -21,7 +21,9 @@ You have a cigarette in hand. Smoke leaves your lips. Almos' face is briefly obs
  + "..."
     ->TB1
  + "PL"
-    ->PL
+    ->FOF1
++ "Follow"
+    ->FollowRabbit
     
 
 == TB1 ==

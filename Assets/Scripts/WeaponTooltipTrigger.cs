@@ -1,3 +1,4 @@
+using System.Text;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,7 +13,26 @@ public class WeaponTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        string content = $"{weapon.weaponName}\nWeapon Type: {weapon.weaponType}\n{weapon.weaponDescription}";
+        var sb = new StringBuilder();
+        int lvl = InventoryManager.Instance.GetWeaponLevel(weapon);
+        int pwr = InventoryManager.Instance.GetWeaponPower(weapon);
+        sb.AppendLine($"{weapon.weaponName}");
+        sb.AppendLine($"Weapon Type: {weapon.weaponType}");
+        sb.AppendLine(weapon.weaponDescription);
+        sb.AppendLine($"Current Known Level: {lvl}");
+        sb.AppendLine($"Current Power: {pwr}");
+        sb.AppendLine("Current Skills:");
+        if (weapon.weaponSkills != null && weapon.weaponSkills.Count > 0)
+        {
+            foreach (var s in weapon.weaponSkills)
+            {
+                sb.AppendLine($" • {s?.skillName ?? "(missing)"}");
+            }
+        } else
+        {
+            sb.AppendLine(" • (none)");
+        }
+        string content = sb.ToString();
         TooltipManager.Instance.ShowTooltip(content);
     }
 

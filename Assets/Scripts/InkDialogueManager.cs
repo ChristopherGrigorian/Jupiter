@@ -88,6 +88,7 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("UnlockLocation", (string location) => MapManager.Instance.UnlockLocation(location));
         story.BindExternalFunction("UnlockSubLocation", (string sublocation) => MapManager.Instance.UnlockSubLocation(sublocation));
         story.BindExternalFunction("RevealMapButton", () => MapManager.Instance.RevealMapButton());
+        story.BindExternalFunction("RevealInventoryButton", () => InventoryManager.Instance.RevealInventoryButton());
         ContinueStory();
     }
 

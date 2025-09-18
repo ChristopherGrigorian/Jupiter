@@ -36,6 +36,9 @@ public class InventoryManager : MonoBehaviour
 
     private string previousType = "";
 
+    private readonly Dictionary<WeaponData, WeaponProgress> weaponProgress = new();
+
+
 
     [SerializeField] private GameObject featuresHUD;
     public static InventoryManager Instance;
@@ -60,20 +63,68 @@ public class InventoryManager : MonoBehaviour
         inventoryButton.onClick.AddListener(() => ShowTab("Features"));
         weaponInventoryButton.onClick.AddListener(() => ShowTab("CharacterSelectorWeapons"));
         skillTreeButton.onClick.AddListener(() => ShowTab("CharacterSelectorSkillTree"));
+
+        foreach (var w in weapons)
+        {
+            if (w == null) continue;
+            if (!weaponProgress.ContainsKey(w))
+                weaponProgress[w] = new WeaponProgress(lvl: 1);
+        }
     }
 
     public void AddWeapon(string name) 
     {
-        foreach (var weapon in acquireableWeapons) 
+        WeaponData found = acquireableWeapons.Find(w => w.name == name);
+        if (found == null) { Debug.Log("Weapon doesn't exist."); return; }
+
+        if (weapons.Contains(found))
         {
-            if (weapon.name == name)
+            bool ok = TryUpgradeWeapon(found);
+            Debug.Log(ok ? $"Upgraded {found.weaponName} to Lv.{GetWeaponLevel(found)}"
+                              : $"Could not upgrade {found.weaponName} (level cap).");
+            return;
+        }
+
+        weapons.Add(found);
+        weaponProgress[found] = new WeaponProgress(lvl: 1);
+    }
+
+    private bool TryUpgradeWeapon(WeaponData weapon)
+    {
+        if (weapon == null) return false;
+        if (!weaponProgress.TryGetValue(weapon, out var p)) return false;
+        if (p.level >= weapon.maxLevel) return false;
+
+        p.level++;
+        weaponProgress[weapon] = p;
+
+        // Unlock new skills if this level matches
+        int index = weapon.skillUnlockLevels.IndexOf(p.level);
+        if (index >= 0 && index < weapon.unlockableSkills.Count)
+        {
+            SkillData newSkill = weapon.unlockableSkills[index];
+            if (!weapon.weaponSkills.Contains(newSkill))
             {
-                weapons.Add(weapon);
-                return;
+                weapon.weaponSkills.Add(newSkill);
+                Debug.Log($"Unlocked new skill '{newSkill.skillName}' for {weapon.weaponName} at Lv.{p.level}!");
             }
         }
 
-        Debug.Log("Weapon doesn't exist.");
+        return true;
+    }
+
+    public int GetWeaponLevel(WeaponData w)
+    {
+        if (w == null) return 0;
+        return weaponProgress.TryGetValue(w, out var p) ? p.level : 0;
+    }
+
+    public int GetWeaponPower(WeaponData w)
+    {
+        if (w == null) return 0;
+        if (!weaponProgress.TryGetValue(w, out var p)) return 0;
+        // Linear growth example: base + perLevel*(level-1)
+        return w.basePower + w.powerPerLevel * Mathf.Max(0, p.level - 1);
     }
 
     public void AddItem(string name)
@@ -156,9 +207,16 @@ public class InventoryManager : MonoBehaviour
                 if (currentSelectedCharacter.equipableWeaponTypes.Contains(weapon.weaponType))
                 {
                     var btn = Instantiate(equippableWeaponPrefab, equippableWeaponsContainer);
-                    btn.GetComponentInChildren<TextMeshProUGUI>().text = weapon.weaponName;
+
+                    int lvl = GetWeaponLevel(weapon);
+                    btn.GetComponentInChildren<TextMeshProUGUI>().text = $"{weapon.weaponName} (Lv.{lvl})";
+
+
+                    var trigger = btn.GetComponent<WeaponTooltipTrigger>();
+                    if (trigger == null) trigger = btn.gameObject.AddComponent<WeaponTooltipTrigger>();
 
                     var capturedWeapon = weapon;
+                    trigger.Init(capturedWeapon);
                     var buttonComponent = btn.GetComponent<Button>();
 
                     if (currentSelectedCharacter.EquippedWeapon == capturedWeapon)
@@ -227,5 +285,10 @@ public class InventoryManager : MonoBehaviour
         {
             ShowTab(previousType);
         }
+    }
+
+    public void RevealInventoryButton()
+    {
+        inventoryButton.gameObject.SetActive(true);
     }
 }

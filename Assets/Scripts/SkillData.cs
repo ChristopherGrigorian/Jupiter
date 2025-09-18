@@ -24,7 +24,10 @@ public class SkillData : ScriptableObject
     public int power;
     public int potency;
     public int MPCost;
+
+    [Header("Targeting")]
     public bool targetsEnemies;
+    public bool isAOE = false;
 
     [Header("Optional: statuses this skill applies")]
     public List<StatusToApply> statusesToApply;
