@@ -110,6 +110,7 @@ public class EnemyAI
                     chosenTarget.currentHP -= totalDamage;
                     GameController.Instance.RefreshUIFor(chosenTarget);
                     message = $"{chosenTarget.Name} takes {totalDamage} damage.";
+                    yield return GameController.Instance.StartCoroutine(GameController.Instance.TryApplyStatuses(self, chosenTarget, chosenSkill));
                 } else
                 {
                     GameController.Instance.sfxSource.PlayOneShot(chosenTarget.data.dodgeSound);
@@ -120,12 +121,12 @@ public class EnemyAI
                 GameController.Instance.PlaySkillSfx(chosenSkill);
                 chosenTarget.currentHP += chosenSkill.potency;
                 message = $"{chosenTarget.Name} heals for {chosenSkill.potency}.";
+                yield return GameController.Instance.StartCoroutine(GameController.Instance.TryApplyStatuses(self, chosenTarget, chosenSkill));
                 break;
             default:
                 message = "Unknown skill type.";
                 break;
         }
-        yield return GameController.Instance.StartCoroutine(GameController.Instance.TryApplyStatuses(self, chosenTarget, chosenSkill));
 
         yield return GameController.Instance.StartCoroutine(GameController.Instance.ShowCombatLog(message));
         yield return new WaitForSeconds(1f);

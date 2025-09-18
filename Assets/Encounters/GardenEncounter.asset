@@ -15,5 +15,5 @@ MonoBehaviour:
   encounterID: Bees!
   enemies:
   - {fileID: 11400000, guid: 9f68739a9a23b474ea3696eb6b42d269, type: 2}
-  - {fileID: 11400000, guid: 9f68739a9a23b474ea3696eb6b42d269, type: 2}
-  - {fileID: 11400000, guid: 9f68739a9a23b474ea3696eb6b42d269, type: 2}
+  - {fileID: 11400000, guid: 364b76956dc81634bafac9a42142d093, type: 2}
+  - {fileID: 11400000, guid: de2b492af52f6d64883b5a3422ca38d0, type: 2}

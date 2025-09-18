@@ -19,6 +19,7 @@ MonoBehaviour:
   potency: 10
   MPCost: 2
   targetsEnemies: 0
+  isAOE: 1
   statusesToApply: []
   castSFX: {fileID: 0}
   sfxVolume: 1
