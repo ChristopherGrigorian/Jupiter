@@ -155,7 +155,7 @@ You grab Boris' hand.
 You close your eyes and your mind is overwhelmed by a beautiful, small town. You see condo like, colorful homes seemingly on the outskirts of a grand chateau.
 "Okay, you may open your eyes now," says Boris. You open your eyes. 
 "You should have the proper data to teleport now. Open up your map, and select Galagos in the Galaga region. You'll no longer have to focus on a region to warp there. The system will help facilitate the experience and transport you."
-"Alright, head over there now," Boris says.
+VAR FirstTimeGalaga = true
 ~RevealMapButton()
 ~UnlockLocation("Galaga")
 ~UnlockSubLocation("Galagos")

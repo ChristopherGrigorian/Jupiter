@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockableLocations:
   - LocationName: Galaga
-    isUnlocked: 0
+    isUnlocked: 1
   - LocationName: Experiment
     isUnlocked: 0
   unlockableSubLocations:
@@ -2243,7 +2243,7 @@ MonoBehaviour:
     mainLocation: Experiment
     sprite: {fileID: -8535634423857798504, guid: 2e4c254c25340d943a5ae9838811c23e, type: 3}
   - subLocationName: Galagos
-    isUnlocked: 0
+    isUnlocked: 1
     mainLocation: Galaga
     sprite: {fileID: 5757813779995298773, guid: fe4a3bc7c4b264a4591018dc43024020, type: 3}
   locationContainer: {fileID: 1204518016}
@@ -10992,7 +10992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4385995494897474369, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8281236087316122574, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
