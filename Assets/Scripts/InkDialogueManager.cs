@@ -7,6 +7,7 @@ using System.Collections;
 public class InkDialogueManager : MonoBehaviour
 {
     [SerializeField] private GameController gameController;
+    [SerializeField] private GameObject titleScreenPanel;
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
@@ -15,10 +16,18 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject buttonContainer;
     [SerializeField] private Button choiceButtonPrefab;
+    [SerializeField] private GameObject dialoguePanel;
+
+    [Header("Cutscene UI")]
+    [SerializeField] private TextMeshProUGUI custceneText;
+    [SerializeField] private GameObject cutscenePanel;
+    [SerializeField] private Image custceneImage;
+    [SerializeField] private RectTransform cutsceneClickZone;
+    private bool cutsceneMode = false;
 
     [Header("Params")]
     [SerializeField] private float typingSpeed = 0.04f;
-    [SerializeField] private RectTransform clickZone;
+    [SerializeField] private RectTransform normalClickZone;
     [SerializeField] private Camera eventCamera;
 
     // === Fade sequence support ===
@@ -49,7 +58,7 @@ public class InkDialogueManager : MonoBehaviour
 
   
 
-    private Story story;
+    public Story story;
 
     
     private Coroutine typingCoroutine;
@@ -89,7 +98,9 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("UnlockSubLocation", (string sublocation) => MapManager.Instance.UnlockSubLocation(sublocation));
         story.BindExternalFunction("RevealMapButton", () => MapManager.Instance.RevealMapButton());
         story.BindExternalFunction("RevealInventoryButton", () => InventoryManager.Instance.RevealInventoryButton());
-        ContinueStory();
+        story.BindExternalFunction("CutsceneMode", () => CutsceneMode());
+        story.BindExternalFunction("StopCutsceneMode", () => StopCutsceneMode());
+
     }
 
     void Update() 
@@ -97,6 +108,14 @@ public class InkDialogueManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            RectTransform clickZone;
+            if (cutsceneMode)
+            {
+                clickZone = cutsceneClickZone;
+            } else
+            {
+                clickZone = normalClickZone;
+            }
             Vector2 localMousePos;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 clickZone, Input.mousePosition, eventCamera, out localMousePos);
@@ -141,7 +160,13 @@ public class InkDialogueManager : MonoBehaviour
 
             heldStory = story.Continue();
 
-            typingCoroutine = StartCoroutine(DisplayLine(heldStory, dialogueText));
+            if (cutsceneMode)
+            {
+                typingCoroutine = StartCoroutine(DisplayLine(heldStory, custceneText));
+            } else
+            {
+                typingCoroutine = StartCoroutine(DisplayLine(heldStory, dialogueText));
+            }
             
         } 
         else
@@ -390,9 +415,33 @@ public class InkDialogueManager : MonoBehaviour
         StopTypingSfx(); // safety in case the object is hidden mid-typing
     }
 
+
+    public void CutsceneMode()
+    {
+        cutsceneMode = true;
+        cutscenePanel.SetActive(true);
+    }
+
+    public void StopCutsceneMode()
+    {
+        cutsceneMode = false;
+        cutscenePanel.SetActive(false);
+    }
+
     public void locationChange(string location)
     {
         story.ChoosePathString(location);
         ContinueStory();
+    }
+
+    public void ShowDialoguePanelFromTitle()
+    {
+        dialoguePanel.SetActive(true);
+        titleScreenPanel.SetActive(false);
+
+        if (story.currentChoices.Count > 0)
+            DisplayChoices();
+        else if (story.canContinue && !isTyping)
+            ContinueStory();
     }
 }

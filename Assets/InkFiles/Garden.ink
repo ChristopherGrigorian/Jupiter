@@ -113,6 +113,7 @@ You look over to him and his face is flush with panic.
 Aiolos is encouraged by your confidence. He reciprocally manifests a gun in hand.
 Two bees materialize before you. Prepare for combat.
 ~ AddCharacter("Almos")
+~ AddWeapon("Sword")
 ~ StopSong()
 ~ PlaySong("Bees")
 ~ StartCombat("Bees!", "FOF2")

@@ -39,6 +39,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Image locationImage;
     [SerializeField] private GameObject mapHUD;
 
+    public bool revealedMap = false;
+
     public static MapManager Instance;
 
     private void Awake()
@@ -179,6 +181,7 @@ public class MapManager : MonoBehaviour
         if (mapButton != null)
         {
             mapButton.gameObject.SetActive(true);
+            revealedMap = true;
         }
     }
 

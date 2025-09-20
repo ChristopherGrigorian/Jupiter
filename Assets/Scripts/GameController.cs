@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;
+using Mono.Cecil;
 
 public class GameController : MonoBehaviour
 {
@@ -306,6 +307,27 @@ public class GameController : MonoBehaviour
                             int spiritBonus = player.EffectiveSpirit / 2;
                             mod.flatDelta = chosenSkill.potency;
                             mod.effectiveFlatDelta = mod.flatDelta + spiritBonus;
+                            s.status.statModifiers[i] = mod;
+                        }
+                    }
+                    RefreshUIFor(t);
+                    yield return StartCoroutine(ShowCombatLog($"{player.Name} utilized {chosenSkill.name}"));
+                    yield return StartCoroutine(TryApplyStatuses(player, t, chosenSkill));
+                }
+                break;
+            case SkillType.Debuff:
+                PlaySkillSfx(chosenSkill);
+                foreach (var t in targets)
+                {
+                    if (!t.IsAlive) continue;
+                    List<StatusToApply> statusEffect = chosenSkill.statusesToApply;
+                    foreach (var s in statusEffect)
+                    {
+                        for (int i = 0; i < s.status.statModifiers.Length; i++)
+                        {
+                            var mod = s.status.statModifiers[i];
+                            mod.flatDelta = chosenSkill.potency;
+                            mod.effectiveFlatDelta = mod.flatDelta;
                             s.status.statModifiers[i] = mod;
                         }
                     }

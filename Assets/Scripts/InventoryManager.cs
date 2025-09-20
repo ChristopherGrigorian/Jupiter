@@ -36,9 +36,9 @@ public class InventoryManager : MonoBehaviour
 
     private string previousType = "";
 
-    private readonly Dictionary<WeaponData, WeaponProgress> weaponProgress = new();
+    public Dictionary<WeaponData, WeaponProgress> weaponProgress = new();
 
-
+    public bool revealedInvenetory = false;
 
     [SerializeField] private GameObject featuresHUD;
     public static InventoryManager Instance;
@@ -289,6 +289,7 @@ public class InventoryManager : MonoBehaviour
 
     public void RevealInventoryButton()
     {
+        revealedInvenetory = true;
         inventoryButton.gameObject.SetActive(true);
     }
 }

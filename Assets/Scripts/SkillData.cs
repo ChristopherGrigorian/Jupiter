@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SkillType { Attack, Heal, Special, Buff }
+public enum SkillType { Attack, Heal, Special, Buff, Debuff }
 
 [System.Serializable]
 public struct StatusToApply

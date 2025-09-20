@@ -36,10 +36,8 @@ You have a cigarette in hand. Smoke leaves your lips. Almos' face is briefly obs
 Almos also has a cigarette in his hand. Two days ago, you poked holes through all of his cigarettes so he wouldn’t be able to smoke them. You’re not sure how either of you is smoking. The cigarettes should have been duds. 
 Your mind is a jumbled mess, trying to figure out all the details. 
 You ignore the thought for now in defeat.
-
 The balcony is small. You and Almos are sitting upon an aluminum patio set. Just two chairs and a small circular table between you. 
 Three months ago, you both barely sat here. It has become something of a ritual for you both to sit here and watch the sunset.
-
 The aluminum of the table seems to be falling apart. You don’t blame the furniture, really, for not holding up. Neither you nor Almos took any particular measures to care for it. It was a cheap set, anyway.
 
 + _Kick the table leg in frustration._
