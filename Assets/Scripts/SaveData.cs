@@ -19,6 +19,7 @@ public class SaveData : ScriptableObject
     [Header("Ink snapshot (serialized in this SO)")]
     [TextArea(3, 30)]
     [SerializeField] private string inkStoryJson = "";   // holds Story.state JSON
+    private string currentStoryText = "";
 
     public bool storyFlippedInventory = false;
     public bool storyFlippedMap = false;
@@ -29,6 +30,7 @@ public class SaveData : ScriptableObject
         weaponProgress = InventoryManager.Instance.weaponProgress;
         items = InventoryManager.Instance.items;
         playerCharacters = GameController.Instance.playerCharacters;
+        currentStoryText = InkDialogueManager.Instance.heldStory;
 
         storyFlippedInventory = InventoryManager.Instance.revealedInvenetory;
         storyFlippedMap = MapManager.Instance.revealedMap;
@@ -42,6 +44,7 @@ public class SaveData : ScriptableObject
         InventoryManager.Instance.weaponProgress = weaponProgress;
         InventoryManager.Instance.items = items;
         GameController.Instance.playerCharacters = playerCharacters;
+        InkDialogueManager.Instance.RestoreDialogueText(currentStoryText);
         
         if (storyFlippedMap) MapManager.Instance.RevealMapButton();
         if (storyFlippedInventory) InventoryManager.Instance.RevealInventoryButton();
@@ -64,7 +67,7 @@ public class SaveData : ScriptableObject
             dm.story.state.LoadJson(inkStoryJson);
 
         // 2) Now show the panel (and only advance if you want)
-        dm.ShowDialoguePanelFromTitle();
+        dm.ShowDialoguePanelFromTitleLoad();
         // Optional: if you want to advance immediately after load:
         // if (dm.story.canContinue) dm.locationChange(GetCurrentKnot(dm.story)); // or dm.ContinueStory()
     }

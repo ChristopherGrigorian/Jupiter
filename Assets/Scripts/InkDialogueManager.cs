@@ -67,7 +67,7 @@ public class InkDialogueManager : MonoBehaviour
     private bool choicesShownThisLine = false;
 
 
-    private string heldStory = "";
+    public string heldStory = "";
 
 
     public static InkDialogueManager Instance;
@@ -434,14 +434,25 @@ public class InkDialogueManager : MonoBehaviour
         ContinueStory();
     }
 
-    public void ShowDialoguePanelFromTitle()
+    public void ShowDialoguePanelFromTitleLoad()
     {
         dialoguePanel.SetActive(true);
         titleScreenPanel.SetActive(false);
 
         if (story.currentChoices.Count > 0)
             DisplayChoices();
-        else if (story.canContinue && !isTyping)
-            ContinueStory();
+    }
+
+    public void ShowDialoguePanelFromTitleNew()
+    {
+        dialoguePanel.SetActive(true);
+        titleScreenPanel.SetActive(false);
+
+        ContinueStory();
+    }
+
+    public void RestoreDialogueText(string text)
+    {
+        dialogueText.text = text;
     }
 }
