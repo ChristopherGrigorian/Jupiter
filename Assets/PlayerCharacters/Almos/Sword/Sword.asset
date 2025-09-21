@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec98e70f74baca4bb8d4bb9df2d85d2, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
+  id: Sword
   weaponName: Sword
+  weaponDescription: 
   weaponType: 1
   weaponSkills:
   - {fileID: 11400000, guid: ad590a69d9e10cb41af3fb58cc6e86ab, type: 2}
+  basePower: 10
+  powerPerLevel: 5
+  maxLevel: 10
+  skillUnlockLevels: 
+  unlockableSkills: []

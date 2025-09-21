@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
   m_Name: Almos
   m_EditorClassIdentifier: 
+  id: Almos
   characterName: Almos
   level: 1
   experience: 0
@@ -28,7 +29,9 @@ MonoBehaviour:
   Skills:
   - {fileID: 11400000, guid: ca5517b66add167439e54ffbaccf148e, type: 2}
   Images: []
+  battleImage: {fileID: 0}
   droppableWeapons: []
+  heldCoin: 0
   skillTree: {fileID: 11400000, guid: 8c3973b1cbe095a42acefcd107f9872c, type: 2}
   unlockedNodeIds: []
   equippedSkills: []

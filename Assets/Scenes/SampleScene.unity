@@ -1376,7 +1376,7 @@ PrefabInstance:
     - target: {fileID: 8281236087316122574, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: da41c0659e2f5974d9f2c72e3fb0e262, type: 2}
+      objectReference: {fileID: 11400000, guid: 70de636764bddbf408d1e10a2d8b3780, type: 2}
     - target: {fileID: 8281236087316122574, guid: dbcfef4ee110e80479729d76ae64f421, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: da41c0659e2f5974d9f2c72e3fb0e262, type: 2}
+      - m_Target: {fileID: 11400000, guid: 70de636764bddbf408d1e10a2d8b3780, type: 2}
         m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 1
@@ -2797,8 +2797,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f02c21f0bfeff9a44a74c61f258ac060, type: 2}
   - {fileID: 11400000, guid: 51fc46daad58b894f8374b36d0b62a81, type: 2}
   - {fileID: 11400000, guid: 97e4d1c294b34448488574ea184ec95a, type: 2}
-  playerCharacters:
-  - {fileID: 11400000, guid: 47a1af29a76a42a4e8d2d9cbe5d4e550, type: 2}
+  playerCharacters: []
   enemyCharacters: []
   dialogueManager: {fileID: 433535021}
   allEncounters:
@@ -2867,8 +2866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9441414e39dd9da4ebd01f4de2a380db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
+  weapons: []
   acquireableWeapons:
   - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
   - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}

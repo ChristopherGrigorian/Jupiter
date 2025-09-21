@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec98e70f74baca4bb8d4bb9df2d85d2, type: 3}
   m_Name: Revolver
   m_EditorClassIdentifier: 
+  id: Revolver
   weaponName: Revolver
   weaponDescription: Standard revolver. Rabbit helped you initially manifest this
     weapon.

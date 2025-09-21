@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
   m_Name: Boris
   m_EditorClassIdentifier: 
+  id: Boris
   characterName: Boris
   level: 3
   experience: 0

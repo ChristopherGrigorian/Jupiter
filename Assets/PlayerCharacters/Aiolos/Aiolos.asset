@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
   m_Name: Aiolos
   m_EditorClassIdentifier: 
+  id: Aiolos
   characterName: Aiolos
   level: 2
   experience: 143

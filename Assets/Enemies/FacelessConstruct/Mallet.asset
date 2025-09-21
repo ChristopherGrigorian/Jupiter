@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec98e70f74baca4bb8d4bb9df2d85d2, type: 3}
   m_Name: Mallet
   m_EditorClassIdentifier: 
+  id: Mallet
   weaponName: Mallet
   weaponDescription: Crush your foes. Although it has a limited moveset, this weapon
     hits hard.
   weaponType: 1
   weaponSkills:
   - {fileID: 11400000, guid: c0d21964e2153a048891c370fee1d9f2, type: 2}
+  basePower: 10
+  powerPerLevel: 5
+  maxLevel: 10
+  skillUnlockLevels: 
+  unlockableSkills: []

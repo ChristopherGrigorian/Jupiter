@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247f5de333605452c81ad6f977187143, type: 3}
-  m_Name: Heal Potion
+  m_Script: {fileID: 11500000, guid: 70d22273922dd4246baa721b920f7cfa, type: 3}
+  m_Name: Save
   m_EditorClassIdentifier: 
-  id: HPPOTION
-  itemName: Health Potion
-  skillAttached: {fileID: 11400000, guid: 43c280c96b26446f5ac076681207cb07, type: 2}

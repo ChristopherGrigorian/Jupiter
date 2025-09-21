@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "Combat/Character")]
 public class CharacterData : ScriptableObject
 {
+    public string id;
     public string characterName;
     public int level = 1;
     public int experience;
