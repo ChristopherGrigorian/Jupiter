@@ -1,11 +1,5 @@
 using System.Collections.Generic;
-using Ink.Parsed;
-using Ink.Runtime;
 using UnityEngine;
-
-using System.IO;
-using Ink.UnityIntegration;
-using UnityEditor.Overlays;
 
 [CreateAssetMenu(menuName = "Saves/SaveData")]
 public class SaveData : ScriptableObject
@@ -36,6 +30,7 @@ public class SaveData : ScriptableObject
         storyFlippedMap = MapManager.Instance.revealedMap;
 
         SaveInkStory();
+        Application.Quit();
     }
 
     public void LoadGame()
