@@ -1,10 +1,9 @@
 == WNW ==
 You awaken in a cylindrical chamber. On the other side of your glass prison is a room filled with wires and monitors. 
-You know not whether you were being experimented on.
-You hold your palms to your face. Just like the dream, you are once more made of metal.
-You are both man and machine. Equivocally, they blur into the same thing. 
-"Almos?" you call out.
-There is no response.
+You feel panicked. Your memories feel incomplete and fragmented. You know not whether you were being experimented on.
+This place feels wholly unfamiliar to you.
+You hold your palms to your face.
+You feel yourself to be a mixture of both man and machine. Equivocally, they blur into the same thing. 
 You metallic head falls into your metallic hands in frustration. They grind and clink upon each other.
 You feel everything, as if the very metal itself was imbued with nerves.
 You touch the glass that encapsulates you. 

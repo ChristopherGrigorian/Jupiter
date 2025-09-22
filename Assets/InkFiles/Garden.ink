@@ -223,6 +223,7 @@ You close your eyes and meditate. You bring focus back to yourself, and when you
 You repeat this until the heavy shroud of rust thins out with each episode you re-live. 
 You begin to hear all. See all. 
 You and Almos become one.
+You remember everything. The wrongs you've done. The things you've tried to change.
 
 + _Continue..._
     -> PL2
@@ -230,26 +231,36 @@ You and Almos become one.
 == PL2 ==
 Your vision fades.
 You feel a compelling force surrounding your body.
-You know you should be terrified, but all you can feel is a sense of security.
+You know you should be terrified, but all you can feel an artificial sense of security.
 
 "I've finally found you," a voice calls. 
 "It was no small effort to carefully pluck you from the expanse."
-"You have been saved. I cherish you, so deeply, Aiolos."
+"You have been saved, once more. I cherish you, so deeply, Aiolos."
 "More than you will ever know."
 You don't feel compelled to respond.
 You just wait and listen.
+"I know you don't believe me anymore, but this is what's best for everyone."
+"I didn't expect you to crawl out of your prison with such fever."
+"I suppose your mission was just that important to you."
+"It taints your innards and sprawls out of you."
+"A ruthless infection, if anything," the voice sighs. "But, it's no matter, I'll cleanse you once more."
+"Like all new devotees, I'll humor you with the same spiel."
+The voice clears its throat.
 "What once would have perished to the great expanse now holds home, here."
 "I am your God."
 "I will breathe life into you once more."
 "A human body shall bind you no more to a flicker of existence."
 "Hearken to me, kin."
 "Welcome home, child."
-"Welcome to Jup-."
-The voice gets cut off.
-You feel the force unravel and dissipate from around your body.
-You don't feel enraptured or under siren.
+
 Your vision returns to you.
 "Welcome to Jupiter..." you mumble to yourself.
+In that moment, you feel yourself scorching. What started as a tingling becomes a full on burning sensation that seeks to suffocate you.
+The pain is almost unbearable. You feel your identity slipping away from you once more. A flame shreds your memories and guts to pieces.
+You feel yourself unraveling, and with it goes the force that once surrounded your body.
+You no longer feel enraptured or under siren.
+You feel empty, and dizzy.
+Your vision cuts out once more.
 -> PL3
 
 == PL3 ==
@@ -262,26 +273,26 @@ Your vision returns to you.
 == WorldOfRot ==
 Your vision is blurry, and your heart is pounding out of your chest. 
 You have a knife gripped in your hand. Your eyes begin to focus. 
-Almos is bloodied and resting on the bed. He is calm; his body doesn't rise or fall. You’re stricken with grief. 
+Almos is bloodied and resting on the bed. He is calm; his body doesn't rise or fall. 
 You walk to the bathroom to clean your face.
 You turn on the sink, and gather water in your cupped hands. 
 You bring the water to your face, over and over again. 
 You're more so tossing the water upon yourself and hoping it cleanses you.
 You're shirt becomes increasingly drenched in water.
 You look up to the mirror to see your reflection, only to be met with Almos' gaze meeting yours. His movements are identical, he blinks and raises his hand when you do. 
-You begin to cry, but Almos just stands there looking at you across the glass.
-He just stands there and stares.
-You reach out to the glass, and your hand melts right through. The glass stretches inward and melds to your fingers. You begin caressing Almos' cheek.
+You don't feel anything when looking at his image. Rather, you can't exactly pinpoint your emotions in this moment. Neither grief nor relief comes to you.
+Everything is just cold, incalculably cold.
+Almos stands there looking at you from across the glass.
+You reach out to the glass, and your hand melts right through. The glass stretches inward and melds to your fingers. You grab hold of Almos' shoulder.
 
 * "I'm so sorry."
 - You whisper sweet nothings to your reflection.
-"I'm so sorry... I'm so sorry," you bellow.
 You feel a wash of vertigo come about you.
 You stumble to the balcony for some fresh air. 
-You feel sick.
-You maneuvered yourself over the banister. 
+You feel so cold.
 The sun shines upon you, its glow warm and inviting. You feel Almos calling to you. 
+You maneuver yourself over the banister.
 Your eyes glisten in the sun’s image, filling your body with strength and devotion. 
-Although nobody is watching you this time, you fall seven stories down onto the street. 
+With only yourself as witness, you fall seven stories down onto the street. 
 ~ FadeOutSeq("", "")
 -> Rabbit
