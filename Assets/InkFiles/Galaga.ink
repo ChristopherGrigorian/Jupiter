@@ -1,3 +1,5 @@
+VAR SpokeToWoman = false
+VAR TTBAC = false
 
 = Galagos 
 {FirstTimeGalaga:
@@ -35,8 +37,12 @@ If you don't interupt Anzhela now, she'll just go on forever.
 "Would you like to visit their shop?
 +  Enter Anzhela's Shop
     -> AnzhelaShop
-* _Enter the chateau._
++ _Enter the chateau._
+    {TTBAC:
+    ->Chateau
+    - else:
     ->ANZWAR
+    }
 + _Leave the quartyard._
     ->FrontOfQuartyard
 }
@@ -72,7 +78,7 @@ You walk along the perimeter, guided by tall hedges that encapsulate the quartya
 == Condos ==
 You're met with a small strip of colorful condos. A woman can be seen resting on one of the porches.
 + _Talk to the woman._
-    VAR SpokeToWoman = true
+    ~ SpokeToWoman = true
     ->TTW
 + _Turn around._
     You turn around and head back around the corner once more. 
@@ -115,5 +121,59 @@ The woman no longer wishes to speak to you. You get off of her porch.
 ->DONE
 
 == TTB ==
-Nothing here yet.
+"Finally decided to talk to little ol' me?" Boris snickers, "I'm flattered, really."
+Boris stands up from the bench. "So, how do you like this place?"
+
++ "It's nice, I guess."
+"Is that so? I sense a bit of doubt," he says.
+    ->TTB1
++ "A little over the top for my tastes."
+"Presumptious as ever, perhaps some things truly never change about a person, even after severance."
+    ->TTB1
+    
+== TTB1 ==
+You're about to interject, but Boris interupts you.
+"Have you met the residents of this place yet? Andromeda is a particularly fierce character... "
+"I'm actually quite afraid of her," Boris says while wringing his hands.
+
+{SpokeToWoman:
++ "I've spoken to her. I'm not sure she wishes to speak with with me any longer, though."
+    Boris sighs, "Oh, as unforgiving as ever. I hope you don't think her rude... she's just, wounded, I would say."
+    ->TTB2
+- else:
++ "No, I haven't spoken to her yet."
+    "No matter," says Boris, "You may end up saying the wrong things, I'm not sure she'd appreciate seeing you like this, anyway."
+    ->TTB2
+}
+
+== TTB2 ==
+"Yeah...um" you mutter. You get a little choked up. You don't feel yourself to be sane. Everything is just so foreign, and upsetting, actually. 
+Boris senses your discomfort, "You must feel pretty overwhelmed right now," Boris says. "Rest assured, while you may have forgotten everything, I have never forgotten the mission we set out on! I'm here to guide you, every step of the way."
+Boris let's out one of his atrocious laughs again, "Consider me your rock, even though you're probably going to be the one that's holding me back!"
+You think Boris is a bitch.
+"Anyway..." says Boris, "In order for you not to be the rock in this situation, we kind of have to up your combat prowess. The people we're messing with are no joke. Luckily, the chateau is overrun with monsters at the moment."
+"It's been a while since I've done some cleaning, but now that you're here we can do some chore-," Boris stutters, "I mean combat together."
+
++ "How has the chateau become like this?"
+- "Well..." Boris says, "Some of your creations sort of went rogue a while back. We sealed them in the chateau for now."
+
++ "Why wait until now to deal with the problem?"
+- "Mostly laziness," says Boris, "Besides, why's that important at this point? You may be able to rekindle some memories if you see the inside."
+The prospect of regaining some of your memories has peaked your interest in pursuing the chateau. You know nothing about these 'creations' that Boris speaks of, much less that he claims they belong to you. You hold these thoughts close by as you set your sights on the chateau.
+
++ "Alright, let's get going."
+    ~ TTBAC = true
+    -> TTB3
+    
+== TTB3 ==
+"Great!" chimes Boris. "Before we get going, I should let you know about upgrading your weapon. When you continuously run into visions of weapons, your familiarity with them becomes enhanced, and therby increases their power. Most weapons even gain new skills when they get upgraded!"
+Walk with me, Boris gestures. You walk with him towards the front of the quartyard. 
+"Anzhela, the merchant in the quartyard, will sell you a vision, or rather data, about specific weapons," Boris says, "I think she has a revolver for sale. If you haven't already, you should really buy that from her to enhance your ability to manifest your revolver."
+
++ "Understood."
+- "Great, I'll leave you here, meet me at the chateau when you're ready."
+->FrontOfQuartyard
+
+== Chateau ==
+End of current written game. Thank you for playing.
 ->DONE
