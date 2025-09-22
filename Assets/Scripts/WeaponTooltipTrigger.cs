@@ -26,11 +26,11 @@ public class WeaponTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointe
         {
             foreach (var s in weapon.weaponSkills)
             {
-                sb.AppendLine($" • {s?.skillName ?? "(missing)"}");
+                sb.AppendLine($" - {s?.skillName ?? "(missing)"}");
             }
         } else
         {
-            sb.AppendLine(" • (none)");
+            sb.AppendLine(" - (none)");
         }
         string content = sb.ToString();
         TooltipManager.Instance.ShowTooltip(content);

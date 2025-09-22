@@ -105,7 +105,7 @@ public class SaveData : ScriptableObject
             ? InkDialogueManager.Instance.story.state.ToJson()
             : "";
 
-        snap.storyFlippedInventory = InventoryManager.Instance.revealedInvenetory;
+        snap.storyFlippedInventory = InventoryManager.Instance.revealedInventory;
         snap.storyFlippedMap = MapManager.Instance.revealedMap;
 
         return snap;

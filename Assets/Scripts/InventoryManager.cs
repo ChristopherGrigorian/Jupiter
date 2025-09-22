@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -34,11 +35,16 @@ public class InventoryManager : MonoBehaviour
     public Button weaponInventoryButton;
     public Button skillTreeButton;
 
+    [Header("Button Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip pressedClip;
+
     private string previousType = "";
 
     public Dictionary<WeaponData, WeaponProgress> weaponProgress = new();
 
-    public bool revealedInvenetory = false;
+    public bool revealedInventory = false;
 
     [SerializeField] private GameObject featuresHUD;
     public static InventoryManager Instance;
@@ -72,7 +78,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddWeapon(string name) 
+    public void AddWeapon(string name)
     {
         WeaponData found = acquireableWeapons.Find(w => w.name == name);
         if (found == null) { Debug.Log("Weapon doesn't exist."); return; }
@@ -146,7 +152,7 @@ public class InventoryManager : MonoBehaviour
         {
             items.Remove(item);
         }
-    } 
+    }
 
     public void AddCoin(int number)
     {
@@ -174,6 +180,7 @@ public class InventoryManager : MonoBehaviour
             foreach (var character in GameController.Instance.playerCharacters)
             {
                 var btn = Instantiate(characterSelectionPrefab, characterSelectionContainer);
+                PlaceButtonNoises(btn);
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
@@ -190,6 +197,8 @@ public class InventoryManager : MonoBehaviour
             {
                 var btn = Instantiate(characterSelectionPrefab, characterSelectionContainer);
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
+
+                PlaceButtonNoises(btn);
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     Debug.Log($"[InventoryManager] Clicked character '{character.characterName}' -> open SkillTree");
@@ -199,10 +208,10 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (type == "EquippableWeapons") 
+        if (type == "EquippableWeapons")
         {
             previousType = "CharacterSelectorWeapons";
-            foreach(var weapon in weapons)
+            foreach (var weapon in weapons)
             {
                 if (currentSelectedCharacter.equipableWeaponTypes.Contains(weapon.weaponType))
                 {
@@ -210,8 +219,8 @@ public class InventoryManager : MonoBehaviour
 
                     int lvl = GetWeaponLevel(weapon);
                     btn.GetComponentInChildren<TextMeshProUGUI>().text = $"{weapon.weaponName} (Lv.{lvl})";
-
-
+                    PlaceButtonNoises(btn);
+    
                     var trigger = btn.GetComponent<WeaponTooltipTrigger>();
                     if (trigger == null) trigger = btn.gameObject.AddComponent<WeaponTooltipTrigger>();
 
@@ -254,18 +263,21 @@ public class InventoryManager : MonoBehaviour
             controller.Bind(currentSelectedCharacter);
             return;
         }
-        
+
     }
 
     private void SelectButton(Button btn)
     {
-        // Reset the previous button�s color
+        // Reset the previous buttons color
         if (currentlySelectedBtn != null)
-            currentlySelectedBtn.GetComponent<Image>().color = defaultColor;
+        {
+            EventSystem eventsystem = EventSystem.current;
+            eventsystem.SetSelectedGameObject(null);
+        }
 
         // Apply red to the newly selected button
         currentlySelectedBtn = btn;
-        currentlySelectedBtn.GetComponent<Image>().color = selectedColor;
+        btn.Select();
     }
 
     private void ClearAll()
@@ -276,11 +288,11 @@ public class InventoryManager : MonoBehaviour
 
     public void previousMenu()
     {
-        if (previousType == "") 
+        if (previousType == "")
         {
             featuresHUD.SetActive(false);
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
-        } 
+        }
         else
         {
             ShowTab(previousType);
@@ -289,7 +301,17 @@ public class InventoryManager : MonoBehaviour
 
     public void RevealInventoryButton()
     {
-        revealedInvenetory = true;
+        revealedInventory = true;
         inventoryButton.gameObject.SetActive(true);
+    }
+
+    private void PlaceButtonNoises(GameObject button)
+    {
+        button.gameObject.AddComponent<ButtonNoise>();
+        var grabbedButtonNoise = button.GetComponentInChildren<ButtonNoise>();
+        grabbedButtonNoise.AddAudioSource(audioSource);
+        grabbedButtonNoise.AddHoverClip(hoverClip);
+        grabbedButtonNoise.AddPressedClip(pressedClip);
+        grabbedButtonNoise.AssignSelf(button.GetComponentInChildren<Button>());
     }
 }

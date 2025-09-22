@@ -39,6 +39,11 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Image locationImage;
     [SerializeField] private GameObject mapHUD;
 
+    [Header("Button Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip pressedClip;
+
     public bool revealedMap = false;
 
     public static MapManager Instance;
@@ -77,6 +82,7 @@ public class MapManager : MonoBehaviour
                 if (location.isUnlocked)
                 {
                     var btn = Instantiate(buttonPrefab, locationContainer);
+                    PlaceButtonNoises(btn);
                     btn.GetComponentInChildren<TextMeshProUGUI>().text = location.LocationName;
                     btn.GetComponent<Button>().onClick.AddListener(() =>
                     {
@@ -95,6 +101,7 @@ public class MapManager : MonoBehaviour
                 if (sublocation.isUnlocked && sublocation.mainLocation == chosenLocation)
                 {
                     var btn = Instantiate(buttonPrefab, sublocationConainter);
+                    PlaceButtonNoises(btn);
                     var mapButtonScript = btn.AddComponent<ButtonHoverImage>();
                     mapButtonScript.targetImage = locationImage;
                     mapButtonScript.hoverSprite = sublocation.sprite;
@@ -183,6 +190,16 @@ public class MapManager : MonoBehaviour
             mapButton.gameObject.SetActive(true);
             revealedMap = true;
         }
+    }
+
+    private void PlaceButtonNoises(GameObject button)
+    {
+        button.gameObject.AddComponent<ButtonNoise>();
+        var grabbedButtonNoise = button.GetComponentInChildren<ButtonNoise>();
+        grabbedButtonNoise.AddAudioSource(audioSource);
+        grabbedButtonNoise.AddHoverClip(hoverClip);
+        grabbedButtonNoise.AddPressedClip(pressedClip);
+        grabbedButtonNoise.AssignSelf(button.GetComponentInChildren<Button>());
     }
 
 }

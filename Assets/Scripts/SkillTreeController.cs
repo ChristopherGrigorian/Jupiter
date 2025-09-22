@@ -2,11 +2,17 @@ using System.Collections.Generic;
 using System.Reflection;
 using Ink.Parsed;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillTreeController : MonoBehaviour
 {
     [SerializeField] private SkillNodeButton buttonPrefab;
     [SerializeField] private Transform buttonContainer;
+
+    [Header("Button Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip pressedClip;
 
     private CharacterData boundCharacter;
     private SkillTreeData boundTree;
@@ -29,7 +35,7 @@ public class SkillTreeController : MonoBehaviour
 
         boundCharacter = character;
         boundTree = character.skillTree != null ? character.skillTree : null;
-        
+
         if (boundTree == null)
         {
             Debug.LogError("[SkillTreeController] Bind: NO TREE", this);
@@ -45,6 +51,7 @@ public class SkillTreeController : MonoBehaviour
         {
             var btn = Instantiate(buttonPrefab, buttonContainer);
 
+            PlaceButtonNoises(btn);
             // set unique nodeId on this instance BEFORE Bind()
             if (nodeIdField != null)
                 nodeIdField.SetValue(btn, node.nodeId);
@@ -69,4 +76,13 @@ public class SkillTreeController : MonoBehaviour
             btn.SendMessage("Refresh", SendMessageOptions.DontRequireReceiver);
     }
 
+    private void PlaceButtonNoises(SkillNodeButton button)
+    {
+        button.gameObject.AddComponent<ButtonNoise>();
+        var grabbedButtonNoise = button.GetComponentInChildren<ButtonNoise>();
+        grabbedButtonNoise.AddAudioSource(audioSource);
+        grabbedButtonNoise.AddHoverClip(hoverClip);
+        grabbedButtonNoise.AddPressedClip(pressedClip);
+        grabbedButtonNoise.AssignSelf(button.GetComponentInChildren<Button>());
+    }
 }

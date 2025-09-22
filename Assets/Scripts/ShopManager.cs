@@ -118,12 +118,13 @@ public class ShopManager : MonoBehaviour
 
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (InventoryManager.Instance.totalCoin > w.price)
+                    if (InventoryManager.Instance.totalCoin >= w.price)
                     {
                         InventoryManager.Instance.AddWeapon(w.weapon.weaponName);
                         InventoryManager.Instance.totalCoin -= w.price;
                         totalCoinDisplay.text = $"Total Coin: {InventoryManager.Instance.totalCoin}";
                         usedShop.shopWeapons.Remove(w);
+                        TooltipManager.Instance.HideTooltip();
                         ShowTab("Weapons");
                     }
                 });
@@ -145,12 +146,13 @@ public class ShopManager : MonoBehaviour
 
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (InventoryManager.Instance.totalCoin > i.price)
+                    if (InventoryManager.Instance.totalCoin >= i.price)
                     {
                         InventoryManager.Instance.AddItem(i.item.itemName);
                         InventoryManager.Instance.totalCoin -= i.price;
                         totalCoinDisplay.text = $"Total Coin:  {InventoryManager.Instance.totalCoin}";
                         usedShop.shopItems.Remove(i);
+                        TooltipManager.Instance.HideTooltip();
                         ShowTab("Items");
                     }
                 });

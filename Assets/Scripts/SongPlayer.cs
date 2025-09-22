@@ -20,7 +20,7 @@ public class SongPlayer : MonoBehaviour
         public AudioClip clip;
         public bool shouldLoop = false;  // loop behavior
         [Range(0.5f, 2f)] public float basePitch = 1f;
-        [Range(0f, 0.25f)] public float pitchJitter = 0.03f; // ± amount applied each loop
+        [Range(0f, 0.25f)] public float pitchJitter = 0.03f; // ï¿½ amount applied each loop
         public float fadeSeconds = 3f; // used on non-loop songs when stopping
     }
 
@@ -67,7 +67,7 @@ public class SongPlayer : MonoBehaviour
         songSource.clip = entry.clip;
         songSource.loop = entry.shouldLoop;
         songSource.pitch = Mathf.Clamp(entry.basePitch, 0.5f, 2f);
-        songSource.volume = 1f;
+        songSource.volume = 0.3f;
         songSource.Play();
 
         if (entry.shouldLoop)
@@ -124,7 +124,7 @@ public class SongPlayer : MonoBehaviour
 
             if (!(songSource.isPlaying && songSource.clip == clip && entry.shouldLoop)) break;
 
-            // nudge pitch around basePitch ± jitter
+            // nudge pitch around basePitch ï¿½ jitter
             float jitter = Random.Range(-entry.pitchJitter, entry.pitchJitter);
             float target = entry.basePitch + jitter;
             songSource.pitch = Mathf.Clamp(target, 0.5f, 2f);
@@ -150,6 +150,6 @@ public class SongPlayer : MonoBehaviour
         }
 
         songSource.Stop();
-        songSource.volume = 1f; // reset for next play
+        songSource.volume = 0.3f; // reset for next play
     }
 }

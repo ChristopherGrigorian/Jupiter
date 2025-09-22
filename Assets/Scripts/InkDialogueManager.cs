@@ -43,6 +43,10 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private bool randomizeStartTime = true;
     private bool typingSfxPlaying = false;
 
+    [Header("Audio (Buttons)")]
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip pressedClip;
+
     // Add these to your Audio (Typewriter) section / Params section
     [SerializeField] private float spaceDelayFactor = 0.2f;     // spaces are quicker
     [SerializeField] private float commaPause = 0.15f;
@@ -56,17 +60,18 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private Vector2 letterPitchJitter = new Vector2(0.98f, 1.04f);
     [SerializeField] private Vector2 punctuationPitchJitter = new Vector2(0.92f, 0.98f);
 
-  
+
 
     public Story story;
 
-    
+
     private Coroutine typingCoroutine;
     private bool isTyping = false;
     private bool isInCombat = false;
     private bool choicesShownThisLine = false;
 
 
+    private bool inTitleScreen = true;
     public string heldStory = "";
 
 
@@ -76,7 +81,8 @@ public class InkDialogueManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
@@ -90,7 +96,7 @@ public class InkDialogueManager : MonoBehaviour
         story.BindExternalFunction("FadeOutSeq", (string pipeSeparated, string continueKnot) => FadeOutSeq(pipeSeparated, continueKnot));
         story.BindExternalFunction("AddCharacter", (string character) => GameController.Instance.AddCharacter(character));
         story.BindExternalFunction("RemoveCharacter", (string character) => GameController.Instance.RemoveCharacter(character));
-        story.BindExternalFunction("PlaySong", (string song) =>  SongPlayer.Instance.PlaySong(song));
+        story.BindExternalFunction("PlaySong", (string song) => SongPlayer.Instance.PlaySong(song));
         story.BindExternalFunction("StopSong", () => SongPlayer.Instance.StopSong());
 
         story.BindExternalFunction("OpenShop", (string shopName, string continueKnot) => ShopManager.Instance.OpenShop(shopName, continueKnot));
@@ -103,16 +109,17 @@ public class InkDialogueManager : MonoBehaviour
 
     }
 
-    void Update() 
+    void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !inTitleScreen)
         {
             RectTransform clickZone;
             if (cutsceneMode)
             {
                 clickZone = cutsceneClickZone;
-            } else
+            }
+            else
             {
                 clickZone = normalClickZone;
             }
@@ -140,8 +147,8 @@ public class InkDialogueManager : MonoBehaviour
                     }
                 }
             }
-        } 
-        
+        }
+
     }
 
     void ContinueStory()
@@ -163,12 +170,13 @@ public class InkDialogueManager : MonoBehaviour
             if (cutsceneMode)
             {
                 typingCoroutine = StartCoroutine(DisplayLine(heldStory, custceneText));
-            } else
+            }
+            else
             {
                 typingCoroutine = StartCoroutine(DisplayLine(heldStory, dialogueText));
             }
-            
-        } 
+
+        }
         else
         {
             StopTypingSfx();
@@ -185,6 +193,14 @@ public class InkDialogueManager : MonoBehaviour
         foreach (Choice choice in story.currentChoices)
         {
             Button button = Instantiate(choiceButtonPrefab, buttonContainer.transform);
+
+            button.gameObject.AddComponent<ButtonNoise>();
+            var grabbedButtonNoise = button.GetComponentInChildren<ButtonNoise>();
+            grabbedButtonNoise.AddAudioSource(sfxSource);
+            grabbedButtonNoise.AddHoverClip(hoverClip);
+            grabbedButtonNoise.AddPressedClip(pressedClip);
+            grabbedButtonNoise.AssignSelf(button);
+
             string formattedChoice = DialogueFormatter.ConvertItalics(choice.text.Trim());
             button.GetComponentInChildren<TextMeshProUGUI>().text = formattedChoice;
 
@@ -197,7 +213,7 @@ public class InkDialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator DisplayLine(string line, TextMeshProUGUI textBox) 
+    IEnumerator DisplayLine(string line, TextMeshProUGUI textBox)
     {
         isTyping = true;
         textBox.text = "";
@@ -255,15 +271,15 @@ public class InkDialogueManager : MonoBehaviour
                         wait = commaPause;
                         isPunctPause = true;
                     }
-                    else if (c == '?') 
-                    { 
-                        wait = questionPause; 
-                        isPunctPause = true; 
+                    else if (c == '?')
+                    {
+                        wait = questionPause;
+                        isPunctPause = true;
                     }
-                    else if (c == '!') 
-                    { 
-                        wait = exclaimPause; 
-                        isPunctPause = true; 
+                    else if (c == '!')
+                    {
+                        wait = exclaimPause;
+                        isPunctPause = true;
                     }
                     else
                     {
@@ -316,7 +332,7 @@ public class InkDialogueManager : MonoBehaviour
 
     private void StartCombat(string encounterID, string continueKnot)
     {
-       
+
         Debug.Log($"Starting combat with {encounterID}");
         gameController.StartCombat(encounterID, continueKnot);
     }
@@ -340,7 +356,7 @@ public class InkDialogueManager : MonoBehaviour
     {
 
         float heldTypingSpeed = typingSpeed;
-        typingSpeed = 0.10f;
+        typingSpeed = 0.07f;
 
         yield return StartCoroutine(FadeImageAlpha(fadeImage, 0, 1));
         fadeText.gameObject.SetActive(true);
@@ -438,7 +454,7 @@ public class InkDialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(true);
         titleScreenPanel.SetActive(false);
-
+        inTitleScreen = false;
         if (story.currentChoices.Count > 0)
             DisplayChoices();
     }
@@ -446,13 +462,19 @@ public class InkDialogueManager : MonoBehaviour
     public void ShowDialoguePanelFromTitleNew()
     {
         dialoguePanel.SetActive(true);
+        StartCoroutine(TitleWaitFor(1.5f));
         titleScreenPanel.SetActive(false);
-
+        inTitleScreen = false;
         ContinueStory();
     }
 
     public void RestoreDialogueText(string text)
     {
         dialogueText.text = text;
+    }
+
+    private IEnumerator TitleWaitFor(float delay)
+    {
+        yield return new WaitForSeconds(delay);
     }
 }
