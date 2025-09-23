@@ -1,8 +1,9 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -15,9 +16,6 @@ public class InventoryManager : MonoBehaviour
 
     public int totalCoin = 0;
 
-    [SerializeField] private Color defaultColor = Color.white;
-    [SerializeField] private Color selectedColor = Color.red;
-
     private Button currentlySelectedBtn;
 
     [Header("Containers")]
@@ -25,15 +23,18 @@ public class InventoryManager : MonoBehaviour
     public Transform characterSelectionContainer;
     public Transform equippableWeaponsContainer;
     public Transform skillTreeContainer;
+    public Transform teamSelectContainer;
 
     [Header("Prefabs")]
     public GameObject characterSelectionPrefab;
     public GameObject equippableWeaponPrefab;
+    public GameObject teamSelectionPrefab;
 
     [Header("Pre-Established Inventory Features / Buttons")]
     public Button inventoryButton;
     public Button weaponInventoryButton;
     public Button skillTreeButton;
+    public Button teamSelectButton;
 
     [Header("Button Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -69,6 +70,7 @@ public class InventoryManager : MonoBehaviour
         inventoryButton.onClick.AddListener(() => ShowTab("Features"));
         weaponInventoryButton.onClick.AddListener(() => ShowTab("CharacterSelectorWeapons"));
         skillTreeButton.onClick.AddListener(() => ShowTab("CharacterSelectorSkillTree"));
+        teamSelectButton.onClick.AddListener(() => ShowTab("TeamSelector"));
 
         foreach (var w in weapons)
         {
@@ -165,6 +167,7 @@ public class InventoryManager : MonoBehaviour
         characterSelectionContainer.gameObject.SetActive(type == "CharacterSelectorWeapons" || type == "CharacterSelectorSkillTree");
         equippableWeaponsContainer.gameObject.SetActive(type == "EquippableWeapons");
         skillTreeContainer.gameObject.SetActive(type == "SkillTree");
+        teamSelectContainer.gameObject.SetActive(type == "TeamSelector");
 
         ClearAll();
 
@@ -264,7 +267,45 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
+        if (type == "TeamSelector")
+        {
+            previousType = "Features";
+
+            foreach (var character in GameController.Instance.playerCharacters)
+            {
+                var btn = Instantiate(teamSelectionPrefab, teamSelectContainer);
+                btn.GetComponentInChildren<TextMeshProUGUI>().text = $"{character.characterName}";
+                PlaceButtonNoises(btn);
+               
+                var buttonComponent = btn.GetComponent<Button>();
+
+                if (character.currentlyEquipped)
+                    btn.GetComponentInChildren<Image>().color = Color.red;
+
+                buttonComponent.onClick.AddListener(() =>
+                {
+                    int equippedCount = GameController.Instance.playerCharacters.Count(c => c.currentlyEquipped);
+
+                    // If this character is not equipped yet and we already have 3, block
+                    if (!character.currentlyEquipped && equippedCount >= 3)
+                        return;
+
+                    character.currentlyEquipped = !character.currentlyEquipped;
+
+                    if (character.currentlyEquipped)
+                    {
+                        btn.GetComponentInChildren<Image>().color = Color.red;
+                    } else
+                    {
+                        btn.GetComponentInChildren<Image>().color = Color.white;
+                    }
+                });
+            }
+        }
     }
+
+    
+
 
     private void SelectButton(Button btn)
     {
@@ -284,6 +325,7 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (Transform child in characterSelectionContainer) Destroy(child.gameObject);
         foreach (Transform child in equippableWeaponsContainer) Destroy(child.gameObject);
+        foreach (Transform child in teamSelectContainer) Destroy (child.gameObject);
     }
 
     public void previousMenu()

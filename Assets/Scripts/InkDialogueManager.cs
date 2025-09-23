@@ -35,6 +35,7 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private Image fadeImage;   // full-screen black CG with alpha 0
     [SerializeField] private float fadeDuration;
     [SerializeField] private TextMeshProUGUI fadeText;
+    private bool inFadeOutSeq = false;
 
 
     [Header("Audio (Typewriter)")]
@@ -112,7 +113,7 @@ public class InkDialogueManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && !inTitleScreen)
+        if (Input.GetMouseButtonDown(0) && !inTitleScreen && !inFadeOutSeq)
         {
             RectTransform clickZone;
             if (cutsceneMode)
@@ -349,12 +350,12 @@ public class InkDialogueManager : MonoBehaviour
 
     public void FadeOutSeq(string pipeSeperated, string continueKnot)
     {
+        inFadeOutSeq = true;
         StartCoroutine(FadeOutSeqCo(pipeSeperated, continueKnot));
     }
 
     private IEnumerator FadeOutSeqCo(string pipeSeperated, string continueKnot)
     {
-
         float heldTypingSpeed = typingSpeed;
         typingSpeed = 0.07f;
 
@@ -377,6 +378,7 @@ public class InkDialogueManager : MonoBehaviour
 
         typingSpeed = heldTypingSpeed;
         yield return StartCoroutine(FadeImageAlpha(fadeImage, 1, 0));
+        inFadeOutSeq = false;
     }
 
     private IEnumerator FadeImageAlpha(Image img, float from, float to)

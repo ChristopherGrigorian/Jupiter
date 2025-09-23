@@ -15,7 +15,7 @@ MonoBehaviour:
   id: Aiolos
   characterName: Aiolos
   level: 2
-  experience: 143
+  experience: 197
   maxHP: 78
   maxMP: 7
   strength: 2
@@ -25,6 +25,7 @@ MonoBehaviour:
   speed: 27
   EquippedWeapon: {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
   dodgeSound: {fileID: 8300000, guid: ae19c1f928962ba488cc06aa18003218, type: 3}
+  currentlyEquipped: 1
   equipableWeaponTypes: 00000000
   Skills:
   - {fileID: 11400000, guid: 8fc4fe9741ae5f447a1bfe1ba985d4d8, type: 2}
@@ -37,7 +38,7 @@ MonoBehaviour:
   battleImage: {fileID: 0}
   droppableWeapons: []
   heldCoin: 0
-  skillTree: {fileID: 11400000, guid: f8d4bb18515f0fe45b4c157c4d014ea0, type: 2}
+  skillTree: {fileID: 11400000, guid: 47f74b797f18cff49b909b4e252285d5, type: 2}
   unlockedNodeIds:
   - 0
   - 1
@@ -46,4 +47,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3d2e223e809fae4cb5cbd11af2e1fcf, type: 2}
   - {fileID: 11400000, guid: 70817161f9fefa8438ee80eacf102653, type: 2}
   - {fileID: 11400000, guid: 8fc4fe9741ae5f447a1bfe1ba985d4d8, type: 2}
-  skillPoints: 3
+  skillPoints: 5

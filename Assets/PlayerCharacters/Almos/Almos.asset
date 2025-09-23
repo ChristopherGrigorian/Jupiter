@@ -25,6 +25,7 @@ MonoBehaviour:
   speed: 22
   EquippedWeapon: {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
   dodgeSound: {fileID: 8300000, guid: ae19c1f928962ba488cc06aa18003218, type: 3}
+  currentlyEquipped: 0
   equipableWeaponTypes: 01000000
   Skills:
   - {fileID: 11400000, guid: ca5517b66add167439e54ffbaccf148e, type: 2}

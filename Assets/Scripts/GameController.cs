@@ -133,7 +133,19 @@ public class GameController : MonoBehaviour
     {
         turnOrder.Clear();
 
-        foreach (var p in playerCharacters)
+        var equippedPlayers = playerCharacters
+           .Where(p => p.currentlyEquipped)
+           .Take(3)
+           .ToList();
+
+        if (equippedPlayers.Count == 0)
+        {
+            Debug.LogWarning("No equipped player characters selected. Aborting combat start.");
+            combatActive = false;
+            return;
+        }
+
+        foreach (var p in equippedPlayers)
         {
             turnOrder.Add(new Combatant(p, true));
         }
@@ -784,14 +796,21 @@ public class GameController : MonoBehaviour
 
     public void AddCharacter(string name)
     {
-        foreach(var combatant in allCharacters)
+        foreach (var combatant in allCharacters)
         {
-            if (combatant.name == name)
+            if (combatant.characterName == name) // prefer a dedicated field over Unity's .name
             {
+                if (playerCharacters.Contains(combatant)) return; // avoid dupes
+
+                bool canEquip = playerCharacters.Count(c => c.currentlyEquipped) < 3;
+
+                combatant.currentlyEquipped = canEquip; // only equip if room
                 playerCharacters.Add(combatant);
+                break;
             }
         }
     }
+
 
     public void RemoveCharacter(string name)
     {

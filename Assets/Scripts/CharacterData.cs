@@ -17,6 +17,7 @@ public class CharacterData : ScriptableObject
     public int speed;
     public WeaponData EquippedWeapon;
     public AudioClip dodgeSound;
+    public bool currentlyEquipped = false;
 
     public List<WeaponType> equipableWeaponTypes;
     public List<SkillData> Skills;

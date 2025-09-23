@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
   m_Name: Obsolete Android
   m_EditorClassIdentifier: 
+  id: Obsolete Android
   characterName: Obsolete Android
   level: 1
   experience: 0
@@ -24,10 +25,13 @@ MonoBehaviour:
   speed: 12
   EquippedWeapon: {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
   dodgeSound: {fileID: 8300000, guid: 2be7548daec14a946a71694dab891fd8, type: 3}
+  currentlyEquipped: 0
   equipableWeaponTypes: 0000000001000000
   Skills: []
   Images: []
+  battleImage: {fileID: 0}
   droppableWeapons: []
+  heldCoin: 0
   skillTree: {fileID: 0}
   unlockedNodeIds: []
   equippedSkills: []
