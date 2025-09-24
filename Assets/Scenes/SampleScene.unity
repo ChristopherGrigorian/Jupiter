@@ -2101,8 +2101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -35}
-  m_SizeDelta: {x: 894.38, y: 162.55}
+  m_AnchoredPosition: {x: 365, y: 10}
+  m_SizeDelta: {x: 1100, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327988809
 MonoBehaviour:
@@ -2122,10 +2122,10 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: -60
+  m_Spacing: -40
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -2731,8 +2731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.007534, y: 250}
-  m_SizeDelta: {x: 1700, y: 450}
+  m_AnchoredPosition: {x: 0.007534, y: 285}
+  m_SizeDelta: {x: 1700, y: 375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390874534
 MonoBehaviour:
@@ -10430,7 +10430,6 @@ GameObject:
   - component: {fileID: 1572816610}
   - component: {fileID: 1572816612}
   - component: {fileID: 1572816611}
-  - component: {fileID: 1572816615}
   m_Layer: 5
   m_Name: DialogueBacking
   m_TagString: Untagged
@@ -10455,8 +10454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 250}
-  m_SizeDelta: {x: 1700, y: 450}
+  m_AnchoredPosition: {x: 0, y: 285}
+  m_SizeDelta: {x: 1700, y: 375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572816611
 MonoBehaviour:
@@ -10479,7 +10478,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 284763fee758e0f46858c32dc92a513a, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10496,19 +10495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572816609}
   m_CullTransparentMesh: 1
---- !u!114 &1572816615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572816609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &1594502685
 GameObject:
   m_ObjectHideFlags: 0
