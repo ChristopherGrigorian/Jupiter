@@ -175,5 +175,19 @@ Walk with me, Boris gestures. You walk with him towards the front of the quartya
 ->FrontOfQuartyard
 
 == Chateau ==
-End of current written game. Thank you for playing.
+Boris is awaiting you patiently at the front door.
+"Perfect, you found you're way, Mr. Rock."
++ "You're hilarious, Mr. Pigeon."
+"Thank you, I try, but with you around it's a lot easier," he jests.
+-> Chateau1
++ "There's not many places to go around here."
+"Regardless, I'm proud of you for walking."
+-> Chateau1
+
+== Chateau1 ==
+You side-eye Boris. "What do you mean by that?"
+"Whatever you wish it to imply," he says.
+"Anyway..." Boris says while fumbling with some keys, "I'll let us in, prepare yourself, I know not what lies on the other end of this door any longer."
+Boris finds the correct key and pushes the doorway. The doors creak and whine until full opened. Light rushes into the main hall of the chateau, and shortly after you follow suit.
+-> ChateauMainHall
 ->DONE

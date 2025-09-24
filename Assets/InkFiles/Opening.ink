@@ -5,6 +5,8 @@ INCLUDE Government.ink
 INCLUDE WholeNewWorld.ink
 INCLUDE Galaga.ink
 INCLUDE Simulation.ink
+INCLUDE Chateau.ink
+
 
 
 
