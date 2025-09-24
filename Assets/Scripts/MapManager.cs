@@ -38,6 +38,7 @@ public class MapManager : MonoBehaviour
 
     [SerializeField] private Image locationImage;
     [SerializeField] private GameObject mapHUD;
+    [SerializeField] private GameObject dialogueHUD;
 
     [Header("Button Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -76,6 +77,17 @@ public class MapManager : MonoBehaviour
 
         if (type == "Locations")
         {
+            UIFader mapFader = mapHUD.GetComponent<UIFader>();
+            if (mapFader != null)
+            {
+                mapFader.FadeIn();
+            }
+
+            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
+            if (diaFader != null)
+            {
+                diaFader.FadeOut();
+            }
             previousType = "";
             foreach (var location in unlockableLocations)
             {
@@ -110,7 +122,11 @@ public class MapManager : MonoBehaviour
                     btn.GetComponent<Button>().onClick.AddListener(() =>
                     {
                         InkDialogueManager.Instance.locationChange(sublocation.subLocationName);
-                        mapHUD.SetActive(false);
+                        UIFader mapFader = mapHUD.GetComponent<UIFader>();
+                        if (mapFader != null)
+                        {
+                            mapFader.FadeOut();
+                        }
                         GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
                     });
                 }
@@ -128,7 +144,17 @@ public class MapManager : MonoBehaviour
     {
         if (previousType == "")
         {
-            mapHUD.SetActive(false);
+            UIFader mapFader = mapHUD.GetComponent<UIFader>();
+            if (mapFader != null)
+            {
+                mapFader.FadeOut();
+            }
+
+            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
+            if (diaFader != null)
+            {
+                diaFader.FadeIn();
+            }
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
         }
         else

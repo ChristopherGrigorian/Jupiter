@@ -48,6 +48,7 @@ public class InventoryManager : MonoBehaviour
     public bool revealedInventory = false;
 
     [SerializeField] private GameObject featuresHUD;
+    [SerializeField] private GameObject dialogueHUD;
     public static InventoryManager Instance;
 
     private CharacterData currentSelectedCharacter;
@@ -174,7 +175,19 @@ public class InventoryManager : MonoBehaviour
         if (type == "Features")
         {
             previousType = "";
-            inventoryFeaturesContainer.gameObject.SetActive(true);
+            //inventoryFeaturesContainer.gameObject.SetActive(true);
+
+            UIFader featFader = featuresHUD.GetComponent<UIFader>();
+            if (featFader != null)
+            {
+                featFader.FadeIn();
+            }
+
+            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
+            if (diaFader != null)
+            {
+                diaFader.FadeOut();
+            }
         }
 
         if (type == "CharacterSelectorWeapons")
@@ -332,7 +345,17 @@ public class InventoryManager : MonoBehaviour
     {
         if (previousType == "")
         {
-            featuresHUD.SetActive(false);
+            UIFader fader = featuresHUD.GetComponent<UIFader>();
+            if (fader != null)
+            {
+                fader.FadeOut();
+            }
+
+            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
+            if (diaFader != null)
+            {
+                diaFader.FadeIn();
+            }           
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
         }
         else
