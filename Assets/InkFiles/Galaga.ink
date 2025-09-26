@@ -188,6 +188,5 @@ Boris is awaiting you patiently at the front door.
 You side-eye Boris. "What do you mean by that?"
 "Whatever you wish it to imply," he says.
 "Anyway..." Boris says while fumbling with some keys, "I'll let us in, prepare yourself, I know not what lies on the other end of this door any longer."
-Boris finds the correct key and pushes the doorway. The doors creak and whine until full opened. Light rushes into the main hall of the chateau, and shortly after you follow suit.
+Boris finds the correct key and pushes the doorway. The doors creak and whine until full opened. Light rushes into the main hall of the chateau, and, shortly after, you follow suit.
 -> ChateauMainHall
-->DONE
