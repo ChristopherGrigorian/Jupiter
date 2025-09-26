@@ -294,5 +294,5 @@ The sun shines upon you, its glow warm and inviting. You feel Almos calling to y
 You maneuver yourself over the banister.
 Your eyes glisten in the sun’s image, filling your body with strength and devotion. 
 With only yourself as witness, you fall seven stories down onto the street. 
-~ FadeOutSeq("", "")
--> Rabbit
+~ FadeOutSeq("", "Rabbit")
+->DONE

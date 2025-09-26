@@ -4,20 +4,20 @@ VAR TTBAC = false
 = Galagos 
 {FirstTimeGalaga:
     You feel yourself being stripped away from reality. 
-    You unravel over and over again. You are woven whole. The image of the condos and chateau materialize before you. You are standing right before the quartyard leading to the chateau. 
+    You unravel over and over again. You are woven whole. The image of the condos and chateau materialize before you. You are standing right before the courtyard leading to the chateau. 
     This whole place feels earily...Earthly. No harsh wind, no flimsy floor. A bright blue sky rests behind the chateau. You hear birds chirping, the air feels crisp and wonderful.
     ~ FirstTimeGalaga = false
     + _Look around for Boris._
         ->LeftOfFront
     + _Explore on your own._
-        ->FrontOfQuartyard
+        ->FrontOfCourtyard
 - else:
     This is Galaga.
-    ->FrontOfQuartyard
+    ->FrontOfCourtyard
 }
 
-== Quartyard ==
-The quartyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.
+== Courtyard ==
+The courtyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.
 You see a wandering merchant here. 
 {MetAnzhela == 0:
 ~ MetAnzhela += 1
@@ -43,33 +43,33 @@ If you don't interupt Anzhela now, she'll just go on forever.
     - else:
     ->ANZWAR
     }
-+ _Leave the quartyard._
-    ->FrontOfQuartyard
++ _Leave the courtyard._
+    ->FrontOfCourtyard
 }
 
 == ANZWAR ==
 "Woah woah woah!" shouts Anzhela. "I wouldn't head in there traveler, it's been overrun by rogue inventions! It's far to dangerous."
 You heed Anzhela's warning, and don't proceed to the chateau.
-->Quartyard
+->Courtyard
 == LeftOfFront ==
 You start walking to your left, and see Boris eyeing you from a bench.
 + _Head over to Boris._
     ->TTB
 + _Turn Around_
-    ->FrontOfQuartyard
+    ->FrontOfCourtyard
     
-== FrontOfQuartyard ==
-You are standing in front the quartyard that leads to the chateau. You can see large and immaculately maintained hedges, and canaopy welcoming you into the quartyard.
-There is also both a pathway to your left and right that walk along the perimeter of the quartyard.
-+ _Enter the quartyard._
-    ->Quartyard
+== FrontOfCourtyard ==
+You are standing in front the courtyard that leads to the chateau. You can see large and immaculately maintained hedges, and canaopy welcoming you into the courtyard.
+There is also both a pathway to your left and right that walk along the perimeter of the courtyard.
++ _Enter the courtyard._
+    ->Courtyard
 + _Go down the left path._
     ->LeftOfFront
 + _Go down the right path._
     ->RightOfFront
     
 == RightOfFront ==
-You walk along the perimeter, guided by tall hedges that encapsulate the quartyard. A lone lamp post stands firm in the ground at this corner. A bench rests under it.
+You walk along the perimeter, guided by tall hedges that encapsulate the courtyard. A lone lamp post stands firm in the ground at this corner. A bench rests under it.
 + _Sit on the bench_
 - You sit on the bench. It feels uncomfortable. You get up.
 + _Turn the corner_
@@ -78,16 +78,15 @@ You walk along the perimeter, guided by tall hedges that encapsulate the quartya
 == Condos ==
 You're met with a small strip of colorful condos. A woman can be seen resting on one of the porches.
 + _Talk to the woman._
-    ~ SpokeToWoman = true
     ->TTW
 + _Turn around._
     You turn around and head back around the corner once more. 
-    -> FrontOfQuartyard
+    -> FrontOfCourtyard
     
 == TTW ==
-{SpokeToWoman:
+{SpokeToWoman == false:
 You approach the woman.
-~ SpokeToWoman = false
+~ SpokeToWoman = true
 + "Hello."
 -> TTWCONT
 - else:
@@ -117,7 +116,7 @@ The woman no longer wishes to speak to you. You get off of her porch.
 ->Condos
 
 == AnzhelaShop ==
-~ OpenShop("Anzhela's Shop", "Quartyard")
+~ OpenShop("Anzhela's Shop", "Courtyard")
 ->DONE
 
 == TTB ==
@@ -167,12 +166,12 @@ The prospect of regaining some of your memories has peaked your interest in purs
     
 == TTB3 ==
 "Great!" chimes Boris. "Before we get going, I should let you know about upgrading your weapon. When you continuously run into visions of weapons, your familiarity with them becomes enhanced, and therby increases their power. Most weapons even gain new skills when they get upgraded!"
-Walk with me, Boris gestures. You walk with him towards the front of the quartyard. 
-"Anzhela, the merchant in the quartyard, will sell you a vision, or rather data, about specific weapons," Boris says, "I think she has a revolver for sale. If you haven't already, you should really buy that from her to enhance your ability to manifest your revolver."
+Walk with me, Boris gestures. You walk with him towards the front of the courtyard. 
+"Anzhela, the merchant in the courtyard, will sell you a vision, or rather data, about specific weapons," Boris says, "I think she has a revolver for sale. If you haven't already, you should really buy that from her to enhance your ability to manifest your revolver."
 
 + "Understood."
 - "Great, I'll leave you here, meet me at the chateau when you're ready."
-->FrontOfQuartyard
+->FrontOfCourtyard
 
 == Chateau ==
 Boris is awaiting you patiently at the front door.

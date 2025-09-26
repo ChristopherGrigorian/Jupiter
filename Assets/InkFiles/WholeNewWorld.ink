@@ -112,7 +112,7 @@ You both wind through endless halls until finally arriving before the robots Bor
 "Will you be joining me for this fight?" you ask.
 {MuffinShared == false:
 "I don't know, man. When I needed help, you didn't provide."
-"You wanted a fucking muffin dude," get over it.
+"You wanted a fucking muffin dude, get over it."
 "Alright my bad...fatass," he mutters under his breath.
 - else:
 "Of course! My bloods boiling!" he says.

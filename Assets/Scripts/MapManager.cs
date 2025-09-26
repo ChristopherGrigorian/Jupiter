@@ -127,6 +127,13 @@ public class MapManager : MonoBehaviour
                         {
                             mapFader.FadeOut();
                         }
+
+                        UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
+                        if (diaFader != null)
+                        {
+                            Debug.Log("I tried to turn back on the dialogue hud");
+                            diaFader.FadeIn();
+                        }
                         GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
                     });
                 }
@@ -153,6 +160,7 @@ public class MapManager : MonoBehaviour
             UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
             if (diaFader != null)
             {
+                Debug.Log("I tried to turn back on the dialogue hud");
                 diaFader.FadeIn();
             }
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
