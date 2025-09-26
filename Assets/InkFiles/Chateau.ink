@@ -1,3 +1,4 @@
+VAR CanTalkToAndromeda = false
 == ChateauMainHall ==
 + _Ask Boris for guidance._
 "Where should we explore first?" you ask Boris.
@@ -57,7 +58,50 @@ Boris stands firm with both hands on his hips, observing the doors. "I'm not rea
 "I've trapped people here?" you ask.
 "Parts of them..." Boris says.
 You look to the doors with heavier heart. "What have I done?" you ask.
-"Whatever it took to uphold the machine," he says. "You had a change of heart towards the end. You never had a chance to free what you locked within."
+"Whatever it took to uphold the machine," he says. "You had a change of heart towards the end. You never had the chance to free those you locked within."
+
++ "Uphold the machine?"
+    ->STCMHEX
++ "Change of heart?"
+    ->STCHMEX
+
+== STCHMEX ==
+"Jupiter thrives off of the destruction of other civilizations. Their worlds, their experiences, everything," Boris pouts. "All twisted into artificial realities. Call it for pleasure or study, Jupiter is an amalgamation-"
+"Of inexplicable feeling," you utter. {if SpokeToWoman: Speaking of destruction, you remember vividly that Andromeda deamed herself a ruthless killer.}
+
+"The pinacle of existence," finishes Boris. "Such were words to live by at one point. Hindsight calls us selfish, horrific beings."
+
++ "Destruction of other civilizations?"
+"You mentioned the destruction of other civilizations?" you ask.
+"Yes," Boris says. "A means to harvest data for these experiences."
+Boris takes note of your blank expression.
+"Hm..." he paces, "How should I explain this? Do you know what a Telepolos is?"
+You don't recall ever knowing about a Telepolos, but information about it feels just in grasp at the back of your mind.
+"A squid, or rather jellyfish sort of creature," you say. "Both renound for advancing our understanding of teleportation, but was suprisingly a food delicacy on Uhloth."
+"How does it taste?" Boris asks.
+"Rubbery," you answers. "It feels malleable in the mouth, but upon applying pressure, with chewing for example, it hardens to a satisfying crunch."
+"Oh..." you say. "I see. It's pretty delicious too. I've never actually tried it, but I know exactly how it tastes."
+"What does it feel like to be stung by one?" asks Boris.
+"Ah!" you flinch as if in pain. 
+"Ah! HAHAHA," mocks Boris.
+
++ "Fuck you."
+"Yeah, yeah. Just remember you have full control over the data you access. Don't analyze the data of things you don't actually want to know. That's why everything goes through a decryption process, so you can't just accidentally read things."
+    -> STCHMEX1
++ "What does it feel like to be hit by a train?"
+"Good try," smirks Boris. "You have full control on what data you access, you know. Don't analyze the data of things you don't actually want to know. That's why everything goes through a decryption process, so you can't just accidentally read things."
+    -> STCHMEX1
+    
+== STCHMEX1 ==
+
++ "Noted."
+"Great. Well, I suggest trying to talk to Andromeda after we're done roaming around this place. She may know how to open one of these doors. She was one of your highest confidants, y'know." 
+Boris sparingly meets your eyes. His voice begins to shake as he lightly kicks the air, "I suppose I didn't make the cut."
++ "Fuck you."
+"Yep, knew that was coming. Anyways, I suggest trying to talk to Andromeda after we're done roaming around this place. She may know how to open one of these doors. She was one of your highest confidants, y'know."
+Boris sparingly meets your eyes. His voice begins to shake as he lightly kicks the air, "I suppose I didn't make the cut."
+
+
 
 ->DONE
 
