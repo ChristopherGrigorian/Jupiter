@@ -2928,6 +2928,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79a6588d99758104db8e2b2dcce7676c, type: 2}
   - {fileID: 11400000, guid: 5540b1e9ad1354f669c40ffc24cf563a, type: 2}
   - {fileID: 11400000, guid: 546b5cb91ba8b461e80d3990ade8ac12, type: 2}
+  - {fileID: 11400000, guid: 7440526510633425f9689fa1669f59cf, type: 2}
+  - {fileID: 11400000, guid: 7440526510633425f9689fa1669f59cf, type: 2}
   combatHudManager: {fileID: 433535024}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}

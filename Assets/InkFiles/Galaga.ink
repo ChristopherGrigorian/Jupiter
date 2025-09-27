@@ -90,9 +90,17 @@ You approach the woman.
 + "Hello."
 -> TTWCONT
 - else:
-The woman wishes not to speak with you.
-->Condos
+    {FirstTimeInChateau == false:
+        The woman wishes not to speak with you.
+        ->Condos
+    - else:
+        ->AndromedaConvo
+    }
 }
+
+== AndromedaConvo ==
+This would be the next point in the story, but I haven't written anything yet. Thank you for playing.
+->DONE
 
 == TTWCONT ==
 The woman looks to you, "You were found and outcasted, I take it? Suprised to see you back here."

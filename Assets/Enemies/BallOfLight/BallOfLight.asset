@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
+  m_Name: BallOfLight
+  m_EditorClassIdentifier: 
+  id: BallOfLight
+  characterName: BallOfLight
+  level: 3
+  experience: 0
+  maxHP: 100
+  maxMP: 3
+  strength: 5
+  perception: 25
+  evasiveness: 25
+  spirit: 0
+  speed: 40
+  EquippedWeapon: {fileID: 11400000, guid: 273b908f813ee47a58dda25cf8c3573d, type: 2}
+  dodgeSound: {fileID: 0}
+  currentlyEquipped: 0
+  equipableWeaponTypes: 02000000
+  Skills: []
+  Images: []
+  battleImage: {fileID: 0}
+  droppableWeapons: []
+  heldCoin: 0
+  skillTree: {fileID: 0}
+  unlockedNodeIds: []
+  equippedSkills: []
+  skillPoints: 0

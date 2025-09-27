@@ -169,4 +169,3 @@ Almos’ eyes calmly chase you seven stories down into the street.
 You always seem to just say his name when you have a question. You think Almos is really smart. He knows a lot of things.
 
 He doesn’t respond to you, however.
-        

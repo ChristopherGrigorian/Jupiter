@@ -1,6 +1,8 @@
 VAR CanTalkToAndromeda = false
 VAR FirstTimeInChateau = false
 VAR FirstTimeLeftHall = false
+VAR FirstTimeRightHall = false
+VAR WeaponChosen = 0
 == ChateauMainHall ==
 + _Ask Boris for guidance._
 "Where should we explore first?" you ask Boris.
@@ -38,6 +40,7 @@ There's a double stairway before you, and halls that lead to both your left and 
 You go down the left hall and reach a study room.
     ->LHCMH
 + _Go down the right hall._
+You go down the right hall.
     ->RHCMH
 + _Go up the stairway._
 You walk up the stairs, and Boris follows as your tail. You reach the top and oversee the main hall from the banister. The same opal refractions moves with ease across the room with your perspective.
@@ -87,7 +90,6 @@ You look back to the rabbits to see a swirl of mist, building from them. All thr
 You look to Boris. 
 "Trust me, they aren't friendly," he says.
 Prepare for combat.
-
 ~ StartCombat("Triple Rabbit", "LHCMEX3")
 ->DONE
 
@@ -102,11 +104,72 @@ You return your focus back to the room.
 ->LHCMH
 
 == RHCMH ==
-Nothing here yet, sorry, this is pretty much end of story.
+{FirstTimeRightHall == false:
+~ FirstTimeRightHall = true
+The hall opens up to a room with black metal walls. The whole room buzzes with energy. Neon engravings line the walls in sporadic patterns, all colliding towards the center of the room towards a single touch panel.
+Boris pushes past you and heads towards the panel. "Trust me, I got this," he boasts. "This is a weapon generation machine, we could literally have infinite upgrades to our weapons. Any weapon in the conceivable universe!"
+Boris starts furiously pressing through menus on the control panel.
+"Oh... oh no..." he says. Seconds later, sirens start blaring throughout the room.
+"What? What is happening?" you say.
+Boris starts flapping his arms frantically, "I don't know, I don't know! I think it thinks I'm an intruder, HOW COULD YOU HAVE NOT GIVEN ME PERMISSIONS TO USE THIS MACHINE!"
+"HOW WAS I SUPPOSED TO KNOW," you yell.
+"I DON'T KNOW," he yells back.
+Boris goes back to smashing buttons on the panel, "Wait, I think I have something here, QUICKLY, tell me what kind of weapon you want me to make!"
+
++ "A GUN."
+~ WeaponChosen = 0
+    -> RHCMHEX
++ "A SWORD."
+~ WeaponChosen = 1
+    -> RHCMHEX
++ "A TOME."
+~ WeaponChosen = 2
+    -> RHCMHEX
+
+- else:
+The room is a shell of what it used to be. The machinery and panel are completely broken. The only thing that lights the space is the light that pours in from the hall.
 
 + _Return to the main hall._
     ->CMH
+}
+
+== RHCMHEX ==
+"OK GOT IT."
+Boris delivers one final smack to the panel before a powerful explosion sends both of you flying into the walls.
+The room whirs down as the electrified walls cease to murmur. The room goes dark.
+{WeaponChosen:
+    - 0:
+A glowing gun is the only thing that iluminates the room, laying promptly atop the panel.
+    - 1:
+A glowing sword is the only thing that iluminates the room, laying promptly atop the panel.
+    - 2:
+A glowing tome is the only thing that iluminates the room, laying promptly atop the panel.
+}
+
+Boris gets up from being hunched on the floor. He wipes some soot from his face as he approached you.
+"Sorry about that..."
+"It's okay Boris."
+"Are you upset with me?" he asks.
+"No," you respond.
+"Are you dissapointed in me?" he asks.
+"Yes," you respond.
+"Okay," he says. I'll go grab the weapon, and we can get out of this room."
+"Okay..." you say. "Wait... Boris what if it's a trick? Why would the system let you create a weapon if it thought you an intruder?"
+"That would be comically convenient, wouldn't it?" Boris says as he picks up the weapon from the pedestal.
+The moment he picks the weapon up, the room begins to shake. The door behind you shuts clean shut, and the room goes pitch black.
+"Boris?" you call.
+"I'm here," he sighs. 
+Something begins manifesting in the room. Light pools from the walls and collides over and over into one concentrated ball that hovers in the center of the room.  
+"I don't like the looks of that," says Boris. "Prepare for combat."
+~ StartCombat("BallOfLight", "RHCMHEX1")
 ->DONE
+
+== RHCMEX1 ==
+The ball of light swells and collapses. The room goes dark briefly, before the door unlocks, relinquishes you from its trap. The door opens up back to the hall.
+"Hey, um..." utters Boris.
+"Just don't," you say. "Lets just go."
+Boris looks towards his feet in shame, "Got it."
+-> RHCMH
 
 == STCMH ==
 There's an array of dark wooden doors up here, each with a number in silver engraved. The floorboards creak with each of your footsteps.
