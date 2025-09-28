@@ -35,6 +35,20 @@ public class InventoryManager : MonoBehaviour
     public Button weaponInventoryButton;
     public Button skillTreeButton;
     public Button teamSelectButton;
+    public Button characterStatsButton;
+
+    [Header("Character Stats Menu")]
+    public GameObject characterStatsHUD;
+    public Image expSprite;
+    public TextMeshProUGUI characterNameBox;
+    public TextMeshProUGUI maxCharHealth;
+    public TextMeshProUGUI maxCharMP;
+    public TextMeshProUGUI charStrength;
+    public TextMeshProUGUI charPerception;
+    public TextMeshProUGUI charEvas;
+    public TextMeshProUGUI charSpirit;
+    public TextMeshProUGUI charSpeed;
+    public TextMeshProUGUI level;
 
     [Header("Button Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -72,6 +86,7 @@ public class InventoryManager : MonoBehaviour
         weaponInventoryButton.onClick.AddListener(() => ShowTab("CharacterSelectorWeapons"));
         skillTreeButton.onClick.AddListener(() => ShowTab("CharacterSelectorSkillTree"));
         teamSelectButton.onClick.AddListener(() => ShowTab("TeamSelector"));
+        characterStatsButton.onClick.AddListener(() => ShowTab("CharacterStatsCS"));
 
         foreach (var w in weapons)
         {
@@ -165,10 +180,12 @@ public class InventoryManager : MonoBehaviour
     private void ShowTab(string type)
     {
         inventoryFeaturesContainer.gameObject.SetActive(type == "Features");
-        characterSelectionContainer.gameObject.SetActive(type == "CharacterSelectorWeapons" || type == "CharacterSelectorSkillTree");
+        characterSelectionContainer.gameObject.SetActive(type == "CharacterSelectorWeapons" || type == "CharacterSelectorSkillTree" || type == "CharacterStatsCS");
         equippableWeaponsContainer.gameObject.SetActive(type == "EquippableWeapons");
         skillTreeContainer.gameObject.SetActive(type == "SkillTree");
         teamSelectContainer.gameObject.SetActive(type == "TeamSelector");
+        characterStatsHUD.gameObject.SetActive(type == "CharacterStats");
+
 
         ClearAll();
 
@@ -220,6 +237,22 @@ public class InventoryManager : MonoBehaviour
                     Debug.Log($"[InventoryManager] Clicked character '{character.characterName}' -> open SkillTree");
                     currentSelectedCharacter = character;
                     ShowTab("SkillTree");
+                });
+            }
+        }
+
+        if (type == "CharacterStatsCS")
+        {
+            previousType = "Features";
+            foreach (var character in GameController.Instance.playerCharacters)
+            {
+                var btn = Instantiate(characterSelectionPrefab, characterSelectionContainer);
+                PlaceButtonNoises(btn);
+                btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
+                btn.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    currentSelectedCharacter = character;
+                    ShowTab("CharacterStats");
                 });
             }
         }
@@ -314,6 +347,21 @@ public class InventoryManager : MonoBehaviour
                     }
                 });
             }
+        }
+
+        if (type == "CharacterStats")
+        {
+            float fillAmount = currentSelectedCharacter.XPNeededToNextLevel() / currentSelectedCharacter.GetRequiredXPForLevel(currentSelectedCharacter.level + 1);
+            expSprite.fillAmount = fillAmount;
+            characterNameBox.text = currentSelectedCharacter.characterName;
+            maxCharHealth.text = currentSelectedCharacter.maxHP.ToString();
+            maxCharMP.text = currentSelectedCharacter.maxMP.ToString();
+            charStrength.text = currentSelectedCharacter.strength.ToString();
+            charPerception.text = currentSelectedCharacter.perception.ToString();
+            charEvas.text = currentSelectedCharacter.evasiveness.ToString();
+            charSpirit.text = currentSelectedCharacter.spirit.ToString();
+            charSpeed.text = currentSelectedCharacter.speed.ToString();
+            level.text = $"Level " + currentSelectedCharacter.level.ToString();
         }
     }
 

@@ -110,7 +110,7 @@ public class CharacterData : ScriptableObject
         Debug.Log($"{characterName} leveled up to {level}!");
     }
 
-    private int GetRequiredXPForLevel(int targetLevel)
+    public int GetRequiredXPForLevel(int targetLevel)
     {
         return Mathf.FloorToInt(100 * Mathf.Pow(targetLevel, 1.5f)); 
     }
