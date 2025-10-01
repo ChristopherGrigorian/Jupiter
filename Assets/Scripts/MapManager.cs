@@ -80,13 +80,13 @@ public class MapManager : MonoBehaviour
             UIFader mapFader = mapHUD.GetComponent<UIFader>();
             if (mapFader != null)
             {
-                mapFader.FadeIn();
+                mapFader.Show();
             }
 
             UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
             if (diaFader != null)
             {
-                diaFader.FadeOut();
+                diaFader.Hide();
             }
             previousType = "";
             foreach (var location in unlockableLocations)
@@ -125,14 +125,14 @@ public class MapManager : MonoBehaviour
                         UIFader mapFader = mapHUD.GetComponent<UIFader>();
                         if (mapFader != null)
                         {
-                            mapFader.FadeOut();
+                            mapFader.Hide();
                         }
 
                         UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
                         if (diaFader != null)
                         {
                             Debug.Log("I tried to turn back on the dialogue hud");
-                            diaFader.FadeIn();
+                            diaFader.Show();
                         }
                         GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
                     });
@@ -154,14 +154,14 @@ public class MapManager : MonoBehaviour
             UIFader mapFader = mapHUD.GetComponent<UIFader>();
             if (mapFader != null)
             {
-                mapFader.FadeOut();
+                mapFader.Hide();
             }
 
             UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
             if (diaFader != null)
             {
                 Debug.Log("I tried to turn back on the dialogue hud");
-                diaFader.FadeIn();
+                diaFader.Show();
             }
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
         }

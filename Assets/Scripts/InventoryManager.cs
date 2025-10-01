@@ -177,6 +177,22 @@ public class InventoryManager : MonoBehaviour
         totalCoin += number;
     }
 
+    private void ToggleHUD(GameObject hud, bool show)
+    {
+        if (!hud) return;
+        var fader = hud.GetComponent<UIFader>();
+        if (fader == null)
+        {
+            Debug.Log("the fader was null");
+            // fallback, but strongly recommend adding UIFader to all HUDs
+            hud.SetActive(show);
+            return;
+        }
+
+        if (show) fader.Show();
+        else if (hud.activeInHierarchy) fader.Hide();
+    }
+
     private void ShowTab(string type)
     {
         inventoryFeaturesContainer.gameObject.SetActive(type == "Features");
@@ -184,27 +200,16 @@ public class InventoryManager : MonoBehaviour
         equippableWeaponsContainer.gameObject.SetActive(type == "EquippableWeapons");
         skillTreeContainer.gameObject.SetActive(type == "SkillTree");
         teamSelectContainer.gameObject.SetActive(type == "TeamSelector");
-        characterStatsHUD.gameObject.SetActive(type == "CharacterStats");
-
+        ToggleHUD(characterStatsHUD, type == "CharacterStats");
 
         ClearAll();
 
         if (type == "Features")
         {
             previousType = "";
-            //inventoryFeaturesContainer.gameObject.SetActive(true);
 
-            UIFader featFader = featuresHUD.GetComponent<UIFader>();
-            if (featFader != null)
-            {
-                featFader.FadeIn();
-            }
-
-            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
-            if (diaFader != null)
-            {
-                diaFader.FadeOut();
-            }
+            ToggleHUD(dialogueHUD, false);
+            ToggleHUD(featuresHUD, true);  
         }
 
         if (type == "CharacterSelectorWeapons")
@@ -393,17 +398,8 @@ public class InventoryManager : MonoBehaviour
     {
         if (previousType == "")
         {
-            UIFader fader = featuresHUD.GetComponent<UIFader>();
-            if (fader != null)
-            {
-                fader.FadeOut();
-            }
-
-            UIFader diaFader = dialogueHUD.GetComponent<UIFader>();
-            if (diaFader != null)
-            {
-                diaFader.FadeIn();
-            }           
+            ToggleHUD(featuresHUD, false);
+            ToggleHUD(dialogueHUD, true);
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
         }
         else
