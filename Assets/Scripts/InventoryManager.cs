@@ -351,7 +351,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterStats")
         {
-            float fillAmount = currentSelectedCharacter.XPNeededToNextLevel() / currentSelectedCharacter.GetRequiredXPForLevel(currentSelectedCharacter.level + 1);
+            float fillAmount = currentSelectedCharacter.XPNeededToNextLevel() / (float) currentSelectedCharacter.GetRequiredXPForLevel(currentSelectedCharacter.level + 1);
             expSprite.fillAmount = fillAmount;
             characterNameBox.text = currentSelectedCharacter.characterName;
             maxCharHealth.text = currentSelectedCharacter.maxHP.ToString();
