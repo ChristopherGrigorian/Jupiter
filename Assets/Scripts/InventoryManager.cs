@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Linq;
+using System.Collections;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Character Stats Menu")]
     public GameObject characterStatsHUD;
+    public Image charImage;
     public Image expSprite;
     public TextMeshProUGUI characterNameBox;
     public TextMeshProUGUI maxCharHealth;
@@ -359,19 +361,46 @@ public class InventoryManager : MonoBehaviour
             float fillAmount = currentSelectedCharacter.XPNeededToNextLevel() / (float) currentSelectedCharacter.GetRequiredXPForLevel(currentSelectedCharacter.level + 1);
             expSprite.fillAmount = fillAmount;
             characterNameBox.text = currentSelectedCharacter.characterName;
-            maxCharHealth.text = currentSelectedCharacter.maxHP.ToString();
-            maxCharMP.text = currentSelectedCharacter.maxMP.ToString();
-            charStrength.text = currentSelectedCharacter.strength.ToString();
-            charPerception.text = currentSelectedCharacter.perception.ToString();
-            charEvas.text = currentSelectedCharacter.evasiveness.ToString();
-            charSpirit.text = currentSelectedCharacter.spirit.ToString();
-            charSpeed.text = currentSelectedCharacter.speed.ToString();
+            maxCharHealth.text = $"Max Health:\n" + currentSelectedCharacter.maxHP.ToString();
+            maxCharMP.text = $"Max MP:\n" + currentSelectedCharacter.maxMP.ToString();
+            charStrength.text = $"Strength: " + currentSelectedCharacter.strength.ToString();
+            charPerception.text = $"Perception: " + currentSelectedCharacter.perception.ToString();
+            charEvas.text = $"Evasion: " + currentSelectedCharacter.evasiveness.ToString();
+            charSpirit.text = $"Spirit: " + currentSelectedCharacter.spirit.ToString();
+            charSpeed.text = $"Speed:" + currentSelectedCharacter.speed.ToString();
             level.text = $"Level " + currentSelectedCharacter.level.ToString();
+
+            CharacterFlipBook(currentSelectedCharacter);
         }
     }
 
-    
+    private Coroutine flipbookCoroutine;
 
+    private void CharacterFlipBook(CharacterData combatant)
+    {
+        if (flipbookCoroutine != null)
+            StopCoroutine(flipbookCoroutine);
+
+        flipbookCoroutine = StartCoroutine(FlipbookRoutine(combatant.Images));
+    }
+
+    private IEnumerator FlipbookRoutine(List<Sprite> images)
+    {
+        int index = 0;
+        while (true)
+        {
+            if (images == null || images.Count == 0)
+            {
+                charImage.sprite = null;
+                yield break;
+            }
+
+            charImage.sprite = images[index];
+            index = (index + 1) % images.Count;
+
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 
     private void SelectButton(Button btn)
     {
