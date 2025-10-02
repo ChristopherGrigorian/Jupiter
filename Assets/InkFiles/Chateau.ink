@@ -165,7 +165,7 @@ Something begins manifesting in the room. Light pools from the walls and collide
 ->DONE
 
 == RHCMEX1 ==
-The ball of light swells and collapses. The room goes dark briefly, before the door unlocks, relinquishes you from its trap. The door opens up back to the hall.
+The ball of light swells and collapses. The room goes dark briefly before the door unlocks. You are relinquished from the trap. The door opens up back to the hall.
 "Hey, um..." utters Boris.
 "Just don't," you say. "Lets just go."
 Boris looks towards his feet in shame, "Got it."

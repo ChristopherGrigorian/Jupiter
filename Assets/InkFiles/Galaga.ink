@@ -1,5 +1,6 @@
 VAR SpokeToWoman = false
 VAR TTBAC = false
+VAR BorisAmnesia = false
 
 = Galagos 
 {FirstTimeGalaga:
@@ -94,11 +95,166 @@ You approach the woman.
         The woman wishes not to speak with you.
         ->Condos
     - else:
+        Boris trails behind you, cowering slightly in your shadow.
         ->AndromedaConvo
     }
 }
 
 == AndromedaConvo ==
+"Why do you insist on bugging me?" she snaps.
+
++ "Boris said to."
+Andromeda sighs, "You both were and still are insufferable."
+"Why are you not telling me everything? Why are you being so mysterious about everything?" you say.
+"I don't know ANY of your intentions. You don't remember anything. I can't tell you who to be," she says.
+"Well, could you tell me who I once was?" you rebuttal.
+-> AC1
++ "You're not telling me everything."
+~ BorisAmnesia = true
+"Well, nor has Boris. Not that it's on purpose, he just has a sort of amnesia like you."
+"Wait what?" Boris chimes in.
+Andromeda rolls her eyes.
+-> AC1
+
+== AC1 ==
+"Well... what has Boris told you so far?" she asks.
+
++ "That we're some alien race of freaks that kill people."
+- "Okay, that's a good start, I guess," she says. 
++ "That I've trapped something behind doors."
+- "That's true..." she ponders.
++ "He told me about the Telepolos."
+- "... alright" Andromeda says.
+
+-> AC2
+
+== AC2 ==
+"Let's just start broad," she says.
+{BorisAmnesia:
+"Wait! Why do I have amnesia?" Boris interrupts.
+"Shut up Boris," you snap.
+He looks at you wide-eyed then back to Andromeda.
+}
+"Boris told you about how we're sort of a militia race, right?"
+"Yes," you nod.
+"What do you think makes a strong fighter?"
+
++ "Strong weapons."
+->AC3
++ "Strong skills."
+->AC3
++ "A strong team."
+->AC3
+
+== AC3 ==
+"Okay, how about an elite sort of fighter? One to literally crush universes, planets, and the livelihoods of millions of cilivilizations?"
+You and Boris look to her, both empty and expressionless.
+"It's a lack of humanity, but with the presence of a sort of essence that makes us real."
++ "A soul?"
+- "Something similar. We call it a Continuum Anchor. Because we have once existed as living, thinking, and feeling biological entities, we are far more grounded in reality." 
+"We are not subject to blur or fragment as easily when encountering resonance weapons. They are the most destructive tools in our universe. There is no conceivable defense against a person's will manifest. Your personhood is therefore, a very potent powersource."
+
++ "What about having a lack of humanity?"
+->AC4
++ Nod quietly.
+->AC4
+
+== AC4 ==
+"Conscious splitting, or memory splitting, is how we artificially gain a lack of humanity," she says. "Everyone with a Continuum Anchor can manifest resonance weapons, but how willing would you be to turn your weapon on another living creature?"
+
++ "I would do it in a heartbeat."
+- "I hope you mean in self defense... Perhaps you aren't much different from your old self. Anyway..."
+
++ "I would never."
+- "Such would be the sane response."
+
+-> AC5
+
+== AC5 ==
+"The 'human' part of you would persist in one entity, and the other would persist in an avatar. Your Continuum Anchor would be split, and you could live two completely separate lives. One focused on a hedonistic, everlasting existence with every imaginable experience in the conveivable universe, and the other a weapon of mass destruction."
+
+"Am I a weapon of mass destruction?" Boris asks.
+"No, you are an experiment gone wrong... or right depending on how you look at it," she says.
+"Oh..." Boris says.
+Andromeda looks to you now, all smug, "Aiolos isn't even your real name, by the way."
+
++ "Then what is it?"
+- "It's Bruce," she murmurs.
+"Bruce was able to create an aritifical Continuum Anchor and instill it in you, Boris. Because of that, he was able to conscious split you. Your combat double is Rabbit."
+
+You look to Boris. You've been presented with quite the bombshell. There's been many such cases of you not being able to pinpoint your emotions, but this time, you feel scared.
+
+"After Boris, though," she continues, "you never attempted the procedure again. Perhaps Boris was a wake up call of sorts, a coupe de grace to prove that you could actually do it. Maybe you thought we took it too far."
+
+-> AC6
+
+== AC6 ==
+* "Are you the combat double, Andromeda?"
+- "Yes, I am," she sighs. 
+"The thing about conscious splitting though is that it doesn't work. The Continuum Anchor has a means, or rather a desire, of maintaining a connection with itself. You could split it over and over again, but all the pieces will slowly merge back with one another."
+"When they collide though, we can only speculate what would happen. Presumably the anchors would have experienced far too different experiences to capture them in one person again. We don't know if they would merge, or one conscious would override the other."
+"I can only speak from experience though. That slow walk of the anchor back to itself brings a little bit of humanity back to a weapon like me over time, and probably a lot of guilt to the counterpart. Despite me having traces of my other half, on combination, another clean split may occur, where one half gets completely erased." 
+"The solution was to seal the other half in such a way where the anchor couldn't make it back to itself. My other half was sealed far too late. I lost all desire to continue this rampage."
+-> AC7
+
+* "Am I the combat double to Bruce?"
+"I'm not sure what happened after your capture, so I can't say for sure. You were a tool of this universe and nothing more. You went rogue, and that's why they severed you from this place."
+->AC6
+
+
+== AC7 ==
++ "Why was your other half sealed so late?"
+- "We didn't know any better at the time. I was one of the first to undergo conscious splitting."
+"It was just sort of a side effect neither of us expected..."
+
++ "Does the collision happen naturally over time?"
+- "Precisely," affirms Andromeda. 
+Boris sort of picks at this beard awkwardly, "So... let's just break the sealed version out and let time take care of the rest, right? That way the killings stop, but Jupiter still remains. Nobody is capable of creating more of these elite soldiers besides Bruce."
+"It's not that simple," Andromeda says. "For the victim of the seal, there's only one way in, and there's no way out. Based on our lack of knowledge, there may not even be a practical reason to actually enter one." 
+"Besides, they're extremely dangerous to enter. We have no idea how the pysche of those sealed are holding up. Those places have become their exclusive universes. Anything goes according to their desires."
+
++ "Could we go straight for the elites?"
+"Even as a team, we would have no chance," she says. "Unlike me, the other elites still have their full will to fight and conquer."
+-> AC8
+
+== AC8 ==
++ "So what do we do?"
+-> AC9
++ "This feels like a losing game."
+-> AC9
+
+== AC9 ==
+"You want my help, I presume? Let me help you help yourself. Consider me as the experiment. We go into the simulation world and find my other half. It's part selfish, but also part valuable."
+
+"That's it? And then?"
+
+"And then you kill me, Andromeda, and observe what happens to be other half."
+
++ "What? No."
+"Don't be too hasty," warns Boris. "Just think about it. It may be worth a shot."
+-> A10
+
++ _Look to Boris._ 
+You look to Boris and he just shrugs.
+"I mean..." he starts, "It's worth a shot I suppose."
+-> A10
+
+== A10 ==
+"I'll lay it out for you," Boris says. "There's literally two possibilities."
+"If we kill Andromeda there, her memories could combine with her other half. In which case we'll still have a grief filled being that doesn't have a desire to kill others." 
+"Or..." Boris wrings his hands in anxiety, "We're going to watch a pretty nasty battle between two psyches and we'll get to observe which version wins." 
+"If things get rough, we just leave the simulation, and if Andromeda, or their other half, goes crazy they'll be stuck there in the simulation."
+
+Boris explanation helped make you a little more rational in the thought process.
+You look to Andromeda.
++ "Are you sure you're okay with this?"
+"Yeah, absolutely, it's all for the betterment of this universe. I've always wanted to meet with my other half anyway..."
+->A11
+
+== A11 ==
++ "I take it you'll be joining us then?"
+"Yes, my skills are at your disposal. Just note though that since the bridge between my other half had started forming, I'm not as strong as I once was. I won't be a burden, though."
+Andromeda joins your party.
 This would be the next point in the story, but I haven't written anything yet. Thank you for playing.
 ->DONE
 
@@ -120,7 +276,11 @@ She looks to you with a hint of disgust, "No, we are not the same, I am not your
 - "I once shared the same virtues as the man that built Boris. Those dreams have since been snuffed out. I'm scared of what they'll do to me." 
 * "Would you join me and help me once more?"
 - She looks to you in confusion, "I had loyaltly to one person only, you are him no longer."
-The woman no longer wishes to speak to you. You get off of her porch.
+{FirstTimeInChateau == false:
+    The woman no longer wishes to speak to you. You get off of her porch.
+- else:
+    The woman seems to shoo you away, but you still feel somewhat determined to speak with her, as per Boris' request.
+}
 ->Condos
 
 == AnzhelaShop ==

@@ -23,7 +23,7 @@ They’re crouched on the floor before you. They sport a suit and are humanoid i
 “Rabbit, huh. I’m Aiolos,” you announce. You’re not sure whether to feel scared or not. 
 "Can you do this?" Rabbit asks. He holds out his palm, and within it, you see a revolver begin to materialize. It's radiating a brilliant light blue color. 
 "Um.. No," you respond. 
-"Soul weapon," Rabbit says. "Think, and behold."
+"Resonance weapon," Rabbit says. "Think, and behold."
 "Think and behold," you echo.
 Rabbit looks at you, confused. "Do, don't say," they instruct.
 You extend you arm out and look at your palm.
