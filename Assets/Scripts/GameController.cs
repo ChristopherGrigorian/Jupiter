@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
     private bool combatActive = false;
 
     [SerializeField] private List<EncounterData> allEncounters;
-    [SerializeField] private CombatHudManager combatHudManager;
 
     [SerializeField] private GameObject combatHUD;
     [SerializeField] private GameObject dialogueHUD;
@@ -26,13 +25,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject combatantButtonPrefab;
 
-    [SerializeField] private Image characterImage;
-
     [SerializeField] private GameObject combatLogPanel;
     [SerializeField] private TextMeshProUGUI combatLogText;
-
-    [SerializeField] private GameObject weaponBacking;
-    [SerializeField] private GameObject actionContainer;
 
     [Header("CombatantInformation")]
     [SerializeField] private TextMeshProUGUI CombatantName;
@@ -58,6 +52,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private float rowSpacing = 6.0f; // distance between pedestals
 
     private readonly Dictionary<Combatant, PedestalController> pedestalMap = new();
+
+    private readonly Dictionary<Combatant, CombatHudManager> hudByCombatant
+     = new Dictionary<Combatant, CombatHudManager>();
+
 
     [Header("LevelUpItems")]
     [SerializeField] private LevelUpPanelController levelUpPanel;
@@ -162,6 +160,7 @@ public class GameController : MonoBehaviour
         Debug.Log("EnteredCombatLoop");
         while (combatActive) {
             Combatant current = turnOrder[currentTurnIndex];
+            FocusCameraOn(current);
 
             if (current.currentHP > 0)
             {
@@ -171,7 +170,6 @@ public class GameController : MonoBehaviour
                 CombatantHealth.text = "Combatant HP: " + current.currentHP.ToString();
                 CombatantMP.text = "Combatant MP: " + current.currentMP.ToString();
 
-                CharacterFlipBook(current);
                 yield return current.isPlayerControlled
                     ? StartCoroutine(PlayerTurn(current))
                     : StartCoroutine(EnemyTurn(current));
@@ -209,15 +207,21 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            combatHudManager.SetAllActionButtonsInteractable(true);
-            weaponBacking.SetActive(true);
-            actionContainer.SetActive(true);
             Debug.Log($"Player {player.Name}'s turn. Choose a skill.");
+
+            var hud = GetHudFor(player);
+            if (hud == null)
+            {
+                Debug.LogError($"No HUD registered for {player.Name}. Did you add CharacterUIRegistrar?");
+                yield break;
+            }
+
+            ShowOnlyHudFor(player);
 
             SkillData chosenSkill = null;
 
             // Populate the action UI and define what happens on click
-            combatHudManager.PopulateActions(player.data, (SkillData skill) =>
+            hud.PopulateActions(player.data, (SkillData skill) =>
             {
 
                 if (!CheckMPReqMet(player, skill))
@@ -228,7 +232,7 @@ public class GameController : MonoBehaviour
 
                 Debug.Log($"{player.Name} uses {skill.skillName}!");
                 chosenSkill = skill;
-                combatHudManager.SetAllActionButtonsInteractable(false);
+                hud.SetAllActionButtonsInteractable(false);
             });
 
             yield return new WaitUntil(() => chosenSkill != null);
@@ -238,7 +242,7 @@ public class GameController : MonoBehaviour
 
             if (selectionCanceled || (!chosenSkill.isAOE && target == null))
             {
-                combatHudManager.SetAllActionButtonsInteractable(true);
+                hud.SetAllActionButtonsInteractable(true);
                 chosenSkill = null;
                 continue;
             }
@@ -478,9 +482,9 @@ public class GameController : MonoBehaviour
     private IEnumerator EnemyTurn(Combatant enemy)
     {
 
-        combatHudManager.SetAllActionButtonsInteractable(false);
-        weaponBacking.SetActive(false);
-        actionContainer.SetActive(false);
+        var hud = GetHudFor(enemy);
+        if (hud) hud.SetAllActionButtonsInteractable(false);
+
         yield return new WaitForSeconds(1f);
 
         var ai = new EnemyAI(enemy, turnOrder);
@@ -678,33 +682,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private Coroutine flipbookCoroutine;
-
-    private void CharacterFlipBook(Combatant combatant)
-    {
-        if (flipbookCoroutine != null)
-            StopCoroutine(flipbookCoroutine);
-
-        flipbookCoroutine = StartCoroutine(FlipbookRoutine(combatant.data.Images));
-    }
-
-    private IEnumerator FlipbookRoutine(List<Sprite> images)
-    {
-        int index = 0;
-        while (true)
-        {
-            if (images == null || images.Count == 0)
-            {
-                characterImage.sprite = null;
-                yield break;
-            }
-
-                characterImage.sprite = images[index];
-            index = (index + 1) % images.Count;
-
-            yield return new WaitForSeconds(0.2f);
-        }
-    }
 
     public IEnumerator ShowCombatLog(string message)
     {
@@ -847,6 +824,49 @@ public class GameController : MonoBehaviour
         }
         // Only show those who actually changed XP (everyone) � you can also filter to LevelsGained > 0 if you prefer
         return list;
+    }
+
+
+    public void RegisterHud(Combatant c, CombatHudManager hud)
+    {
+        hudByCombatant[c] = hud;
+    }
+
+    public void UnregisterHud(Combatant c)
+    {
+        hudByCombatant.Remove(c);
+    }
+
+    private CombatHudManager GetHudFor(Combatant c)
+    {
+        hudByCombatant.TryGetValue(c, out var hud);
+        return hud;
+    }
+
+    private void ShowOnlyHudFor(Combatant c)
+    {
+        // iterate a snapshot to avoid "modified during enumeration"
+        foreach (var hud in hudByCombatant.Values.ToList())
+            if (hud) hud.gameObject.SetActive(false);
+
+        var hudCur = GetHudFor(c);
+        if (hudCur) hudCur.gameObject.SetActive(true);
+    }
+
+    private PedestalController GetPedestalFor(Combatant c)
+    {
+        if (pedestalMap.TryGetValue(c, out var ped))
+            return ped;
+        return null;
+    }
+
+    private void FocusCameraOn(Combatant c)
+    {
+        var ped = GetPedestalFor(c);
+        if (ped != null && ped.viewingPoint != null && cameraPan != null)
+        {
+            cameraPan.PanTo(ped.viewingPoint);
+        }
     }
 
 }
