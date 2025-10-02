@@ -15,6 +15,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] public List<ItemData> items;
     [SerializeField] private List<ItemData> acquireableItems;
 
+    [SerializeField] private GameObject toolTipHolder;
+
     public int totalCoin = 0;
 
     private Button currentlySelectedBtn;
@@ -40,8 +42,11 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Character Stats Menu")]
     public GameObject characterStatsHUD;
+    public Image charImageRed;
+    public Image charImageBlue;
     public Image charImage;
     public Image expSprite;
+    public TextMeshProUGUI currentWeapon;
     public TextMeshProUGUI characterNameBox;
     public TextMeshProUGUI maxCharHealth;
     public TextMeshProUGUI maxCharMP;
@@ -208,6 +213,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "Features")
         {
+            toolTipHolder.gameObject.SetActive(false);
             previousType = "";
 
             ToggleHUD(dialogueHUD, false);
@@ -216,6 +222,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterSelectorWeapons")
         {
+            toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
             {
@@ -232,6 +239,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterSelectorSkillTree")
         {
+            toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
             {
@@ -250,6 +258,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterStatsCS")
         {
+            toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
             {
@@ -322,6 +331,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "TeamSelector")
         {
+            toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
 
             foreach (var character in GameController.Instance.playerCharacters)
@@ -369,6 +379,7 @@ public class InventoryManager : MonoBehaviour
             charSpirit.text = $"Spirit: " + currentSelectedCharacter.spirit.ToString();
             charSpeed.text = $"Speed:" + currentSelectedCharacter.speed.ToString();
             level.text = $"Level " + currentSelectedCharacter.level.ToString();
+            currentWeapon.text = $"Current Weapon:\n" + currentSelectedCharacter.EquippedWeapon.weaponName;
 
             CharacterFlipBook(currentSelectedCharacter);
         }
@@ -392,10 +403,14 @@ public class InventoryManager : MonoBehaviour
             if (images == null || images.Count == 0)
             {
                 charImage.sprite = null;
+                charImageRed.sprite = null;
+                charImageBlue.sprite = null;
                 yield break;
             }
 
             charImage.sprite = images[index];
+            charImageRed.sprite = images[(index + 1) % images.Count];
+            charImageBlue.sprite = images[(index + 2) % images.Count];
             index = (index + 1) % images.Count;
 
             yield return new WaitForSeconds(0.2f);
