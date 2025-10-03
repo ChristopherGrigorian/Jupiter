@@ -13,6 +13,10 @@ public class PedestalController : MonoBehaviour
     [SerializeField] private CanvasGroup highlight;
     [SerializeField] private Image characterImage;
 
+    [Header("UI")]
+    [SerializeField] private CanvasGroup uiGroup;
+    [SerializeField] private UIFader fader;
+
     [Header("Player-only UI")]
     [SerializeField] private CanvasGroup actionExtras; // tabs, prompts, etc (optional)
 
@@ -72,7 +76,7 @@ public class PedestalController : MonoBehaviour
     }
 
     void LateUpdate()
-    {
+    {   /*
         if (!Camera.main) return;
 
         // billboard texts toward camera
@@ -86,11 +90,44 @@ public class PedestalController : MonoBehaviour
             var e = hp.transform.eulerAngles;
             characterImage.transform.rotation = Quaternion.Euler(0f, e.y, 0f);
         }
+        */
     }
 
     public void SetHover(bool on)
     {
         if (highlight) highlight.alpha = on ? 1f : 0f;
         if (nameLabel) nameLabel.color = on ? new Color(1f, 1f, 0.6f) : Color.white;
+    }
+
+    public void SetUIVisible(bool visible, bool instant = false)
+    {
+        // Prefer UIFader if assigned
+        if (fader)
+        {
+            if (instant) fader.SetVisibleImmediate(visible);
+            else if (visible) fader.Show();
+            else fader.Hide();
+            return;
+        }
+
+        // Fallback to CanvasGroup if no UIFader
+        if (!uiGroup) uiGroup = GetComponentInChildren<CanvasGroup>(true);
+        if (!uiGroup) return;
+
+        if (instant)
+        {
+            uiGroup.alpha = visible ? 1f : 0f;
+            uiGroup.interactable = visible;
+            uiGroup.blocksRaycasts = visible;
+            uiGroup.gameObject.SetActive(visible);
+        }
+        else
+        {
+            // no fader = no animation; do immediate anyway
+            uiGroup.alpha = visible ? 1f : 0f;
+            uiGroup.interactable = visible;
+            uiGroup.blocksRaycasts = visible;
+            uiGroup.gameObject.SetActive(visible);
+        }
     }
 }

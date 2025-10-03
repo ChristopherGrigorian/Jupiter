@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcd4b306562e0745952766ed53373ce, type: 3}
   m_Name: FacelessConstruct
   m_EditorClassIdentifier: 
-  characterName: FacelessConstruct
+  id: 
+  characterName: Faceless Construct
   level: 1
   experience: 0
   maxHP: 20
@@ -24,6 +25,7 @@ MonoBehaviour:
   speed: 10
   EquippedWeapon: {fileID: 11400000, guid: 82c5bfb29e4f2554eb3c8dc503099cea, type: 2}
   dodgeSound: {fileID: 8300000, guid: 2be7548daec14a946a71694dab891fd8, type: 3}
+  currentlyEquipped: 0
   equipableWeaponTypes: 
   Skills: []
   Images:

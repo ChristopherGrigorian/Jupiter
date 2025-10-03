@@ -1,9 +1,14 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Linq;
+
 
 public class CombatHudManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI toolTipText;
+
     [Header("Containers")]
     [SerializeField] private Transform weaponContainer;
     [SerializeField] private Transform skillContainer;
@@ -21,7 +26,9 @@ public class CombatHudManager : MonoBehaviour
 
     private CharacterData activeCharacter;
     private System.Action<SkillData> cachedSkillCallback;
-    private bool _wired;
+    private bool wired;
+
+    public System.Action PendingConsumeAction { get; set; }
 
     void Awake()
     {
@@ -35,7 +42,7 @@ public class CombatHudManager : MonoBehaviour
 
     private void WireIfNeeded()
     {
-        if (_wired) return;
+        if (wired) return;
 
         // Optional: auto-find if not assigned in prefab
         if (!weaponContainer) weaponContainer = transform.Find("Weapon");
@@ -46,7 +53,7 @@ public class CombatHudManager : MonoBehaviour
         if (skillTabButton) { skillTabButton.onClick.RemoveAllListeners(); skillTabButton.onClick.AddListener(() => ShowTab("Skill")); }
         if (itemTabButton) { itemTabButton.onClick.RemoveAllListeners(); itemTabButton.onClick.AddListener(() => ShowTab("Item")); }
 
-        _wired = true;
+        wired = true;
     }
 
     public void PopulateActions(CharacterData character, System.Action<SkillData> onSkillChosen)
@@ -66,8 +73,6 @@ public class CombatHudManager : MonoBehaviour
             Debug.LogError("[CombatHud] Button prefabs are not assigned on prefab.");
             return;
         }
-
-        ShowTab("Weapon");
     }
 
     private void ShowTab(string type)
@@ -93,12 +98,17 @@ public class CombatHudManager : MonoBehaviour
                     weaponContainer,
                     weaponButtonPrefab,
                     skill.skillName,
-                    () => { cachedSkillCallback?.Invoke(skill); }
+                    () => 
+                    { 
+                        PendingConsumeAction = null; 
+                        cachedSkillCallback?.Invoke(skill); 
+                    }
                 );
 
                 var trigger = btnGO.AddComponent<SkillTooltipTrigger>();
-                trigger.Init(skill);
+                trigger.Init(skill, toolTipText);
             }
+            SelectTabButton(weaponTabButton);
         }
         else if (type == "Skill" && activeCharacter)
         {
@@ -108,12 +118,17 @@ public class CombatHudManager : MonoBehaviour
                     skillContainer,
                     skillButtonPrefab,
                     skill.skillName,
-                    () => { cachedSkillCallback?.Invoke(skill); }
+                    () => 
+                    { 
+                        PendingConsumeAction = null; 
+                        cachedSkillCallback?.Invoke(skill); 
+                    }
                 );
 
                 var trigger = btnGO.AddComponent<SkillTooltipTrigger>();
-                trigger.Init(skill);
+                trigger.Init(skill, toolTipText);
             }
+            SelectTabButton(skillTabButton);
         }
         else if (type == "Item")
         {
@@ -125,19 +140,20 @@ public class CombatHudManager : MonoBehaviour
                     item.itemName,
                     () =>
                     {
+                        PendingConsumeAction = () => { item.DestorySelf(); };
                         cachedSkillCallback?.Invoke(item.skillAttached);
-                        item.DestorySelf();
                     }
                 );
 
                 var trigger = btnGO.AddComponent<SkillTooltipTrigger>();
-                trigger.Init(item.skillAttached);
+                trigger.Init(item.skillAttached, toolTipText);
             }
+            SelectTabButton(itemTabButton);
         }
 
     }
 
-    private void ClearAll()
+    public void ClearAll()
     {
         if (weaponContainer) foreach (Transform c in weaponContainer) Destroy(c.gameObject);
         if (skillContainer) foreach (Transform c in skillContainer) Destroy(c.gameObject);
@@ -183,7 +199,66 @@ public class CombatHudManager : MonoBehaviour
 
         btn.onClick.RemoveAllListeners();
         btn.onClick.AddListener(() => onClick?.Invoke());
+        btn.onClick.AddListener(StopTabWobble);
+        btn.onClick.AddListener(ClearAll);
         return btnGO;
+    }
+
+    private void SelectTabButton(Button tabBtn)
+    {
+        if (!tabBtn) return;
+        StartCoroutine(SelectNextFrame(tabBtn));
+    }
+
+    private System.Collections.IEnumerator SelectNextFrame(Button b)
+    {
+        // Let the canvas/layout rebuild first
+        yield return null;
+
+        if (!b || !b.gameObject.activeInHierarchy) yield break;
+
+        // Clear current selection, then select properly
+        if (EventSystem.current)
+        {
+            Debug.Log("I tried to select the button");
+            EventSystem.current.SetSelectedGameObject(null);
+            b.Select(); // sends OnSelect + drives Selectable state machine
+        }
+
+        // If you wobble the active tab, do it after selection
+        ToggleTabWobble(b);
+    }
+
+
+    private void ToggleTabWobble(Button active)
+    {
+        // Ensure components exist or add them
+        var weaponW = weaponTabButton ? weaponTabButton.GetComponent<UIWobblePop>() : null;
+        if (weaponTabButton && !weaponW) weaponW = weaponTabButton.gameObject.AddComponent<UIWobblePop>();
+
+        var skillW = skillTabButton ? skillTabButton.GetComponent<UIWobblePop>() : null;
+        if (skillTabButton && !skillW) skillW = skillTabButton.gameObject.AddComponent<UIWobblePop>();
+
+        var itemW = itemTabButton ? itemTabButton.GetComponent<UIWobblePop>() : null;
+        if (itemTabButton && !itemW) itemW = itemTabButton.gameObject.AddComponent<UIWobblePop>();
+
+        // Enable only the active tab's wobble
+        if (weaponW) weaponW.enabled = (active == weaponTabButton);
+        if (skillW) skillW.enabled = (active == skillTabButton);
+        if (itemW) itemW.enabled = (active == itemTabButton);
+    }
+
+    public void StopTabWobble()
+    {
+        void Off(Button b)
+        {
+            if (!b) return;
+            var w = b.GetComponent<UIWobblePop>();
+            if (w) w.enabled = false;
+        }
+        Off(weaponTabButton);
+        Off(skillTabButton);
+        Off(itemTabButton);
     }
 
 }

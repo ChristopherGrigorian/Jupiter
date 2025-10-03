@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject pedestalPrefab;
     [SerializeField] private Transform playerRowAnchor;
     [SerializeField] private Transform enemyRowAnchor;
-    [SerializeField] private float rowSpacing = 6.0f; // distance between pedestals
+    [SerializeField] private float rowSpacing = 100.0f; // distance between pedestals
 
     private readonly Dictionary<Combatant, PedestalController> pedestalMap = new();
 
@@ -76,6 +76,17 @@ public class GameController : MonoBehaviour
 
     private bool selectionCanceled = false;
 
+    private Transform lastActorViewPoint;
+
+
+    [Header("Environment")]
+    [SerializeField] private Material combatSkybox;   // assign your combat skybox
+
+    // saved originals
+    private Material _origSkybox;
+    private bool _origFogEnabled;
+    private Color _origFogColor;
+    private float _origFogDensity;
 
     private void Awake()
     {
@@ -94,11 +105,17 @@ public class GameController : MonoBehaviour
         {
             encounterMap[encounter.encounterID] = encounter;
         }
+
+        _origSkybox = RenderSettings.skybox;
+        _origFogEnabled = RenderSettings.fog;
+        _origFogColor = RenderSettings.fogColor;
+        _origFogDensity = RenderSettings.fogDensity;
     }
 
 
     public void StartCombat(string encounterID, string continueKnot)
     {
+        ApplyCombatEnvironment();
         if (!encounterMap.ContainsKey(encounterID))
         {
             Debug.LogError($"No encounter found with ID: {encounterID}");
@@ -121,6 +138,7 @@ public class GameController : MonoBehaviour
         PrepareCombatants();
 
         SpawnAllPedestals();
+        HideAllPlayersUI(instant: true);
 
         currentTurnIndex = 0;
 
@@ -161,6 +179,10 @@ public class GameController : MonoBehaviour
         while (combatActive) {
             Combatant current = turnOrder[currentTurnIndex];
             FocusCameraOn(current);
+            if (current.isPlayerControlled)
+                ShowOnlyCurrentPlayerUI(current, instant: false);
+            else
+                HideAllPlayersUI(instant: false);
 
             if (current.currentHP > 0)
             {
@@ -188,6 +210,8 @@ public class GameController : MonoBehaviour
 
                 if (cameraPan != null && dialogueCamAnchor != null)
                     cameraPan.PanTo(dialogueCamAnchor);
+
+                RestoreEnvironment();
 
                 combatHUD.SetActive(false);
                 dialogueHUD.SetActive(true);
@@ -242,16 +266,22 @@ public class GameController : MonoBehaviour
 
             if (selectionCanceled || (!chosenSkill.isAOE && target == null))
             {
+                hud.PendingConsumeAction = null;
                 hud.SetAllActionButtonsInteractable(true);
                 chosenSkill = null;
                 continue;
             }
+
+            hud.PendingConsumeAction?.Invoke();
+            hud.PendingConsumeAction = null;
 
             SpendMP(player, chosenSkill);
             yield return StartCoroutine(PlayerAction(player, chosenSkill));
             player.currentMP += 1;
 
             yield return StartCoroutine(ResolveEndOfTurnStatuses(player));
+
+            if (hud) hud.ClearAll();
             yield break;
         }
     }
@@ -559,7 +589,28 @@ public class GameController : MonoBehaviour
 
     private IEnumerator TargetSelection(Combatant player, SkillData skill)
     {
+        if (!skill.targetsEnemies)
+        {
+            // Ally targeting mode: show all player UIs
+            ShowAllPlayersUI(true, instant: false);
+        }
+
         target = null;
+
+        var playerHud = GetHudFor(player);
+        var playerFader = GetFaderFor(player);
+
+        // snapshot if it was visible
+        bool hudWasVisible =
+            (playerFader && playerFader.gameObject.activeSelf && playerFader.GetComponent<CanvasGroup>().alpha > 0.01f)
+            || (playerHud && playerHud.gameObject.activeSelf);
+
+        if (hudWasVisible)
+        {
+            if (playerFader) playerFader.Hide();
+            else playerHud.gameObject.SetActive(false);
+        }
+
 
         if (cameraPan != null)
         {
@@ -593,21 +644,27 @@ public class GameController : MonoBehaviour
 
             // cleanup
             HighlightGroup(skill.targetsEnemies, false);
-            cameraPan.PanTo(combatCamAnchor);
+            if (selectionCanceled)
+            {
+                if (cameraPan != null && lastActorViewPoint != null)
+                    cameraPan.PanTo(lastActorViewPoint);     // back to actor’s pedestal
+                ShowOnlyCurrentPlayerUI(player, instant: false);
+                if (hudWasVisible)
+                {
+                    if (playerFader) playerFader.Show();
+                    else playerHud.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                if (cameraPan != null && combatCamAnchor != null)
+                    cameraPan.PanTo(combatCamAnchor);         // logs view
+            }
             yield break; // target remains null on purpose for AOE
         }
 
         while (target == null)
         {
-            // (Optional) ignore when mouse over UI
-            // if (UnityEngine.EventSystems.EventSystem.current?.IsPointerOverGameObject() == true)
-            // {
-            //     SetHover(lastHover, false);
-            //     lastHover = null;
-            //     yield return null;
-            //     continue;
-            // }
-
             // Raycast from camera to mouse
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 1000f, pedestalMask))
@@ -659,9 +716,25 @@ public class GameController : MonoBehaviour
         }
 
         // Clear hover visuals after selection
-        cameraPan.PanTo(combatCamAnchor);
         SetHover(lastHover, false);
         lastHover = null;
+
+        if (selectionCanceled)
+        {
+            
+            if (cameraPan != null && lastActorViewPoint != null) cameraPan.PanTo(lastActorViewPoint);
+            ShowOnlyCurrentPlayerUI(player, instant: false);
+            if (hudWasVisible)
+            {
+                if (playerFader) playerFader.Show();
+                else if (playerHud) playerHud.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            if (cameraPan != null && combatCamAnchor != null) cameraPan.PanTo(combatCamAnchor);
+            // keep HUD hidden during combat log/resolve; next actor’s ShowOnlyHudFor() will show theirs
+        }
     }
 
     private void SetHover(PedestalController ped, bool on)
@@ -685,6 +758,10 @@ public class GameController : MonoBehaviour
 
     public IEnumerator ShowCombatLog(string message)
     {
+        ShowAllPlayersUI(true, instant: false);
+
+        if (cameraPan != null && combatCamAnchor != null)
+            cameraPan.PanTo(combatCamAnchor);
         //combatLogPanel.SetActive(true);
         combatLogText.text = message;
 
@@ -738,8 +815,8 @@ public class GameController : MonoBehaviour
         {
             var go = Instantiate(pedestalPrefab, playerRowAnchor);   // parent first
             go.transform.localPosition = pLocal[i];
-            go.transform.localRotation = Quaternion.identity;        // or face anchor.forward if you prefer
-            go.transform.localScale = new Vector3(2, 1, 2);
+            go.transform.localRotation = Quaternion.Euler(0, -45, 0);       // or face anchor.forward if you prefer
+            go.transform.localScale = new Vector3(1, 0.5f, 1);
 
             var pc = go.GetComponent<PedestalController>();
             pc.Bind(players[i]);
@@ -754,8 +831,8 @@ public class GameController : MonoBehaviour
         {
             var go = Instantiate(pedestalPrefab, enemyRowAnchor);    // parent first
             go.transform.localPosition = eLocal[i];
-            go.transform.localRotation = Quaternion.identity;
-            go.transform.localScale = new Vector3(2, 1, 2);
+            go.transform.localRotation = Quaternion.Euler(0, 45, 0);
+            go.transform.localScale = new Vector3(1, 0.5f, 1);
 
             var pc = go.GetComponent<PedestalController>();
             pc.Bind(enemies[i]);
@@ -845,12 +922,35 @@ public class GameController : MonoBehaviour
 
     private void ShowOnlyHudFor(Combatant c)
     {
-        // iterate a snapshot to avoid "modified during enumeration"
-        foreach (var hud in hudByCombatant.Values.ToList())
-            if (hud) hud.gameObject.SetActive(false);
+        // fade-hide everyone else
+        foreach (var kv in hudByCombatant.ToList())
+        {
+            var other = kv.Key;
+            var hud = kv.Value;
+            if (!hud) continue;
 
-        var hudCur = GetHudFor(c);
-        if (hudCur) hudCur.gameObject.SetActive(true);
+            var fader = hud.GetComponent<UIFader>();
+            bool isActive = hud.gameObject.activeInHierarchy;
+
+            if (other == c)
+            {
+                if (fader)
+                {
+                    if (isActive) fader.Show();
+                    else { hud.gameObject.SetActive(true); fader.SetVisibleImmediate(true); }
+                }
+                else hud.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (fader)
+                {
+                    if (isActive) fader.Hide();
+                    else fader.SetVisibleImmediate(false); // don’t start coroutine on inactive
+                }
+                else hud.gameObject.SetActive(false);
+            }
+        }
     }
 
     private PedestalController GetPedestalFor(Combatant c)
@@ -865,8 +965,64 @@ public class GameController : MonoBehaviour
         var ped = GetPedestalFor(c);
         if (ped != null && ped.viewingPoint != null && cameraPan != null)
         {
+            lastActorViewPoint = ped.viewingPoint;
             cameraPan.PanTo(ped.viewingPoint);
         }
     }
 
+    private UIFader GetFaderFor(Combatant c)
+    {
+        var hud = GetHudFor(c);
+        return hud ? hud.GetComponent<UIFader>() : null;
+    }
+
+    private void ShowPlayerPedestalsWhere(System.Func<Combatant, bool> predicate, bool instant = false)
+    {
+        foreach (var kv in pedestalMap)
+        {
+            var c = kv.Key;
+            var ped = kv.Value;
+            if (!c.isPlayerControlled || ped == null) continue;
+            ped.SetUIVisible(predicate(c), instant);
+        }
+    }
+
+    // Convenience wrappers
+    private void ShowOnlyCurrentPlayerUI(Combatant current, bool instant = false)
+    {
+        ShowPlayerPedestalsWhere(c => c == current && c.IsAlive, instant);
+    }
+
+    private void ShowAllPlayersUI(bool on, bool instant = false)
+    {
+        ShowPlayerPedestalsWhere(c => on && c.IsAlive, instant);
+    }
+
+    private void HideAllPlayersUI(bool instant = false)
+    {
+        ShowPlayerPedestalsWhere(c => false, instant);
+    }
+
+    private void ApplyCombatEnvironment()
+    {
+        if (combatSkybox) RenderSettings.skybox = combatSkybox;
+
+        // optional: punch up atmosphere during combat
+        // RenderSettings.ambientMode = AmbientMode.Skybox;
+        RenderSettings.fog = true;
+        RenderSettings.fogColor = new Color(0.05f, 0.08f, 0.12f);
+        RenderSettings.fogDensity = 0.02f;
+
+        DynamicGI.UpdateEnvironment(); // refresh ambient/probe lighting from new skybox
+    }
+
+    private void RestoreEnvironment()
+    {
+        RenderSettings.skybox = _origSkybox;
+        RenderSettings.fog = _origFogEnabled;
+        RenderSettings.fogColor = _origFogColor;
+        RenderSettings.fogDensity = _origFogDensity;
+
+        DynamicGI.UpdateEnvironment();
+    }
 }

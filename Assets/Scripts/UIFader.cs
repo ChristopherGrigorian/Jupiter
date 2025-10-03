@@ -39,13 +39,15 @@ public class UIFader : MonoBehaviour
 
     public void Show()
     {
-        gameObject.SetActive(true);
-        StartTransition(visible: true);
+        if (!gameObject.activeSelf) gameObject.SetActive(true);
+        if (!isActiveAndEnabled) { SetVisibleImmediate(true); return; }
+        StartTransition(true);
     }
 
     public void Hide()
     {
-        StartTransition(visible: false);
+        if (!isActiveAndEnabled) { SetVisibleImmediate(false); return; }
+        StartTransition(false);
     }
 
     private void StartTransition(bool visible)
@@ -79,6 +81,8 @@ public class UIFader : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = fadeTo;
+        canvasGroup.interactable = visible;
+        canvasGroup.blocksRaycasts = visible;
 
         // Wait for pop/flash if they’re running
         if (pop != null) yield return pop;
@@ -167,4 +171,16 @@ public class UIFader : MonoBehaviour
         // cleanup
         flashCanvasGroup.alpha = 0f;
     }
+
+    // Add inside UIFader
+    public void SetVisibleImmediate(bool visible)
+    {
+        if (!canvasGroup) canvasGroup = GetComponent<CanvasGroup>();
+        gameObject.SetActive(true);
+        canvasGroup.alpha = visible ? 1f : 0f;
+        canvasGroup.interactable = visible;
+        canvasGroup.blocksRaycasts = visible;
+        if (!visible) gameObject.SetActive(false);
+    }
+
 }

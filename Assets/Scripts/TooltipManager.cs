@@ -25,10 +25,20 @@ public class TooltipManager : MonoBehaviour
         shopTooltipText.text = content;
     }
 
+    public void ShowToolTipCombat(TextMeshProUGUI textToChange, string content)
+    {
+        textToChange.text = content;
+    }
+
     public void HideTooltip()
     {
         tooltipText.text = "";
         skillTreeTooltipText.text = "";
         shopTooltipText.text = "";
+    }
+
+    public void HideToolTipCombat(TextMeshProUGUI textToChange)
+    {
+        textToChange.text = "";
     }
 }

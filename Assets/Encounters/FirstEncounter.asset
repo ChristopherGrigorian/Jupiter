@@ -15,3 +15,5 @@ MonoBehaviour:
   encounterID: FacelessConstruct
   enemies:
   - {fileID: 11400000, guid: 93cb9a6aab580444f8de0d36506c954a, type: 2}
+  - {fileID: 11400000, guid: 93cb9a6aab580444f8de0d36506c954a, type: 2}
+  - {fileID: 11400000, guid: 93cb9a6aab580444f8de0d36506c954a, type: 2}
