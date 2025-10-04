@@ -52,7 +52,7 @@ You walk up the stairs, and Boris follows as your tail. You reach the top and ov
 The room is cluttered with diagrams and drawings of different mechanisms. 
 Monitors and computers are prolific within this space, the wires of which pour into a singular machine.
 
-{FirstTimeLeftHall:
+{FirstTimeLeftHall == false:
 "I remember this place," says Boris. "That machine is a giant 3D printer, almost. It has a bit more flare to it then just that. I'm pretty sure you made me here."
 
 + "Is that why you have a little more flare?" you ask.
