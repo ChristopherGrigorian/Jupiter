@@ -24,7 +24,10 @@ public class ButtonNoise : MonoBehaviour, IPointerEnterHandler
 
     public void PlayClickNoise()
     {
-        audioSource.PlayOneShot(pressedClip, 0.5f);
+        if (audioSource != null && audioSource.enabled && audioSource.gameObject.activeInHierarchy)
+        {
+            audioSource.PlayOneShot(pressedClip, 0.5f);
+        }
     }
 
     public void AddAudioSource(AudioSource audioSource)

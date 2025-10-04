@@ -54,7 +54,6 @@ MonoBehaviour:
   - 0
   - 1
   equippedSkills:
-  - {fileID: 11400000, guid: b3d2e223e809fae4cb5cbd11af2e1fcf, type: 2}
   - {fileID: 11400000, guid: 8fc4fe9741ae5f447a1bfe1ba985d4d8, type: 2}
   - {fileID: 11400000, guid: 70817161f9fefa8438ee80eacf102653, type: 2}
   skillPoints: 5

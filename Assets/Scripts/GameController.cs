@@ -875,7 +875,7 @@ public class GameController : MonoBehaviour
 
     public void PlaySkillSfx(SkillData skill)
     {
-        if (sfxSource != null)
+        if (sfxSource != null && skill.castSFX != null)
         {
             sfxSource.PlayOneShot(skill.castSFX, skill.sfxVolume);
         } 
