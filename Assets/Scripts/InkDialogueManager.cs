@@ -149,6 +149,26 @@ public class InkDialogueManager : MonoBehaviour
                 }
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Space) && !inTitleScreen && !inFadeOutSeq)
+        {
+            if (story.currentChoices.Count == 0 && story.canContinue && !isTyping && !isInCombat)
+            {
+                ContinueStory();
+            }
+            else if (isTyping)
+            {
+                dialogueText.text = heldStory;
+                StopCoroutine(typingCoroutine);
+                isTyping = false;
+                StopTypingSfx();
+
+                if (!choicesShownThisLine && story.currentChoices.Count > 0)
+                {
+                    choicesShownThisLine = true;
+                    DisplayChoices();
+                }
+            }       
+        }
 
     }
 
