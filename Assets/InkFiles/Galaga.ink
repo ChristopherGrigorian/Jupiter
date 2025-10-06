@@ -255,7 +255,88 @@ You look to Andromeda.
 + "I take it you'll be joining us then?"
 "Yes, my skills are at your disposal. Just note though that since the bridge between my other half had started forming, I'm not as strong as I once was. I won't be a burden, though."
 Andromeda joins your party.
-This would be the next point in the story, but I haven't written anything yet. Thank you for playing.
+->A12
+
+== A12 ==
+// ~ AddCharacter("Andromeda")
++ "Thank you."
+"It's no problem," says Andromeda. "Let's waste no time."
+->A13
++ "Alright, let's go."
+"Right with you," says Andromeda.
+->A13
+
+== A13 == 
+You all make your way back into the chateau and up the stairs. The numbered doors remain shut tight in front of you.
+Andromeda leads ahead of the party and walks towards the door with the number one on it. 
+"Open my door, Aiolos," she beckons.
+
++ "I don't know how..."
+-> A14
++ "I thought you would know how to open them..."
+-> A14
+
+== A14 ==
+"Well... that's awkard," she says. "You had all the keys."
+Boris cranes his head, "Now that I'm actually looking at them, there's no key holes on these doors..."
+"Perhaps it's a verbal command?" suggests Andromeda.
+"Nah, that's too obvious... I must have a spell in here somewhere," Boris says as he flips through his tome.
+"Ah, got it," he says.
+He thrusts his hand out and starts reciting a spell. The door begin to glow and sparkle. Blue energy permeates from it and free falls with grace, winding at your feet into cloud tufts.
+You look to Boris who now seems to be struggling greatly with the spell. He faces whinces in both frustration and pain.
+"I... don't think this is working," he whines.
+He gives a final instance of energy to the door, and in his recklessness, the whole room erupts in violent shaking, and a agitating static shriek. 
+An explosion overwhelms Boris, and he is thrusted off the second floor with such force he broke through the banister, and ended up sprawled on the first.
+Both you and Andromeda rush to where the banister had been shattered and look down in search of Boris. 
+You both see him laying on his belly, his limbs poised every which way. More frigtening is the fact that Boris is not moving.
+"Boris!" Andromeda yells.
+
++ "Boris, stop messing about."
+You hear a soft giggling echoing throughout the chamber. "You did make me durable," he jests as he lifts himself to his feet.
+He brushes off the dust from his clothes and marches right back up the stairs.
+-> A15
++ _Rush to Boris' side._
+You stumble the stairs after Boris, yelling his name incessently without a response.
+You reach him and kneel by his side grabbing hold of his shoulder.
+->A14A
+
+== A14A ==
++ "Boris?"
+You hear a soft giggling echoing throughout the chamber. "You did make me durable," he jests as he lifts himself to his feet.
+"Why would you play with me like that?" you shout.
+"I just wanted to see if you care about me," he smiles. "Which you do," he says as he punches your shoulder.
+Be brushes off the dust from his clothes. You both march right back up the stairs. 
+->A15
+
+== A15 ==
+You both walk in front of the door again. "Well that didn't work."
+You pace about. Andromeda looks to you.
+"Surely you must remember something?" she asks.
+
++ "I really don't."
+- You shake your head.
+"Do you at least know what my real name was?"
+You think back, grasping at anything at the back of your mind.
+"Boris?" you say. "Can I see that spell you were using?"
+"Oh.. sure, but I don't think it's going to work."
+"It did look like it was responding though," you say.
+"Alright then," he says.
+He hands over the tome at the correct page for you. You begin reciting the spell.
+Energy overwhelms both you and the door. The borders of your mind are lined with memories of the past. The most damning parts of psyche are still so out of reach and blurry. Through all the chaos, one name comes to you. It demands from you your utmost attention.
+"Lucy!" you yell.
+You resonante with door and it bursts open in a flurry of blur particles.
+The room calms, and the party peers through the door.
+"There's nothing in there!" Boris shouts. "What the fuck."
+"Not quite," you say. You enter the dark room, spotting a slip of paper layed nicely on the floor. You grab it to try and read it but you're unable.
+"Boris, is this encrypted?" you ask.
+"Let me look," he says.
+"Yes, actually, this is location data. Quite primitive to put it on a piece of paper though."
+"Perhaps it was meant to be a clever tactic. You can't reach it from a digital sense, and the location to this world is already hidden," Andromeda says.
+Boris glares at Andromeda, "I don't think Bruce is thaaat smart. I decrypted this message by the way. It looks like we're headed to a beach of some sort."
+"Oh... thanks..." you say.
+~ UnlockLocation("Lucy's Realm")
+~ UnlockSubLocation("Oasis")
+"I've added the location to your map interface, you should be able to teleport there freely now. Let's get going. The longer we wait the harder it will be to end this all. 
 ->DONE
 
 == TTWCONT ==

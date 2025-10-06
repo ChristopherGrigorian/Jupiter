@@ -7,6 +7,8 @@ VAR MeetBoris = 0
 VAR GunFun = 0
 VAR MuffinShared = false
 VAR MetAnzhela = 0
+
+VAR BorisConfidant = 0
 EXTERNAL StartCombat(string, string)
 EXTERNAL FadeOutSeq(string, string)
 EXTERNAL AddCharacter(string)
