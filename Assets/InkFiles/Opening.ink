@@ -22,9 +22,6 @@ You have a cigarette in hand. Smoke leaves your lips. Almos' face is briefly obs
     -> TB1
  + "..."
     ->TB1
-+ "Courtyard"
-    ->Courtyard
-    
     
 
 == TB1 ==
