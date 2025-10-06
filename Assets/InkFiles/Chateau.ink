@@ -84,7 +84,7 @@ The rabbit begins to hop away, and phases through one of the walls of the room. 
 == LHCMEX2 ==
 You take advantage of the world's brief disillusionment, and push through the wall with Boris. You both end up in small pocket of space. What once was one now has become three, as in, three small black rabbits sit before you.
 "See, I told you," Boris says. "They just keep multiplying, that's why I didn't want to deal with it."
-"Okay, while I'm here now. Also, they're just rabbits, they aren't monsters."
+"Okay, well I'm here now. Also, they're just rabbits, they aren't monsters."
 "Just you wait," Boris says. "Look now."
 You look back to the rabbits to see a swirl of mist, building from them. All three morph into replicas reminiscent of Rabbit.
 You look to Boris. 
@@ -164,7 +164,7 @@ Something begins manifesting in the room. Light pools from the walls and collide
 ~ StartCombat("BallOfLight", "RHCMHEX1")
 ->DONE
 
-== RHCMEX1 ==
+== RHCMHEX1 ==
 The ball of light swells and collapses. The room goes dark briefly before the door unlocks. You are relinquished from the trap. The door opens up back to the hall.
 "Hey, um..." utters Boris.
 "Just don't," you say. "Lets just go."

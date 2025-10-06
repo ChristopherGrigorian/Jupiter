@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bced415262c14419aa3363cf6a6a1e, type: 3}
   m_Name: Triple Rabbit
   m_EditorClassIdentifier: 
-  encounterID: Tribble Rabbit
+  encounterID: Triple Rabbit
   enemies:
   - {fileID: 11400000, guid: d12958eeaa369461b9b800b73fc5b8c9, type: 2}
   - {fileID: 11400000, guid: d12958eeaa369461b9b800b73fc5b8c9, type: 2}

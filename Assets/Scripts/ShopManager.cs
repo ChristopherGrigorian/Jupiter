@@ -66,10 +66,26 @@ public class ShopManager : MonoBehaviour
                 usedShop = shop;
             } 
         }
-        shopHUD.SetActive(true);
+        ToggleHUD(shopHUD, true);
         shopDescription.text = usedShop.shopDescription;
         totalCoinDisplay.text = $"Total Coin: {InventoryManager.Instance.totalCoin}";
         ShowTab("Features");
+    }
+    
+    private void ToggleHUD(GameObject hud, bool show)
+    {
+        if (!hud) return;
+        var fader = hud.GetComponent<UIFader>();
+        if (fader == null)
+        {
+            Debug.Log("the fader was null");
+            // fallback, but strongly recommend adding UIFader to all HUDs
+            hud.SetActive(show);
+            return;
+        }
+
+        if (show) fader.Show();
+        else if (hud.activeInHierarchy) fader.Hide();
     }
 
     private void Awake()
@@ -77,7 +93,8 @@ public class ShopManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-        } else
+        }
+        else
         {
             Destroy(gameObject);
             return;
@@ -170,7 +187,7 @@ public class ShopManager : MonoBehaviour
     {
         if (previousType == "") 
         { 
-            shopHUD.SetActive(false);
+            ToggleHUD(shopHUD, false);
             InkDialogueManager.Instance.locationChange(storyDropoff);
         } else
         {

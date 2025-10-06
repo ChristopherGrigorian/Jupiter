@@ -225,10 +225,10 @@ A blue and indigo mist continues to swirl around your legs as you walk though ea
 
 "Hellooo," he bellows. "Look at what we have here!" He grabs hold of your arm and pulls you close to him. With the other hand he clamps beneath your chin and examines your face.
 
-* "Mind getting your hands off of me?"
++ "Mind getting your hands off of me?"
 - He retracts a little and just smiles. "Hahaha, aren't you a sexy one. You're diseased, aren't you? You look sickly and beautiful and empty." His face grows wicked and stupid. "Jumping off a balcony for a man, now? How repulsing."
  
- * "It wasn't like that, you know. Something called to me."
+ + "It wasn't like that, you know. Something called to me."
  - "Ah, yes, of course," he says while pacing about. He circles and examines you now like a shark teasing its prey. He's dressed in gray cloths as if someone wrapped a feathery tapestry around him. The clothes carry the occasionally smear of green hues. 
  
  He halts in front of you once more, "That would be Jupiter that was calling to you."
@@ -236,10 +236,10 @@ A blue and indigo mist continues to swirl around your legs as you walk though ea
  "It was lovely, wasn't it?" the man says. It seems like the man just ignored what you said. 
  "It takes many shapes and forms," he continues. "Jupiter is multitude, NO, an AMALGAMATION of inexplicable feeling. 'THE PINACLE OF EXISTENCE' some might be bold enough to say." He pauses briefly to clear his throat, "It's also a very real place."
  
- * "Are we on Jupiter now?"
++ "Are we on Jupiter now?"
 - "Of course not," he responds dully. "We're in a sort of in-between world. A proxy, if you will. Your signal to Jupiter was interrupted by something. This place is just as artificial as the reality you once stood in before."
 
-* "So, who interrupted the signal?"
++ "So, who interrupted the signal?"
 - "Well, that little friend of yours did," he says cheerily. "I forgot to mention though, I'm Boris."
 
 You think Boris is a bitch.
@@ -248,7 +248,7 @@ You think Boris is a bitch.
 
 You gaze at his hand, but don't go to shake  it. You return your focus to his face.
 
-* "Why the hell are you here?"
++ "Why the hell are you here?"
 - "Straight to the point, are we? Well, according to the script, I'm here to keep you on track when you make stupid decisions. Rabbit is one of Almos' creations."
 
 You interject, "Didn't you just insult me earlier for jumping off the balcony? Why would Almos create you to say that?"
@@ -259,5 +259,5 @@ Boris is now looking off in the distance, "You hear that beeping right? It's bes
 
     ~ MeetBoris += 1
     
-* _Follow Rabbit._
++ _Follow Rabbit._
 -> FollowRabbit
