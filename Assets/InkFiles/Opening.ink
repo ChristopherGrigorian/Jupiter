@@ -6,6 +6,8 @@ INCLUDE WholeNewWorld.ink
 INCLUDE Galaga.ink
 INCLUDE Simulation.ink
 INCLUDE Chateau.ink
+INCLUDE Lucy's Realm.ink
+
 
 
 
