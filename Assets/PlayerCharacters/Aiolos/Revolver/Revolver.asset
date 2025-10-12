@@ -19,6 +19,7 @@ MonoBehaviour:
   weaponType: 0
   weaponSkills:
   - {fileID: 11400000, guid: 4d8a05c6c1331be4dbc0aa522882f58f, type: 2}
+  - {fileID: 11400000, guid: 66aa6d337d7b05648852fda2e044c68c, type: 2}
   basePower: 10
   powerPerLevel: 5
   maxLevel: 10
