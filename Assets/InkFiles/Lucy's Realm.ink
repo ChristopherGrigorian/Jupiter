@@ -110,4 +110,57 @@ Andromeda looks to Boris and then back to you, "Ok well if you change your mind,
 ->OceanMain
 
 == OceanMain ==
+{FirstTimeOasis:
+The party wades further and further into the water. You all walk into the ocean until you're about chest deep.
+Boris begins shaking, "Are we sure about this?"
+"Absolutely," interjects Andromeda. "It's ok if you're scared Boris."
+Andromeda waddles over to Boris while the water slowly swells to her neck and sinks again. She grabs Boris' hand beneath the water to comfort him. 
+"We go," she says while looking towards you.
+}
+
+You all plunge through the surface of the water and dive deeper below. A limitless blue enshrouds you and the party.
+
+{FirstTimeOasis:
+"A damn! It's the same thing as the beach. Everything just feel infinite around here. Where the fuck is Lucy?" says Boris.
+"How did you speak to us just now?" you ask.
+"We don't communicate with sound, you know. Our mouths may move but words are transported with intent," informs Andromeda. "You may message anybody you know with just your thoughts, or if you'd like to voice to those in a vicinity, your message is broadcasted a distance from yourself."
+Boris looks to you now, "Well you were the only connection with Lucy weren't you?"
+You look to Boris, but don't respond. You don't really remember Lucy.
+"MESSAGE HER," he yells.
+
++ "Ok, damn."
+"LUUUCCCYYYY," you shout with all your might.
+Boris begins to yell back "NOOO NOT SHOUT THE MESSAGE." He looks to you now all wild eyed, "YOU WERE SUPPOSED TO JUST SET UP A PRIVATE MENTAL CONNECTION, YOU JUST BROADCASTED THE MESSAGE TO EVERY-" 
+The ocean begins to violently thrash and shake. A wailing noise vibrates through the water with such ferocity the party goes still in fear. 
+"OH GOD FUCK" screams Boris.
+A massive shadow of a figure encroaches upon the party.
+Boris starts flailing about, trying to kick up to the surface as fast as possible.
+Andromeda swoops over and grabs him by the foot holding him back, "HEY! You're not leaving us, we got this. Everyone, prepare for combat!"
+~ StartCombat("Whale", "WhaleFinish")
+->DONE
+}
+
++ _Head to the underwater train station._
+    -> UnderwaterTrainStation
+
+== WhaleFinish ==
+Boris can't stop hyperventalating. Both Andromeda and you look to Boris. "Huuumph... Hummmph," Boris' heavy breathing continues.
+"Boris, dude, breathe," says Andromeda. "Just re-encrypt the file on thalassophobia."
+"But I AM scared of lassos," Boris cries, "It's INTEGRAL to my personality."
+"Oh my god," sighs Andromeda. 
+"All those poor animals..." whispers Boris.
+You roll your eyes, but briefly catch a glistening coming from deeper in the water.
+
++ "Follow me."
+- "Wait... what... where are you going?" Boris says while swimming behind you.
+The party follows you in your pursuit of the glistening in the water.
+-> UnderwaterTrainStation
++ "Do yall see that?"
+Andromeda traces her eyes in the direction you're looking. She squints a bit, "Yes, actually. It's definetly worth investigating.
+The party follows you in your pursuit of the glistening in the water.
+-> UnderwaterTrainStation
+
+== UnderwaterTrainStation ==
+End of story.
+
 ->DONE

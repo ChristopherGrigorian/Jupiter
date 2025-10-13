@@ -4255,6 +4255,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 546b5cb91ba8b461e80d3990ade8ac12, type: 2}
   - {fileID: 11400000, guid: 7440526510633425f9689fa1669f59cf, type: 2}
   - {fileID: 11400000, guid: 86378b7854e1f46d686e9467f5010173, type: 2}
+  - {fileID: 11400000, guid: 8f687c537ca2148139b743f5d5438e5f, type: 2}
+  - {fileID: 11400000, guid: 47dce579574d94adebbeb9b2aa1f8a8e, type: 2}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}
   targetContainer: {fileID: 215210112}
@@ -4383,17 +4385,13 @@ MonoBehaviour:
   unlockableLocations:
   - LocationName: Galaga
     isUnlocked: 1
-  - LocationName: Experiment
+  - LocationName: Lucy's Realm
     isUnlocked: 0
   unlockableSubLocations:
-  - subLocationName: Experiment1
+  - subLocationName: Oasis
     isUnlocked: 0
-    mainLocation: Experiment
+    mainLocation: Lucy's Realm
     sprite: {fileID: -6359615994749993738, guid: b310940abe30b2a4ebab9608afe420f6, type: 3}
-  - subLocationName: Experiment2
-    isUnlocked: 0
-    mainLocation: Experiment
-    sprite: {fileID: -8535634423857798504, guid: 2e4c254c25340d943a5ae9838811c23e, type: 3}
   - subLocationName: Galagos
     isUnlocked: 1
     mainLocation: Galaga
