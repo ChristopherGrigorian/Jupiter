@@ -9,12 +9,6 @@ INCLUDE Chateau.ink
 INCLUDE Lucy's Realm.ink
 INCLUDE JupiterCapita.ink
 
-
-
-
-
-
-
 The balcony surveys well above the street. The street is empty and quiet. Almos is quiet. He sits across from you now, a table between you both. He usually isn’t quiet on Saturdays. Perhaps you’ve gotten it all wrong. It may be Sunday now that you think about it. The days don’t seem to matter anymore, at least to you, anyway.
 ~ AddCharacter("Aiolos")
 ~ AddWeapon("Revolver")
