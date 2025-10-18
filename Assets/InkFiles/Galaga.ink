@@ -228,7 +228,7 @@ Boris sort of picks at this beard awkwardly, "So... let's just break the sealed 
 
 "That's it? And then?"
 
-"And then you kill me, Andromeda, and observe what happens to be other half."
+"And then you kill me, Andromeda, and observe what happens to be other half. Perhaps the rupture of my continuum anchor will fool the seal into releasing its grasp on my other half."
 
 + "What? No."
 "Don't be too hasty," warns Boris. "Just think about it. It may be worth a shot."
