@@ -1,46 +1,51 @@
 == JupiterCapita ==
 The burst of light dissapates. Memories of a land you've existed in once before rush back to you. The image of Almos and your apartment return to your mind once more.
 You're on a balcony. Almos is here. He sits across from you now, a table between you both.
-"Back so soon?" he says.
+"Oh. We're back?" he says.
 + "How am I here again?"
 - You look to your right in distress. The night sky is engulfed with the image of Jupiter. The moon no longer shines upon you both.
-"We're in Bruce's beating heart, of course. This land echoes and reeks of his aspirations juxtaposed to the feelings of leaving so many lands to waste. It burdens him. We eat him alive," Almos says.
+"How... how are you even here again?" you say.
+"I'm not entirely sure... I feel as though I've experienced the world for a while through you," he pauses. "I remember the chateau, Boris, Andromeda, and the train carriage with Lucy..." 
+Almos looks to the horizon, "You feel it too, right? That feeling of wasting away. The dullness."
+"I do," you affirm.
+Almos takes a deep breath, "Perhaps we're locked away in Bruce's beating heart. I feel myself being inexplicable drawn to the horizon on end. The skies swell, as do I, to the point of bursting. I feel as though he wishes to see us rot."
+Almos sinks to gravel, "This land reeks of his aspirations. We are inexplicable transposed into a land of waste. We burden him. We eat him alive."
 + "Does he despise us?"
-- "Of course," Almos says. "You feel it too, right? The fragility of this place. The monotony, the routine of it all. He would love to see his humanity rot away in his own very flesh."
+- "Of course," Almos says. "Don't you feel so fragile and helpless here? The desperation, the monotony, the routine of it all? 
 
-+ "Are you Bruce?"
-- "Something like that. We don't necessarily see eye to eye anymore, hence him severing us upon our escape."
++ "Are we Bruce?"
+- "Something like that. We are the humanity that holds him hostage, and he's wounded us deeply."
 "What do you mean?" you ask.
-"You and me both are like... compartmentalizations of Bruce's humanity, meant to be locked away here forever. Bruce had split his conscious into threes, of which two split once more."
+"Your a body without heart, I'm a mind without thought," he says.
+"It's silly really... we writhe without reason," he sighs. "You and me both are like... compartmentalizations of Bruce's humanity, meant to be locked away here forever. Bruce had split his conscious into three, of which two split once more."
 
 + "You and I?"
 - "Exactly," he says, "And Boris and Rabbit."
 "I thought Bruce had created a new continuum anchor for Boris?" you ask.
 "No," Almos chuckles, "His ego got the better of him, and such the rumor spread. He regrets it only because he spread himself so thin. 
-Almos takes a breathe, "The dullness of this world is a means for us to lose our humanity. To break us in such a way that once our anchors reconnect to him, his will win over ours."
+Almos takes a breathe, "The dullness of this world is a means for us to lose our humanity, to break us in such a way that once our anchors reconnect to him his anchor will win over ours. There will be nothing left of us."
 "Think about it... Boris' slide... Rabbit left to wander a meaningless indigo world... our entrapment in stupid routines and bureaucracy...my endless pointless work at the office..."
 
 + "You had a job?"
-"Er... yes, anyway... I have a plan."
--> Capita1
-
-+ "So what do we do?"
-"I have a plan," he responds.
+"Er... yes, anyway... It's how I created the proxy world you fell in to. Anyway I have a plan."
 -> Capita1
 
 == Capita1 ==
-"Well the last one didn't work," you interject. "We got separated on retransmission."
-"Well if you would let me finish... I would explain..."
-"Alright go ahead," you say.
-"Our anchors briefly merged the first time because we used the same connection at the same time to reach Jupiter..."
-"Alright I'm following..." you say.
-"What if we combine our anchors before transmission? Bruce was able to separate us because we weren't fully together at that point."
-"We had to go through such a convuluted sequence last time though with your plan... I wasn't even aware of more than like half of it.."
-"Well it was the only way to get us both in Boris and Rabbit's prison."
-"Speaking of," you interject, "How haven't we combined just due to time passing?"
-"We live too similar lives... opposites attract sort of situation, you know? We're more likely to combine with Bruce first, hence the nature of our imprisonment."
+"Well the last one didn't work," you say. "We got separated on retransmission."
+"We technically didn't get separated on transmission," he interjects. "After the burning sensation, I felt myself dissapate within you."
+"I was never in control, but I always there with you," he says.
 
-+ "How are going to combine beforehand?"
++ "How was it so easy for me to forget you?"
+- "I assume Bruce used a sort of amnesia on us," he says. "Our anchors merged while we transferred to Jupiter, but it was as if there was a wall between us both. And... now we're separated again."
+
+You pout, "We had to go through such a convuluted sequence last time though with your plan... I wasn't even aware of more than like half of it.."
+"That's why I have a better plan," says Almos.
+"Alright I'm following..." you say.
+"What if we combine our anchors before transmission? Bruce was able to semi-block our combination because we weren't fully together at that point."
+"Speaking of combination," you interject, "How haven't we combined just due to time passing?"
+"I assume it's because we live too similar lives... opposites attract sort of situation, you know? We're more likely to combine with Bruce first, hence the nature of our imprisonment."
+
++ "How are we going to combine beforehand?"
 {KillAndromeda:
 "Andromeda left a gift for us..." he says.
 - else:
@@ -49,26 +54,49 @@ Almos takes a breathe, "The dullness of this world is a means for us to lose our
 -> Capita2
 
 == Capita2 ==
-"A key of sorts... where we won't have to play by this realms rules."
-Almos begins manifesting a sword within his hand.
-"The Limitless Blue..." he announces.
-It glimmers in his hand with effervescent ferocity.
-"It's our ticket back to Jupiter. Allow me to be your champion, Aiolos. Your alter ego, your fears manifest as strength in the toughest of battles. Grab my hand, and claim me as your sword."
-You grab hold of his hand, and with the other he drives the sword deep into his chest. You feel yourself melting into Almos' ego. The world shatters into a galactic blue.
+"A key of sorts... where we won't have to play by this realms rules. Similar to my proxy world."
+Almos lifts his hand in strength. Light fold upon itself over and over in his palm, warping the surrounding air.
+"The Limitless Blue..." he announces as a sword begins to coalesce in his hand. The blade hums like a dying star rediscovering its pulse.
+The weapon's edge flickers with effervescent ferocity. 
 
+"It's our ticket back to Jupiter," he says. He turns to you with passion in his eyes,"Allow me to be your champion, Aiolos. Your alter ego, your fears manifest as strength in the toughest of battles. Grab my hand, before Bruce senses our alignment forming."
+
+You hesitate, "Almos... Are you sure this is the only way?"
+
+He smiles faintly, "It's reckless, I know... But I don't think Bruce can separate what he can't tell apart." 
+You reach for his hand with conviction. The moment your skin touches his, the sword solidifies in a stronger burst of light. Almos raises his other hand and drives the blade through his chest. 
+No blood pours forth from the wound, only a burst of indigo fractals.
+You feel yourself dissolving, nerves undwinding into a blue atmosphere, your consciousness overwhelmed by his. 
+Almos exhales one final breath. The sound is inexplicable, the echo of a collapsing world. 
+"Don't forget who you are when the color fades," he says softly.
+
+The world fractures like glass under an ocean of pressure and a whole new galaxy burst from the seams.
 ~ FadeOutSeq("Aiolos... / Come forth, and claim my existence as your own.", "Capita3")
 -> DONE
 
 == Capita3 ==
-You're suspending against the backdrop of a shimmering blue galaxy. Almos stands before you.
-The world around you echoes with Almos' voice, "Come to me, and let me dissapate in your arms."
-You approach Almos. You walk without ground beneath you. 
-"This sword is a gateway, a fragment of both Lucy and Andromeda's dreams. They wish to see you win, to end the machine. In this moments flicker, our combination will reeinvigorate the world which you've just collapsed. Bruce has no jurisdiction here."
-You now run to Almos and grab hold of him. You force you fist right through his chest and pull out his heart. You crush his existence in your hand. His body melts away into yours. 
-You feel invigorated and lethal. You manifest The Limitless Blue in your hand and slash the galaxy in which you stand. 
-A white aura shines through. You're in mania. Your body bursts a golden blue as you force the sword into the wound you made in the cosmos.
-The skies falls as fragments of the blue universe around you peel off and reveal its hidden luminosity.
-Just as fast as the galaxy fell apart it rebuilds itself in the very moment Lucy and Andromeda were stood before you in the train carriage, both wishing death upon themselves.
+You're suspending in a sea of shimmering blue. Almos stands before you, half-formed, his body stitched together by constellation fragments.
+
+"Aiolos," his voice echoes from every direction. "Come to me, and let me dissapate in your arms."
+You approach Almos. Each of your steps warp the space in which you walk. 
+"This sword is a gateway," he says. "A means forward, rather."
+He looks down at the blade, its light casting refractions across his face.
+"It is the first rule written into all worlds. A universe's right to move, change and contradict."
+Almos shakes his head, "Bruce built a world based upon endless statis. As such the weapon is antithesis of his design." 
+He turns to the vast expanse around him.
+"It's forged from Lucy and Andromeda dreams. They wished for freedom. They wished to breach a hole in the machine. It's a promise that a 'perfect' order must one day yield."
+His voice begins to crack, "Lucy's universe has just collapsed and from it this sword was born."
+He looks to you, his eyes becoming glossy, "In this moment flicker we can reignite her star. Bruce has no jurisdiction here. He cannot stop us from breaking through." 
+You look into his eyes. They're already dissolving into starlight.
+He nods slowly.
+You thrust your hand forward. His chest caves inward like liquid glass. You pull free his heart. 
+He smiles one last time. "Do it."
+You crush his existence in your hand.
+Almost bursts apart in blue mote. His energy rushes to you, flooding your lungs and your mind.
+You feel invigorated and lethal. You awaken with The Limitless Blue already in your grasp. Your eyes blaze a golden-blue. You swing the sword, slashing the very fabric of this suspended galaxy. 
+A white aura shines through the wound you've made, spilling radiance. You're in mania. Your body bursts with unfathamable energy. You force the sword deep into the fabric of the cosmos. 
+The skies falls as fragments of the blue universe unravel and dissapates around you.
+The world around you rebuilds itself to the very moment Lucy and Andromeda were stood before you in the train carriage, both wishing death upon themselves.
 -> Capita4
 
 == Capita4 ==
@@ -84,22 +112,28 @@ The pain subsides and you rise to your feet once more. Everybody is looking at y
 "Aiolos?" Boris says. "What happened... you don't look so... robotic and plain anymore."
 You don't respond to Boris, but immediately address Lucy. "I know you don't want to die here. Help me, please."
 Lucy just shakes her head, "I..."
-You interupt her and look to Andromeda, "Both of you can't back down now, after all he's taken."
+You cut her off, eyes flicking to Andromeda, "Both of you can't back down now, after all he's taken."
 "I want to believe you..." Lucy says.
-You take a step forward towards Lucy. Aiolos' voice reverberates against Almos' in combination, "Then believe me now, please. You said you didn't want to be a means of upholding a machine. Help me destroy it."
 
-+ "I need your strength."
-- "I possess it no longer..." she says, voice trembling. 
-You manifest The Limitless Blue in hand and hand it over to Lucy.
-Andromeda looks to the both of you and understands.
-"I don't wish to forget or abandon you Lucy," Andromeda says. "I'm so sorry... I'm so so sorry..." she cries. "Let me be your strength, and together we can end this nightmare."
-"And then?" Lucy asks.
-"And then we can finally rest, together, for good," Andromeda says.
-Andromeda walks up to Lucy and grabs her hand.
+Aiolos' and Almos' voices echo together: "Then believe me now please, the machine only survives if you stay divided. I saw it happen, the burst of light..." you say exasperated, "but this weapon--"
+
+You manifest The Limitless Blue, its light burning through the dim carriage.
+"--this blade was born from your collapse. It remembers everything that Bruce took from you, it remembers the bond you both had. It won't kill you, it will restore you."
+
+Lucy gazes at it, trembling. "Restore...? But if I use it on Andromeda--"
+Andromeda steps forward, "No. Do it. I don't wish to forget or abandon you Lucy." Andromeda says. "I'm so sorry... I'm so so sorry..." she cries. "Let me be your strength. We'll end this nightmare together."
+"And then?" Lucy whispers.
+"And then we can finally rest. Not as two. As one." 
+
++ "Please, I need your strength."
+- "I possess it no longer..." Lucy says, voice trembling. 
+Andromeda grabs The Limitless Blue from you and hands it to Lucy, forcefully clenching her fist around the base of the weapon. 
+"I shall return it to you. Do it, Lucy!" Andromeda shouts.
 Lucy closes her eyes and drives The Limiltess Blue threw Andromeda's chest.
-Andromeda dissapates and melts into Lucy.
-Lucy inhales and exhales deeply, as if taking a breathe of fresh air. She hugs herself in this moment.
-She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other, "We'll carry this burden together, I promise."
+Once more, there is no blood, only light. Andromeda dissolves into her, their outlines merging in a wash of gold and azure. 
+
+Lucy gasps, inhaling as though it were her first time. She hugs herself in this moment, shaking with radiance.
+She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other in unison, "We'll carry this burden together. Always."
 -> Capita5
 
 == Capita5 ==

@@ -23,3 +23,15 @@ EXTERNAL RevealMapButton()
 EXTERNAL RevealInventoryButton()
 EXTERNAL CutsceneMode()
 EXTERNAL StopCutsceneMode()
+
+#Aiolos = The Face (how the ego wants to appear)
+
+#Almos = The Mind (rationalization, justification)
+
+#Boris = The Heart (deflection, comfort through denial)
+
+#Rabbit = The Shadow (what the ego fears becoming)
+
+# The Limitless Blue’s “law” is the right to move, change, contradict — i.e., the power to reconcile what cannot coexist.
+
+# When Lucy wields it, it doesn’t kill Andromeda; it collapses the contradiction Bruce forced between them.

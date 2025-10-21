@@ -256,7 +256,7 @@ The voice clears its throat.
 Your vision returns to you.
 "Welcome to Jupiter..." you mumble to yourself.
 In that moment, you feel yourself scorching. What started as a tingling becomes a full on burning sensation that seeks to suffocate you.
-The pain is almost unbearable. You feel your identity slipping away from you once more. A flame shreds your memories and guts to pieces.
+The pain is almost unbearable. You feel your identity slipping away from you once more. Almos is relinquished from your grasp. A flame shreds your memories and guts to pieces.
 You feel yourself unraveling, and with it goes the force that once surrounded your body.
 You no longer feel enraptured or under siren.
 You feel empty, and dizzy.
