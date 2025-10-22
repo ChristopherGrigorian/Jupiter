@@ -137,6 +137,26 @@ She takes another deep breath and opens her eyes. She turns to one of the window
 -> Capita5
 
 == Capita5 ==
-End of story for now.
+Boris begins to hug himself as well, "WHERE'S MY POWER?"
++ "We have to find Rabbit first."
+"You're right," he says. "But where do we even go?"
+"Hm..." you ponder.
+-> Capita6
 
++ "You don't deserve it..."
+"WHAT" he shouts. He lunges at you and grabs hold of your collar. "NO... I WANT IT... NO... I NEED  IT."
+"You don't need anything, and let me go!" you shout.
+"You're right I'm sorry..." he says.
+
+-> Capita6
+
+== Capita6 ==
+"Rabbit was last seen at the chateau, or at least fragments of him, wasn't he?" chimes in Lucy.
+"So you've gained all of Andromeda's memories, I've taken it?" asks Boris.
+"Indeed," she affirms. "We can head back there now and take a look around?"
+
++ "Sounds like a good idea."
+"I AGREE!" Boris shouts.
+Andromeda and you both glare at him.
+"I mean... I agree..." he whispers. "Let's just go, get out your map and teleport I'll meet ya'll there."
 ->DONE
