@@ -158,5 +158,7 @@ Boris begins to hug himself as well, "WHERE'S MY POWER?"
 + "Sounds like a good idea."
 "I AGREE!" Boris shouts.
 Andromeda and you both glare at him.
-"I mean... I agree..." he whispers. "Let's just go, get out your map and teleport I'll meet ya'll there."
+"I mean... I agree..." he whispers. "Let's just go, get out your map and teleport to Galagos, I'll meet ya'll there."
+~ FirstTimeOasis = false
+VAR ReturnToGalaga = true
 ->DONE

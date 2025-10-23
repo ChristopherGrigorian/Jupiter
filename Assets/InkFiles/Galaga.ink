@@ -12,10 +12,57 @@ VAR BorisAmnesia = false
         ->LeftOfFront
     + _Explore on your own._
         ->FrontOfCourtyard
+}      
+{ReturnToGalaga:
+    Boris takes a deep breathe, "Oh, home sweet home..."
+    Lucy's eyes widen as she looks upon the courtyard and chateau. "God this is bougie... You're full of yourself aren't you?" she says to you.
+    
+    + "Yes, I suppose I am..."
+        -> RTG
+    + "I don't know, ask Bruce."
+        -> RTG
 - else:
     This is Galaga.
     ->FrontOfCourtyard
 }
+
+== RTG ==
+"Speaking of, why aren't we just striking at the source?" she says. "We're going through all this effort to kill the 'ultimate weapons,' without really solving the problem at hand here--Bruce.
+"We don't actually know where Bruce is," Boris shrugs. "He didn't really leave any traces. Also, we're still slowing down the machine by breaking the seals in the chateau."
+"I'm not sure we learned a whole lot from our situation though with Andromeda and Lucy..." you chime in.
+"What do you mean?" asks Lucy.
+{KillAndromeda:
+"Well, I saw some sort of a vision when I killed Andromeda..."
+- else:
+"Well, I saw some sort of a vision when I killed you Lucy..."
+}
+"Go on..." she says. 
+"Everything sort of just shattered, it was as if you and Andromeda were compeletly incapabitble anymore."
+"But..." she interupts. "The sword you had, you said it was from me and Andromea?"
+"Yeah I know..." you say. "It doesn't really make sense. I feel like The Limitless Blue wouldn't have formed otherwise if both of you didn't see eye to eye. Perhaps what I witnessed was a very violent rejoining between the two of you... I can't say for sure," you respond.
+Boris senses the worry between you two. He glances at both of you with a little unease, "Have same faith guys. We may not have all the pieces, but we do know something has least come out of the whole situation. We have the Limitless Blue now, so rejoinings may be a little bit more... safe... I would hope."
+"I guess we just didn't account for how much energy would actually be released upon one of our deaths," Lucy says.
+"The caveat may very well be acceptance of the whole situation as well..." you say.
+"But, it's not like we can convince the other weapons into seals like we did with Andromeda," Boris says. "And, they're well outside of Jupiter's network. We have no idea where they are in the universe at the current moment. All we know is they're causing mass destruction."
+"You're right," Andromeda says, "Just check your logs, more new ones show up every day. What the hell is a Hrodric?"
+"I don't know," Boris tilts his head as if inspecting something on the ground, "It does look kind of cute though..."
+
++ "Well, they're all dead now..."
+    -> RTG1
+
++ "They only exist in memory now..."
+    -> RTG1
+
+== RTG1 ==
+"You're a bummer aren't you," says Boris. 
+Andromeda turns to him in such a fierce matter he jumps.
+"Sorry..." he says. "That was insensitive..."
+You shake your head in frustration. "Let's just find Rabbit. One thing at a time guys, I'm gettig dizzy just thinking about what we have to do."
+"I agree," says Boris.
+"Of course, you do," Andromeda rolls here eyes. "Why do you think Rabbit would even accept binding with you?"
+Boris pouts, "Well there's only one way to find out isn't there? We gotta find him first." He marches off and you and Andromeda follow him into the Chateau.
+    
+->ChateauMainHall
 
 == Courtyard ==
 The courtyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.

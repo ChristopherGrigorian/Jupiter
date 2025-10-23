@@ -36,6 +36,27 @@ You listen in. You hear a breeze walk through the You hear absolutely nothing.
 You're in a grand hall at the front of the chateau. The walls stretch far beyond your eyesight towards the sky. The ceiling has openings that let in light through filtered glass. The whole room glistens of opal refractions.
 There's a double stairway before you, and halls that lead to both your left and right.
 
+{ReturnToGalaga:
+"RABBIT! RABBIT!" yells Boris. "I KNOW YOU'RE HERE MAN."
+Lucy and you go wide eyed. You want to chastise Boris, but both of you have a feeling it might be stupid enough to work.
+A cosmic while manifests  in the middle of the room. A hand juts out and peels the masquerade away. Out of the pocket dimension, Rabbit sprouts out and looks upon the three of you.
+"There you are, man... Hey..." Boris says.
+Rabbit whips out a gun and points it straight at Boris head.
+"HEY AHHHHH. PUT THAT..." Boris lowers his voice, "...down..."
+For the first time in your journey you hear Rabbit speak. He voice sounds as though it's forcing itself through a static strainer. He sounds reserved, contemplative, and inhuman.
+"What do you want from me?" asks Rabbit.
+Lucy nudges Boris forward a bit.
+Boris looks panicked, "Um... I want to work together with you."
+"No," responds Rabbit.
+"Oh.." says Boris. "Okay."
+
++ "I know you're not giving up that easy Boris..."
+    -> MRIC
++ "We respect your decision."
+"What!? I don't!" shouts Lucy.
+    -> MRIC
+
+- else:
 + _Go down the left hall._
 You go down the left hall and reach a study room.
     ->LHCMH
@@ -47,7 +68,65 @@ You walk up the stairs, and Boris follows as your tail. You reach the top and ov
     ->STCMH
 + _Leave the chateau._
     -> Courtyard
-    
+}
+
+== MRIC ==
+"I think if you just heard me out..." prompts Boris.
+"There's nothing to hear out Boris... I love you, I really do, but I don't wish to become one with you."
+"But..." Boris whimpers.
+"You're a burst of fire and heart... and, I'm just not like that," he says. "It also didn't go unnoticed that you cleared out my little helpers from the pocket dimension in the lab room."
+"But I didn't know we were the same person at that time!" Boris whines. "Andromeda didn't tell me anything! I would have taken care of them!"
+"For as much heart as you have, Boris, your love surely isn't unconditional" says Rabbit. "Something to think about for the time being."
+Boris mouth dropped. The room went silent.
+"Alright... Down to business, I may have found something of interest for all of us."
+
++ "Go on..."
+- "I have intel on the next ultimate weapon we should be targetting," Rabbit says. "His name is Cosmo, the combat double that is. His real name is Vireo."
+"Well at least he doesn't sound that threatening..." says Boris, "...right?"
+Rabbit shakes their head, "Vireo is a little... insane... I suppose. Cynical and fucked in the head. His whole dreamland bows to his design. His own humanity went a little too much to his head."
+"I'm glad Lucy was suicidal," sighs Boris.
+"HEY!" Lucy shouts.
+"Anyway..." Rabbit interrupts. "It most definetly wasn't the best idea to bring Andromeda into Lucy's realm. When there's an automatic merging of the anchor things can be... catasrophic... The merging takes place in the dimension sure, but everything in it gets wiped. I'm glad you all had something like The Limitless Blue."
+"So... what happens if we take out Vireo in his dimension?" asks Lucy.
+"He should dissapate without an issue. The anchor will merge at Cosmo's coordinates in the universe. The ensuing explosion is sure to be violent... but such a violent rejoining will lead to Cosmo collapsing in on himself."
+Rabbit now turn to you, "You spoke of a timeline where you saw such a collapse correct? Between Andromeda and Lucy."
+"How do you know that..." you ask.
+"Boris and I are still intrinsically linked with one another, I know of your journey together thus far. Now answer the question. You saw an alternate timeline where you saw the collapse of Andromeda and Lucy? Yes?"
+
++ "Yes."
+-> MRIC1
++ "Was that what that was?"
+-> MRIC1
+
+
+== MRIC1 ==
+"Alright, then you know what I'm saying to be true... Interesting though that you were able to carry over the knowlede of manifested weapons..."
+
++ "It was made from Andromeda and Lucy's energy."
+- "I don't really buy that explanation quite yet..." Rabbit says. 
+Lucy appears to become angry, "Is it just insult Lucy day or something?"
+"I meant no insult, it's that the circumstances surrounding Aiolos' acquisition of such a weapon are a little... fantastic... I'll leave it at that for now. Let's head over to the doors on the second floor."
+The party heads up to the second floor. 
+"Alright it just this next door over, do your thing Aiolos."
+Boris hands over his tome and you start casting the spell.
+"Vireo!" You shout.
+A rush of green energy pours forth from the door, it explodes in a cloud of smoke.
+Boris strolls in and grabs the paper within. 
+"Alright... I guess... this is it. I've sent the location data over."
+"Will you be joining us, Rabbit?" asks Lucy.
+"Yes I will once you all enter Vireo's domain," he says. "I can hold my one weight, but I'm a little scared for you guys. It may be better to go back to the Lucy's realm and train a little bit more. If you're confident, though, find me in Vireo's realm. I'll try to get as much info as I can, see you later."
+Rabbit dissapears into a wash of stars. 
+The party looks to each other. 
+"I'm with you all the way dude," Boris says. "It's you're call on how we proceed. I'm cool with jumping straight in, or gaining some experience first. We may be able to gain a little bit more intel on how these realms work in the first place."
+"Same here..." says Lucy. "I'm fine with either plan, lead the way."
+
+~ ReturnToGalaga = false
+
++ _Return to the main hall._
+    ->CMH
+
+-> DONE
+
 == LHCMH ==
 The room is cluttered with diagrams and drawings of different mechanisms. 
 Monitors and computers are prolific within this space, the wires of which pour into a singular machine.

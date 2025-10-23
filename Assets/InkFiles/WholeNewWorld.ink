@@ -86,7 +86,7 @@ You approach without hesitation, manifesting your weapon once more.
 == LeftHallContinued ==
 "Whaddya think." he responds.
 "How are you here?" you ask.
-Boris lowers his voice a little, "There's a couple of robots back there, and I got scared."
+"I'm not sure, I just woke up in a tube thing. I got freaked out and just started blasting my way out. Also..." Boris lowers his voice a little, "There's a couple of robots back there, and I got scared."
 "No, not like... whatever," you concede. "Do you know the way out of here?"
 "Yeah," he responds. Boris doesn't continue speaking.
 "...so..." you say after an uncomfortable amount of time.
