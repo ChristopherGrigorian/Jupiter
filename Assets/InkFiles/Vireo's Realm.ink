@@ -89,7 +89,7 @@ The guard dematerializes into a flurry of flower petals.
 Boris takes a few deep breaths, "I feel like this place is making me unecessarily angry. Maybe it's just super bright."
 
 + "Have you eaten recently?"
-"No..." Boris pouts.
+- "No..." Boris pouts.
 "Okay... we are robots you know we don't have to eat things..." says Lucy.
 "But I made it a personality trait of mine to be hangry," responds Boris.
 
@@ -181,5 +181,6 @@ The party wanders down the street. And takes a right at the intersection.
 
 {FirstTimeNeonCity:
 "I think I see the ticket booth over there."
+}
 
 -> DONE
