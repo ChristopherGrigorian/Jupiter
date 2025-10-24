@@ -6,7 +6,9 @@ A neon city materializes before you as you teleport to the coordinates. You seem
 Boris materializes besides you. Lucy follows suite soon after.
 "Hmph..." Boris exhales. 
 "Certainly a bold statement as greeting," says Lucy.
-"So... is the city's name Salvation?" says Boris.
+Boris looks around confused, "Where's Rabbit?"
+"Not sure..." answers Lucy. "I'm sure he'll turn up soon. He seems like the kind that likes to work alone."
+"I guess..." says Boris. "So... is the city's name Salvation?"
 
 + "Probably."
 "Yeah... probably..." Boris chirps.
@@ -180,7 +182,73 @@ No story here.
 The party wanders down the street. And takes a right at the intersection.
 
 {FirstTimeNeonCity:
-"I think I see the ticket booth over there."
+Lucy points to something in the distance, "I think I see the ticket booth over there."
+The party approaches the ticket master. She sits behind a glass window. The booth itself seems embedded in the building itself. Through the glass you can see a crammed room with a couple of devices meant to print and distribute tickets.
+"Is this the theater?" asks Boris to the ticket master.
+"No...?" responds the woman. "This is the ticket booth to the theater. No sales location is actually attached to the theater itself."
+"Alright," says Lucy. "Thanks for the information... um... can we have three tickets to-"
+"The Tragedy Of Artifice And His Several Angels?" she interupts. "That will be 500,000 pigeon bucks."
+"WHAT!" shouts Boris.
+Boris reaches for his tome again, but you grab hold of his arm tight to restrain him.
+"Well... it's a Vireo production, and it's exclusive tonight. Genius has no price, you know."
+"Will you accept a performative dance as payment?" says Boris.
+"No..." mumbles the woman. "We only accept pigeon bucks here."
+The party walks away from the counter to console one another.
+"So... um... where are we getting that kind of cash?" Lucy asks.
+
++ "Start stripping, Boris."
+"There was a club back there, wasn't there?" Lucy says.
+Boris looks horrified, "You all can't seriously be considering this..."
+->RS1
+
++ "Maybe there's some work we can find around here?"
+"Lets open a bakery," Boris smiles.
+"You would like that wouldn't you..." sneers Lucy.
+->RS1
 }
 
--> DONE
+This road leads down to a dead end. The ticket booth is here. A couple of benches line the neon streets.
+
++ _Head down the left path._
+-> LeftStreet
++ _Head back to the main plaza._
+-> RightStreet
+
+
+== RS1 == 
+"Pssst... over here," a voice echoes from the top the street.
+The party approaches a hooded figure. 
+"Hellooo," Boris belts.
+"SHHH!" the guy shouts.
+"Oh, sorry," he whispers.
+"The name's Serzh, and I got a proposition for all of you."
+The party stares at him blankly.
+"It's not some stupid art thing is it?" asks Boris.
+"No... well... yes... in a way. Many see it as art and pay top dollar to watch it all happen."
+"Is it porn?" asks Boris.
+Lucy's expression went from intrigue to disgust "What the fuck Boris..."
+"It's a genuine question, y'know" he shrugs.
+Serzh shoots the party a smile, "Some may find it erotic, I suppose..."
+Boris starts chuckling, "See! I knew it."
+"It's an underground fighting ring... the winner takes home the grand prize of a million pigeon bucks," Serzh says.
+"Well that's convenient," says Boris. "And I suppose your going to say something like," Boris lowers his tone and makes his voice gravely like Serzh's, "I'm not much a fighter, but I'll take a clean split of the mil for giving you all the intel on this operation. You all look like a strong bunch... you can fight in my steed."
+"...well...yes," Serzh confirms. "You all in?"
+"Yeah, let's do it... this'll be a warmup," Lucy jests.
+Serzh looks a little worried at this sentiment, "Eh... I'm not sure about that... seems like they've got a strong lineup this time around..."
+Lucy senses his worry, "Trust me, I'm not being overconfident... lead the way," she commands.
+"Alright, follow me" he shrugs.
+The party follows him to the end of the street towards a dead end.
+"I think this guy is about to mug us..." Boris says.
+
++ "We have nothing to steal."
+- "Oh yeah, you're right!" Boris cheers.
+Serzh approaches a wall at the end of the alleyway and starts prodding at it methodically.
+You all watch in awe and strange beeping noises can be heard emitting from the wall.
+"There!" Serzh says in triumphantly. A part of the wall seemingly dissapears.
+Serzh ushers everyone through the doorway, "Quickly, it will regenerate soon."
+You all shuffle through the opening before it takes form once more behind you.
+"Follow," Serzh says.
+It seems as though you are walking through a labyrinth of corridors. There are barely and light sources, so the party is fully relying on Serzh for direction.
+The thin corridors soon open up to a giant room with a cage in the middle. Rows upon rows of seats are situated in a circular manner overlooking the cage.
+"Here we are," Serzh snickers. "Let's get to our dressing room and we can talk about strategy and get-up."
+-> DressingRoom
