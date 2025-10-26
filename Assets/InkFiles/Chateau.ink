@@ -132,9 +132,9 @@ The room is cluttered with diagrams and drawings of different mechanisms.
 Monitors and computers are prolific within this space, the wires of which pour into a singular machine.
 
 {FirstTimeLeftHall == false:
-"I remember this place," says Boris. "That machine is a giant 3D printer, almost. It has a bit more flare to it then just that. I'm pretty sure you made me here."
+"I remember this place," says Boris. "That machine is a giant 3D printer, almost. It has a bit more flare to it then just that."
 
-+ "Is that why you have a little more flare?" you ask.
++ "Wow, you also have a little more flare."
     ->LHCMHEX1
 - else: 
 + _Return to the main hall._
