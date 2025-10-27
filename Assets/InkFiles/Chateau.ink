@@ -2,6 +2,7 @@ VAR CanTalkToAndromeda = false
 VAR FirstTimeInChateau = false
 VAR FirstTimeLeftHall = false
 VAR FirstTimeRightHall = false
+VAR SpokeToMarilyn = false
 VAR WeaponChosen = 0
 == ChateauMainHall ==
 + _Ask Boris for guidance._
@@ -64,7 +65,7 @@ You go down the left hall and reach a study room.
 You go down the right hall.
     ->RHCMH
 + _Go up the stairway._
-You walk up the stairs, and Boris follows as your tail. You reach the top and oversee the main hall from the banister. The same opal refractions moves with ease across the room with your perspective.
+You walk up the stairs. You reach the top and oversee the main hall from the banister. The same opal refractions moves with ease across the room with your perspective.
     ->STCMH
 + _Leave the chateau._
     -> Courtyard
@@ -252,6 +253,16 @@ Boris looks towards his feet in shame, "Got it."
 
 == STCMH ==
 There's an array of dark wooden doors up here, each with a number in silver engraved. The floorboards creak with each of your footsteps.
+
+{SpokeToMarilyn:
+    "Welcome up," Marilyn says. "Are you all ready to enter?"
+    + "Yes."
+        -> Calypso
+    + "No."
+        "Alright, come back up to me when you're ready," Marilyn says. The party walks back down the stairs.
+        -> CMH
+}
+
 {FirstTimeInChateau == false:
 ~ FirstTimeInChateau = true
 You look to Boris. You try to budge one of the locked doors. It doesn't give way.

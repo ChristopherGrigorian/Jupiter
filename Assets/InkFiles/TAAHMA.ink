@@ -147,7 +147,86 @@ The room is silent for a bit.
 
 == Debrief ==
 The party walk to the main room of the chateau to sit down and debrief. Rabbit left down the right hall to the weapons room.
+"So... that weapon you picked up?" Boris asks.
 
-No more story. Thank you for playing.
+"I'm not even sure," you respond.
+"What was it called? I know mine was The Limitless Blue, but-"
+"Flesh Abandon," you say.
+"Huh..." Andromeda exhales.
+Boris looks between the both of you, "I'm thirsty," he says.
+"Are you never satiated?" says Andromeda.
+"Complacency is a dangerous thing, y'know," Boris says.
+Andromeda shakes her head and rolls her eyes, "At what point does it become gluttonous then?"
+"Whenever I say so!" Boris shouts as he storms out towards the entrance of the room. "I'm going to Anzhela, she's probably selling something."
+You and Lucy are left alone with one another.
+"Um..." she pouts. "How's the weather?"
 
--> DONE
++ "We should follow Boris."
+"Yeah, you're probably right," she addresses.
+As both of you approach the door you hear a shriek from outside of the chateau.
+"BORIS?!" you both shout. Lucy starts bolting to the noise and you follow.
+-> TDOA
+
++ "It's... probably the same as always."
+As soon as you respond, you hear a shriek come from outside of the chateau.
+"BORIS?!" you both shout. Lucy bolts to the door and you follow.
+-> TDOA
+
+== TDOA ==
+You both run out into the courtyard. The skies are blood red. At the end of your vision, you see Boris groveling besides Anzhela.
+"WHAT IS HAPPENING?!" Lucy shouts.
+The skies roar with a woman's voice, "I thought you all might be up to trouble... I knew I sensed this place shifting..."
+A crimson energy coalesces at the center of the courtyard--a woman sprouts from its core. 
+"Who are you?!" Lucy shouts.
+The woman smiles, "Marilyn..."
+
++ "The muffin lady?"
+"Yes... that one..." she says.
+"Wait... you have muffins?" Boris asks.
+"No..." she says.
+Boris looks to her confused, "Why not-"
+"SILENCE!" she shouts. 
+"What do you want?" you ask.
+"It's not so much as what I want... but rather what you want..." she says. "None of you are actually ready to face Atlas."
+"Who is that?" Lucy asks.
+"Bruce's strongest weapon, he won't go as easily, nevertheless present himself to you like I am now."
+"You're also one of his weapons?" Boris asks.
+"Of course--I'm a fount of unfathamable power," she says.
+-> TDOA1
+
++ "What do you want?"
+"It's not so much as what I want, but rather what you want..." she says. "None of you are actually ready to face Atlas."
+"Who is that?" Lucy asks.
+"Bruce's strongest weapon, he won't go as easily, nevertheless present himself to you like I am now."
+"You're also one of his weapons?" Boris asks.
+"Of course, I'm a fount of unfathamable power," she says.
+-> TDOA1
+
+== TDOA1 ==
+"Have you come to kill us?" Boris cries.
+"Probably not, little Boris," she laughs. "At least not by my hand."
+"Hey, I'm not laughing here," Lucy charges.
+Marilyn bursts into a fit of laughter once more, "Good, then you can die with a straight face."
+"The good news for you all though," Marilyn says, "Is that I'm willing to actually help you."
+Boris eyes her, "You seem to be a bit too... human? I think? To be an ultimate weapon."
+Marilyn seems to be looking through Boris rather than at him, "Ever the cynic, arent you?" she sighs. "It it so wrong to want to be part of something bigger and grander than oneself? Jupiter is grand, don't get me wrong but... I've seen first hand what the universe has to offer..." 
+Marilyn seems deep in thought, as if trying to find the next words to say, "The greatest thing off all is, well, nothing at all. I wish as much as the rest of you to be part of the bigger expanse. I don't want to be strung up by the artificiality of Jupiter."
+"How can you say that when you had a hand in its making?" Lucy says.
+"Artists are never fond of their own work," Marilyn says. "This world's construction was just another task... It means nothing to me. Atlas makes this world's destruction next to impossible. With three seals broken, Atlas will be freed, and subsequently can be killed."
+"So..." Boris drones.
+"So," she responds, "We break the seal Bruce placed on my other half as well."
+"I won't be as much of a nuisance as Vireo and Cosmo..." she snarls. "I'm convinced of this course."
+
++ "Well then, let's get going."
+- "Sounds like a plan," Marilyn says. "I would take this time before we venture into my other half's realm to train a bit more in the realms you've already discovered, but if you're confident, we can press forward. I'll be waiting for you back in the chateau for when you're ready." 
+
+An echoing can be heard from near the chateau, "Oh, hello Marilyn."
+Rabbit wanders towards the group, "I didn't expect you to be here..."
+Marilyn looks upon them cautiously. 
+"Anyway, I came out to say the weapons room is available," Rabbit says. "If you provide it currency, it should be able to generate a plethora of different weapons for you--one's you've learned already and new ones as well."
+"Phew," Boris sighs, "I'm glad you were able to fix that room up."
+The party now looks to you.
+"Lead the way bud, whatever you want to do next, we'll follow," Boris says.
+~ SpokeToMarilyn = true
++ _Enter the chateau._
+-> CMH
