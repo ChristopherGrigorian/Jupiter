@@ -134,7 +134,9 @@ Urania falters. The stars that once composed her being begin to dim. Her life fl
 Her body scatters, thousands of glowing fragments spiral upward from her corpse and fade into nothing.
 
 "Calpyso must be just above, let us ascend," Marilyn says.
++ _Head to final floor._
+    ->FourthFloor
 
 == FourthFloor ==
-No more story.
+No more story. Nothing left.
 ->DONE
