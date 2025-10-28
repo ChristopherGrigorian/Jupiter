@@ -90,15 +90,14 @@ Cosmo and Marilyn look teary-eyed at the opening expanse.
 "I will save you, I will cherish you, my beautiful angels."
 Lucy, Marilyn, and Cosmo dissapate into blue particles that rush to the tear in the expanse.
 You and Boris are left here. You look up to Bruce.
-"I'm sorry," he looks down upon you both. "I hope you know I always loved you all, I really did. I tried to do what's best. I had to to save everything--to save everyone I loved. It was kill or be killed, and I was selfish," he sobs.
-"Aiolos, Almos, Boris and Rabbit--I hope you can forgive me."
-A burst of blue energy launches from the tear in the expanse. It burns at Bruce seeking to evaporate the core of his being until he is erased.
+"I'm sorry," he looks down upon you both. "I hope you know I always loved you all, I really did. I tried to do what's best. I had to to save everything--to save everyone I loved. It was kill or be killed, and I was selfish," he sobs. "Aiolos, Almos, Boris and Rabbit--I hope you can forgive me."
+A burst of blue energy launches from the tear in the expanse. It burns at Bruce, seeking to evaporate the core of his being until he and his universe are erased.
 The machine's gears begin to stop churning, Jupiter begins to collapse.
 
 Boris hugs you. You hug him back. In this moment, you feel yourself scorching. What started as a tingling becomes a full on burning sensation that seeks to suffocate you.
 The pain is almost unbearable. You feel your identity slipping away from you once more. Almos is relinquished from your grasp. Rabbit is relinquished from your grasp. Boris is relinquished from your grasp. A flame shreds your memories and guts to pieces.
 
-"I am your God," a voice echoes.
+"I am your God," a voice echoes through your dying realm.
 "I will breathe life into you once more."
 "Hearken to me, kin."
 "Welcome home, child."
