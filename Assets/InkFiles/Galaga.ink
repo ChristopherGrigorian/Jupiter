@@ -65,7 +65,43 @@ Boris pouts, "Well there's only one way to find out isn't there? We gotta find h
 ->ChateauMainHall
 
 == Courtyard ==
+
+{FinishCalypso:
+    You walk out of the chateau to horrific sky touring over the courtyard. The skies are an endless black sea. No stars shine upon you.
+    Rabbit stands besides Marilyn, "We must prepare," they say. "The time is near to face Atlas and shake this world free from Bruce."
+    
+    An earthquake erupts in Galagos. The surroundings condos topple, their broken colorful walls now a disaster of a medley upon the ground. The wings of the angel statues in the courtyard snap off, and crumble. The cathedral's delicate glass features can be heard shattering in the darkness. The building folds in on itself. Upon parts of its architecture colliding with the ground, clouds of smoke flourish in the air. 
+    The whole realm is quiet, and swallowed in darkness. 
+    A transmission is being broadcast to all of you.
+    It's location data.
+    The party looks to Boris.
+    Boris looks distraught and confused, "I... don't understand this..." he says. "The coordinates are well beyond the bounds of Jupiter."
+    "How could that possibly be?" Lucy asks.
+    Marilyn begins to laugh, "You think Bruce would hide himself and Atlas away somewhere so easily accessable... think again."
+    Marilyn looks to you now, "But, don't worry, we have a means of forcing our way through..." 
+    Rabbit looks over to you, "Flesh Abandon, it can forcefully transport us to Bruce's whereabouts... Just keep the data in mind and fire away. We can all be transported."
+    "You sure this is safe?" Boris asks.
+    "Do we have much of a choice?" Lucy snaps. "Go on then Aiolos, fire away."
+    You hold the coordinates in memory and manifest Flesh Abandon. You point your gun at Lucy.
+    "Come on, then. I'll see you on the other side," she says.
+    You fire and Lucy's body evaporates into the atmosphere.
+    You look to Boris now.
+    "Ah... do the others first, bud," he says.
+    You shoot Rabbit, and subsequently Marilyn.
+    Boris now looks at you with fear in his eyes, "I have a really bad feeling about Marilyn..." he says.
+    "Me too, but even if her final plans are malicious, she still shares our goals for the time being..." you say. "To end the cycle of what sustains all the bad parts of this world. We go this bud, don't worry."
+    Boris looks to you and smiles a bit, "Okay... that makes me feel better... he says. "I'll see you on the other side...bud..."
+    He closes his eyes, and you fire shortly after. You're the only one left here.
+    
+    + _Transport yourself to the coordinates._
+    You hold the gun to your own head and fire. You feel yourself evaporate and rush through a great expanse. You feel weightless and without thought. You feel time passing incredibly slowly, your body swells and flattens with the motions of the great expanse. 
+    After a while of traveling the expanse, you feel your corporeal form slowly returning to you.
+    -> TheFinale
+
+}
+
 The courtyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.
+
 You see a wandering merchant here. 
 {MetAnzhela == 0:
 ~ MetAnzhela += 1

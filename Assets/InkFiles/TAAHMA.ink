@@ -55,9 +55,9 @@ The angels soar to the party at vicious speed. Prepare for combat.
 ->DONE
 
 == TGP1 ==
-The party slaughters the angels. They each burst into a flame of golden light. You look over to Rabbit who struggling to keep up with Eos. He's badly injured.
-"WE HAVE TO HELP HIM!" Boris shouts. "RABBIT! RETREAT! WE'LL TAKE IT FROM HERE!"
-Rabbit looks over to the party while panting. He raises his gun to his head, pulls the trigger, and vanishes, removing himself from battle.
+The party slaughters the angels. They each burst into a flame of golden light. You look over to Rabbit who struggling to keep up with Eos. They are badly injured.
+"WE HAVE TO HELP THEM!" Boris shouts. "RABBIT! RETREAT! WE'LL TAKE IT FROM HERE!"
+Rabbit looks over to the party while panting. They raise their gun to their head. Rabbit pulls the trigger and vanishes, removing themself from battle.
 "This one looks a lot stroner than the other three! Brace everyone!" Lucy shouts, "Prepare for combat!"
 ~ StartCombat("Eos", "TGP2")
 ->DONE

@@ -252,11 +252,12 @@ Boris looks towards his feet in shame, "Got it."
 -> RHCMH
 
 == STCMH ==
-There's an array of dark wooden doors up here, each with a number in silver engraved. The floorboards creak with each of your footsteps.
+There's a small array of dark wooden doors up here, each with a number in silver engraved. The floorboards creak with each of your footsteps.
 
 {SpokeToMarilyn:
     "Welcome up," Marilyn says. "Are you all ready to enter?"
     + "Yes."
+    ~ SpokeToMarilyn = false
         -> Calypso
     + "No."
         "Alright, come back up to me when you're ready," Marilyn says. The party walks back down the stairs.

@@ -138,5 +138,46 @@ Her body scatters, thousands of glowing fragments spiral upward from her corpse 
     ->FourthFloor
 
 == FourthFloor ==
+The party reaches the final floor. A woman can be seen laying in the middle of the floor. Her hair is long and flows all around her, blending with the obsidian all around her.
+There is no longer a ceiling above you. Calypso stares endlessly into the hell above her.
+Marilyn approaches her slowly, "Calypso?" she calls.
+Calypso turns her head slowly towards Marilyn, "Oh, you've finally arrived."
+"You've received my notes?" Marilyn asks.
+"Yes..." she responds. "I can't say I ag-"
+"Shh..." Marilyn whispers. "I will deliver upon everything I promised."
+Boris leans to you now, "We sure we can trust her?"
+
++ "I hope so."
+"I'm glad you're feeling suspicious too... But once she combines with Calypso, she'll be no match for the two of us at least... and Lucy."
+"I agree," you say, "It's probably safest to let her and Calpyso combine..."
+-> FourthFloorFinish
++ "I'll keep an eye out."
+"I'm glad you're feeling suspicious too... But once she combines with Calypso, she'll be no match for the two of us at least... and Lucy."
+"I agree," you say, "It's probably safest to let her and Calpyso combine..."
+-> FourthFloorFinish
+
+== FourthFloorFinish ==
+Marilyn looks graceful in this moment as she calls to you, "Aiolos, would you please hand over The Limitless Blue?"
+You manifest the weapon and hand it over to her.
+"Are you ready?" she says to Calypso.
+Calypso looks back to the sky above her, "My heart is full of doubt... you know that."
+Marilyn raises her brow, "Would you rather stay here? All alone in this place."
+Calypso flinches a bit, "No... I don't want to... it's just..."
+"It's okay to have your doubts about me, but I promise you, it's better this way," Marilyn affirms.
+"Okay... then yes... I'm ready... just make it quick," Calypso says.
+Marilyn approaches Calypso with The Limitless Blue firmly in grasp.
+She swings is wildy before finally striking down through Calypso chest.
+Calypso doesn't make a sound. Marilyn breathes in deeply. Calypso's body dissapates into a wisp-like reflective substance. Her essence balls into clouds and infiltrates Marilyn's lungs.
+Marilyn looks up to the rest of the party, seemingly more invigorated than ever before.
+"The seals are finally broken... We must [repare for Atlas' damnation."
+
+The tower dissapates around you, and in its place the chateau's walls rise once more.
+A glowing pink tome was left in place of where Calypso had been slain. You walk up to grab it, but Marilyn picks it up before you.
+"Ah... Absolute Devotion..." she says. Lucy and Rabbit seem unphased by this reach, but Boris looks just as puzzled as you.
+Marilyn stores the book away. 
+"A calm before the storm," Marilyn warns. "We have but a moment before this castle begins to crumble. Manifest all the weapons and help you will need. Quickly, I'll meet you outside."
+VAR FinishCalypso = true
+->CMH
+
 No more story. Nothing left.
 ->DONE

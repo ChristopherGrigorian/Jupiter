@@ -138,12 +138,12 @@ Lucy and you share a glance and just smile at one another.
 "WHAT AN ENTHUSIASTIC AUDIENCE WE HAVE TONIGHT! LET'S KEEP THAT ENERGY UP AND FIERCE YA'LL! WE HAVE ONE MORE MATCH FOR ALL YOU LOVELY FOLK TONIGHT. OUR DEADLY TRIO WILL FACE...DRUM ROLL PLEASE... ... ...RABBIT!"
 
 "Rabbit?" the party chirps in unison. 
-The party watches Rabbit walk casually up to the gate to the cage and let himself in. He looks upon the party, "Oh good, you all had the same idea as me."
-The party looks upon him in utter shock.
+The party watches Rabbit walk casually up to the gate to the cage and let themself in. They look upon the party, "Oh good, you all had the same idea as me."
+The party looks upon Rabbit in utter shock.
 "Come on now, let's get this over with..." Rabbit mumbles. "The show is to begin soon, we need to get the cash and get out."
 "GET READY, GET SET, FIGHT!" Pivin shouts.
 The party doesn't move a muscle.
-Rabbit manifests his gun in hand and walk to the center of the arena. He pull the gun to his own head. "See you at the show..." He pulls the trigger and disappears into a constellation of stars.
+Rabbit manifests their gun in hand and walks to the center of the arena. They pull the gun to his own head. "See you at the show..." They pull the trigger and disappears into a constellation of stars.
 The crowd is silent.
 The party is silent.
 "A... FORFEIT?!?" Pivin screams in disbelief.
@@ -173,7 +173,7 @@ The party follows them to the train station.
 A train pulls up to the station.
 "The theater as an exclusive line heading straight to the heart of it," Rabbit mumbles. "We get off at the last stop."
 "Damn, you really did your research, huh?" says Boris.
-"Field scouting? Yes," he affirms.
+"Field scouting? Yes," they affirms.
 The party rides in silence and get off at the last stop.
 You surface from the train station into the heart of the theater. The place is covered in gold and green accents. Marble floors shine radiantly upon you. Rows of red velvet seats await you beyond dark wooden double doors, guarded by ticket checkers.
 "Can we go to the concession stand?" Boris begs.
