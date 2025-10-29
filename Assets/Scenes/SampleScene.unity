@@ -564,6 +564,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 433535021}
+        m_TargetAssemblyTypeName: InkDialogueManager, Assembly-CSharp
+        m_MethodName: ContinueStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &40068685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4257,6 +4269,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 86378b7854e1f46d686e9467f5010173, type: 2}
   - {fileID: 11400000, guid: 8f687c537ca2148139b743f5d5438e5f, type: 2}
   - {fileID: 11400000, guid: 47dce579574d94adebbeb9b2aa1f8a8e, type: 2}
+  - {fileID: 11400000, guid: 648d0dcaab5b9144d865b686fc5f6c3d, type: 2}
+  - {fileID: 11400000, guid: d652b454bdc1a9b46be60c42a188b942, type: 2}
+  - {fileID: 11400000, guid: 3efeb7de755f80149b0a3e65985b98de, type: 2}
+  - {fileID: 11400000, guid: be300255bea08784a91eb8052b787e28, type: 2}
+  - {fileID: 11400000, guid: fdd4131a2539e3f4b8b628f3fafbb971, type: 2}
+  - {fileID: 11400000, guid: a2cac5bc82420bf41be7f20f32a0a95a, type: 2}
+  - {fileID: 11400000, guid: b28fd9fb3ab27f744bc911fc4fff22bb, type: 2}
+  - {fileID: 11400000, guid: be300255bea08784a91eb8052b787e28, type: 2}
+  - {fileID: 11400000, guid: 09dfcee9f4a190a46a44c7dd3814e052, type: 2}
+  - {fileID: 11400000, guid: 0c998d82e5d19394dbe7368c5a805a16, type: 2}
+  - {fileID: 11400000, guid: 2cfc88d8515c0104ca7f26144bc20c74, type: 2}
+  - {fileID: 11400000, guid: 92d9b6561032d3c4f853ac3fb03b8eed, type: 2}
+  - {fileID: 11400000, guid: c5fd34daef39022428b6f5d439bdda56, type: 2}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}
   targetContainer: {fileID: 215210112}

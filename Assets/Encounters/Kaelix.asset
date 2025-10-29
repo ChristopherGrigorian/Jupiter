@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bced415262c14419aa3363cf6a6a1e, type: 3}
+  m_Name: Kaelix
+  m_EditorClassIdentifier: Assembly-CSharp::EncounterData
+  encounterID: Kaelix
+  enemies:
+  - {fileID: 11400000, guid: 95ccfa372d5759c4aa6ab9eeb33d6083, type: 2}
+  - {fileID: 11400000, guid: 95ccfa372d5759c4aa6ab9eeb33d6083, type: 2}
+  - {fileID: 11400000, guid: 95ccfa372d5759c4aa6ab9eeb33d6083, type: 2}

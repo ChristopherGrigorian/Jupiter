@@ -172,7 +172,7 @@ public class InkDialogueManager : MonoBehaviour
 
     }
 
-    void ContinueStory()
+    public void ContinueStory()
     {
         // Clear existing choices
         foreach (Transform child in buttonContainer.transform)

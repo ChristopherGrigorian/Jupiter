@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bced415262c14419aa3363cf6a6a1e, type: 3}
+  m_Name: Celestial Opposition
+  m_EditorClassIdentifier: Assembly-CSharp::EncounterData
+  encounterID: Celestial Opposition
+  enemies:
+  - {fileID: 11400000, guid: 500919fafd1ada04ca3b1e384a6c0635, type: 2}
+  - {fileID: 11400000, guid: b3ab65e2e4231fb4c8e4ab8245dbf229, type: 2}
+  - {fileID: 11400000, guid: 9971fc96c4f84be4d94048a28ccf1608, type: 2}

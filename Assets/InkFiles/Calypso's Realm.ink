@@ -36,7 +36,7 @@ Ethereal bodies begin to collide in the air above the party. Their bodies mishap
 
 Everyone looks to each other in horror. Boris is stone cold pouting.
 "I knew some shit like this was going to happen," he sighs, "Get ready for combat, ya'll."
-~ StartCombat("EtheralBallOfBodies", "C2")
+~ StartCombat("EtherealBallOfBodies", "C2")
 ->DONE
 
 == C2 ==
