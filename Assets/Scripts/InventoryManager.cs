@@ -74,6 +74,8 @@ public class InventoryManager : MonoBehaviour
 
     private CharacterData currentSelectedCharacter;
 
+    [SerializeField] private Image characterPreviewImage;
+
     private void Awake()
     {
         if (Instance == null)
@@ -228,6 +230,12 @@ public class InventoryManager : MonoBehaviour
             {
                 var btn = Instantiate(characterSelectionPrefab, characterSelectionContainer);
                 PlaceButtonNoises(btn);
+
+                var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterButtonScript.targetImage = characterPreviewImage;
+                characterButtonScript.hoverSprites = character.hoverImages;
+                characterButtonScript.entranceSprites = character.entranceImages;
+
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
@@ -247,6 +255,12 @@ public class InventoryManager : MonoBehaviour
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
 
                 PlaceButtonNoises(btn);
+
+                var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterButtonScript.targetImage = characterPreviewImage;
+                characterButtonScript.hoverSprites = character.hoverImages;
+                characterButtonScript.entranceSprites = character.entranceImages;
+
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     Debug.Log($"[InventoryManager] Clicked character '{character.characterName}' -> open SkillTree");
@@ -264,6 +278,12 @@ public class InventoryManager : MonoBehaviour
             {
                 var btn = Instantiate(characterSelectionPrefab, characterSelectionContainer);
                 PlaceButtonNoises(btn);
+
+                var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterButtonScript.targetImage = characterPreviewImage;
+                characterButtonScript.hoverSprites = character.hoverImages;
+                characterButtonScript.entranceSprites = character.entranceImages;
+
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = character.characterName;
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
