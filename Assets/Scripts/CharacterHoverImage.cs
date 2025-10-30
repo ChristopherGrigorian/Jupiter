@@ -26,7 +26,7 @@ public class CharacterHoverImage : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (targetImage != null && hoverSprites != null)
         {
-            targetImage.enabled = true; // make sure it's visible
+            targetImage.enabled = true; 
             if (entranceFlipbookCoroutine != null)
                 StopCoroutine(entranceFlipbookCoroutine);
             if (hoverFlipbookCoroutine != null)

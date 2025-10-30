@@ -232,6 +232,7 @@ public class InventoryManager : MonoBehaviour
                 PlaceButtonNoises(btn);
 
                 var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterPreviewImage.gameObject.SetActive(true);
                 characterButtonScript.targetImage = characterPreviewImage;
                 characterButtonScript.hoverSprites = character.hoverImages;
                 characterButtonScript.entranceSprites = character.entranceImages;
@@ -240,6 +241,8 @@ public class InventoryManager : MonoBehaviour
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     currentSelectedCharacter = character;
+                    characterPreviewImage.sprite = null;
+                    characterPreviewImage.gameObject.SetActive(false);
                     ShowTab("EquippableWeapons");
                 });
             }
@@ -257,6 +260,7 @@ public class InventoryManager : MonoBehaviour
                 PlaceButtonNoises(btn);
 
                 var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterPreviewImage.gameObject.SetActive(true);
                 characterButtonScript.targetImage = characterPreviewImage;
                 characterButtonScript.hoverSprites = character.hoverImages;
                 characterButtonScript.entranceSprites = character.entranceImages;
@@ -265,6 +269,8 @@ public class InventoryManager : MonoBehaviour
                 {
                     Debug.Log($"[InventoryManager] Clicked character '{character.characterName}' -> open SkillTree");
                     currentSelectedCharacter = character;
+                    characterPreviewImage.sprite = null;
+                    characterPreviewImage.gameObject.SetActive(false);
                     ShowTab("SkillTree");
                 });
             }
@@ -280,6 +286,7 @@ public class InventoryManager : MonoBehaviour
                 PlaceButtonNoises(btn);
 
                 var characterButtonScript = btn.AddComponent<CharacterHoverImage>();
+                characterPreviewImage.gameObject.SetActive(true);
                 characterButtonScript.targetImage = characterPreviewImage;
                 characterButtonScript.hoverSprites = character.hoverImages;
                 characterButtonScript.entranceSprites = character.entranceImages;
@@ -288,6 +295,8 @@ public class InventoryManager : MonoBehaviour
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     currentSelectedCharacter = character;
+                    characterPreviewImage.sprite = null;
+                    characterPreviewImage.gameObject.SetActive(false);
                     ShowTab("CharacterStats");
                 });
             }

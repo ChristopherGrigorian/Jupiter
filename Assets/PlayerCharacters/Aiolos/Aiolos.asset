@@ -57,14 +57,12 @@ MonoBehaviour:
   - {fileID: -7809359578544954088, guid: 278c82f36023fe84190a68b6323b5f14, type: 3}
   - {fileID: -7034009117720606992, guid: bc7c928ec3e40514fa5d315de8f3c450, type: 3}
   hoverImages:
+  - {fileID: 2014605521705940963, guid: 6aa904d292a5ff245b8458e4c3267f0a, type: 3}
+  - {fileID: 4977805801484559528, guid: 950d9e5e9225be644be1449aa8f25bd2, type: 3}
   - {fileID: -7034009117720606992, guid: bc7c928ec3e40514fa5d315de8f3c450, type: 3}
-  - {fileID: -7809359578544954088, guid: 278c82f36023fe84190a68b6323b5f14, type: 3}
-  - {fileID: -4052718092891441097, guid: 6db4bf6b2b54e4948ba401a5dc01b3af, type: 3}
-  - {fileID: -4723296946115614453, guid: d6ca2646574c2e348be96f54421d91e0, type: 3}
-  - {fileID: -4723296946115614453, guid: d6ca2646574c2e348be96f54421d91e0, type: 3}
-  - {fileID: -4052718092891441097, guid: 6db4bf6b2b54e4948ba401a5dc01b3af, type: 3}
-  - {fileID: -7809359578544954088, guid: 278c82f36023fe84190a68b6323b5f14, type: 3}
   - {fileID: -7034009117720606992, guid: bc7c928ec3e40514fa5d315de8f3c450, type: 3}
+  - {fileID: 4977805801484559528, guid: 950d9e5e9225be644be1449aa8f25bd2, type: 3}
+  - {fileID: 2014605521705940963, guid: 6aa904d292a5ff245b8458e4c3267f0a, type: 3}
   droppableWeapons: []
   heldCoin: 0
   skillTree: {fileID: 11400000, guid: 47f74b797f18cff49b909b4e252285d5, type: 2}
