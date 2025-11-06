@@ -57,7 +57,7 @@ Lucy begins looking around as if looking for something.
 "There's no need for that, friends," the guard says. "Perhaps I could look the other way if you can demonstrate to me a display of art!"
 
 + "Display of art?"
-"DISPLAY THIS BITCH," Boris shouts.
+"DISPLAY THIS BITCH!" Boris shouts.
 "STOP!" Lucy and you shout in unison.
 Boris pulls out his tome and fires a tetra burst at the guard.
 The bolt strikes the guard hard, but they barely stagger.
