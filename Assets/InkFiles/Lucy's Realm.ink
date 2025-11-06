@@ -3,6 +3,7 @@ VAR Drowning = true
 VAR Seagul = 0
 == Oasis ==
 {FirstTimeOasis:
+~ HideMapButton()
 You're being is invited to a new space, and way of thinking. Your party and yourself materialize on a sandy beach. Seagulls chirp in the air. Waves thrash and roar and relief their anger to a rolling whisper.
 ->MainBeach
 -else:

@@ -4417,20 +4417,20 @@ MonoBehaviour:
     sprite: {fileID: 7861389648039863994, guid: 54ee4e80f8cac3f46903ccc665cf7b84, type: 3}
   - LocationName: Vireo's Realm
     isUnlocked: 0
-    sprite: {fileID: -4088829630878589348, guid: fe271de26d6226247a841d3861627591, type: 3}
+    sprite: {fileID: 8808899216555066417, guid: f1c35328805cf164a9aa7e97b27edd89, type: 3}
   unlockableSubLocations:
   - subLocationName: Oasis
     isUnlocked: 0
     mainLocation: Lucy's Realm
-    sprite: {fileID: -6359615994749993738, guid: b310940abe30b2a4ebab9608afe420f6, type: 3}
+    sprite: {fileID: -4088829630878589348, guid: fe271de26d6226247a841d3861627591, type: 3}
   - subLocationName: Galagos
     isUnlocked: 1
     mainLocation: Galaga
     sprite: {fileID: 1735771447247911222, guid: 7f421d686dc23f54eb4b199a000d7809, type: 3}
-  - subLocationName: Salvation
+  - subLocationName: Neolight
     isUnlocked: 1
     mainLocation: Vireo's Realm
-    sprite: {fileID: 1735771447247911222, guid: 7f421d686dc23f54eb4b199a000d7809, type: 3}
+    sprite: {fileID: -8442724517849412941, guid: f803ceb9795158c4197fb64a4966ee25, type: 3}
   locationContainer: {fileID: 1204518016}
   sublocationConainter: {fileID: 769045490}
   mapButton: {fileID: 1939167301}

@@ -1,8 +1,9 @@
 VAR FirstTimeNeonCity = true
-== NeonCityHolding ==
+== Neolight ==
 A neon city materializes before you as you teleport to the coordinates. You seem to be in a holding area prior to the entrance. A large banner streams in front of you reading "Welcome To Salvation."
 
 {FirstTimeNeonCity:
+~ HideMapButton()
 Boris materializes besides you. Lucy follows suite soon after.
 "Hmph..." Boris exhales. 
 "Certainly a bold statement as greeting," says Lucy.
@@ -19,10 +20,11 @@ You glance to him, to which he returns a cunning glare.
 + "I don't know, let's ask Vireo."
 "You're not very helpful are you?" Boris responds.
 ->NCH1
-}
+- else:
 
 + _Enter the city._
     ->NCHub
+}
 
 == NCH1 ==
 "Anyway..." Lucy says. "It doesn't matter what the place is called let's just get going."
@@ -60,7 +62,7 @@ Lucy begins looking around as if looking for something.
 Boris pulls out his tome and fires a tetra burst at the guard.
 The bolt strikes the guard hard, but they barely stagger.
 "Ohhh.... HAAAAH... OHHH... THAT... WAS... MARVELOUS..." the guard shrieks in ecstacy. 
-"They're a fucking freak," Boris screeches. "Are you both with me or not..."
+"They're a fucking freak!" Boris screeches. "Are you both with me or not!"
 Lucy and you look to him wide-eyed.
 "Please help..." he mumbles.
 Prepare for combat.
@@ -205,7 +207,7 @@ Boris looks horrified, "You all can't seriously be considering this..."
 "Lets open a bakery," Boris smiles.
 "You would like that wouldn't you..." sneers Lucy.
 ->RS1
-}
+- else:
 
 This road leads down to a dead end. The ticket booth is here. A couple of benches line the neon streets.
 
@@ -213,9 +215,10 @@ This road leads down to a dead end. The ticket booth is here. A couple of benche
 -> LeftStreet
 + _Head back to the main plaza._
 -> RightStreet
-
+}
 
 == RS1 == 
+~ FirstTimeNeonCity = false
 "Pssst... over here," a voice echoes from the top the street.
 The party approaches a hooded figure. 
 "Hellooo," Boris belts.

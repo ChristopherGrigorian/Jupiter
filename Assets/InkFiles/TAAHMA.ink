@@ -228,5 +228,6 @@ Marilyn looks upon them cautiously.
 The party now looks to you.
 "Lead the way bud, whatever you want to do next, we'll follow," Boris says.
 ~ SpokeToMarilyn = true
+~ RevealMapButton()
 + _Enter the chateau._
 -> CMH

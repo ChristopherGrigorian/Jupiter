@@ -67,6 +67,7 @@ Boris pouts, "Well there's only one way to find out isn't there? We gotta find h
 == Courtyard ==
 
 {FinishCalypso:
+~ HideMapButton()
     You walk out of the chateau to horrific sky touring over the courtyard. The skies are an endless black sea. No stars shine upon you.
     Rabbit stands besides Marilyn, "We must prepare," they say. "The time is near to face Atlas and shake this world free from Bruce."
     

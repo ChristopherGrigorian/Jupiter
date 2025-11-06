@@ -259,6 +259,7 @@ There's a small array of dark wooden doors up here, each with a number in silver
     "Welcome up," Marilyn says. "Are you all ready to enter?"
     + "Yes."
     ~ SpokeToMarilyn = false
+    ~ HideMapButton()
         -> Calypso
     + "No."
         "Alright, come back up to me when you're ready," Marilyn says. The party walks back down the stairs.

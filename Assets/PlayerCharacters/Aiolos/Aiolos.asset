@@ -15,7 +15,7 @@ MonoBehaviour:
   id: Aiolos
   characterName: Aiolos
   level: 2
-  experience: 197
+  experience: 237
   maxHP: 78
   maxMP: 7
   strength: 2
@@ -46,7 +46,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d10e0ecf006d014daaf308b428f16a7, type: 3}
   - {fileID: 21300000, guid: 4ad35982535e4564895cd0e82497534c, type: 3}
   - {fileID: 21300000, guid: cf6ec6d318481b14aae0ff87bd6b0e5e, type: 3}
-  battleImage: {fileID: 0}
+  battleImage: {fileID: 21300000, guid: cf6ec6d318481b14aae0ff87bd6b0e5e, type: 3}
   entranceImages:
   - {fileID: 4421796462450599411, guid: 6b3cf59f335b0be4bb9d5c10bdf9d5d7, type: 3}
   - {fileID: 8439353119942544358, guid: 9e1506d75a446774099f8b145854d863, type: 3}
