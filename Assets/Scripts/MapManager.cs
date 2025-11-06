@@ -9,6 +9,7 @@ public class LocationData
 {
     public string LocationName;
     public bool isUnlocked;
+    public Sprite sprite;
 }
 
 [System.Serializable]
@@ -95,6 +96,9 @@ public class MapManager : MonoBehaviour
                 {
                     var btn = Instantiate(buttonPrefab, locationContainer);
                     PlaceButtonNoises(btn);
+                    var mapButtonScript = btn.AddComponent<ButtonHoverImage>();
+                    mapButtonScript.targetImage = locationImage;
+                    mapButtonScript.hoverSprite = location.sprite;
                     btn.GetComponentInChildren<TextMeshProUGUI>().text = location.LocationName;
                     btn.GetComponent<Button>().onClick.AddListener(() =>
                     {
@@ -223,6 +227,15 @@ public class MapManager : MonoBehaviour
         {
             mapButton.gameObject.SetActive(true);
             revealedMap = true;
+        }
+    }
+
+    public void HideMapButton()
+    {
+        if (mapButton != null)
+        {
+            mapButton.gameObject.SetActive(false);
+            revealedMap = false;
         }
     }
 

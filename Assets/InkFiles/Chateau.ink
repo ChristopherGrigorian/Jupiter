@@ -118,9 +118,10 @@ Boris strolls in and grabs the paper within.
 "Yes I will once you all enter Vireo's domain," he says. "I can hold my one weight, but I'm a little scared for you guys. It may be better to go back to the Lucy's realm and train a little bit more. If you're confident, though, find me in Vireo's realm. I'll try to get as much info as I can, see you later."
 Rabbit dissapears into a wash of stars. 
 The party looks to each other. 
-"I'm with you all the way dude," Boris says. "It's you're call on how we proceed. I'm cool with jumping straight in, or gaining some experience first. We may be able to gain a little bit more intel on how these realms work in the first place."
+"I'm with you all the way dude," Boris says. "It's your call on how we proceed. I'm cool with jumping straight in, or gaining some experience first. We may be able to gain a little bit more intel on how these realms work in the first place."
 "Same here..." says Lucy. "I'm fine with either plan, lead the way."
-
+~ UnlockLocation("Vireo's Realm")
+~ UnlockSubLocation("Salvation")
 ~ ReturnToGalaga = false
 
 + _Return to the main hall._
