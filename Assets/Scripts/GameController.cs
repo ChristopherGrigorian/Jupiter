@@ -175,6 +175,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator CombatLoop()
     {
+        yield return StartCoroutine(ShowCombatLog($"Ready for combat? Click to continue!"));
         Debug.Log("EnteredCombatLoop");
         while (combatActive) {
             Combatant current = turnOrder[currentTurnIndex];

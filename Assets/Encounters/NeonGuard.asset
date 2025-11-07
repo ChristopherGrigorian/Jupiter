@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
   encounterID: NeonGuard
   enemies:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b74a01823e4afd0418d1e8af64a3a229, type: 2}

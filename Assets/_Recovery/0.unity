@@ -4328,7 +4328,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
-  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   acquireableItems:
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   toolTipHolder: {fileID: 1139047496}
@@ -13786,7 +13785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1677937059928240808, guid: fff1bb1c1c6ef7e4d8b8d35980cceb83, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
