@@ -140,6 +140,8 @@ Slowly but surely, a faithful replica of Vireo is built before you.
 Rabbit looks to you all now, "Don't worry. This one isn't actually completely sentient, but he has his combat uses. He may even transcend into Cosmo for a short period of time."
 Rabbit now walks to one of the main consoles and generates a small blue translucent cube. "We can store him in this," Rabbit says as he points the cube towards the Vireo clone. Green energy pours fourth from the construct and into small cube. "You see that? Just as I've pulled him into the cube, you may pull him out," they now hand the cube over to you. "You may summon him to fight in battle alongside us. Just rememeber though, only three of you may be in combat at a single time, so you'll have to choose from the menu who you'd like to be out on the field."
 
+~ AddCharacter("Vireo")
+
 + "Thank you!"
 "No problem, you all may want to debrief while I try to fix up the weapons room.
 -> Debrief

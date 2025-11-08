@@ -4256,6 +4256,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f02c21f0bfeff9a44a74c61f258ac060, type: 2}
   - {fileID: 11400000, guid: 51fc46daad58b894f8374b36d0b62a81, type: 2}
   - {fileID: 11400000, guid: 97e4d1c294b34448488574ea184ec95a, type: 2}
+  - {fileID: 11400000, guid: e3af3e6d7dbd4489898031a3cbc05ea2, type: 2}
+  - {fileID: 11400000, guid: fe7b6a37a24b84cab91a9965b27a0d89, type: 2}
+  - {fileID: 11400000, guid: aaab0b52a88e24b0f8042b58de835b6c, type: 2}
   playerCharacters: []
   enemyCharacters: []
   dialogueManager: {fileID: 433535021}
