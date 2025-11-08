@@ -9,7 +9,7 @@ You hope you weren't asleep for too long. In your wake, you feel a certain tinge
 
 You're most certainly in your office. You really hope you haven't accidentally slept for too long. 
 There are diagrams scattered all over your desk, some of which have frantic and messy edits upon them chalked in with pencil. 
-You try to open the drawer underneath your desk but the locks won't budge. You have no idea where the key could be.
+You try to open the drawer underneath your desk but the lock won't budge. You have no idea where the key could be.
 You check the clock. Two hours left to go before you can go home. Your stomach bubbles. You head to the break room for food. 
 The office is always empty. You suppose you just have an awkward shift, but it’s of your own accord. The hallways are dimly lit. On the way to the break room you pass several series of closed doors.  
 All are locked by keycard. You always assume you don’t have the security privileges to enter them. There’s no real reason either, you just stick to your corner of the office. 
@@ -54,7 +54,7 @@ He then bursts through the doorway and rushes to stand before you.
 "BORIS IS HERE TO RESCUE YOU."
 
 + "Um... Hello Boris?"
-    -> G5
+    -> GSpecial
 
 + "Hellooo Boris!"
     ~UncannyPeculiarity += 1
@@ -135,7 +135,7 @@ You approach the terminal the terminal cautiously.
 {UncannyPeculiarity > 2:
 Your memory feels blurred, but you're slowly beggining to remember. This is an Andromeda terminal. It's meant to uphold simulations of grandeur and delusion. You worked on these exact models.
 - else:
-The thing whirs with seemingly redundant buttons flashing on that back off again. It gets to a point where it's a little dramatic, surely.
+The device is covered with seemingly redundant flashing buttons. It's a little dramatic, surely.
 }
 
 You notice a single keypad within the center of it.

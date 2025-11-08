@@ -35,7 +35,7 @@ C-class citizens, like Aiolos, could only open the door in times of Essential Co
 
 Aiolos somehow gets painfully close to missing the deadline, however. It’s often a mixture of him brining in the bags one at a time, and him deciding to organize the supplies in your fridge while the door is still open. 
 
-It drive you mad that he won’t just drag the bags inside, close the door, rescan, and deal with organizing after. You feel your throat straining in anger already at the thought of it. You try not to get too worked up.
+It drives you mad that he won’t just drag the bags inside, close the door, rescan, and deal with organizing after. You feel your throat straining in anger already at the thought of it. You try not to get too worked up.
 
 Due to your new job, you were afforded B-class citizen status. It’s essentially identical to that of a C-class citizen, with the added authority of leaving for work in your allotted time slot. 
 
@@ -52,7 +52,9 @@ You’re afraid of the difficult conversation that would ensue. Sometimes you fe
 You feel yourself awaken from a horrible nightmare. You were just murdered by Aiolos. You lay perfectly still as if still in stasis. You stay there and allow the fright to subside.
 }
 
-You prop yourself on your forearms and lift your chest to get a better look at the clock on your nightstand. You blink a couple of times to bring it into focus. It's around twelve o'clock noon. You don't sleep very much nowadays because of your night shift, but it's the only way to pursue this venture without Aiolos knowing. You wonder why he hasn't grown suspicious of the fact that you 'sleep' for an excessive amount of time. Perhaps he thinks you're depressed.
+You prop yourself on your forearms and lift your chest to get a better look at the clock on your nightstand. You blink a couple of times to bring it into focus. It's around twelve o'clock noon. 
+You don't sleep very much nowadays because of your night shift, but it's the only way to pursue this venture without Aiolos knowing. 
+You wonder why he hasn't grown suspicious of the fact that you 'sleep' for an excessive amount of time. Perhaps he thinks you're depressed.
 
 You try to pretend you're still sleeping to get an extra hour of rest in, but you fear you've already made too much noise ruffling the sheets. Aiolos has a pretty good ear for that, unfortunately. You guess he gets bored waiting for you to wake up.
 
@@ -231,7 +233,7 @@ You remember everything. The wrongs you've done. The things you've tried to chan
 == PL2 ==
 Your vision fades.
 You feel a compelling force surrounding your body.
-You know you should be terrified, but all you can feel an artificial sense of security.
+You know you should be terrified, but all you can feel is an artificial sense of security.
 
 "I've finally found you," a voice calls. 
 "It was no small effort to carefully pluck you from the expanse."

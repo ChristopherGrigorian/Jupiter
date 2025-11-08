@@ -1,9 +1,10 @@
 == Calypso ==
+~ HideMapButton()
 Boris hands over his tome to you once more.
 "You know my other half's name right?" Marilyn asks.
 "Yes... I think..." you mumble.
 You begin reciting the spell from Boris' tome.
-"Calpso!" you shout.
+"Calypso!" you shout.
 The door bursts in clouds of pinkish swirls.
 Boris waves away some of the smoke and enter the room and comes out exmaning a slip of paper.
 "Alright, got it," Boris says. "I've sent over the map data to everyone."
@@ -21,7 +22,7 @@ The party materializes besides you. Everyone looks around in wonder. Marilyn see
 The party begins marching through the endless cotton expanse. Whispers from the ghost-like figures that wander every which way fill the realm with ambience:
 "The Queen's guests?... Who are they?... Did the Queen call for them?... It doesn't look like they belong here..."
 Boris try desperately to wave in the faces of a few of them and ask for directions, but they all ignore him.
-"AHHHH!" he shouts. "Why won't anybody listen to me..." he whines. Where the fuck is this Queen they're talking about?"
+"AHHHH!" he shouts. "Why won't anybody listen to me..." he whines. "Where the fuck is this Queen they're talking about?"
 "Don't get too worked up already," Lucy assures, "I'm sure we'll be able to find her. I assume this Queen they talk about is Calypso."
 The voices from the spirits dim.
 "Calypso... she said her name?" they whisper.
@@ -41,14 +42,15 @@ Everyone looks to each other in horror. Boris is stone cold pouting.
 
 == C2 ==
 The amalgamation of spirits burst as the party delivers the final blow.
-The ground begins to loosen and unravel beneath the party. Everyone is sent into free fall. A new floor begins to form beneath your falling bodies. Threads unravel and tie with one another from the edges of your vision as you reach closer to impact. The party lands on a cotton like ground. Unlike the previous pink one, this one is gray. A desolate and sharp wind brushes past you, as if sand grains tear at your skin.
+The ground begins to loosen and unravel beneath the party. Everyone is sent into free fall. A new floor begins to form beneath your falling bodies. 
+Threads unravel and tie with one another from the edges of your vision as you reach closer to impact. The party lands on a cotton like ground. Unlike the previous pink one, this one is gray. A desolate and sharp wind brushes past you, as if sand grains tear at your skin.
 Boris stand up almost immediately and starts jumping and brushing off his knees and feet--as if in panic. Lucy looks over to him confused. Rabbit begins looking around.
 "No spirits this time..." Rabbit says.
 "Evidently..." Marilyn says sarcastically. "What now?"
 "YOU DON'T SEE THEM? AHH AHHH HELP ME," Boris screams. 
 Boris is sinking into the ground like quicksand. Lucy runs over to grab his sprawling hands. He's brought chest deep into the cotton. "HELP! HELP!" he shouts.
-Rabbit spring to help him as well, but both slip up on their grasp.
-"HE'S GETTING PULLED TO HARD," Rabbit shouts.
+Rabbit springs to help him as well, but both slip up on their grasp.
+"HE'S GETTING PULLED TOO HARD," Rabbit shouts.
 Boris is completely submerged, his muffled screams drown into nothingness.
 The party looks to each other in silence.
 Lucy's eyes widen, "THEY'RE EVERYWHERE!"
@@ -56,7 +58,8 @@ Hundreds of hands breach through the floor and grab hold of the party's legs.
 "I guess we're going with him," Marilyn smirks. "See you on the other side."
 The party is dragged into oblivion. They all go quietly. 
 Visions of madness flash by you. You close your eyes in fear, but the images still haunt you.
-You huddle into yourself, until you feel you back hit the air once more. You lift yourself from your craddle position. You're on the other end of the floor you had just sunk into. It seems as though your polarity has been flipped. You look up to the ceiling. It seem to be either a bursting sun, or a lava pool. Solar flares swirl around you and wind back to the volcanic ceiling.
+You huddle into yourself, until you feel you back hit the air once more. You lift yourself from your craddle position. You're on the other end of the floor you had just sunk into. It seems as though your polarity has been flipped. 
+You look up to the ceiling. It seems to be either a bursting sun, or a lava pool. Solar flares swirl around you and wind back to the volcanic ceiling.
 Your party melds up from the ground. Boris was already here, craddled on the ground.
 
 + _Comfort Boris._
@@ -86,7 +89,7 @@ Upon reaching the tower the hands submerge themselves once more. Their movements
 The party looks to you for assurance.
 You nod.
 The party wades to the front doors of the tower. You open the doors. A pattern mosaic garnishes the floor with purple and black with white accents. A ceiling is not to far above you, with a spiral staircase leading upwards.
-Rabbit looks towards the stairs, "Multiple levels, multiple fights... Be ready for action. This place is bound to be armed.
+Rabbit looks towards the stairs, "Multiple levels, multiple fights... Be ready for action. This place is bound to be armed."
 The ground floor is empty.
 
 + _Head up to the first floor._
@@ -166,17 +169,17 @@ Calypso flinches a bit, "No... I don't want to... it's just..."
 "It's okay to have your doubts about me, but I promise you, it's better this way," Marilyn affirms.
 "Okay... then yes... I'm ready... just make it quick," Calypso says.
 Marilyn approaches Calypso with The Limitless Blue firmly in grasp.
-She swings is wildy before finally striking down through Calypso chest.
+She swings it wildy before finally striking down through Calypso chest.
 Calypso doesn't make a sound. Marilyn breathes in deeply. Calypso's body dissapates into a wisp-like reflective substance. Her essence balls into clouds and infiltrates Marilyn's lungs.
 Marilyn looks up to the rest of the party, seemingly more invigorated than ever before.
-"The seals are finally broken... We must [repare for Atlas' damnation."
+"The seals are finally broken... We must prepare for Atlas' damnation."
 
 The tower dissapates around you, and in its place the chateau's walls rise once more.
 A glowing pink tome was left in place of where Calypso had been slain. You walk up to grab it, but Marilyn picks it up before you.
 "Ah... Absolute Devotion..." she says. Lucy and Rabbit seem unphased by this reach, but Boris looks just as puzzled as you.
 Marilyn stores the book away. 
 "A calm before the storm," Marilyn warns. "We have but a moment before this castle begins to crumble. Manifest all the weapons and help you will need. Quickly, I'll meet you outside."
-VAR FinishCalypso = true
+~ FinishCalypso = true
 ->CMH
 
 No more story. Nothing left.

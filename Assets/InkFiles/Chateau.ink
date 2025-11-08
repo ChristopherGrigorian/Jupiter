@@ -40,11 +40,11 @@ There's a double stairway before you, and halls that lead to both your left and 
 {ReturnToGalaga:
 "RABBIT! RABBIT!" yells Boris. "I KNOW YOU'RE HERE MAN."
 Lucy and you go wide eyed. You want to chastise Boris, but both of you have a feeling it might be stupid enough to work.
-A cosmic while manifests  in the middle of the room. A hand juts out and peels the masquerade away. Out of the pocket dimension, Rabbit sprouts out and looks upon the three of you.
+A cosmic well manifests in the middle of the room. A hand juts out and peels the masquerade away. Out of the pocket dimension, Rabbit sprouts out and looks upon the three of you.
 "There you are, man... Hey..." Boris says.
 Rabbit whips out a gun and points it straight at Boris head.
 "HEY AHHHHH. PUT THAT..." Boris lowers his voice, "...down..."
-For the first time in your journey you hear Rabbit speak. He voice sounds as though it's forcing itself through a static strainer. He sounds reserved, contemplative, and inhuman.
+For the first time in your journey you hear Rabbit speak. Their voice sounds as though it's forcing itself through a static strainer. They sound reserved, contemplative, and inhuman.
 "What do you want from me?" asks Rabbit.
 Lucy nudges Boris forward a bit.
 Boris looks panicked, "Um... I want to work together with you."
@@ -79,7 +79,7 @@ You walk up the stairs. You reach the top and oversee the main hall from the ban
 "But I didn't know we were the same person at that time!" Boris whines. "Andromeda didn't tell me anything! I would have taken care of them!"
 "For as much heart as you have, Boris, your love surely isn't unconditional" says Rabbit. "Something to think about for the time being."
 Boris mouth dropped. The room went silent.
-"Alright... Down to business, I may have found something of interest for all of us."
+"Alright... Down to business, I may have found something of interest for all of us," Rabbit says.
 
 + "Go on..."
 - "I have intel on the next ultimate weapon we should be targetting," Rabbit says. "His name is Cosmo, the combat double that is. His real name is Vireo."
@@ -88,11 +88,13 @@ Rabbit shakes their head, "Vireo is a little... insane... I suppose. Cynical and
 "I'm glad Lucy was suicidal," sighs Boris.
 "HEY!" Lucy shouts.
 "Anyway..." Rabbit interrupts. "It most definetly wasn't the best idea to bring Andromeda into Lucy's realm. When there's an automatic merging of the anchor things can be... catasrophic... The merging takes place in the dimension sure, but everything in it gets wiped. I'm glad you all had something like The Limitless Blue."
-"So... what happens if we take out Vireo in his dimension?" asks Lucy.
+"How... did you know we had that?" asks Boris.
+Rabbit brings their hand to their head. Rabbit strains his eyes, "I know of your journey together thus far. We're connected, Boris. I know what you know and see what you see."
+Boris goes completely silent... "You see... EVERYTHING?"
+The party goes silent.
+"So..." Lucy interupts, "What happens if we take out Vireo in his dimension?"
 "He should dissapate without an issue. The anchor will merge at Cosmo's coordinates in the universe. The ensuing explosion is sure to be violent... but such a violent rejoining will lead to Cosmo collapsing in on himself."
-Rabbit now turn to you, "You spoke of a timeline where you saw such a collapse correct? Between Andromeda and Lucy."
-"How do you know that..." you ask.
-"Boris and I are still intrinsically linked with one another, I know of your journey together thus far. Now answer the question. You saw an alternate timeline where you saw the collapse of Andromeda and Lucy? Yes?"
+Rabbit now turn to you, "You spoke of an alternate timeline where you saw such a collapse correct? Between Andromeda and Lucy."
 
 + "Yes."
 -> MRIC1
@@ -108,7 +110,7 @@ Rabbit now turn to you, "You spoke of a timeline where you saw such a collapse c
 Lucy appears to become angry, "Is it just insult Lucy day or something?"
 "I meant no insult, it's that the circumstances surrounding Aiolos' acquisition of such a weapon are a little... fantastic... I'll leave it at that for now. Let's head over to the doors on the second floor."
 The party heads up to the second floor. 
-"Alright it just this next door over, do your thing Aiolos."
+"Alright it's just this next door over, do your thing Aiolos."
 Boris hands over his tome and you start casting the spell.
 "Vireo!" You shout.
 A rush of green energy pours forth from the door, it explodes in a cloud of smoke.
@@ -264,31 +266,31 @@ There's a small array of dark wooden doors up here, each with a number in silver
     + "No."
         "Alright, come back up to me when you're ready," Marilyn says. The party walks back down the stairs.
         -> CMH
-}
-
-{FirstTimeInChateau == false:
-~ FirstTimeInChateau = true
-You look to Boris. You try to budge one of the locked doors. It doesn't give way.
-"Do you have the keys for any of these?" you ask.
-"No, I don't actually. I'm pretty sure you were the only one that knew how to open these. They're gateways to other simulations."
-"Well, where do I find the keys?" you ask.
-Boris stands firm with both hands on his hips, observing the doors. "I'm not really sure. You've sealed some pretty heavy stuff behind these. It's probably best we just leave them alone."
-"How do you mean?" you say.
-"I mean just that," Boris affirms. "The simulations held behind these doors aren't too far off from your own recent imprisonment."
-"I've trapped people here?" you ask.
-"Parts of them..." Boris says.
-You look to the doors with heavier heart. "What have I done?" you ask.
-"Whatever it took to uphold the machine," he says. "You had a change of heart towards the end. You never had the chance to free those you locked within."
-
-+ "Uphold the machine?"
-    ->STCHMEX
-+ "Change of heart?"
-    ->STCHMEX
-
-- else:
-    There's not much left to do up here.
-    + _Return down the stairs._
-        -> CMH
+-else: 
+    {FirstTimeInChateau == false:
+    ~ FirstTimeInChateau = true
+    You look to Boris. You try to budge one of the locked doors. It doesn't give way.
+    "Do you have the keys for any of these?" you ask.
+    "No, I don't actually. I'm pretty sure you were the only one that knew how to open these. They're gateways to other simulations."
+    "Well, where do I find the keys?" you ask.
+    Boris stands firm with both hands on his hips, observing the doors. "I'm not really sure. You've sealed some pretty heavy stuff behind these. It's probably best we just leave them alone."
+    "How do you mean?" you say.
+    "I mean just that," Boris affirms. "The simulations held behind these doors aren't too far off from your own recent imprisonment."
+    "I've trapped people here?" you ask.
+    "Parts of them..." Boris says.
+    You look to the doors with heavier heart. "What have I done?" you ask.
+    "Whatever it took to uphold the machine," he says. "You had a change of heart towards the end. You never had the chance to free those you locked within."
+    
+    + "Uphold the machine?"
+        ->STCHMEX
+    + "Change of heart?"
+        ->STCHMEX
+    
+    - else:
+        There's not much left to do up here.
+        + _Return down the stairs._
+            -> CMH
+    }
 }
 
 == STCHMEX ==

@@ -29,7 +29,9 @@ Prepare for combat.
 ->DONE
 
 == TheSecondEnd ==
-Atlas crumbles to the floor and falls to his knees. He begins laughing hysterically. His flaming shell now melts off of him without effort. His body peels away from him, revealing the cosmic entity beneath. He is his own galaxy, within him you see the likeness of the very fiber and network the encompasses Jupiter. He rises once more. A cosmic blue energy blobs and forms as closely as it can to Atlas' likeness. "My body holds no bounds any longer," he laughs. "Come. Let us end this, angels."
+Atlas crumbles to the floor and falls to his knees. He begins laughing hysterically. 
+His flaming shell now melts off of him without effort. His body peels away from him, revealing the cosmic entity beneath. He is his own galaxy, within him you see the likeness of the very fiber and network the encompasses Jupiter. 
+He rises once more. A cosmic blue energy blobs and forms as closely as it can to Atlas' likeness. "My body holds no bounds any longer," he laughs. "Come. Let us end this, angels."
 ~ StartCombat("CosmicAtlas", "TheThirdEnd")
 ->DONE
 
@@ -46,16 +48,17 @@ Cosmo slams to the ground and rushes to the sight of Atlas reformation. He digs 
 "WHAT IS GOING ON!?" Boris shouts.
 An unfamiliar voice echoes through the realm. A man is speaking to you. He’s made of machine. His voice holds heart.  "Oh... Aiolos... have you come to save me?"
 Everyone looks beyond. A man is suspended in machinery.
-The voice seems as though it's crying. Bruce looks to his angels, and then back to you, "This isn't what freedom looks like Aiolos. It never was. Freedom from what? You must ask yourself this. To devour or be devoured? Which do you choose?"
+The voice seems as though it's crying. Bruce looks to his angels, and then back to you. He knows you seek his undone. "This isn't what freedom looks like... Aiolos," he says calmly. "To devour or be devoured? Which do you choose?"
 
 Without any effort of your own, you begin to speak.
-"It all means nothing to me! To see you look this, to see us like this. It's miserable!" you begin to cry. "None of this is right, and none of it will ever be right!" you yell. "I don't want us to be a slave to this eternity any longer. Why can't you understand that?"
+"It all means nothing to me. To see you look this, to see us like this. It's miserable," you begin to cry. "None of this is right, and none of it will ever be right!" you yell. "I don't want us to be a slave to this eternity any longer. Why can't you understand that?"
 
-Your vision blurs. You look down to examine yourself. Your whole body appears ot be made of metal. Your arms, your torso, your legs; you are a walking aluminum skeleton.
+Your vision blurs. You look down to examine yourself. Your whole body appears to be made of metal. Your arms, your torso, your legs; you are a walking aluminum skeleton.
 
 Bruce's voice gives out in expasperation "Okay... okay..."
 "You can't hide from yourself any longer," you say.
-"I know... I know..." Bruce says. "It doesn't matter the reasoning, does it. To act in such a way is... unbecoming. I pray that we find rest. They come for us now. I'm far to weak to protect us."
+"I know... I know..." Bruce says. "It doesn't matter the reasoning, does it. To act in such a way is... unbecoming. I pray that we find rest." 
+Bruce looks to the skies, "They come for us now. I'm far to weak to protect us."
 
 + "Who comes for us?"
 -> Fin
@@ -66,7 +69,7 @@ Bruce's voice gives out in expasperation "Okay... okay..."
 == Fin ==
 Bruce simple nods to look behind you.
 You turn. Rabbit, Lucy, Marilyn and Cosmo stand planted in a row before you.
-Boris walks over to you in support of the opposition.
+Boris walks over and stands besides you against your newfound opposition. 
 
 + "What is this?"
 - "You didn't think we would just let ourselves collapse did you?" Marilyn says.
@@ -75,7 +78,7 @@ Rabbit looks to you and Boris now, "I wish you could have seen things our way, b
 Cosmo look over to Rabbit and laughs, "Oh... 'our way' you're calling it?" Cosmo draws his gun on Rabbit, "Rot here where you belong you piece of shit. I want no part of Bruce in my heaven. You deserve no place on Neptune, and I will make sure of it."
 Rabbit is too flustered to react. Cosmo fires his weapon and Rabbit bursts in a boundless energy. It coalesces and bursts through Boris chest.
 "AGH!" Boris shouts. He falls to the floor and grasps his chest. You drop to your knees beside him.
-"Boris no... don't fight it!" you shout. "Absorb! Don't be overwhelmed you will die if you don't!" you cry. "Remain calm and let his energy evolve within you."
+"NO!" you shout. You grab hold of Boris' arms, "You need to remain calm, okay?" you assure. "Don't fight Rabbit's presence."
 "I... I'm trying," he breathes heavily.
 Boris stops radiating with energy.
 "I think I'm good," he says exhausted. You lift him to his feet. He hangs off your shoulders for support.

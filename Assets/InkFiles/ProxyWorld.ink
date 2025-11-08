@@ -14,14 +14,14 @@ They’re crouched on the floor before you. They sport a suit and are humanoid i
     
 == RabbitBrain ==
 "Who are you?" you ask, uncertainly. The figure looks at you with curiosity while lifting itself to a half squat. 
-“Rabbit,” it responds quietly.
+“Rabbit,” they responds quietly.
 
 + "Rabbit?"
     -> RabbitBrain1
     
 == RabbitBrain1 ==
 “Rabbit, huh. I’m Aiolos,” you announce. You’re not sure whether to feel scared or not. 
-"Can you do this?" Rabbit asks. He holds out his palm, and within it, you see a revolver begin to materialize. It's radiating a brilliant light blue color. 
+"Can you do this?" Rabbit asks. They hold out their palm, and within it, you see a revolver begin to materialize. It's radiating a brilliant light blue color. 
 "Um.. No," you respond. 
 "Resonance weapon," Rabbit says. "Think, and behold."
 "Think and behold," you echo.

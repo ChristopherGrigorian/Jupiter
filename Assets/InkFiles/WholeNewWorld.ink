@@ -86,7 +86,7 @@ You approach without hesitation, manifesting your weapon once more.
 == LeftHallContinued ==
 "Whaddya think." he responds.
 "How are you here?" you ask.
-"I'm not sure, I just woke up in a tube thing. I got freaked out and just started blasting my way out. Also..." Boris lowers his voice a little, "There's a couple of robots back there, and I got scared."
+"I'm not sure, I woke up a long time ago in a tube thing but I came back here to get you. Also..." Boris lowers his voice a little, "There's a couple of robots back there, and I got scared."
 "No, not like... whatever," you concede. "Do you know the way out of here?"
 "Yeah," he responds. Boris doesn't continue speaking.
 "...so..." you say after an uncomfortable amount of time.
@@ -100,24 +100,13 @@ You approach without hesitation, manifesting your weapon once more.
 
 + "GET US OUT THEN."
     - "Damn. Alright." he mutters. 
-    {MuffinShared == false: 
-    "First you don't share the muffin, and now you're just shouting at me. You really are just a bitch, huh."
-    Your mouth drops, you've nothing left to say. "Close your damn mouth, let's go," Boris says.
-    You follow without a word.
-    }
     ->LHC2
     
 == LHC2 ==
 You both wind through endless halls until finally arriving before the robots Boris was talking about.
 "Will you be joining me for this fight?" you ask.
-{MuffinShared == false:
-"I don't know, man. When I needed help, you didn't provide."
-"You wanted a fucking muffin dude, get over it."
-"Alright my bad...fatass," he mutters under his breath.
-- else:
 "Of course! My bloods boiling!" he says.
 "Well... it would if I had any," he mutters. "Let's get em!"
-}
 
 ~ AddCharacter("Boris")
 Boris has now joined your party.

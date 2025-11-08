@@ -4276,12 +4276,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fdd4131a2539e3f4b8b628f3fafbb971, type: 2}
   - {fileID: 11400000, guid: a2cac5bc82420bf41be7f20f32a0a95a, type: 2}
   - {fileID: 11400000, guid: b28fd9fb3ab27f744bc911fc4fff22bb, type: 2}
-  - {fileID: 11400000, guid: be300255bea08784a91eb8052b787e28, type: 2}
   - {fileID: 11400000, guid: 09dfcee9f4a190a46a44c7dd3814e052, type: 2}
   - {fileID: 11400000, guid: 0c998d82e5d19394dbe7368c5a805a16, type: 2}
   - {fileID: 11400000, guid: 2cfc88d8515c0104ca7f26144bc20c74, type: 2}
   - {fileID: 11400000, guid: 92d9b6561032d3c4f853ac3fb03b8eed, type: 2}
   - {fileID: 11400000, guid: c5fd34daef39022428b6f5d439bdda56, type: 2}
+  - {fileID: 11400000, guid: e26d3866f289e4e42bb7f9ea98594ba0, type: 2}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}
   targetContainer: {fileID: 215210112}

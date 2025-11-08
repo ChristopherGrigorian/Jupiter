@@ -1,10 +1,11 @@
 VAR FirstTimeNeonCity = true
+VAR ChosePigeon = false
 == Neolight ==
 A neon city materializes before you as you teleport to the coordinates. You seem to be in a holding area prior to the entrance. A large banner streams in front of you reading "Welcome To Salvation."
 
 {FirstTimeNeonCity:
 ~ HideMapButton()
-Boris materializes besides you. Lucy follows suite soon after.
+Boris materializes besides you. Lucy follows suit soon after.
 "Hmph..." Boris exhales. 
 "Certainly a bold statement as greeting," says Lucy.
 Boris looks around confused, "Where's Rabbit?"
@@ -44,7 +45,7 @@ The guard grabs their head in both hands and grovels, "It's just so... so... BRI
 
 
 + Maybe we can exchange Boris for entry...
-VAR ChosePigeon = true
+~ ChosePigeon = true
 "HEY I'M NOT A PIGEON MAN," Boris shouts.
 "Alright let's just calm down..." Lucy says. 
 Lucy begins looking around as if looking for something.
@@ -80,7 +81,7 @@ The guard dematerializes into a flurry of flower petals.
 
 {ChosePigeon:
 + "Slow your roll pigeon bro."
-"IF YOU SAY THAT ONE MORE TIME!"
+"IF YOU SAY THAT ONE MORE TIME!" Boris shouts.
 "ALRIGHT STOP SHOUTING!" yells Lucy.
 -> NCH4
 }
@@ -192,7 +193,7 @@ The party approaches the ticket master. She sits behind a glass window. The boot
 "The Tragedy Of Artifice And His Several Angels?" she interupts. "That will be 500,000 pigeon bucks."
 "WHAT!" shouts Boris.
 Boris reaches for his tome again, but you grab hold of his arm tight to restrain him.
-"Well... it's a Vireo production, and it's exclusive tonight. Genius has no price, you know."
+"Well... it's a Vireo production, and it's exclusive tonight. Genius has no price, you know," she says.
 "Will you accept a performative dance as payment?" says Boris.
 "No..." mumbles the woman. "We only accept pigeon bucks here."
 The party walks away from the counter to console one another.

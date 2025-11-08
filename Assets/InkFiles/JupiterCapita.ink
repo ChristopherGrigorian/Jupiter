@@ -33,7 +33,7 @@ Almos takes a breathe, "The dullness of this world is a means for us to lose our
 == Capita1 ==
 "Well the last one didn't work," you say. "We got separated on retransmission."
 "We technically didn't get separated on transmission," he interjects. "After the burning sensation, I felt myself dissapate within you."
-"I was never in control, but I always there with you," he says.
+"I was never in control, but I was always there with you," he says.
 
 + "How was it so easy for me to forget you?"
 - "I assume Bruce used a sort of amnesia on us," he says. "Our anchors merged while we transferred to Jupiter, but it was as if there was a wall between us both. And... now we're separated again."
@@ -59,7 +59,7 @@ Almos lifts his hand in strength. Light fold upon itself over and over in his pa
 "The Limitless Blue..." he announces as a sword begins to coalesce in his hand. The blade hums like a dying star rediscovering its pulse.
 The weapon's edge flickers with effervescent ferocity. 
 
-"It's our ticket back to Jupiter," he says. He turns to you with passion in his eyes,"Allow me to be your champion, Aiolos. Your alter ego, your fears manifest as strength in the toughest of battles. Grab my hand, before Bruce senses our alignment forming."
+"It's our ticket back to Jupiter," he says. He turns to you with passion in his eyes, "Allow me to be your champion, Aiolos. Your alter ego, your fears manifest as strength in the toughest of battles. Grab my hand, before Bruce senses our alignment forming."
 
 You hesitate, "Almos... Are you sure this is the only way?"
 
@@ -68,7 +68,6 @@ You reach for his hand with conviction. The moment your skin touches his, the sw
 No blood pours forth from the wound, only a burst of indigo fractals.
 You feel yourself dissolving, nerves undwinding into a blue atmosphere, your consciousness overwhelmed by his. 
 Almos exhales one final breath. The sound is inexplicable, the echo of a collapsing world. 
-"Don't forget who you are when the color fades," he says softly.
 
 The world fractures like glass under an ocean of pressure and a whole new galaxy burst from the seams.
 ~ FadeOutSeq("Aiolos... / Come forth, and claim my existence as your own.", "Capita3")
@@ -82,7 +81,7 @@ You approach Almos. Each of your steps warp the space in which you walk.
 "This sword is a gateway," he says. "A means forward, rather."
 He looks down at the blade, its light casting refractions across his face.
 "It is the first rule written into all worlds. A universe's right to move, change and contradict."
-Almos shakes his head, "Bruce built a world based upon endless statis. As such the weapon is antithesis of his design." 
+Almos shakes his head, "Bruce built a world based upon endless stasis. As such, the weapon is antithesis of his design." 
 He turns to the vast expanse around him.
 "It's forged from Lucy and Andromeda dreams. They wished for freedom. They wished to breach a hole in the machine. It's a promise that a 'perfect' order must one day yield."
 His voice begins to crack, "Lucy's universe has just collapsed and from it this sword was born."
@@ -92,10 +91,10 @@ He nods slowly.
 You thrust your hand forward. His chest caves inward like liquid glass. You pull free his heart. 
 He smiles one last time. "Do it."
 You crush his existence in your hand.
-Almost bursts apart in blue mote. His energy rushes to you, flooding your lungs and your mind.
+Almost bursts apart into blue motes. His energy rushes to you, flooding your lungs and your mind.
 You feel invigorated and lethal. You awaken with The Limitless Blue already in your grasp. Your eyes blaze a golden-blue. You swing the sword, slashing the very fabric of this suspended galaxy. 
 A white aura shines through the wound you've made, spilling radiance. You're in mania. Your body bursts with unfathamable energy. You force the sword deep into the fabric of the cosmos. 
-The skies falls as fragments of the blue universe unravel and dissapates around you.
+The skies falls as fragments of the blue universe unravel and dissapate around you.
 The world around you rebuilds itself to the very moment Lucy and Andromeda were stood before you in the train carriage, both wishing death upon themselves.
 -> Capita4
 
@@ -107,7 +106,9 @@ The world around you rebuilds itself to the very moment Lucy and Andromeda were 
 
 Your mind is dizzy. You clutch your head in distress and fall to the floor while screaming in agony. You feel Almos crawling through your skin. He surfaces within you and takes your form.
 
-Your appearance transforms to that of Almos.
+Your appearance transforms to that of Aiolos.
+~ RemoveCharacter("Obsolete Android")
+~ AddCharacter("Aiolos")
 The pain subsides and you rise to your feet once more. Everybody is looking at you in shock.
 "Aiolos?" Boris says. "What happened... you don't look so... robotic and plain anymore."
 You don't respond to Boris, but immediately address Lucy. "I know you don't want to die here. Help me, please."
@@ -129,11 +130,13 @@ Andromeda steps forward, "No. Do it. I don't wish to forget or abandon you Lucy.
 - "I possess it no longer..." Lucy says, voice trembling. 
 Andromeda grabs The Limitless Blue from you and hands it to Lucy, forcefully clenching her fist around the base of the weapon. 
 "I shall return it to you. Do it, Lucy!" Andromeda shouts.
-Lucy closes her eyes and drives The Limiltess Blue threw Andromeda's chest.
+Lucy closes her eyes and drives The Limiltess Blue through Andromeda's chest.
 Once more, there is no blood, only light. Andromeda dissolves into her, their outlines merging in a wash of gold and azure. 
 
 Lucy gasps, inhaling as though it were her first time. She hugs herself in this moment, shaking with radiance.
 She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other in unison, "We'll carry this burden together. Always."
+~ RemoveCharacter("Andromeda")
+~ AddCharacter("Lucy")
 -> Capita5
 
 == Capita5 ==
@@ -161,5 +164,5 @@ Andromeda and you both glare at him.
 "I mean... I agree..." he whispers. "Let's just go, get out your map and teleport to Galagos, I'll meet ya'll there."
 ~ FirstTimeOasis = false
 ~ RevealMapButton()
-VAR ReturnToGalaga = true
+~ ReturnToGalaga = true
 ->DONE

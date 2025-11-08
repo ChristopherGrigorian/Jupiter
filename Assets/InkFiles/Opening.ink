@@ -37,7 +37,7 @@ You have a cigarette in hand. Smoke leaves your lips. Almos' face is briefly obs
     ->Rabbit
 + "Demo2"
     ~ AddCharacter("Almos")
-    ->FollowRabbit
+    ->Calypso
     
 
 == TB1 ==

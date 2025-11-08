@@ -23,10 +23,11 @@ You go the kitchen and open the cupboards. You see some of your favorite snacks 
 
 == BAL ==
 The balcony is quiet and empty. The street is still below. There is a lovely garden table set.
-
+{ReachedGov == true:
 + _Kill yourself._
 You once again throw yourself from the balcony into the empty night.
     -> AfterParty
+}    
 + _Return to the living room._
     -> LIV
     

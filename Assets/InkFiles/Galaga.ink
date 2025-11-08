@@ -1,6 +1,8 @@
 VAR SpokeToWoman = false
 VAR TTBAC = false
 VAR BorisAmnesia = false
+VAR ReturnToGalaga = false
+VAR FinishCalypso = false
 
 = Galagos 
 {FirstTimeGalaga:
@@ -12,18 +14,20 @@ VAR BorisAmnesia = false
         ->LeftOfFront
     + _Explore on your own._
         ->FrontOfCourtyard
-}      
-{ReturnToGalaga:
-    Boris takes a deep breathe, "Oh, home sweet home..."
-    Lucy's eyes widen as she looks upon the courtyard and chateau. "God this is bougie... You're full of yourself aren't you?" she says to you.
-    
-    + "Yes, I suppose I am..."
-        -> RTG
-    + "I don't know, ask Bruce."
-        -> RTG
 - else:
-    This is Galaga.
-    ->FrontOfCourtyard
+    {ReturnToGalaga:
+        Boris takes a deep breathe, "Oh, home sweet home..."
+        Lucy's eyes widen as she looks upon the courtyard and chateau. "God this is bougie... You're full of yourself aren't you?" she says to you.
+        
+        + "Yes, I suppose I am..."
+            -> RTG
+        + "I don't know, ask Bruce."
+            -> RTG
+    - else:
+        This is Galaga.
+        + Head to the front of the quartyard.
+            ->FrontOfCourtyard
+    }
 }
 
 == RTG ==
@@ -37,7 +41,7 @@ VAR BorisAmnesia = false
 "Well, I saw some sort of a vision when I killed you Lucy..."
 }
 "Go on..." she says. 
-"Everything sort of just shattered, it was as if you and Andromeda were compeletly incapabitble anymore."
+"Everything sort of just shattered, it was as if you and Andromeda were compeletly incompatible anymore."
 "But..." she interupts. "The sword you had, you said it was from me and Andromea?"
 "Yeah I know..." you say. "It doesn't really make sense. I feel like The Limitless Blue wouldn't have formed otherwise if both of you didn't see eye to eye. Perhaps what I witnessed was a very violent rejoining between the two of you... I can't say for sure," you respond.
 Boris senses the worry between you two. He glances at both of you with a little unease, "Have same faith guys. We may not have all the pieces, but we do know something has least come out of the whole situation. We have the Limitless Blue now, so rejoinings may be a little bit more... safe... I would hope."
@@ -62,7 +66,7 @@ You shake your head in frustration. "Let's just find Rabbit. One thing at a time
 "Of course, you do," Andromeda rolls here eyes. "Why do you think Rabbit would even accept binding with you?"
 Boris pouts, "Well there's only one way to find out isn't there? We gotta find him first." He marches off and you and Andromeda follow him into the Chateau.
     
-->ChateauMainHall
+->CMH
 
 == Courtyard ==
 
@@ -71,7 +75,8 @@ Boris pouts, "Well there's only one way to find out isn't there? We gotta find h
     You walk out of the chateau to horrific sky touring over the courtyard. The skies are an endless black sea. No stars shine upon you.
     Rabbit stands besides Marilyn, "We must prepare," they say. "The time is near to face Atlas and shake this world free from Bruce."
     
-    An earthquake erupts in Galagos. The surroundings condos topple, their broken colorful walls now a disaster of a medley upon the ground. The wings of the angel statues in the courtyard snap off, and crumble. The cathedral's delicate glass features can be heard shattering in the darkness. The building folds in on itself. Upon parts of its architecture colliding with the ground, clouds of smoke flourish in the air. 
+    An earthquake erupts in Galagos. The surroundings condos topple, their broken colorful walls now a disaster of a medley upon the ground. The wings of the angel statues in the courtyard snap off, and crumble. The cathedral's delicate glass features can be heard shattering in the darkness. 
+    The building folds in on itself. Upon parts of its architecture colliding with the ground, clouds of smoke flourish in the air. 
     The whole realm is quiet, and swallowed in darkness. 
     A transmission is being broadcast to all of you.
     It's location data.
@@ -90,7 +95,7 @@ Boris pouts, "Well there's only one way to find out isn't there? We gotta find h
     "Ah... do the others first, bud," he says.
     You shoot Rabbit, and subsequently Marilyn.
     Boris now looks at you with fear in his eyes, "I have a really bad feeling about Marilyn..." he says.
-    "Me too, but even if her final plans are malicious, she still shares our goals for the time being..." you say. "To end the cycle of what sustains all the bad parts of this world. We go this bud, don't worry."
+    "Me too, but even if her final plans are malicious, she still shares our goals for the time being..." you say. "To end the cycle of what sustains all the bad parts of this world. We got this bud, don't worry."
     Boris looks to you and smiles a bit, "Okay... that makes me feel better... he says. "I'll see you on the other side...bud..."
     He closes his eyes, and you fire shortly after. You're the only one left here.
     
@@ -99,37 +104,38 @@ Boris pouts, "Well there's only one way to find out isn't there? We gotta find h
     After a while of traveling the expanse, you feel your corporeal form slowly returning to you.
     -> TheFinale
 
-}
+- else:
 
-The courtyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.
-
-You see a wandering merchant here. 
-{MetAnzhela == 0:
-~ MetAnzhela += 1
-She approaches you.
-"Hello there, wanderer! I'm just so giddy finally...FINALLY... I have a new customer."
-The merchant can barely keep their balance. They sway back and forth with the weight of their backpack.
-You say nothing.
-"Ohhh... I see you're one of those shy ones," they say. "Name is Anzhela by the way!" 
-Anzhela throws her bag to the floor and unwraps it into a nice tarp. A couple of items roll about on top of the tarp, street-vendor style.
-"Neat, huh? A backback that is also a tarp, and also a blanket...and also potentially a tablecloth... and... and..."
-If you don't interupt Anzhela now, she'll just go on forever.
-+ "Could I take a look at your goods?"
-    "YES OF COURSE," Anzhela begins coughing in a wicked fit. 
-    She stablizes, "That's why I rolled it out, silly. Here! take a look!"
-    -> AnzhelaShop
-- else:   
-"Would you like to visit their shop?
-+  Enter Anzhela's Shop
-    -> AnzhelaShop
-+ _Enter the chateau._
-    {TTBAC:
-    ->Chateau
-    - else:
-    ->ANZWAR
+    The courtyard is very grandiose and breathtaking. Statues of angels and fountains are positioned symmetrically on either side of the walkway heading to the chateau.
+    
+    You see a wandering merchant here. 
+    {MetAnzhela == 0:
+    ~ MetAnzhela += 1
+    She approaches you.
+    "Hello there, wanderer! I'm just so giddy finally...FINALLY... I have a new customer."
+    The merchant can barely keep their balance. They sway back and forth with the weight of their backpack.
+    You say nothing.
+    "Ohhh... I see you're one of those shy ones," they say. "Name is Anzhela by the way!" 
+    Anzhela throws her bag to the floor and unwraps it into a nice tarp. A couple of items roll about on top of the tarp, street-vendor style.
+    "Neat, huh? A backback that is also a tarp, and also a blanket...and also potentially a tablecloth... and... and..."
+    If you don't interupt Anzhela now, she'll just go on forever.
+    + "Could I take a look at your goods?"
+        "YES OF COURSE," Anzhela begins coughing in a wicked fit. 
+        She stablizes, "That's why I rolled it out, silly. Here! take a look!"
+        -> AnzhelaShop
+    - else:   
+    "Would you like to visit their shop?
+    +  Enter Anzhela's Shop
+        -> AnzhelaShop
+    + _Enter the chateau._
+        {TTBAC:
+        ->Chateau
+        - else:
+        ->ANZWAR
+        }
+    + _Leave the courtyard._
+        ->FrontOfCourtyard
     }
-+ _Leave the courtyard._
-    ->FrontOfCourtyard
 }
 
 == ANZWAR ==
@@ -155,8 +161,6 @@ There is also both a pathway to your left and right that walk along the perimete
     
 == RightOfFront ==
 You walk along the perimeter, guided by tall hedges that encapsulate the courtyard. A lone lamp post stands firm in the ground at this corner. A bench rests under it.
-+ _Sit on the bench_
-- You sit on the bench. It feels uncomfortable. You get up.
 + _Turn the corner_
     ->Condos
 
@@ -247,10 +251,10 @@ You and Boris look to her, both empty and expressionless.
 "Conscious splitting, or memory splitting, is how we artificially gain a lack of humanity," she says. "Everyone with a Continuum Anchor can manifest resonance weapons, but how willing would you be to turn your weapon on another living creature?"
 
 + "I would do it in a heartbeat."
-- "I hope you mean in self defense... Perhaps you aren't much different from your old self. Anyway..."
-
+"I hope you mean in self defense... Perhaps you aren't much different from your old self. Anyway..."
+-> AC5
 + "I would never."
-- "Such would be the sane response."
+"Such would be the sane response."
 
 -> AC5
 
@@ -338,11 +342,11 @@ You look to Andromeda.
 == A11 ==
 + "I take it you'll be joining us then?"
 "Yes, my skills are at your disposal. Just note though that since the bridge between my other half had started forming, I'm not as strong as I once was. I won't be a burden, though."
-Andromeda joins your party.
 ->A12
 
 == A12 ==
-// ~ AddCharacter("Andromeda")
+~ AddCharacter("Andromeda")
+Andromeda joins your party.
 + "Thank you."
 "It's no problem," says Andromeda. "Let's waste no time."
 ->A13
@@ -389,7 +393,7 @@ You reach him and kneel by his side grabbing hold of his shoulder.
 You hear a soft giggling echoing throughout the chamber. "You did make me durable," he jests as he lifts himself to his feet.
 "Why would you play with me like that?" you shout.
 "I just wanted to see if you care about me," he smiles. "Which you do," he says as he punches your shoulder.
-Be brushes off the dust from his clothes. You both march right back up the stairs. 
+He brushes off the dust from his clothes. You both march right back up the stairs. 
 ->A15
 
 == A15 ==

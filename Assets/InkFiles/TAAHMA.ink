@@ -1,13 +1,17 @@
 == TheGrandPlay ==
-
+~ HideMapButton()
 The lights grow dim. An announcer begins to speak.
 "Welcome..." they echo, "to the one and only showing of the genius Vireo's play, "The Tragedy Of Artifice And His Several Angels."
 
 A single spotlight hits the stage. A man of crystal lays in the center of a cathedral. An entricate weaving of metal and colored glass surrounds the man. When he breathes, the chiming of colliding, twinkling stars shatter throughout the theater--on exhale his body emits a dim light.
 
 A narrator's voice echoes over the scene.
-"This... is Artifice. He was built to feel, and love," the narrators tone grows somber, "But... he then taught himself to forget what feeling means. He thrashes in his existence. He's lost all humanity, hasn't he? But look how beautifully he rests... He has lost his heart of existence, not of tragedy, but of an innate, burning desire to feel nothing at all."
-The narrator takes a deep breathe, as Artifice now does, "His body a continuous, meaningless machine, an existence a defiance to the parts of himself he sliced away. His body a reflection of all the knowledge he's gained, of the universes he's destroyed. 'Of course...' he would bellow, 'My name is Artifice! For I'm man-made, I was never born.'"
+"This... is Artifice. He was built to feel, and love," the narrators tone grows somber, "But... he then taught himself to forget what feeling means. He thrashes in his existence. He's lost all humanity, hasn't he? But look how beautifully he rests..." 
+Boris leans into you and whispers while smacking on his snacks, "This feels a little uninspired, right?"
+"Please be quiet..." you say.
+"Okay..." he whispers back.
+The narrator continues, "He has lost his heart of existence, not of tragedy, but of an innate, burning desire to feel nothing at all."
+The narrator takes a deep breathe, as Artifice now does, "His body a continuous, meaningless machine, an existence--no--a defiance to the parts of himself he sliced away. His body a reflection of all the knowledge he's gained, of the universes he's destroyed. 'Of course...' he would bellow, 'My name is Artifice! For I'm man-made, I was never born.'"
 
 Artifice rises from the ground and begins drawing angels in the skies of his cathedral.
 
@@ -25,7 +29,7 @@ Artifice rises from the ground and begins drawing angels in the skies of his cat
 
 The narrators voice becomes more erratic, as if in psychosis, "He created the angels to bear his burdens. He couldn't handle the weight of humanity any longer... The sins and atrocities he'd perpetrated--he left it all to his angels." 
 
-"He breathes as endless machine--he is free of his sin, free of consequences. Is it worth it to be able to sustain a better world?"
+"He breathes as endless machine--as artificial as it may be, he is free of his sin, free of consequences. Is it worth it to be able to sustain a better world?"
 
 The narrator begins to laugh hysterically, "His being a machine! He breathes life to a whole universe on repeat! A clean conscious is needed for the pursuit of perfection, for perfect people and perfect places!"
 
@@ -47,7 +51,7 @@ A stray light shines and refracts off of Artifice's body. His body illuminates a
 
 Lucien, Rivio and Alara join Eos in infiltrating the scene. 
 
-"I'll hold of Eos for now!" Rabbit commands. "Handle the other three!"
+"I'll hold off Eos for now!" Rabbit commands. "Handle the other three!"
 
 The angels soar to the party at vicious speed. Prepare for combat.
 
@@ -55,7 +59,7 @@ The angels soar to the party at vicious speed. Prepare for combat.
 ->DONE
 
 == TGP1 ==
-The party slaughters the angels. They each burst into a flame of golden light. You look over to Rabbit who struggling to keep up with Eos. They are badly injured.
+The party slaughters the angels. They each burst into a flame of golden light. You look over to Rabbit who is struggling to keep up with Eos's attacks. Rabbit looks badly injured.
 "WE HAVE TO HELP THEM!" Boris shouts. "RABBIT! RETREAT! WE'LL TAKE IT FROM HERE!"
 Rabbit looks over to the party while panting. They raise their gun to their head. Rabbit pulls the trigger and vanishes, removing themself from battle.
 "This one looks a lot stroner than the other three! Brace everyone!" Lucy shouts, "Prepare for combat!"
@@ -65,7 +69,7 @@ Rabbit looks over to the party while panting. They raise their gun to their head
 == TGP2 ==
 Eos burns to dust.
 A trembling voice comes on the loud speaker, "An otherworldy force? Do they wish to claim triumph over Artifice while he's weakened?"
-"His angels are no more. Did they fight their hardest? Or... perhaps... did they fall willingly? Did Artifice's angel's turn on their God?"
+"His angels are no more. Did they fight their hardest? Or... perhaps... did they fall willingly? Did Artifice's angel's finally turn on their God?"
 
 Artifice stands firm center stage. Glistens a light hue as he breathes. 
 "Have you come to finish me?" he speaks. "Is the party over?"
@@ -91,7 +95,7 @@ You summon The Limitless Blue in your hand.
 + _Kill Vireo._
 - You strike Vireo down. His body bursts in green light. Like confetti, orchids shower upon you and the party in his final moments. 
 
-"There will be no encore, no light in this dawn," the narrator says. "One awful world may topple, but another will jsut takes its place."
+"There will be no encore, no light in this dawn," the narrator says. "One awful world may topple, but another will just take its place."
 
 The cathedral backdrop begins to crumble. The whole theather begins shaking in violent protest of Vireo's death.
 
@@ -209,7 +213,7 @@ Boris looks to her confused, "Why not-"
 Marilyn bursts into a fit of laughter once more, "Good, then you can die with a straight face."
 "The good news for you all though," Marilyn says, "Is that I'm willing to actually help you."
 Boris eyes her, "You seem to be a bit too... human? I think? To be an ultimate weapon."
-Marilyn seems to be looking through Boris rather than at him, "Ever the cynic, arent you?" she sighs. "It it so wrong to want to be part of something bigger and grander than oneself? Jupiter is grand, don't get me wrong but... I've seen first hand what the universe has to offer..." 
+Marilyn seems to be looking through Boris rather than at him, "Ever the cynic, arent you?" she sighs. "Is it so wrong to want to be part of something bigger and grander than oneself? Jupiter is grand, don't get me wrong but... I've seen first hand what the universe has to offer..." 
 Marilyn seems deep in thought, as if trying to find the next words to say, "The greatest thing off all is, well, nothing at all. I wish as much as the rest of you to be part of the bigger expanse. I don't want to be strung up by the artificiality of Jupiter."
 "How can you say that when you had a hand in its making?" Lucy says.
 "Artists are never fond of their own work," Marilyn says. "This world's construction was just another task... It means nothing to me. Atlas makes this world's destruction next to impossible. With three seals broken, Atlas will be freed, and subsequently can be killed."

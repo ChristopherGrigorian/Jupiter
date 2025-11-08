@@ -45,7 +45,7 @@ Boris takes out a coin and flips it. "Heads!" he says, "I win!"
 + "I called heads?"
 "You didn't call heads, you cheater, I did," you say.
 "Why are you lying?"
-You look at Boris as if you might blow a fuse. He seems unphased by bottled up anger. Andromeda can be heard giggling in the background.
+You look at Boris as if you might blow a fuse. He seems unphased by your bottled up anger. Andromeda can be heard giggling in the background.
 "Alright we're heading right, let's go," announces Boris.
 ->BeachCycle
 + "Yay..."
@@ -85,7 +85,7 @@ The group's footsteps imprint into the sand over and over again. It feels as tho
 "YOU WANT ME TO SWIM?" cries Boris. "No way."
 "A bit more than that. I think we need to dive into the ocean," says Andromeda.
 "Won't it feel like we're drowning?" you ask.
-"Not if we never decrypt the associated data... and also encrypt the data current circulating within us about drowning."
+"Not if we never decrypt the associated data... and also encrypt the data currently circulating within us about drowning."
 + "Let's just keep walking."
 Andromeda looks to Boris and then back to you, "Ok well if you change your mind, we'll be ready to take the plunge."
 -> BeachCycle
@@ -117,12 +117,13 @@ Boris begins shaking, "Are we sure about this?"
 "Absolutely," interjects Andromeda. "It's ok if you're scared Boris."
 Andromeda waddles over to Boris while the water slowly swells to her neck and sinks again. She grabs Boris' hand beneath the water to comfort him. 
 "We go," she says while looking towards you.
-}
+- else:
 
 You all plunge through the surface of the water and dive deeper below. A limitless blue enshrouds you and the party.
+}
 
 {FirstTimeOasis:
-"A damn! It's the same thing as the beach. Everything just feel infinite around here. Where the fuck is Lucy?" says Boris.
+"Ah, damn! It's the same thing as the beach. Everything just feel infinite around here. Where the fuck is Lucy?" says Boris.
 "How did you speak to us just now?" you ask.
 "We don't communicate with sound, you know. Our mouths may move but words are transported with intent," informs Andromeda. "You may message anybody you know with just your thoughts, or if you'd like to voice to those in a vicinity, your message is broadcasted a distance from yourself."
 Boris looks to you now, "Well you were the only connection with Lucy weren't you?"
@@ -139,10 +140,11 @@ Boris starts flailing about, trying to kick up to the surface as fast as possibl
 Andromeda swoops over and grabs him by the foot holding him back, "HEY! You're not leaving us, we got this. Everyone, prepare for combat!"
 ~ StartCombat("Whale", "WhaleFinish")
 ->DONE
-}
+-else:
 
 + _Head to the underwater train station._
     -> UnderwaterTrainStation
+}
 
 == WhaleFinish ==
 Boris can't stop hyperventalating. Both Andromeda and you look to Boris. "Huuumph... Hummmph," Boris' heavy breathing continues.
@@ -177,12 +179,13 @@ Both Andromeda and Boris explode into a fit of laughter.
 "Oh, you've really gone mad now, haven't you?" Boris sighs. "All this medication in our database and we still don't have a cure for what you have..."
 "Boris you're all fucked up too, I don't want to hear it," Andromeda interjects. 
     -> UTSpecial
-}
+- else:
 
 In this limitless blue, you stumble upon train station. The building is covered in mosaic like circle windows, through each you can see a multicolored shimmer seeping into the surrounding water. Train tracks sprout from either side of the building.
 
 + _Enter the train station._
 -> TSHub
+}
 
 == UTSpecial ==
 You grit your teeth in frustation, but let the whole thing go. You attention is drawn back to the building. It is covered in mosaic like circle windows. They are gorgeous and grand. Through each you can see a multicolored shimmer seeping into the surrounding water, most probably due to a light coming from the inside. Train tracks sprout from either side of the building.
@@ -219,12 +222,13 @@ You almost missed it when you walked in, but there is an information kiosk a lit
     -> Kiosk
 + _Wait for the train._
     -> TrainWait
-}
+-else: 
 
 The room is grand in scale, and very barren. A few benches are sprawled about, and are made of the same material as the walls. If one squints, they would appear to be lumps that just swell from the floor. The room is split down the middle by the train tracks. The party stands together on the platform. A blinking sign can be seen hanging from the ceiling. A train is about to arrive. 
 
 + _Wait for the train._
     -> TrainWait
+}
     
 == Kiosk ==
 The party approaches the kiosk.
@@ -267,7 +271,7 @@ The party heads back closer to the tracks to wait for the next train.
 "Great plan..." mutters Andromeda.
 "Well do you have a better plan?" snaps Boris.
 "No," says Andromeda.
-"WELL GOOD THING I'M THE BRAINS OF THIS WHOLE OPERATION."
+"WELL GOOD THING I'M THE BRAINS OF THIS WHOLE OPERATION," Boris shouts.
 
 + "I wouldn't say that..."
 Boris' eyes laser over to you.
@@ -286,10 +290,10 @@ Boris begins smiling, "Hi miss..." he's incredibly giddy with joy.
 The woman's expression does not change as she looks from Boris to both you and Andromeda.
 "I take it I'm who you're looking for," she says.
     -> TrainWait1
-}
+-else:
 
 The train has arrived, please select a location from your map feature you wish it to take you.
-
+}
 == TrainWait1 ==
 + "Yes, actually."
 "May I ask your names?" Lucy says.
