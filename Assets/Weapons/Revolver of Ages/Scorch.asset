@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
-  m_Name: Sparkle
-  m_EditorClassIdentifier: 
-  skillName: Sparkle
-  skillDescription: Toss some confetti. Not very powerful.
+  m_Name: Scorch
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillName: Scorch
+  skillDescription: A fast attack of flames. Reduces a single opponents attack.
   type: 0
-  power: 3
+  power: 10
   potency: 0
-  MPCost: 0
+  MPCost: 1
   targetsEnemies: 1
   isAOE: 0
-  statusesToApply: []
-  castSFX: {fileID: 8300000, guid: 5ef491f577e4e804c819e2586b09bd29, type: 3}
-  sfxVolume: 0.5
+  statusesToApply:
+  - status: {fileID: 11400000, guid: b7059e1407628de4eb67e9dc3e8c2a83, type: 2}
+    chance: 1
+    durationOverride: 0
+    stacks: 1
+  castSFX: {fileID: 0}
+  sfxVolume: 1

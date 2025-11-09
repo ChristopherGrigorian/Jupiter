@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
+  m_Name: Bastard Stars
+  m_EditorClassIdentifier: Assembly-CSharp::SkillData
+  skillName: Bastard Stars
+  skillDescription: Launch a wave a star bits at all enemies. Hexes all enemies.
+  type: 0
+  power: 15
+  potency: 0
+  MPCost: 2
+  targetsEnemies: 1
+  isAOE: 1
+  statusesToApply:
+  - status: {fileID: 11400000, guid: 4319f68e736db4dafa563210c7269029, type: 2}
+    chance: 1
+    durationOverride: 0
+    stacks: 1
+  castSFX: {fileID: 0}
+  sfxVolume: 1

@@ -16,17 +16,17 @@ MonoBehaviour:
   characterName: Andromeda
   level: 1
   experience: 0
-  maxHP: 5
+  maxHP: 60
   maxMP: 5
-  strength: 5
-  perception: 5
-  evasiveness: 5
-  spirit: 5
-  speed: 5
-  EquippedWeapon: {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
+  strength: 10
+  perception: 20
+  evasiveness: 20
+  spirit: 15
+  speed: 20
+  EquippedWeapon: {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
   dodgeSound: {fileID: 0}
   currentlyEquipped: 0
-  equipableWeaponTypes: 
+  equipableWeaponTypes: 01000000
   Skills: []
   Images: []
   battleImage: {fileID: 0}

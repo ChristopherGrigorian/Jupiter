@@ -351,8 +351,7 @@ public class GameController : MonoBehaviour
                         {
                             var mod = s.status.statModifiers[i];
                             int spiritBonus = player.EffectiveSpirit / 2;
-                            mod.flatDelta = chosenSkill.potency;
-                            mod.effectiveFlatDelta = mod.flatDelta + spiritBonus;
+                            mod.effectiveFlatDelta = mod.flatDelta + chosenSkill.potency + spiritBonus;
                             s.status.statModifiers[i] = mod;
                         }
                     }
@@ -372,8 +371,7 @@ public class GameController : MonoBehaviour
                         for (int i = 0; i < s.status.statModifiers.Length; i++)
                         {
                             var mod = s.status.statModifiers[i];
-                            mod.flatDelta = chosenSkill.potency;
-                            mod.effectiveFlatDelta = mod.flatDelta;
+                            mod.effectiveFlatDelta = mod.flatDelta - chosenSkill.potency;
                             s.status.statModifiers[i] = mod;
                         }
                     }

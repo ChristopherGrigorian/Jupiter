@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec98e70f74baca4bb8d4bb9df2d85d2, type: 3}
+  m_Name: The Limitless Blue
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  id: TLB
+  weaponName: The Limitless Blue
+  weaponDescription: Born from Andromeda and Lucy's dreams. The origin of it's creation,
+    or how you're able to possess it, is unknown.
+  weaponType: 1
+  weaponSkills:
+  - {fileID: 11400000, guid: d0802f8da5ff03545aac432136874c97, type: 2}
+  - {fileID: 11400000, guid: 14aaa06ec8691e64eb1893a64f1febcf, type: 2}
+  - {fileID: 11400000, guid: 60883182d6c133a4ca97d895277edb97, type: 2}
+  basePower: 10
+  powerPerLevel: 5
+  maxLevel: 10
+  skillUnlockLevels: 
+  unlockableSkills: []

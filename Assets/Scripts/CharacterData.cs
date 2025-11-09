@@ -22,8 +22,6 @@ public class CharacterData : ScriptableObject
     public List<WeaponType> equipableWeaponTypes;
     public List<SkillData> Skills;
     public List<Sprite> Images;
-    public float xPos;
-    public float yPos;
     public Sprite battleImage;
     public List<Sprite> entranceImages;
     public List<Sprite> hoverImages;

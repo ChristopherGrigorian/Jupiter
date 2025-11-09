@@ -18,8 +18,9 @@ MonoBehaviour:
   type: 0
   power: 0
   potency: 0
-  MPCost: 0
-  targetsEnemies: 0
+  MPCost: 1
+  targetsEnemies: 1
+  isAOE: 0
   statusesToApply:
   - status: {fileID: 11400000, guid: 4319f68e736db4dafa563210c7269029, type: 2}
     chance: 1

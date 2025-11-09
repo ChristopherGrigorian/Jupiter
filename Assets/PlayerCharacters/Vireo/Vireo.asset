@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   id: Vireo
   characterName: Vireo
-  level: 1
+  level: 5
   experience: 0
-  maxHP: 5
+  maxHP: 60
   maxMP: 5
-  strength: 5
-  perception: 5
-  evasiveness: 5
-  spirit: 5
-  speed: 5
-  EquippedWeapon: {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
+  strength: 25
+  perception: 25
+  evasiveness: 25
+  spirit: 25
+  speed: 25
+  EquippedWeapon: {fileID: 11400000, guid: f78a1e050d036e441bbb2fda9ca5dd2a, type: 2}
   dodgeSound: {fileID: 0}
   currentlyEquipped: 0
-  equipableWeaponTypes: 
+  equipableWeaponTypes: 00000000
   Skills: []
   Images: []
   battleImage: {fileID: 0}

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 709adcf1b46083348b4af6085834a1f9, type: 3}
-  m_Name: StrengthBuff
-  m_EditorClassIdentifier: 
-  statusId: STRENGTHBUFF
-  displayName: StrengthBuff
+  m_Name: StrengthDebuff
+  m_EditorClassIdentifier: Assembly-CSharp::StatusEffectData
+  statusId: STRENGTHDEBUFF
+  displayName: Strength Debuff
   baseDurationTurns: 3
-  stackable: 0
-  maxStacks: 1
+  stackable: 1
+  maxStacks: 3
   damagePerTurn: 0
   statModifiers:
   - stat: 0
-    flatDelta: 10
+    flatDelta: -10
     effectiveFlatDelta: 0

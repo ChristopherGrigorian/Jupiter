@@ -36,6 +36,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 47b83510458b02343a3f047a4611a08b, type: 3}
   - {fileID: 21300000, guid: b9f76f668919f0c4c92d49b43b4ceb0d, type: 3}
   - {fileID: 21300000, guid: 471dec011669aa34681e7c8692540a60, type: 3}
+  - {fileID: 21300000, guid: 471dec011669aa34681e7c8692540a60, type: 3}
+  - {fileID: 21300000, guid: b9f76f668919f0c4c92d49b43b4ceb0d, type: 3}
+  - {fileID: 21300000, guid: 47b83510458b02343a3f047a4611a08b, type: 3}
+  - {fileID: 21300000, guid: 08f324698eb70164da0012a70e1eef8d, type: 3}
+  - {fileID: 21300000, guid: 5a65f01d468506d4e99367b35453eb93, type: 3}
+  - {fileID: 21300000, guid: 59eb87ba43d0dad41ad5a62110711c36, type: 3}
   xPos: 52
   yPos: -67.5
   battleImage: {fileID: 21300000, guid: 59eb87ba43d0dad41ad5a62110711c36, type: 3}

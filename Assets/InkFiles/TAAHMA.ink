@@ -108,6 +108,7 @@ You are transported back to the main hall of the chateau.
 
 In the same position that you cut down Vireo, a green gun glows on the floor. You feel Almos taking over you body. He goes to grab the gun.
 Almos' voice rings in your mind, "Flesh Abandon... Vireo's gift."
+~ AddWeapon("Flesh Abandon")
 You look around to your peers but nobody is to be seen. The chateau dims to black. You're in a vision, a blurry moment of in-betweeness.
 
 You awaken back on the balcony. You sit here alone. It's a starless, moonless night. Jupiter does not claim the skies. A blue mist illuminates your surroundings.

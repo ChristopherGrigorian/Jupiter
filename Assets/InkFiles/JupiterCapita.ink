@@ -104,7 +104,7 @@ The world around you rebuilds itself to the very moment Lucy and Andromeda were 
 
 "Aiolos, no," Andromeda interjects, "I promise you, killing me is the best chance we have of giving Lucy the life she deserves. This whole place will collapse. She won't remember me or anything I've done. Everything for her will go back to the moment we were orginally split.
 
-Your mind is dizzy. You clutch your head in distress and fall to the floor while screaming in agony. You feel Almos crawling through your skin. He surfaces within you and takes your form.
+Your mind is dizzy. You clutch your head in distress and fall to the floor while screaming in agony. You feel Almos crawling through your skin. He surfaces within you and restores your being to who you once were.
 
 Your appearance transforms to that of Aiolos.
 ~ RemoveCharacter("Obsolete Android")
@@ -137,6 +137,7 @@ Lucy gasps, inhaling as though it were her first time. She hugs herself in this 
 She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other in unison, "We'll carry this burden together. Always."
 ~ RemoveCharacter("Andromeda")
 ~ AddCharacter("Lucy")
+~ AddWeapon("The Limitless Blue")
 -> Capita5
 
 == Capita5 ==

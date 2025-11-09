@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c64de61aec9482488e4f1b199bf1c10, type: 3}
-  m_Name: Sparkle
+  m_Name: Curse
   m_EditorClassIdentifier: 
-  skillName: Sparkle
-  skillDescription: Toss some confetti. Not very powerful.
+  skillName: Curse
+  skillDescription: Hex the enemy, leaving a potent DoT on the enemy for 3 turns,
+    non-stacking.
   type: 0
-  power: 3
+  power: 0
   potency: 0
-  MPCost: 0
+  MPCost: 1
   targetsEnemies: 1
   isAOE: 0
-  statusesToApply: []
-  castSFX: {fileID: 8300000, guid: 5ef491f577e4e804c819e2586b09bd29, type: 3}
-  sfxVolume: 0.5
+  statusesToApply:
+  - status: {fileID: 11400000, guid: 4319f68e736db4dafa563210c7269029, type: 2}
+    chance: 1
+    durationOverride: 0
+    stacks: 1
+  castSFX: {fileID: 0}
+  sfxVolume: 1

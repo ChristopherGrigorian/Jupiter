@@ -223,10 +223,13 @@ The room whirs down as the electrified walls cease to murmur. The room goes dark
 {WeaponChosen:
     - 0:
 A glowing gun is the only thing that iluminates the room, laying promptly atop the panel.
+~ AddWeapon("Revolver of Ages")
     - 1:
 A glowing sword is the only thing that iluminates the room, laying promptly atop the panel.
+~ AddWeapon("Sword of Ages")
     - 2:
 A glowing tome is the only thing that iluminates the room, laying promptly atop the panel.
+~ AddWeapon("Tome of Ages")
 }
 
 Boris gets up from being hunched on the floor. He wipes some soot from his face as he approached you.
