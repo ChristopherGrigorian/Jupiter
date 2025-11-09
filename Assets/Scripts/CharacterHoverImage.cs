@@ -58,6 +58,7 @@ public class CharacterHoverImage : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private IEnumerator StartEntranceThenHover()
     {
+        yield return new WaitForSeconds(0.15f);
         yield return StartCoroutine(EntranceFlipbookRoutine(entranceSprites));
         hoverFlipbookCoroutine = StartCoroutine(HoverFlipbookRoutine(hoverSprites));
     }

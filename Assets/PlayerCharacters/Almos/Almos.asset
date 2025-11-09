@@ -15,7 +15,7 @@ MonoBehaviour:
   id: Almos
   characterName: Almos
   level: 1
-  experience: 0
+  experience: 40
   maxHP: 50
   maxMP: 7
   strength: 12
@@ -25,12 +25,33 @@ MonoBehaviour:
   speed: 22
   EquippedWeapon: {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
   dodgeSound: {fileID: 8300000, guid: ae19c1f928962ba488cc06aa18003218, type: 3}
-  currentlyEquipped: 0
+  currentlyEquipped: 1
   equipableWeaponTypes: 01000000
   Skills:
   - {fileID: 11400000, guid: ca5517b66add167439e54ffbaccf148e, type: 2}
-  Images: []
-  battleImage: {fileID: 0}
+  Images:
+  - {fileID: 21300000, guid: 59eb87ba43d0dad41ad5a62110711c36, type: 3}
+  - {fileID: 21300000, guid: 5a65f01d468506d4e99367b35453eb93, type: 3}
+  - {fileID: 21300000, guid: 08f324698eb70164da0012a70e1eef8d, type: 3}
+  - {fileID: 21300000, guid: 47b83510458b02343a3f047a4611a08b, type: 3}
+  - {fileID: 21300000, guid: b9f76f668919f0c4c92d49b43b4ceb0d, type: 3}
+  - {fileID: 21300000, guid: 471dec011669aa34681e7c8692540a60, type: 3}
+  xPos: 52
+  yPos: -67.5
+  battleImage: {fileID: 21300000, guid: 59eb87ba43d0dad41ad5a62110711c36, type: 3}
+  entranceImages:
+  - {fileID: 21300000, guid: 46ee572ab7aebae4080e89f76fcf4d8e, type: 3}
+  - {fileID: 21300000, guid: 18e884729462ef343a63d5c2edc63338, type: 3}
+  - {fileID: 21300000, guid: fb9ee87925caf984f9782143f34f57ad, type: 3}
+  - {fileID: 21300000, guid: 336cb155ac07acf4491c3717b82d95da, type: 3}
+  - {fileID: 21300000, guid: d702011fb4e10d94f888804013d5e89d, type: 3}
+  hoverImages:
+  - {fileID: 21300000, guid: 6a22feffc3af2dc43b386be9c06510b7, type: 3}
+  - {fileID: 21300000, guid: 6408351823e51064a89cf03e63fc8936, type: 3}
+  - {fileID: 21300000, guid: b39395a85f474f144bab0edfe9e8c127, type: 3}
+  - {fileID: 21300000, guid: b39395a85f474f144bab0edfe9e8c127, type: 3}
+  - {fileID: 21300000, guid: 6408351823e51064a89cf03e63fc8936, type: 3}
+  - {fileID: 21300000, guid: 6a22feffc3af2dc43b386be9c06510b7, type: 3}
   droppableWeapons: []
   heldCoin: 0
   skillTree: {fileID: 11400000, guid: 8c3973b1cbe095a42acefcd107f9872c, type: 2}

@@ -421,6 +421,9 @@ public class InventoryManager : MonoBehaviour
         if (flipbookCoroutine != null)
             StopCoroutine(flipbookCoroutine);
 
+        //RectTransform rt = charImage.GetComponent<RectTransform>();
+        //rt.anchoredPosition = new Vector2(combatant.xPos, combatant.yPos);
+
         flipbookCoroutine = StartCoroutine(FlipbookRoutine(combatant.Images));
     }
 

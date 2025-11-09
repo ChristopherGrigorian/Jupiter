@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 950d9e5e9225be644be1449aa8f25bd2
+guid: d702011fb4e10d94f888804013d5e89d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4977805801484559528
-    second: "[t\xD76s]_[d0286993-ceda-435b-bc49-3b7075af083c]_2025-10-29_19-51-15_0"
+      213: 8555495865009512567
+    second: "[t\xD76s]_[c58783fb-70a4-437b-b9f5-2e5296d1e78b]_2025-11-08_18-08-15_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 7, y: 0, z: 32, w: 2}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "[t\xD76s]_[d0286993-ceda-435b-bc49-3b7075af083c]_2025-10-29_19-51-15_0"
+      name: "[t\xD76s]_[c58783fb-70a4-437b-b9f5-2e5296d1e78b]_2025-11-08_18-08-15_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -121,15 +121,15 @@ TextureImporter:
         width: 600
         height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 7, y: 0, z: 32, w: 2}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a4ad5eb008b41540800000000000000
-      internalID: 4977805801484559528
+      spriteID: 7702737092a3bb670800000000000000
+      internalID: 8555495865009512567
       vertices: []
       indices: 
       edges: []
@@ -138,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e595d92e7a522d649918de1007f6bcb1
-    internalID: 781801748
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "[t\xD76s]_[d0286993-ceda-435b-bc49-3b7075af083c]_2025-10-29_19-51-15_0": 4977805801484559528
+      "[t\xD76s]_[c58783fb-70a4-437b-b9f5-2e5296d1e78b]_2025-11-08_18-08-15_0": 8555495865009512567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
