@@ -48,7 +48,6 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private AudioClip hoverClip;
     [SerializeField] private AudioClip pressedClip;
 
-    // Add these to your Audio (Typewriter) section / Params section
     [SerializeField] private float spaceDelayFactor = 0.2f;     // spaces are quicker
     [SerializeField] private float commaPause = 0.15f;
     [SerializeField] private float periodPause = 0.35f;
@@ -57,7 +56,6 @@ public class InkDialogueManager : MonoBehaviour
     [SerializeField] private float ellipsisPause = 0.50f;
     [SerializeField] private float newlinePause = 0.25f;
 
-    // Optional: separate pitch ranges for letters vs punctuation
     [SerializeField] private Vector2 letterPitchJitter = new Vector2(0.98f, 1.04f);
     [SerializeField] private Vector2 punctuationPitchJitter = new Vector2(0.92f, 0.98f);
 

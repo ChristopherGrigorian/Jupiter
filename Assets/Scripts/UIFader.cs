@@ -172,7 +172,6 @@ public class UIFader : MonoBehaviour
         flashCanvasGroup.alpha = 0f;
     }
 
-    // Add inside UIFader
     public void SetVisibleImmediate(bool visible)
     {
         if (!canvasGroup) canvasGroup = GetComponent<CanvasGroup>();
