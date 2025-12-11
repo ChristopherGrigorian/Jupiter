@@ -4437,6 +4437,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 92d9b6561032d3c4f853ac3fb03b8eed, type: 2}
   - {fileID: 11400000, guid: c5fd34daef39022428b6f5d439bdda56, type: 2}
   - {fileID: 11400000, guid: e26d3866f289e4e42bb7f9ea98594ba0, type: 2}
+  - {fileID: 11400000, guid: 9bf76f8f910c1f54db5c293a6c0c5c7c, type: 2}
+  - {fileID: 11400000, guid: 274c76fc15bb9054b9027522fea268a6, type: 2}
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}
   targetContainer: {fileID: 215210112}

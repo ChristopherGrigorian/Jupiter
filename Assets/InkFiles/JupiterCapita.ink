@@ -134,7 +134,7 @@ Lucy closes her eyes and drives The Limiltess Blue through Andromeda's chest.
 Once more, there is no blood, only light. Andromeda dissolves into her, their outlines merging in a wash of gold and azure. 
 
 Lucy gasps, inhaling as though it were her first time. She hugs herself in this moment, shaking with radiance.
-She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other in unison, "We'll carry this burden together. Always."
+She takes another deep breath and opens her eyes. She turns to one of the windows in the train carriage and peers at her reflection. Lucy and Andromeda's voices layer upon each other in unison, "Oh... wow."
 ~ RemoveCharacter("Andromeda")
 ~ AddCharacter("Lucy")
 ~ AddWeapon("The Limitless Blue")

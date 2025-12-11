@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EncounterData
   encounterID: SharkAttack
   enemies:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6574cbc1af1564a409fa04fd73243f6e, type: 2}

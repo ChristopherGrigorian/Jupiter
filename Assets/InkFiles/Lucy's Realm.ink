@@ -422,14 +422,14 @@ The party is stunned by the image of the burning cathedral. An uncomfortable sil
 Lucy looks to Andromeda now.
 Andromeda tries to speak up, "I know you loathe me but-"
 "I loathe and love you," Lucy interrupts. "You're both a blessing and a burden. Imagine being so delusional to the fruits of your own existence."
-Lucy furrows her brows, "I know exactly who I am. You, Andromeda, are still back peddaling. Fix yourself before you go out of your way trying to fix me. 
+Lucy furrows her brows, "I know exactly who I am. You, Andromeda, are still back peddaling. Fix yourself before you go out of your way trying to fix me." 
 "I'm not trying to fix you, I'm trying to help you," Andromeda reasons. 
 Lucy looks to Andromeda in anger, "You're not trying to help. You just want freedom from yourself and what you've done, no matter if death is the most tangible answer."
 "I-" Andromeda blurts.
 "I know you" Lucy interrupts again, "I know us. This is selfish, and you know it. I'll take care of Aiolos myself, even if you won't."
 Seaweed and tentacles burst from the ground and restrict Andromeda's movement.
 Lucy is in mania, she grits her teeth, "I'll finish the job you should have done the moment you laid eyes on him."
-"NO! Andromeda shouts. "We need him! I promise you! Don't fuck this up!"
+"NO!" Andromeda shouts. "We need him! I promise you! Don't fuck this up!"
 Lucy just shakes her head, "I wish I could trust you in this moment. Just give me a moment, and we'll talk about this after."
 Lucy is completely enraptured and out of commision.
 "Come forth," Lucy points to you and Boris, "I'll finish the job."
