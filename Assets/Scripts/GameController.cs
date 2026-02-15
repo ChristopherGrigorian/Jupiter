@@ -99,6 +99,8 @@ public class GameController : MonoBehaviour
             Destroy(gameObject); // Optional safety
             return;
         }
+        allEncounters = Resources.LoadAll<EncounterData>("Encounters").ToList();
+        allCharacters = Resources.LoadAll<CharacterData>("PlayerCharacters").ToList();
 
         encounterMap = new Dictionary<string, EncounterData>();
         foreach (var encounter in allEncounters)

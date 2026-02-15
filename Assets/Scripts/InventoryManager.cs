@@ -87,6 +87,9 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject); // Optional safety
             return;
         }
+
+        acquireableWeapons = Resources.LoadAll<WeaponData>("Weapons").ToList();
+        acquireableItems = Resources.LoadAll<ItemData>("Items").ToList();
     }
 
     private void Start()

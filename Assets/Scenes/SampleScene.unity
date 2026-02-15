@@ -4403,42 +4403,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b28ad13aa1ab6a40b5084cc8111c5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allCharacters:
-  - {fileID: 11400000, guid: 47a1af29a76a42a4e8d2d9cbe5d4e550, type: 2}
-  - {fileID: 11400000, guid: f02c21f0bfeff9a44a74c61f258ac060, type: 2}
-  - {fileID: 11400000, guid: 51fc46daad58b894f8374b36d0b62a81, type: 2}
-  - {fileID: 11400000, guid: 97e4d1c294b34448488574ea184ec95a, type: 2}
-  - {fileID: 11400000, guid: e3af3e6d7dbd4489898031a3cbc05ea2, type: 2}
-  - {fileID: 11400000, guid: fe7b6a37a24b84cab91a9965b27a0d89, type: 2}
-  - {fileID: 11400000, guid: aaab0b52a88e24b0f8042b58de835b6c, type: 2}
+  allCharacters: []
   playerCharacters: []
   enemyCharacters: []
   dialogueManager: {fileID: 433535021}
-  allEncounters:
-  - {fileID: 11400000, guid: 5fd8b4393187c9b44a52a55ca0af4e36, type: 2}
-  - {fileID: 11400000, guid: 6f9f250c61b14aa4795f19124fbb16ce, type: 2}
-  - {fileID: 11400000, guid: 79a6588d99758104db8e2b2dcce7676c, type: 2}
-  - {fileID: 11400000, guid: 5540b1e9ad1354f669c40ffc24cf563a, type: 2}
-  - {fileID: 11400000, guid: 546b5cb91ba8b461e80d3990ade8ac12, type: 2}
-  - {fileID: 11400000, guid: 7440526510633425f9689fa1669f59cf, type: 2}
-  - {fileID: 11400000, guid: 86378b7854e1f46d686e9467f5010173, type: 2}
-  - {fileID: 11400000, guid: 8f687c537ca2148139b743f5d5438e5f, type: 2}
-  - {fileID: 11400000, guid: 47dce579574d94adebbeb9b2aa1f8a8e, type: 2}
-  - {fileID: 11400000, guid: 648d0dcaab5b9144d865b686fc5f6c3d, type: 2}
-  - {fileID: 11400000, guid: d652b454bdc1a9b46be60c42a188b942, type: 2}
-  - {fileID: 11400000, guid: 3efeb7de755f80149b0a3e65985b98de, type: 2}
-  - {fileID: 11400000, guid: be300255bea08784a91eb8052b787e28, type: 2}
-  - {fileID: 11400000, guid: fdd4131a2539e3f4b8b628f3fafbb971, type: 2}
-  - {fileID: 11400000, guid: a2cac5bc82420bf41be7f20f32a0a95a, type: 2}
-  - {fileID: 11400000, guid: b28fd9fb3ab27f744bc911fc4fff22bb, type: 2}
-  - {fileID: 11400000, guid: 09dfcee9f4a190a46a44c7dd3814e052, type: 2}
-  - {fileID: 11400000, guid: 0c998d82e5d19394dbe7368c5a805a16, type: 2}
-  - {fileID: 11400000, guid: 2cfc88d8515c0104ca7f26144bc20c74, type: 2}
-  - {fileID: 11400000, guid: 92d9b6561032d3c4f853ac3fb03b8eed, type: 2}
-  - {fileID: 11400000, guid: c5fd34daef39022428b6f5d439bdda56, type: 2}
-  - {fileID: 11400000, guid: e26d3866f289e4e42bb7f9ea98594ba0, type: 2}
-  - {fileID: 11400000, guid: 9bf76f8f910c1f54db5c293a6c0c5c7c, type: 2}
-  - {fileID: 11400000, guid: 274c76fc15bb9054b9027522fea268a6, type: 2}
+  allEncounters: []
   combatHUD: {fileID: 1435281178}
   dialogueHUD: {fileID: 1498953306}
   targetContainer: {fileID: 215210112}
@@ -4476,23 +4445,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons: []
-  acquireableWeapons:
-  - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
-  - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
-  - {fileID: 11400000, guid: 82c5bfb29e4f2554eb3c8dc503099cea, type: 2}
-  - {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
-  - {fileID: 11400000, guid: a99f335617413a64ab5f5bb6816a3488, type: 2}
-  - {fileID: 11400000, guid: f78a1e050d036e441bbb2fda9ca5dd2a, type: 2}
-  - {fileID: 11400000, guid: f2d150de488ff3a4eb5275d1c7755df7, type: 2}
-  - {fileID: 11400000, guid: 93770a74462652e469123f48240169a5, type: 2}
-  - {fileID: 11400000, guid: f3e4d42e5e6e1bb47a211c65c28840e5, type: 2}
+  acquireableWeapons: []
   items:
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
-  acquireableItems:
-  - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
+  acquireableItems: []
   toolTipHolder: {fileID: 1139047496}
   totalCoin: 30
   inventoryFeaturesContainer: {fileID: 1032679123}
