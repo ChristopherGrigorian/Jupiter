@@ -11,17 +11,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f8a6b10dcb5aa498253d430c23b7f7, type: 3}
   m_Name: GameDB
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameDB
   weapons:
   - {fileID: 11400000, guid: 273b908f813ee47a58dda25cf8c3573d, type: 2}
-  - {fileID: 11400000, guid: b0a2be43b4e372845b66728b0be14367, type: 2}
-  - {fileID: 11400000, guid: 82c5bfb29e4f2554eb3c8dc503099cea, type: 2}
+  - {fileID: 11400000, guid: f78a1e050d036e441bbb2fda9ca5dd2a, type: 2}
   - {fileID: 11400000, guid: 6274563da9a17614c87da382ef365d79, type: 2}
+  - {fileID: 11400000, guid: 93770a74462652e469123f48240169a5, type: 2}
   - {fileID: 11400000, guid: 05842402661504b4f9ccf9671885a78c, type: 2}
+  - {fileID: 11400000, guid: f3e4d42e5e6e1bb47a211c65c28840e5, type: 2}
+  - {fileID: 11400000, guid: a99f335617413a64ab5f5bb6816a3488, type: 2}
+  - {fileID: 11400000, guid: f2d150de488ff3a4eb5275d1c7755df7, type: 2}
   items:
   - {fileID: 11400000, guid: 8c8dafc607fb34d4aafd605f62f12f19, type: 2}
   characters:
   - {fileID: 11400000, guid: 47a1af29a76a42a4e8d2d9cbe5d4e550, type: 2}
   - {fileID: 11400000, guid: f02c21f0bfeff9a44a74c61f258ac060, type: 2}
+  - {fileID: 11400000, guid: aaab0b52a88e24b0f8042b58de835b6c, type: 2}
   - {fileID: 11400000, guid: 97e4d1c294b34448488574ea184ec95a, type: 2}
+  - {fileID: 11400000, guid: e3af3e6d7dbd4489898031a3cbc05ea2, type: 2}
   - {fileID: 11400000, guid: 51fc46daad58b894f8374b36d0b62a81, type: 2}
+  - {fileID: 11400000, guid: fe7b6a37a24b84cab91a9965b27a0d89, type: 2}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "DB/GameDB")]
@@ -7,6 +8,13 @@ public class GameDB : ScriptableObject
     public List<WeaponData> weapons;
     public List<ItemData> items;
     public List<CharacterData> characters;
+
+    private void OnEnable()
+    {
+        weapons = Resources.LoadAll<WeaponData>("Weapons").ToList();
+        items = Resources.LoadAll<ItemData>("Items").ToList();
+        characters = Resources.LoadAll<CharacterData>("PlayerCharacters").ToList();
+    }
 
     public WeaponData WeaponById(string id) => weapons.Find(w => w && w.id == id);
     public ItemData ItemById(string id) => items.Find(i => i && i.id == id);

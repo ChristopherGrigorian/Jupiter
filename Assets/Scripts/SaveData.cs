@@ -64,7 +64,6 @@ public class SaveData : ScriptableObject
     {
         public string weaponId;
         public int level;
-        public float xp;
 
         // If your WeaponProgress has more fields, add them here (e.g. perks, upgrades, etc.)
     }

@@ -62,6 +62,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private AudioClip hoverClip;
     [SerializeField] private AudioClip pressedClip;
 
+    [Header("Camera Movement")]
+    [SerializeField] private Camera cam;
+    [SerializeField] private Transform pivot;
+
     private string previousType = "";
 
     public Dictionary<WeaponData, WeaponProgress> weaponProgress = new();
@@ -70,6 +74,7 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private GameObject featuresHUD;
     [SerializeField] private GameObject dialogueHUD;
+    [SerializeField] private GameObject featuresHUDRest;
     public static InventoryManager Instance;
 
     private CharacterData currentSelectedCharacter;
@@ -222,11 +227,14 @@ public class InventoryManager : MonoBehaviour
             previousType = "";
 
             ToggleHUD(dialogueHUD, false);
-            ToggleHUD(featuresHUD, true);  
-        }
+            ToggleHUD(featuresHUD, true);
+            ToggleHUD(featuresHUDRest, false);
+        } 
 
         if (type == "CharacterSelectorWeapons")
         {
+            ToggleHUD(featuresHUD, false);
+            ToggleHUD(featuresHUDRest, true);
             toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
@@ -253,6 +261,8 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterSelectorSkillTree")
         {
+            ToggleHUD(featuresHUD, false);
+            ToggleHUD(featuresHUDRest, true);
             toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
@@ -281,6 +291,8 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterStatsCS")
         {
+            ToggleHUD(featuresHUD, false);
+            ToggleHUD(featuresHUDRest, true);
             toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
             foreach (var character in GameController.Instance.playerCharacters)
@@ -363,6 +375,8 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "TeamSelector")
         {
+            ToggleHUD(featuresHUD, false);
+            ToggleHUD(featuresHUDRest, true);
             toolTipHolder.gameObject.SetActive(true);
             previousType = "Features";
 
@@ -400,6 +414,7 @@ public class InventoryManager : MonoBehaviour
 
         if (type == "CharacterStats")
         {
+            previousType = "CharacterStatsCS";
             float fillAmount = currentSelectedCharacter.XPNeededToNextLevel() / (float) currentSelectedCharacter.GetRequiredXPForLevel(currentSelectedCharacter.level + 1);
             expSprite.fillAmount = fillAmount;
             characterNameBox.text = currentSelectedCharacter.characterName;
@@ -480,6 +495,12 @@ public class InventoryManager : MonoBehaviour
             ToggleHUD(featuresHUD, false);
             ToggleHUD(dialogueHUD, true);
             GameController.Instance.cameraPan.PanTo(GameController.Instance.dialogueCamAnchor);
+        } else if (previousType == "Features")
+        {
+            ToggleHUD(featuresHUD, true);
+            ToggleHUD(featuresHUDRest, false);
+            cam.GetComponent<CameraPan>().PanTo(pivot);
+            ShowTab(previousType);
         }
         else
         {

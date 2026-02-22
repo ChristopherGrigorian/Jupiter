@@ -112,7 +112,7 @@ public class InkDialogueManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && !inTitleScreen && !inFadeOutSeq)
+        if (Input.GetMouseButtonDown(0) && !inTitleScreen && !inFadeOutSeq && dialoguePanel.activeInHierarchy)
         {
             RectTransform clickZone;
             if (cutsceneMode)
@@ -148,7 +148,7 @@ public class InkDialogueManager : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !inTitleScreen && !inFadeOutSeq)
+        else if (Input.GetKeyDown(KeyCode.Space) && !inTitleScreen && !inFadeOutSeq && dialoguePanel.activeInHierarchy)
         {
             if (story.currentChoices.Count == 0 && story.canContinue && !isTyping && !isInCombat)
             {
